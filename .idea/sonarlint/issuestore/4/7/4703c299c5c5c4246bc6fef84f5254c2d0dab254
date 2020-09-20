@@ -1,0 +1,12 @@
+
+9
+java:S3626Œ"Remove this redundant jump.(ûÁİ…8›ÌìàÊ.
+_
+java:S1128"=Remove this unused import 'java.util.NoSuchElementException'.(®“ÿéúÿÿÿÿ8³ÅÅàÊ.
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(á¥‡8‰ŠÇßÊ.
+z
+java:S1450"]Remove the "currentElement" field and declare it as a local variable in the relevant methods.(›æãÿ8çŸÅàÊ.
+8
+java:S3626{"Remove this redundant jump.(ûÁİ…8çŸÅàÊ.
+8
+java:S3626n"Remove this redundant jump.(ûÁİ…8·˜ÚàÊ.
