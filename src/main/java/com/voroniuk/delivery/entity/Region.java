@@ -2,6 +2,7 @@ package com.voroniuk.delivery.entity;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class Region {
     private int id;
@@ -58,4 +59,16 @@ public class Region {
         cities.add(city);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Region)) return false;
+        Region region = (Region) o;
+        return name.equals(region.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }

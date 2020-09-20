@@ -43,7 +43,7 @@ public class MainController extends HttpServlet {
         Map<String, String> distMap = new LinkedHashMap<>();
 
         for (City city : manager.findAllCities()) {
-            if (city != a) {
+            if (!city.equals(a)) {
                 distMap.put(city.getName(), String.format("%.1f", manager.findDistance(a, city)));
             }
         }
