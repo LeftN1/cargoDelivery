@@ -27,14 +27,7 @@ CREATE TABLE cargo_types(
     type_name VARCHAR(20) UNIQUE NOT NULL
 );
 
-CREATE TABLE orders(
-	id SERIAL PRIMARY KEY,
-	user_id INT REFERENCES users(id),
-    cargo_type INT REFERENCES  cargo_types(id),
-    weight INT,
-    volume INT,
-    date_time TIMESTAMP
-);
+
 
 CREATE TABLE  countries(
 	id SERIAL PRIMARY KEY,
@@ -42,14 +35,14 @@ CREATE TABLE  countries(
 );
 
 CREATE TABLE  regions(
-	id SERIAL PRIMARY KEY,
-	region VARCHAR(30) UNIQUE NOT NULL,
+	region_id SERIAL PRIMARY KEY,
+	region_name VARCHAR(30) UNIQUE NOT NULL,
 	country INT REFERENCES  countries(id)
 );
 
 CREATE TABLE cities(
-	id SERIAL PRIMARY KEY,
-    region INT REFERENCES  regions(id),
+	city_id SERIAL PRIMARY KEY,
+    region INT REFERENCES  regions(region_id),
     city_name VARCHAR(30) NOT NULL,
     longitude FLOAT,
     latitude FLOAT,
@@ -58,7 +51,17 @@ CREATE TABLE cities(
 
 CREATE TABLE destination(
 	id SERIAL PRIMARY KEY,
-    city INT REFERENCES cities(id),
+    city INT REFERENCES cities(city_id),
     adress VARCHAR(30)
     );
+	
+CREATE TABLE orders(
+	id SERIAL PRIMARY KEY,
+	user_id INT REFERENCES users(id),
+	adress INT REFERENCES destination(id),
+    cargo_type INT REFERENCES  cargo_types(id),
+    weight INT,
+    volume INT,
+    date_time TIMESTAMP
+);
 	
