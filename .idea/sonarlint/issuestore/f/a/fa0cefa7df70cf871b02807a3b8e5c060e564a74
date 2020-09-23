@@ -1,17 +1,6 @@
 
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ıÕ‚ëÊ.
+X	java:S125)"<This block of commented-out lines of code should be removed.(Şëö›8îí†ëÊ.
 ƒ
 java:S19895"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(êÈÄµûÿÿÿÿ8Á§›ÚÊ.
-Y
-java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8ÚÉŠêÊ.
-`
-java:S1128	">Remove this unused import 'com.voroniuk.delivery.entity.User'.(Ê¬ğûÿÿÿÿ8ø÷³ßÊ.
-Q
-java:S3740,"/Provide the parametrized type for this generic.(ñ Ë«ıÿÿÿÿ8Õ÷ƒêÊ.
-]
-java:S1128"@Remove this unused import 'com.voroniuk.delivery.entity.Region'.(œ‘¥Ø8öËûéÊ.
-^
-java:S1128"ARemove this unused import 'com.voroniuk.delivery.entity.Country'.(³‚Ü¸8öËûéÊ.
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8£ÿ…êÊ.
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ø÷³ßÊ.

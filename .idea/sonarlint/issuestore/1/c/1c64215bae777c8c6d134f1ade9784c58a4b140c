@@ -1,12 +1,12 @@
 
-X	java:S125"<This block of commented-out lines of code should be removed.(Õİüø8“œÔéÊ.
-X	java:S125"<This block of commented-out lines of code should be removed.(œ¹ãğ8¬ÏÖéÊ.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Éï£êûÿÿÿÿ8Åö¿éÊ.
 M
 java:S1128"1Remove this unused import 'java.util.LinkedList'.(»Äğ18‚¤îéÊ.
-s
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Éï£êûÿÿÿÿ8‡†òéÊ.
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Éï£êûÿÿÿÿ8Åö¿éÊ.
 _
 java:S1854"=Remove this useless assignment to local variable "allCities".(…ŠÙÊøÿÿÿÿ8õ»ùéÊ.
+X	java:S125"<This block of commented-out lines of code should be removed.(Õİüø8“œÔéÊ.
 P
 java:S1481".Remove this unused "allCities" local variable.(…ŠÙÊøÿÿÿÿ8õ»ùéÊ.
+s
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Éï£êûÿÿÿÿ8‡†òéÊ.
+X	java:S125"<This block of commented-out lines of code should be removed.(œ¹ãğ8¬ÏÖéÊ.

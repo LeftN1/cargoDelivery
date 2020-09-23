@@ -1,9 +1,12 @@
 package com.voroniuk.delivery.entity;
 
+import java.util.List;
+
 public class User {
     private int id;
     private String login;
     private Role role;
+    private List<Order> orderList;
 
 
     public User(String login) {

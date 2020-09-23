@@ -29,6 +29,7 @@ CREATE TABLE cargo_types(
 
 CREATE TABLE orders(
 	id SERIAL PRIMARY KEY,
+	user_id INT REFERENCES users(id),
     cargo_type INT REFERENCES  cargo_types(id),
     weight INT,
     volume INT,
@@ -61,4 +62,3 @@ CREATE TABLE destination(
     adress VARCHAR(30)
     );
 	
-    
