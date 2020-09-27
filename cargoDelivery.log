@@ -1,0 +1,16 @@
+2020-09-27 18:28 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 18:28 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
+2020-09-27 18:28 [TRACE]          CommandContainer:    22 - Number of commands --> 4
+2020-09-27 18:28 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-27 18:28 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 18:28 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 19:12 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
+2020-09-27 19:12 [TRACE]          CommandContainer:    22 - Number of commands --> 4
+2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
+2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp

@@ -43,3 +43,9 @@ J
 sql/db-create-postgres.sql,2\d\2de25c237adf5f41a7455458c136b487fcce53e1
 ]
 -src/main/java/com/voroniuk/delivery/Test.java,1\c\1c64215bae777c8c6d134f1ade9784c58a4b140c
+e
+5src/main/java/com/voroniuk/delivery/entity/Order.java,f\4\f499601133d00a3f99840b33a5015f27e67292f8
+y
+Isrc/main/java/com/voroniuk/delivery/controller/TestSessionController.java,4\4\449a0bb62410d741a2543241cbcaca904941273c
+K
+src/main/webapp/session.jsp,6\d\6d29b9d922176f77000e30b8272a001d08342d75

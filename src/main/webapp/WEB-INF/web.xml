@@ -3,22 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee web-app_4_0.xsd" version="4.0">
 
+    <display-name>Cargo delivery</display-name>
+
+    <welcome-file-list>
+        <welcome-file>main.jsp</welcome-file>
+    </welcome-file-list>
+
     <servlet>
         <servlet-name>main-controller</servlet-name>
-        <servlet-class>com.voroniuk.delivery.controller.MainController</servlet-class>
-        <init-param>
-            <param-name>catalog</param-name>
-            <param-value>Spring</param-value>
-        </init-param>
+        <servlet-class>com.voroniuk.delivery.web.MainController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>main-controller</servlet-name>
         <url-pattern>/main</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/static/*</url-pattern>
     </servlet-mapping>
 
     <servlet>

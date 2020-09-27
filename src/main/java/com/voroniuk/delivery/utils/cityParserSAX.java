@@ -1,11 +1,11 @@
 package com.voroniuk.delivery.utils;
 
 
-import com.voroniuk.delivery.constant.Constants;
-import com.voroniuk.delivery.constant.XML;
-import com.voroniuk.delivery.entity.City;
-import com.voroniuk.delivery.entity.Country;
-import com.voroniuk.delivery.entity.Region;
+import com.voroniuk.delivery.utils.constant.Constants;
+import com.voroniuk.delivery.utils.constant.XML;
+import com.voroniuk.delivery.db.entity.City;
+import com.voroniuk.delivery.db.entity.Country;
+import com.voroniuk.delivery.db.entity.Region;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;

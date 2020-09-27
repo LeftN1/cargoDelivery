@@ -1,8 +1,8 @@
 package com.voroniuk.delivery.utils;
 
-import com.voroniuk.delivery.dao.DBManager;
-import com.voroniuk.delivery.dao.DBManagerImpl;
-import com.voroniuk.delivery.entity.Country;
+import com.voroniuk.delivery.db.dao.CityDAO;
+import com.voroniuk.delivery.db.dao.DBManager;
+import com.voroniuk.delivery.db.entity.Country;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -19,9 +19,10 @@ public class AddCitiesFromXMLtoDB {
 
         Country Ukraine = parser.getCountry();
 
-        DBManager manager = DBManagerImpl.getInstance();
+        CityDAO cityDAO = new CityDAO();
 
-        manager.addCountry(Ukraine);
+
+        cityDAO.addCountry(Ukraine);
 
     }
 
