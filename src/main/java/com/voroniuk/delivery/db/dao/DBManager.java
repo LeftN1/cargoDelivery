@@ -40,49 +40,7 @@ public class DBManager {
     }
 
 
-    public void addUser(User user) {
-        String sql = "INSERT INTO users (login) VALUES (?)";
 
-        try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
-
-            statement.setString(1, user.getLogin());
-            statement.executeUpdate();
-
-            try (ResultSet resultSet = statement.getGeneratedKeys()) {
-                if (resultSet.next()) {
-                    user.setId(resultSet.getInt(1));
-                }
-            }
-
-            logger.info("User has been added");
-        } catch (SQLException e) {
-            logger.severe(e.getMessage());
-        }
-    }
-
-
-
-
-    public List<User> findAllUsers() {
-        List<User> res = new LinkedList<>();
-        String sql = "SELECT * FROM users";
-
-        try (Connection connection = getConnection();
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
-
-            while (resultSet.next()) {
-                int id = resultSet.getInt(1);
-                String login = resultSet.getString(2);
-                res.add(new User(id, login));
-            }
-
-        } catch (SQLException e) {
-            logger.severe(e.getMessage());
-        }
-        return res;
-    }
 
 
 

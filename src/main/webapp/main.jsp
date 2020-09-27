@@ -1,13 +1,12 @@
 <%@ page import="com.voroniuk.delivery.db.entity.City" %>
 <%@ page import="com.voroniuk.delivery.db.dao.CityDAO" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!doctype html>
 <html>
 
 <head>
-
     <title>Main page</title>
-
 </head>
 
 <body>
@@ -42,7 +41,7 @@ Session Id: ${pageContext.session.id}
 <br>
 Role: ${pageContext.session.getAttribute("role")}
 <div>
-    <form action="main.jsp" method="post">
+    <form action="main.jsp" method="post" accept-charset="UTF-8">
         <p>
             Choose your city:
             <select name="current">

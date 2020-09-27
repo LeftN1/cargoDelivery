@@ -34,7 +34,7 @@ public class CityDAO {
 
             LOG.info("Country has been added");
         } catch (SQLException e) {
-            LOG.warn(e.getMessage());
+            LOG.warn(e);
         }
 
 
@@ -72,7 +72,7 @@ public class CityDAO {
 
 
         } catch (SQLException e) {
-            LOG.warn(e.getMessage());
+            LOG.warn(e);
         }
     }
 
@@ -107,7 +107,7 @@ public class CityDAO {
             }
 
         } catch (SQLException e) {
-            LOG.warn(e.getMessage());
+            LOG.warn(e);
         }
     }
 
@@ -132,7 +132,7 @@ public class CityDAO {
                 res.add(new City(id, region, cityName, longitude, latitude));
             }
         } catch (SQLException e) {
-            LOG.warn(e.getMessage());
+            LOG.warn(e);
         }
         return res;
     }

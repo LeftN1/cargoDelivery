@@ -13,7 +13,7 @@ public class LoginCommand extends Command{
 
         String forward= Path.PAGE__MAIN;
 
-        req.getSession().setAttribute("role", "user");
+
 
         return forward;
     }

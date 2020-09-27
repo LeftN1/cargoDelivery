@@ -1,7 +1,0 @@
-
-I
-java:S1068",Remove this unused "order_id" private field.(úñ¶Ê8‹ùÍÖË.
-M
-java:S1068"+Remove this unused "user_id" private field.(šÖïéÿÿÿÿÿ8‹ùÍÖË.
-o	java:S116"SRename this field "order_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úñ¶Ê8‹ùÍÖË.
-s	java:S116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÖïéÿÿÿÿÿ8‹ùÍÖË.
