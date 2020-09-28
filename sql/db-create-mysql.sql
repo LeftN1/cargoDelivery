@@ -1,17 +1,21 @@
-DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS delivery_status CASCADE;
+DROP TABLE IF EXISTS deliveries CASCADE;
 DROP TABLE IF EXISTS destination CASCADE;
 DROP TABLE IF EXISTS cities CASCADE;
 DROP TABLE IF EXISTS regions CASCADE;
 DROP TABLE IF EXISTS countries CASCADE;
+DROP TABLE IF EXISTS statuses CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS roles CASCADE;
 DROP TABLE IF EXISTS cargo_types CASCADE;
+DROP TABLE IF EXISTS translations CASCADE;
+DROP TABLE IF EXISTS locales CASCADE;
 
 
 CREATE TABLE roles
 (
-    role_id        INT PRIMARY KEY AUTO_INCREMENT,
-    role_name VARCHAR(20) UNIQUE NOT NULL
+    role_id     INT PRIMARY KEY AUTO_INCREMENT,
+    role_name   VARCHAR(20) UNIQUE NOT NULL
 );
 
 CREATE TABLE users
@@ -58,25 +62,59 @@ CREATE TABLE cities
 
 CREATE TABLE destination
 (
-    id     INT PRIMARY KEY AUTO_INCREMENT,
-    city   INT,
-    adress VARCHAR(30),
+    id      INT PRIMARY KEY AUTO_INCREMENT,
+    city    INT,
+    adress  VARCHAR(30),
 	FOREIGN KEY (city) REFERENCES cities (city_id) ON DELETE CASCADE
 );
 
-CREATE TABLE orders
+CREATE TABLE statuses
 (
-    id         INT PRIMARY KEY AUTO_INCREMENT,
-    user_id    INT,
-    adress     INT,
-    cargo_type INT,
-    weight     INT,
-    volume     INT,
-    date_time  TIMESTAMP,
-	FOREIGN KEY (user_id)	REFERENCES users (id) ON DELETE CASCADE,
-	FOREIGN KEY (adress)	REFERENCES destination (id) ON DELETE CASCADE,
-	FOREIGN KEY (cargo_type)	REFERENCES cargo_types (id) ON DELETE CASCADE
+	id              INT PRIMARY KEY AUTO_INCREMENT,
+    status_name     VARCHAR(30)
 );
+
+CREATE TABLE deliveries
+(
+    id          INT PRIMARY KEY AUTO_INCREMENT,
+	user_id     INT,
+    adress      INT,
+    cargo_type  INT,
+    weight      INT,
+    volume      INT,
+    cost	    DOUBLE,
+    creation_date  TIMESTAMP,
+    FOREIGN KEY (user_id)	 REFERENCES users (id) ON DELETE CASCADE,
+	FOREIGN KEY (adress)	 REFERENCES destination (id) ON DELETE CASCADE,
+	FOREIGN KEY (cargo_type) REFERENCES cargo_types (id) ON DELETE CASCADE
+);
+
+CREATE TABLE delivery_status
+(
+    delivery_id INT,
+    status_id INT,
+    date_time TIMESTAMP,
+    FOREIGN KEY (status_id) REFERENCES statuses (id) ON DELETE CASCADE,
+    FOREIGN KEY (delivery_id) REFERENCES deliveries (id) ON DELETE CASCADE
+);
+
+CREATE TABLE locales
+(
+	id         INT PRIMARY KEY AUTO_INCREMENT,
+    locale_name VARCHAR(30)
+);
+
+CREATE TABLE translations
+(
+	locale_id INT,
+    default_name VARCHAR(30),
+    translation VARCHAR(30),
+    FOREIGN KEY (locale_id) REFERENCES locales (id) ON DELETE CASCADE
+);
+
+insert into locales (locale_name) values ('en_EN');
+insert into locales (locale_name) values ('ru_RU');
+insert into locales (locale_name) values ('uk_UA');
 
 INSERT INTO roles (role_name)
 VALUES 

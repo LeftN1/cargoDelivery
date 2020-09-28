@@ -1,105 +1,22 @@
-2020-09-27 18:28 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 18:28 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 18:28 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 18:28 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 18:28 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 18:28 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:12 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 19:12 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:12 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:12 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:18 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:18 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 19:18 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 19:18 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 19:18 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 19:18 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:27 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 21:27 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 21:27 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 21:27 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:27 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 21:27 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:27 [ INFO]                   CityDAO:   165 - Can't find city ??????
-2020-09-27 21:27 [ INFO]                   CityDAO:   165 - Can't find city ???????
-2020-09-27 21:33 [ INFO]                   CityDAO:   165 - Can't find city ???»???????°
-2020-09-27 21:35 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 21:35 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 21:35 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 21:35 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:35 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 21:35 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:35 [ INFO]                   CityDAO:   165 - Can't find city ??????????????
-2020-09-27 21:38 [ INFO]                   CityDAO:   165 - Can't find city ???????°??????????
-2020-09-27 21:39 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 21:39 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 21:39 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 21:39 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 21:55 [ INFO]                   CityDAO:   165 - Can't find city ???µ??????
-2020-09-27 21:58 [ INFO]                   CityDAO:   165 - Can't find city ???????°??????????
-2020-09-27 22:00 [ INFO]                   CityDAO:   165 - Can't find city ??????????????
-2020-09-27 22:06 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:06 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 22:06 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 22:06 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 22:07 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:07 [ WARN]                   CityDAO:    31 - java.sql.SQLException: No value specified for parameter 2
-2020-09-27 22:07 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 22:07 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:07 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 22:07 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 22:07 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 22:08 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:08 [ WARN]                   CityDAO:    31 - java.sql.SQLException: No value specified for parameter 2
-2020-09-27 22:08 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 22:09 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:09 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 22:09 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 22:09 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 22:09 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:09 [ WARN]                   CityDAO:    31 - java.sql.SQLException: No value specified for parameter 2
-2020-09-27 22:09 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 22:10 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:10 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 22:10 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 22:10 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 22:10 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:10 [ INFO]                   CityDAO:    29 - User has been added
-2020-09-27 22:10 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 22:51 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:51 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 22:51 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 22:51 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 22:51 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 22:51 [ WARN]                   CityDAO:    35 - java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
-2020-09-27 22:51 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 23:01 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:01 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 23:01 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 23:01 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 23:01 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:01 [ WARN]                   CityDAO:    35 - java.sql.SQLException: Parameter index out of range (3 > number of parameters, which is 2).
-2020-09-27 23:01 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 23:02 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:02 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 23:02 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 23:02 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 23:02 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:02 [ INFO]                   CityDAO:    33 - User has been added
-2020-09-27 23:02 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
-2020-09-27 23:12 [ INFO]                   CityDAO:    35 - Country has been added
-2020-09-27 23:36 [ INFO]                   CityDAO:    35 - Country has been added
-2020-09-27 23:37 [ INFO]                   CityDAO:    35 - Country has been added
-2020-09-27 23:38 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:38 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
-2020-09-27 23:38 [TRACE]          CommandContainer:    22 - Number of commands --> 4
-2020-09-27 23:38 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
-2020-09-27 23:38 [DEBUG]            MainController:    33 - MainController starts
-2020-09-27 23:38 [ INFO]                   CityDAO:    33 - User has been added
-2020-09-27 23:38 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:00 [ INFO]                   CityDAO:    35 - Country has been added
+2020-09-28 23:26 [ INFO]                   CityDAO:    35 - Country has been added
+2020-09-28 23:26 [ WARN]                   CityDAO:    37 - java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'Óêðàèíà' for key 'country_name'
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
+2020-09-28 23:31 [TRACE]          CommandContainer:    22 - Number of commands --> 4
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [ INFO]                   CityDAO:    33 - User has been added
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /main.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
+2020-09-28 23:31 [DEBUG]            MainController:    33 - MainController starts
+2020-09-28 23:31 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
