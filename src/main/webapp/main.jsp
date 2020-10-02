@@ -1,5 +1,6 @@
 <%@ page import="com.voroniuk.delivery.db.entity.City" %>
 <%@ page import="com.voroniuk.delivery.db.dao.CityDAO" %>
+<%@ page import="java.util.Locale" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!doctype html>
@@ -48,12 +49,12 @@ Role: ${pageContext.session.getAttribute("role")}
                 <%
                     City currentCity = cityDAO.findAllCities().get(0);
 
-                    String current = request.getParameter("current") != null ? request.getParameter("current") : currentCity.getName();
+                    String current = request.getParameter("current") != null ? request.getParameter("current") : currentCity.getName(Locale.US);
 
                     for (City city : cityDAO.findAllCities()) {
 
-                        out.println("<option " + (current.equals(city.getName()) ? "selected=true" : " ") + ">");
-                        out.println(city.getName());
+                        out.println("<option " + (current.equals(city.getName(Locale.US)) ? "selected=true" : " ") + ">");
+                        out.println(city.getName(Locale.US));
                         out.println("</option>");
                     }
                 %>
@@ -64,14 +65,14 @@ Role: ${pageContext.session.getAttribute("role")}
 </div>
 <div>
     <%
-        currentCity = cityDAO.getCity(current);
-        out.println("Distance from " + currentCity.getName() + " to :<br>");
+        currentCity = cityDAO.findCityByName(current);
+        out.println("Distance from " + currentCity.getName(Locale.US) + " to :<br>");
         out.println("<table>");
 
         for (City city : cityDAO.findAllCities()) {
             String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
             out.println("<tr>");
-            out.println("<td>" + city.getName() + "</td>");
+            out.println("<td>" + city.getName(Locale.US) + "</td>");
             out.println("<td>" + dist + "</td>");
             out.println("<tr>");
         }

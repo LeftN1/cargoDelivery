@@ -119,3 +119,7 @@
 2020-10-03 01:19 [ INFO]                   CityDAO:    95 - Region Черкасская область added
 2020-10-03 01:19 [ INFO]                   CityDAO:    95 - Region Черниговская область added
 2020-10-03 01:19 [ INFO]                   CityDAO:    95 - Region Черновицкая область added
+2020-10-03 01:26 [DEBUG]            MainController:    33 - MainController starts
+2020-10-03 01:26 [DEBUG]          CommandContainer:    21 - Command container was successfully initialized
+2020-10-03 01:26 [TRACE]          CommandContainer:    22 - Number of commands --> 4
+2020-10-03 01:26 [DEBUG]            MainController:    41 - Controller finished. forward adress: /jsp/register.jsp
