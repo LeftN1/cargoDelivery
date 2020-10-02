@@ -1,13 +1,8 @@
 package com.voroniuk.delivery.db.dao;
 
-
-import com.voroniuk.delivery.db.entity.User;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 

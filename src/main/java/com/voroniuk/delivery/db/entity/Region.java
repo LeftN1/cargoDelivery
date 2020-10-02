@@ -5,6 +5,7 @@ import java.util.*;
 public class Region {
     private int id;
     private Country country;
+    private int nameResourceId;
     private Map<Locale, String> name;
     private List<City> cities;
 
@@ -47,7 +48,9 @@ public class Region {
         return name;
     }
 
-    public void setName(Map<Locale, String> name) {
+
+
+    public void setNames(Map<Locale, String> name) {
         this.name = name;
     }
 
@@ -61,6 +64,14 @@ public class Region {
 
     public void addCity(City city){
         cities.add(city);
+    }
+
+    public int getNameResourceId() {
+        return nameResourceId;
+    }
+
+    public void setNameResourceId(int nameResourceId) {
+        this.nameResourceId = nameResourceId;
     }
 
     @Override

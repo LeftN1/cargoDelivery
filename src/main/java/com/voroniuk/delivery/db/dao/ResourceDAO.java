@@ -142,4 +142,21 @@ public class ResourceDAO {
             }
         }
     }
+
+    public void deleteResource(int id){
+        String sql = "DELETE FROM resources WHERE id=?";
+
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+
+            statement.executeUpdate();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
 }

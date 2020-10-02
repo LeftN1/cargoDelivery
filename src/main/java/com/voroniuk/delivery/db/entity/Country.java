@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Country {
     private int id;
+    private int nameResourceId;
     private Map<Locale, String> name;
 
     private List<Region> regions;
@@ -52,5 +53,13 @@ public class Country {
 
     public void addRegion(Region region){
         regions.add(region);
+    }
+
+    public int getNameResourceId() {
+        return nameResourceId;
+    }
+
+    public void setNameResourceId(int nameResourceId) {
+        this.nameResourceId = nameResourceId;
     }
 }

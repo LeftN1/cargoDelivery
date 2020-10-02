@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <country en="Ukraine" ru="Украина" uk="Україна">
-    <region ru="Автономная Республика Крым">
+    <region en="Autonomous Republic of Crimea" ru="Автономная Республика Крым">
         <city lat="44.4197222" lon="34.0430556" en="Alupka" ru="Алупка" uk="Алупка"/>
         <city lat="44.6637211" lon="34.405013" en = "Alushta" ru="Алушта" uk="Алушта"/>
-        <city lat="46.1072222" lon="33.6933333" ru="Армянск" />
-        <city lat="44.7527778" lon="33.8608333" ru="Бахчисарай" />
+        <city lat="46.1072222" lon="33.6933333" en = "Armiansk" ru="Армянск" uk="Армянськ"/>
+        <city lat="44.7527778" lon="33.8608333" ru="Бахчисарай" uk="Бахчисарай" />
         <city lat="45.0544444" lon="34.6022222" ru="Белогорск" />
         <city lat="45.7086111" lon="34.3933333" ru="Джанкой" />
         <city lat="45.2036111" lon="33.3613889" ru="Евпатория" />

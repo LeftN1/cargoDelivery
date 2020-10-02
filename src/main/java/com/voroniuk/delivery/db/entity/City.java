@@ -5,12 +5,13 @@ import java.util.*;
 public class City {
     private int id;
     private Region region;
-    private Map<Locale, String> name;
+    private int nameResourceId;
+    private Map<Locale, String> names;
     private double longitude;
     private double latitude;
 
     public City() {
-        name= new HashMap<>();
+        names = new HashMap<>();
     }
 
     public int getId() {
@@ -30,31 +31,31 @@ public class City {
     }
 
     public String getName(Locale locale) {
-        if(name.isEmpty()){
+        if (names.isEmpty()) {
             return "Unknown";
         }
 
-        if(!name.containsKey(locale)){
+        if (!names.containsKey(locale)) {
             locale = Locale.getDefault();
         }
 
-        if(!name.containsKey(Locale.getDefault())){
-            locale = name.keySet().iterator().next();
+        if (!names.containsKey(Locale.getDefault())) {
+            locale = names.keySet().iterator().next();
         }
 
-        return name.get(locale);
+        return names.get(locale);
     }
 
     public Map<Locale, String> getNames() {
-        return name;
+        return names;
     }
 
-    public void setName(Map<Locale, String> name) {
-        this.name = name;
+    public void setNames(Map<Locale, String> names) {
+        this.names = names;
     }
 
-    public void addName(Locale locale, String s){
-        name.put(locale, s);
+    public void addName(Locale locale, String s) {
+        names.put(locale, s);
     }
 
     public double getLongitude() {
@@ -73,6 +74,18 @@ public class City {
         this.latitude = latitude;
     }
 
+    public int getNameResourceId() {
+        return nameResourceId;
+    }
+
+    public void setNameResourceId(int nameResourceId) {
+        this.nameResourceId = nameResourceId;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" + getName(Locale.getDefault()) + "}";
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -80,12 +93,12 @@ public class City {
         if (!(o instanceof City)) return false;
         City city = (City) o;
         return region.equals(city.region) &&
-                name.equals(city.name);
+                names.equals(city.names);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(region, name);
+        return Objects.hash(region, names);
     }
 
 }
