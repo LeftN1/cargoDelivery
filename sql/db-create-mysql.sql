@@ -14,7 +14,9 @@ DROP TABLE IF EXISTS locales CASCADE;
 CREATE TABLE locales
 (
     id          INT PRIMARY KEY AUTO_INCREMENT,
-    locale_name VARCHAR(30)
+    lang VARCHAR(2),
+    country VARCHAR(2),
+    UNIQUE (lang, country)
 );
 
 CREATE TABLE resources
@@ -110,7 +112,7 @@ CREATE TABLE deliveries
 );
 
 CREATE TABLE delivery_status
-(
+(	
     delivery_id      INT,
     status_id        INT,
     date_time        TIMESTAMP,
@@ -118,12 +120,15 @@ CREATE TABLE delivery_status
     FOREIGN KEY (delivery_id) REFERENCES deliveries (id) ON DELETE CASCADE
 );
 
-insert into locales (locale_name)
-values ('en_EN');
-insert into locales (locale_name)
-values ('ru_RU');
-insert into locales (locale_name)
-values ('uk_UA');
+insert into locales (lang, country)
+values ('en','US');
+
+insert into locales (lang, country)
+values ('ru','RU');
+
+insert into locales (lang, country)
+values ('uk','UA');
+
 
 INSERT INTO roles (role_name)
 VALUES ('USER'),
