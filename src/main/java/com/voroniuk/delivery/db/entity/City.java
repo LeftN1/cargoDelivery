@@ -1,32 +1,16 @@
 package com.voroniuk.delivery.db.entity;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class City {
     private int id;
     private Region region;
-    private String name;
+    private Map<Locale, String> name;
     private double longitude;
     private double latitude;
-    private List<Destination> destinations;
 
     public City() {
-    }
-
-    public City(Region region, String cityName, double longitude, double latitude) {
-        this.region = region;
-        this.name = cityName;
-        this.longitude = longitude;
-        this.latitude = latitude;
-    }
-
-    public City(int id, Region region, String name, double longitude, double latitude) {
-        this.id = id;
-        this.region = region;
-        this.name = name;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        name= new HashMap<>();
     }
 
     public int getId() {
@@ -45,12 +29,32 @@ public class City {
         this.region = region;
     }
 
-    public String getName() {
+    public String getName(Locale locale) {
+        if(name.isEmpty()){
+            return "Unknown";
+        }
+
+        if(!name.containsKey(locale)){
+            locale = Locale.getDefault();
+        }
+
+        if(!name.containsKey(Locale.getDefault())){
+            locale = name.keySet().iterator().next();
+        }
+
+        return name.get(locale);
+    }
+
+    public Map<Locale, String> getNames() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(Map<Locale, String> name) {
         this.name = name;
+    }
+
+    public void addName(Locale locale, String s){
+        name.put(locale, s);
     }
 
     public double getLongitude() {
@@ -69,12 +73,6 @@ public class City {
         this.latitude = latitude;
     }
 
-    @Override
-    public String toString() {
-        return "City{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -89,4 +87,5 @@ public class City {
     public int hashCode() {
         return Objects.hash(region, name);
     }
+
 }

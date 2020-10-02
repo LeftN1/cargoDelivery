@@ -1,19 +1,15 @@
 package com.voroniuk.delivery.db.entity;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Country {
     private int id;
-    private String name;
+    private Map<Locale, String> name;
 
-    private List<Region> regions = new LinkedList<>();
-
+    private List<Region> regions;
     public Country(){
-    }
-
-    public Country(String name) {
-        this.name = name;
+        name = new HashMap<>();
+        regions = new LinkedList<>();
     }
 
     public int getId() {
@@ -24,12 +20,26 @@ public class Country {
         this.id = id;
     }
 
-    public String getName() {
+
+    public void setName(Map<Locale, String> name) {
+        this.name = name;
+    }
+
+    public String getName(Locale locale) {
+
+        if(!name.containsKey(locale)){
+            locale = Locale.getDefault();
+        }
+
+        return name.get(locale);
+    }
+
+    public Map<Locale, String> getNames() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void addName(Locale locale, String s){
+        name.put(locale, s);
     }
 
     public List<Region> getRegions() {

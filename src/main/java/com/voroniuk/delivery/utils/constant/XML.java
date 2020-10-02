@@ -8,7 +8,9 @@ public enum XML {
 	CITY("city"),
 
 	//attribute name
-	NAME("name"),
+	EN("en"),
+	RU("ru"),
+	UK("uk"),
 	LAT("lat"),
 	LON("lon");
 

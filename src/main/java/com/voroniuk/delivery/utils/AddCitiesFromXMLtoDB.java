@@ -1,7 +1,6 @@
 package com.voroniuk.delivery.utils;
 
 import com.voroniuk.delivery.db.dao.CityDAO;
-import com.voroniuk.delivery.db.dao.DBManager;
 import com.voroniuk.delivery.db.entity.Country;
 import org.xml.sax.SAXException;
 

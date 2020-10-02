@@ -3,23 +3,36 @@ package com.voroniuk.delivery.db.dao;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Country;
 import com.voroniuk.delivery.db.entity.Region;
-import com.voroniuk.delivery.web.MainController;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.NoSuchElementException;
 
 public class CityDAO {
 
     private static final Logger LOG = Logger.getLogger(CityDAO.class);
 
-    public void addCountry(Country country) {
-        String sql = "INSERT INTO countries (country_name) VALUES (?)";
-        try (Connection connection = DBManager.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+    private ResourceDAO resourceDAO;
 
-            statement.setString(1, country.getName());
+    public CityDAO() {
+        this.resourceDAO = resourceDAO = new ResourceDAO();
+    }
+
+    public void addCountry(Country country) {
+
+        String sql = "INSERT INTO countries (name_resource_id) VALUE (?)";
+        int resId;
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
+        ) {
+
+            resId = resourceDAO.addResource();
+            statement.setInt(1, resId);
+
             statement.executeUpdate();
 
             try (ResultSet resultSet = statement.getGeneratedKeys()) {
@@ -28,145 +41,229 @@ public class CityDAO {
                 }
             }
 
-            if (country.getRegions().size() > 0) {
-                addRegions(country.getRegions());
+            for (Locale locale : country.getNames().keySet()) {
+                resourceDAO.addTranslation(resId, locale, country.getName(locale));
             }
 
-            LOG.info("Country has been added");
-        } catch (SQLException e) {
-            LOG.warn(e);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
+        LOG.info("Country " + country.getName(Locale.getDefault()) + " added");
 
+        addRegions(country.getRegions());
 
     }
-
 
     public void addRegion(Region region) {
-        List<Region> regions = new LinkedList<>();
-        regions.add(region);
-        addRegions(regions);
-    }
 
-
-    public void addRegions(List<Region> regions) {
-        String sql = "INSERT INTO regions (region_name, country) VALUES (?,?)";
+        String sql = "INSERT INTO regions (name_resource_id, country) VALUE (?, ?)";
+        int resId;
 
         try (Connection connection = DBManager.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
-            connection.setAutoCommit(false);
+             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
+        ) {
 
-            for (Region region : regions) {
-                statement.setString(1, region.getName());
-                statement.setInt(2, region.getCountry().getId());
-                statement.executeUpdate();
-                connection.commit();
-                try (ResultSet resultSet = statement.getGeneratedKeys()) {
-                    if (resultSet.next()) {
-                        region.setId(resultSet.getInt(1));
-                    }
-                }
-                if (region.getCities().size() > 0) {
-                    addCities(region.getCities());
+            resId = resourceDAO.addResource();
+            statement.setInt(1, resId);
+            statement.setInt(2, region.getCountry().getId());
+
+            statement.executeUpdate();
+
+            try (ResultSet resultSet = statement.getGeneratedKeys()) {
+                if (resultSet.next()) {
+                    region.setId(resultSet.getInt(1));
                 }
             }
 
+            for (Locale locale : region.getNames().keySet()) {
+                resourceDAO.addTranslation(resId, locale, region.getName(locale));
+            }
 
-        } catch (SQLException e) {
-            LOG.warn(e);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        LOG.info("Region " + region.getName(Locale.getDefault()) + " added");
+
+        addCities(region.getCities());
+    }
+
+    private void addRegions(List<Region> regionList) {
+        for (Region region : regionList) {
+            addRegion(region);
         }
     }
 
 
     public void addCity(City city) {
-        List<City> cities = new LinkedList<>();
-        cities.add(city);
-        addCities(cities);
-    }
 
+        for (Locale locale : city.getNames().keySet()) {
+            City tryFind = findCityByName(city.getName(locale));
+            if (tryFind != null && tryFind.getRegion().equals(city.getRegion())) {
+                throw new IllegalArgumentException("City "+city.getName(locale) + " already exists");
+            }
+        }
 
-    public void addCities(List<City> cities) {
-        String sql = "INSERT INTO cities (region, city_name, longitude, latitude) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO cities (region, name_resource_id, longitude, latitude) VALUE (?, ?, ?, ?)";
+        int resId;
 
         try (Connection connection = DBManager.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
-            connection.setAutoCommit(false);
+             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
+        ) {
 
-            for (City city : cities) {
-                statement.setInt(1, city.getRegion().getId());
-                statement.setString(2, city.getName());
-                statement.setDouble(3, city.getLongitude());
-                statement.setDouble(4, city.getLatitude());
-                statement.executeUpdate();
-                connection.commit();
-                try (ResultSet resultSet = statement.getGeneratedKeys()) {
-                    if (resultSet.next()) {
-                        city.setId(resultSet.getInt(1));
-                        System.out.println(city.getId());
-                    }
+            resId = resourceDAO.addResource();
+            statement.setInt(1, city.getRegion().getId());
+            statement.setInt(2, resId);
+            statement.setDouble(3, city.getLongitude());
+            statement.setDouble(4, city.getLatitude());
+            statement.executeUpdate();
+
+            try (ResultSet resultSet = statement.getGeneratedKeys()) {
+                if (resultSet.next()) {
+                    city.setId(resultSet.getInt(1));
                 }
             }
 
-        } catch (SQLException e) {
-            LOG.warn(e);
-        }
-    }
-
-
-    public List<City> findAllCities() {
-        List<City> res = new LinkedList<>();
-        String sql = "select city_id, region_name, city_name, longitude, latitude\n" +
-                "from cities\n" +
-                "join regions\n" +
-                "on region = region_id\n" +
-                "order by city_id";
-        try (Connection connection = DBManager.getInstance().getConnection();
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(sql)) {
-
-            while (resultSet.next()) {
-                int id = resultSet.getInt(1);
-                Region region = new Region(resultSet.getString(2));
-                String cityName = resultSet.getString(3);
-                double longitude = resultSet.getDouble(4);
-                double latitude = resultSet.getDouble(5);
-                res.add(new City(id, region, cityName, longitude, latitude));
+            for (Locale locale : city.getNames().keySet()) {
+                resourceDAO.addTranslation(resId, locale, city.getNames().get(locale));
             }
-        } catch (SQLException e) {
-            LOG.warn(e);
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
-        return res;
     }
 
+    public void addCities(List<City> cityList) {
+        for (City city : cityList) {
+            addCity(city);
+        }
+    }
 
-    public City getCity(String name) {
-        String sql = "select city_id, region_name, city_name, longitude, latitude\n" +
-                "from cities\n" +
-                "join regions\n" +
-                "on region = region_id\n" +
-                "where city_name= ?";
+    public City findCityByName(String name) {
+
+        int resourceId = resourceDAO.getResourceIdByTranslation(name);
+
+        if (resourceId < 0) {
+            return null;
+        }
+
+        String sql = "SELECT id, region, longitude, latitude FROM cities WHERE name_resource_id = ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
-            statement.setString(1, name);
+
+            statement.setInt(1, resourceId);
 
             statement.executeQuery();
 
             try (ResultSet resultSet = statement.getResultSet()) {
-
                 if (resultSet.next()) {
                     int id = resultSet.getInt(1);
-                    Region region = new Region(resultSet.getString(2));
-                    String cityName = resultSet.getString(3);
-                    double longitude = resultSet.getDouble(4);
-                    double latitude = resultSet.getDouble(5);
-                    return new City(id, region, cityName, longitude, latitude);
-                } else {
-                    LOG.info("Can't find city " + name);
+                    Region region = getRegionById(resultSet.getInt(2));
+                    double longitude = resultSet.getDouble(3);
+                    double latitude = resultSet.getDouble(4);
+                    Map<Locale, String> names = resourceDAO.getTranslations(resourceId);
+                    City city = new City();
+                    city.setId(id);
+                    city.setRegion(region);
+                    city.setLongitude(longitude);
+                    city.setLatitude(latitude);
+                    city.setName(names);
+                    return city;
                 }
             }
-        } catch (SQLException e) {
-            LOG.warn(e.getMessage());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+    public City getCityById(int id) {
+        String sql = "SELECT region, name_resource_id, longitude, latitude FROM cities WHERE id = ?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+
+            statement.executeQuery();
+
+            try (ResultSet resultSet = statement.getResultSet()) {
+                if (resultSet.next()) {
+
+                    Region region = getRegionById(resultSet.getInt(1));
+                    Map<Locale, String> names = resourceDAO.getTranslations(resultSet.getInt(2));
+                    double longitude = resultSet.getDouble(3);
+                    double latitude = resultSet.getDouble(4);
+
+                    City city = new City();
+                    city.setRegion(region);
+                    city.setLongitude(longitude);
+                    city.setLatitude(latitude);
+                    city.setName(names);
+                    return city;
+                }
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+
+    }
+
+    public Region getRegionById(int id) {
+
+        String sql = "SELECT name_resource_id, country FROM regions WHERE id = ?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+
+            statement.setInt(1, id);
+
+            statement.executeQuery();
+
+            try (ResultSet resultSet = statement.getResultSet()) {
+                if (resultSet.next()) {
+
+                    Map<Locale, String> names = resourceDAO.getTranslations(resultSet.getInt(1));
+                    Country country = getCountryById(resultSet.getInt(2));
+
+                    Region region = new Region();
+                    region.setName(names);
+                    region.setCountry(country);
+
+                    return region;
+                }
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public Country getCountryById(int id) {
+        String sql = "SELECT name_resource_id FROM countries WHERE id = ?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+
+            statement.executeQuery();
+
+            try (ResultSet resultSet = statement.getResultSet()) {
+                if (resultSet.next()) {
+
+                    Map<Locale, String> names = resourceDAO.getTranslations(resultSet.getInt(1));
+                    Country country = new Country();
+                    country.setName(names);
+                    return country;
+                }
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         return null;
     }

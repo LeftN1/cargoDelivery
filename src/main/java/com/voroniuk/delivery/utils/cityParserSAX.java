@@ -1,6 +1,7 @@
 package com.voroniuk.delivery.utils;
 
 
+import com.voroniuk.delivery.db.entity.SiteLocales;
 import com.voroniuk.delivery.utils.constant.Constants;
 import com.voroniuk.delivery.utils.constant.XML;
 import com.voroniuk.delivery.db.entity.City;
@@ -14,6 +15,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
+import java.util.Locale;
 
 
 public class cityParserSAX extends DefaultHandler {
@@ -87,7 +89,15 @@ public class cityParserSAX extends DefaultHandler {
 
         if (XML.COUNTRY.equalsTo(currentElement)) {
             country = new Country();
-            country.setName(attributes.getValue(uri, XML.NAME.value()));
+            if (attributes.getValue(uri,XML.EN.value())!=null) {
+                country.addName(SiteLocales.EN.getLocale(), attributes.getValue(uri, XML.EN.value()));
+            }
+            if (attributes.getValue(uri,XML.RU.value())!=null) {
+                country.addName(SiteLocales.RU.getLocale(), attributes.getValue(uri, XML.RU.value()));
+            }
+            if (attributes.getValue(uri,XML.UK.value())!=null) {
+                country.addName(SiteLocales.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
+            }
             return;
         }
 
@@ -95,7 +105,15 @@ public class cityParserSAX extends DefaultHandler {
             region = new Region();
             region.setId(0);
             region.setCountry(getCountry());
-            region.setName(attributes.getValue(uri, XML.NAME.value()));
+            if (attributes.getValue(uri,XML.EN.value())!=null) {
+                region.addName(SiteLocales.EN.getLocale(), attributes.getValue(uri, XML.EN.value()));
+            }
+            if (attributes.getValue(uri,XML.RU.value())!=null) {
+                region.addName(SiteLocales.RU.getLocale(), attributes.getValue(uri, XML.RU.value()));
+            }
+            if (attributes.getValue(uri,XML.UK.value())!=null) {
+                region.addName(SiteLocales.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
+            }
             return;
         }
 
@@ -105,7 +123,16 @@ public class cityParserSAX extends DefaultHandler {
             city.setRegion(region);
             city.setLatitude(Double.parseDouble(attributes.getValue(uri, XML.LAT.value())));
 			city.setLongitude(Double.parseDouble(attributes.getValue(uri, XML.LON.value())));
-			city.setName(attributes.getValue(uri, XML.NAME.value()));
+
+			if (attributes.getValue(uri,XML.EN.value())!=null) {
+                city.addName(SiteLocales.EN.getLocale(), attributes.getValue(uri, XML.EN.value()));
+            }
+            if (attributes.getValue(uri,XML.RU.value())!=null) {
+                city.addName(SiteLocales.RU.getLocale(), attributes.getValue(uri, XML.RU.value()));
+            }
+            if (attributes.getValue(uri,XML.UK.value())!=null) {
+                city.addName(SiteLocales.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
+            }
 			return;
         }
 

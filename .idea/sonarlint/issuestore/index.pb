@@ -15,9 +15,13 @@ s
 Csrc/main/java/com/voroniuk/delivery/utils/AddCitiesFromXMLtoDB.java,c\6\c63dfdf9d93a5b1e4607d17c1a45d203d34c6b3f
 l
 <src/main/java/com/voroniuk/delivery/utils/cityParserSAX.java,4\7\4703c299c5c5c4246bc6fef84f5254c2d0dab254
-J
-sql/db-create-postgres.sql,2\d\2de25c237adf5f41a7455458c136b487fcce53e1
 ]
 -src/main/java/com/voroniuk/delivery/Path.java,6\2\62ff55904075fa93afdcd7506e85981d271c78e7
 k
 ;src/main/java/com/voroniuk/delivery/web/MainController.java,c\7\c78121892ea5081724f30611b37cab90da2c5bdb
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+B
+sql/test-query.sql,e\c\ec9b320ae4bd2f64f8df9a81af4728615a128ac0
+g
+7src/main/java/com/voroniuk/delivery/db/dao/CityDAO.java,d\c\dcc95ae7f083c5d8283f747f1af5284135a9ab4c
