@@ -21,7 +21,7 @@ CREATE TABLE locales
 
 CREATE TABLE resources
 (
-    id INT PRIMARY KEY AUTO_INCREMENT
+    id INT PRIMARY KEY AUTO_INCREMENT    
 );
 
 CREATE TABLE translations
@@ -31,7 +31,7 @@ CREATE TABLE translations
     translation VARCHAR(30) NOT NULL,
     UNIQUE (resource_id, locale_id),
     FOREIGN KEY (locale_id) REFERENCES locales (id) ON DELETE CASCADE,
-    FOREIGN KEY (resource_id) REFERENCES resources (id) ON DELETE CASCADE
+    FOREIGN KEY (resource_id) REFERENCES resources (id) ON DELETE CASCADE 
 );
 
 CREATE TABLE roles

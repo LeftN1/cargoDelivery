@@ -11,6 +11,11 @@ public class LoginCommand extends Command{
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        String login = req.getParameter("login");
+        String password = req.getParameter("password");
+
+
+
         String forward= Path.PAGE__MAIN;
 
 

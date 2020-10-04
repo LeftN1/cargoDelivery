@@ -359,7 +359,7 @@ public class CityDAO {
                     Region tempRegion = new Region();
                     tempRegion.setId(regionId);
                     city = new City();
-
+                    city.setId(id);
                     city.setRegion(tempRegion);
                     city.setLongitude(longitude);
                     city.setLatitude(latitude);

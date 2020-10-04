@@ -1,8 +1,7 @@
-<%@ page import="com.voroniuk.delivery.db.entity.City" %>
-<%@ page import="com.voroniuk.delivery.db.dao.CityDAO" %>
-<%@ page import="java.util.Locale" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!doctype html>
 <html>
 
@@ -12,9 +11,6 @@
 
 <body>
 <h2>Cargo Delivery Service</h2>
-<%
-    CityDAO cityDAO = new CityDAO();
-%>
 
 <c:choose>
 
@@ -37,48 +33,27 @@
     </c:otherwise>
 </c:choose>
 
+<form name="langForm" action="/controller" method="post">
+    <input type="hidden" name="command" value="changeLocale">
+    <select name="choosenLang">
+        <c:forEach var="item" items="${applicationScope.locales}">
+            <option>${item.getName()}</option>
+        </c:forEach>
+        </option>
+    </select>
+    <input type="submit" value="change">
+</form>
+
+<c:out value="lang : ${sessionScope.language}"/>
+<fmt:setLocale value="${sessionScope.language}" />
+
 <hr>
 Session Id: ${pageContext.session.id}
 <br>
 Role: ${pageContext.session.getAttribute("role")}
-<div>
-    <form action="main.jsp" method="post" accept-charset="UTF-8">
-        <p>
-            Choose your city:
-            <select name="current">
-                <%
-                    City currentCity = cityDAO.findAllCities().get(0);
 
-                    String current = request.getParameter("current") != null ? request.getParameter("current") : currentCity.getName(Locale.US);
 
-                    for (City city : cityDAO.findAllCities()) {
 
-                        out.println("<option " + (current.equals(city.getName(Locale.US)) ? "selected=true" : " ") + ">");
-                        out.println(city.getName(Locale.US));
-                        out.println("</option>");
-                    }
-                %>
-            </select>
-        </p>
-        <p><input type="submit" value="choose"></p>
-    </form>
-</div>
-<div>
-    <%
-        currentCity = cityDAO.findCityByName(current);
-        out.println("Distance from " + currentCity.getName(Locale.US) + " to :<br>");
-        out.println("<table>");
-
-        for (City city : cityDAO.findAllCities()) {
-            String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
-            out.println("<tr>");
-            out.println("<td>" + city.getName(Locale.US) + "</td>");
-            out.println("<td>" + dist + "</td>");
-            out.println("<tr>");
-        }
-        out.println("</table>");
-    %>
-</div>
 
 </body>
 </html>

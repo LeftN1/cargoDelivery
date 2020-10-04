@@ -14,9 +14,11 @@ public class CommandContainer {
 
     static {
         commands.put("noCommand", new NoCommand());
+        commands.put("main", new MainCommand());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
         commands.put("register", new RegisterCommand());
+        commands.put("changeLocale", new ChangeLocaleCommand());
 
         LOG.debug("Command container was successfully initialized");
         LOG.trace("Number of commands --> " + commands.size());
@@ -25,7 +27,12 @@ public class CommandContainer {
 
 
     public static Command get(String commandName){
-        if (commandName == null || !commands.containsKey(commandName)) {
+
+        if(commandName == null){
+            commandName="main";
+        }
+
+        if (!commands.containsKey(commandName)) {
             LOG.trace("Command not found, name --> " + commandName);
             return commands.get("noCommand");
         }

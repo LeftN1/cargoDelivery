@@ -1,6 +1,7 @@
 package com.voroniuk.delivery.web;
 
 
+import com.voroniuk.delivery.db.entity.SiteLocales;
 import com.voroniuk.delivery.web.command.Command;
 import com.voroniuk.delivery.web.command.CommandContainer;
 import org.apache.log4j.Logger;
@@ -13,10 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/controller")
+
+@WebServlet("/")
 public class MainController extends HttpServlet {
 
     private static final Logger LOG = Logger.getLogger(MainController.class);
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        getServletContext().setAttribute("locales", SiteLocales.values());
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

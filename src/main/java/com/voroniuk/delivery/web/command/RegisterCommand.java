@@ -4,7 +4,7 @@ import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.UserDAO;
 import com.voroniuk.delivery.db.entity.Role;
 import com.voroniuk.delivery.db.entity.User;
-import com.voroniuk.delivery.web.MainController;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -49,10 +49,18 @@ public class RegisterCommand extends Command {
 
         UserDAO userDAO = new UserDAO();
 
+        if(userDAO.findUserByLogin(login)!=null){
+            msg = "User with login '" + login + "' already exists";
+            req.setAttribute("msg", msg);
+            return forward;
+        }
+
+
+
         User newUser = new User();
 
         newUser.setLogin(login);
-        newUser.setPassword(password);
+        newUser.setPassword(DigestUtils.md5Hex(password));
         newUser.setRole(Role.USER);
 
         userDAO.addUser(newUser);

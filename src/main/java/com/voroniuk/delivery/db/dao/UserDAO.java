@@ -1,7 +1,5 @@
 package com.voroniuk.delivery.db.dao;
 
-import com.voroniuk.delivery.db.entity.City;
-import com.voroniuk.delivery.db.entity.Region;
 import com.voroniuk.delivery.db.entity.Role;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.log4j.Logger;
@@ -11,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class UserDAO {
-    private static final Logger LOG = Logger.getLogger(CityDAO.class);
+    private static final Logger LOG = Logger.getLogger(UserDAO.class);
 
     public void addUser(User user) {
         String sql = "INSERT INTO users (login, role, pass) VALUES (?,?,?)";
@@ -47,7 +45,7 @@ public class UserDAO {
 
                 if (resultSet.next()) {
                     for (Role role : Role.values()) {
-                        if (role.name().equals(resultSet.getString(2))){
+                        if (role.name().equals(resultSet.getString(2))) {
                             return role;
                         }
                     }
@@ -86,8 +84,10 @@ public class UserDAO {
         return -1;
     }
 
-    public User getUser(String login) {
-        String sql = "SELECT * FROM users WHERE login=?";
+    public User findUserByLogin(String login) {
+        String sql =    "select users.id, pass, role_name from users " +
+                        "join roles on role=roles.id " +
+                        "where login=? LIMIT 1";
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
@@ -96,7 +96,15 @@ public class UserDAO {
             try (ResultSet resultSet = statement.getResultSet()) {
 
                 if (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+                    String password = resultSet.getString(2);
+                    Role role = Role.valueOf(resultSet.getString(3));
 
+                    User user = new User();
+                    user.setId(id);
+                    user.setLogin(login);
+                    user.setRole(role);
+                    return user;
                 } else {
                     LOG.info("Can't find user " + login);
                 }

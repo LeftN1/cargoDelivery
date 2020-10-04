@@ -1,12 +1,10 @@
 package com.voroniuk.delivery.db.entity;
 
+import java.util.Locale;
+
 public enum Role {
     USER,
     MANAGER,
     ADMIN;
-
-    public String value() {
-        return name();
-    }
 
 }
