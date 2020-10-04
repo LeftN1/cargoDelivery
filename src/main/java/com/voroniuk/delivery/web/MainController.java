@@ -1,7 +1,10 @@
 package com.voroniuk.delivery.web;
 
 
-import com.voroniuk.delivery.db.entity.SiteLocales;
+import com.voroniuk.delivery.db.dao.CityDAO;
+import com.voroniuk.delivery.db.entity.CargoType;
+import com.voroniuk.delivery.db.entity.DeliveryStatus;
+import com.voroniuk.delivery.db.entity.SiteLocale;
 import com.voroniuk.delivery.web.command.Command;
 import com.voroniuk.delivery.web.command.CommandContainer;
 import org.apache.log4j.Logger;
@@ -23,7 +26,14 @@ public class MainController extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        getServletContext().setAttribute("locales", SiteLocales.values());
+
+        CityDAO cityDAO = new CityDAO();
+
+        getServletContext().setAttribute("cities", cityDAO.findAllCities());
+
+        getServletContext().setAttribute("locales", SiteLocale.values());
+        getServletContext().setAttribute("cargoTypes", CargoType.values());
+        getServletContext().setAttribute("statuses", DeliveryStatus.values());
     }
 
     @Override

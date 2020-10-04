@@ -36,5 +36,16 @@ join translations on resource_id=resources.id;
 
 select distinct cities.id from cities;
 
+select * from users;
+
 select users.id, login, pass, role_name from users
 join roles on role=roles.id;
+
+SELECT * FROM cargo_types
+join translations on name_resource_id = resource_id;
+
+SELECT * FROM statuses
+join translations on name_resource_id = resource_id;
+
+insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost)
+values (1, 1, 'skdjfhsdfh', 1, 10, 10, 22.2);

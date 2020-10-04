@@ -55,15 +55,13 @@ public class RegisterCommand extends Command {
             return forward;
         }
 
-
-
         User newUser = new User();
 
         newUser.setLogin(login);
         newUser.setPassword(DigestUtils.md5Hex(password));
         newUser.setRole(Role.USER);
 
-        userDAO.addUser(newUser);
+        userDAO.saveUser(newUser);
 
 
         forward = Path.PAGE__MAIN;

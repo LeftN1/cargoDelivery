@@ -13,7 +13,7 @@ public class LogoutCommand extends Command {
 
         String forward = Path.PAGE__MAIN;
 
-        req.getSession().setAttribute("role", null);
+        req.getSession().setAttribute("user", null);
 
         return forward;
 

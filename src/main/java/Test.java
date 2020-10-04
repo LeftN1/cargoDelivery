@@ -1,7 +1,8 @@
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.UserDAO;
+import com.voroniuk.delivery.db.entity.CargoType;
 import com.voroniuk.delivery.db.entity.City;
-import com.voroniuk.delivery.db.entity.SiteLocales;
+import com.voroniuk.delivery.db.entity.SiteLocale;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -19,9 +20,9 @@ public class Test {
         System.out.println(cities);
 
 
-        System.out.println(cities.get(0).getName(SiteLocales.UA.getLocale()));
+        System.out.println(cities.get(0).getName(SiteLocale.UA.getLocale()));
 
-        System.out.println(SiteLocales.EN);
+        System.out.println(SiteLocale.EN);
 
         User user = userDAO.findUserByLogin("333");
         System.out.println(user.getRole().name());
@@ -31,6 +32,8 @@ public class Test {
         System.out.println(hash);
 
         System.out.println(hash.equals(DigestUtils.md5Hex("hello")));
+
+
 
     }
 }

@@ -28,7 +28,7 @@ CREATE TABLE translations
 (
     resource_id INT         NOT NULL,
     locale_id   INT         NOT NULL,
-    translation VARCHAR(30) NOT NULL,
+    translation VARCHAR(50) NOT NULL,
     UNIQUE (resource_id, locale_id),
     FOREIGN KEY (locale_id) REFERENCES locales (id) ON DELETE CASCADE,
     FOREIGN KEY (resource_id) REFERENCES resources (id) ON DELETE CASCADE 
@@ -43,9 +43,9 @@ CREATE TABLE roles
 CREATE TABLE users
 (
     id    INT PRIMARY KEY AUTO_INCREMENT,
-    login VARCHAR(20) UNIQUE NOT NULL,
+    login VARCHAR(50) UNIQUE NOT NULL,
     role  INT,
-    pass  VARCHAR(30),
+    pass  VARCHAR(50),
     FOREIGN KEY (role) REFERENCES roles (id) ON DELETE CASCADE
 );
 
@@ -100,12 +100,11 @@ CREATE TABLE deliveries
     id            INT PRIMARY KEY AUTO_INCREMENT,
     user_id       INT,
     city_id       INT,
-    adress        VARCHAR(20),
+    adress        VARCHAR(100),
     cargo_type    INT,
     weight        INT,
     volume        INT,
     cost          DOUBLE,
-    creation_date TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     FOREIGN KEY (city_id) REFERENCES cities (id) ON DELETE CASCADE,
     FOREIGN KEY (cargo_type) REFERENCES cargo_types (id) ON DELETE CASCADE
@@ -134,4 +133,71 @@ INSERT INTO roles (role_name)
 VALUES ('USER'),
        ('MANAGER'),
        ('ADMIN');
+
+INSERT INTO resources value (1);
+INSERT INTO translations VALUES(1, 1, 'parcel');
+INSERT INTO translations VALUES(1, 2, 'посылка');
+INSERT INTO translations VALUES(1, 3, 'посилка');
+INSERT INTO cargo_types VALUES (1, 1);
+
+INSERT INTO resources value (2);
+INSERT INTO translations VALUES(2, 1, 'documents');
+INSERT INTO translations VALUES(2, 2, 'документы');
+INSERT INTO translations VALUES(2, 3, 'документи');
+INSERT INTO cargo_types VALUES (2, 2);
+
+INSERT INTO resources value (3);
+INSERT INTO translations VALUES(3, 1, 'wheels');
+INSERT INTO translations VALUES(3, 2, 'шины');
+INSERT INTO translations VALUES(3, 3, 'шини');
+INSERT INTO cargo_types VALUES (3, 3);
+
+INSERT INTO resources value (4);
+INSERT INTO translations VALUES(4, 1, 'cargo');
+INSERT INTO translations VALUES(4, 2, 'грузы');
+INSERT INTO translations VALUES(4, 3, 'вантажі');
+INSERT INTO cargo_types VALUES (4, 4);
+
+INSERT INTO resources value (5);
+INSERT INTO translations VALUES(5, 1, 'pallets');
+INSERT INTO translations VALUES(5, 2, 'паллеты');
+INSERT INTO translations VALUES(5, 3, 'палети');
+INSERT INTO cargo_types VALUES (5, 5);
+
+INSERT INTO resources value (6);
+INSERT INTO translations VALUES(6, 1, 'new');
+INSERT INTO translations VALUES(6, 2, 'новая');
+INSERT INTO translations VALUES(6, 3, 'нова');
+INSERT INTO statuses VALUES (1, 6);
+
+INSERT INTO resources value (7);
+INSERT INTO translations VALUES(7, 1, 'processed');
+INSERT INTO translations VALUES(7, 2, 'обработано');
+INSERT INTO translations VALUES(7, 3, 'опрацьовано');
+INSERT INTO statuses VALUES (1, 7);
+
+INSERT INTO resources value (8);
+INSERT INTO translations VALUES(8, 1, 'paid');
+INSERT INTO translations VALUES(8, 2, 'оплачено');
+INSERT INTO translations VALUES(8, 3, 'оплачено');
+INSERT INTO statuses VALUES (1, 8);
+
+INSERT INTO resources value (9);
+INSERT INTO translations VALUES(9, 1, 'shipped');
+INSERT INTO translations VALUES(9, 2, 'отправлено');
+INSERT INTO translations VALUES(9, 3, 'відправлено');
+INSERT INTO statuses VALUES (1, 9);
+
+INSERT INTO resources value (10);
+INSERT INTO translations VALUES(10, 1, 'arrived');
+INSERT INTO translations VALUES(10, 2, 'прибыло');
+INSERT INTO translations VALUES(10, 3, 'прибуло');
+INSERT INTO statuses VALUES (1, 10);
+
+INSERT INTO resources value (11);
+INSERT INTO translations VALUES(11, 1, 'recieved');
+INSERT INTO translations VALUES(11, 2, 'получено');
+INSERT INTO translations VALUES(11, 3, 'отримано');
+INSERT INTO statuses VALUES (1, 11);
+
     

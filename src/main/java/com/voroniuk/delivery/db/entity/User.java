@@ -8,7 +8,7 @@ public class User implements Serializable {
     private String login;
     private Role role;
     private String password;
-    private List<Order> orderList;
+    private List<Delivery> orderList;
 
     public User() {
     }

@@ -11,7 +11,7 @@ import java.util.List;
 public class UserDAO {
     private static final Logger LOG = Logger.getLogger(UserDAO.class);
 
-    public void addUser(User user) {
+    public void saveUser(User user) {
         String sql = "INSERT INTO users (login, role, pass) VALUES (?,?,?)";
 
         try (Connection connection = DBManager.getInstance().getConnection();
@@ -103,6 +103,7 @@ public class UserDAO {
                     User user = new User();
                     user.setId(id);
                     user.setLogin(login);
+                    user.setPassword(password);
                     user.setRole(role);
                     return user;
                 } else {
