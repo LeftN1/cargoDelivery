@@ -21,7 +21,6 @@ public class MakeOrderCommand extends Command {
         CityDAO cityDAO = new CityDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-        String forward = Path.PAGE__USER_ACCOUNT;
 
         String adress = req.getParameter("adress");
         CargoType cType = CargoType.valueOf(req.getParameter("type"));
@@ -40,7 +39,7 @@ public class MakeOrderCommand extends Command {
             width = Integer.parseInt(req.getParameter("width"));
             height = Integer.parseInt(req.getParameter("height"));
         } catch (NumberFormatException e) {
-            return forward;
+            return CommandContainer.get("account").execute(req,resp);
         }
 
         City currentCity = cityDAO.findCityById(Integer.parseInt(req.getParameter("current")));
@@ -60,7 +59,7 @@ public class MakeOrderCommand extends Command {
 
             req.setAttribute("cost", cost);
 
-            return forward;
+            return CommandContainer.get("account").execute(req,resp);
         }
 
         Delivery delivery = new Delivery();
@@ -75,8 +74,7 @@ public class MakeOrderCommand extends Command {
 
         orderDAO.saveDelivery(delivery);
 
-
-        return forward;
+        return CommandContainer.get("account").execute(req,resp);
     }
 
 }

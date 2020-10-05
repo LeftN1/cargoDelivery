@@ -25,7 +25,7 @@ public class LoginCommand extends Command{
 
         if(user != null && user.getPassword().equals(passHash)){
             req.getSession().setAttribute("user", user);
-            forward= CommandContainer.get("account").execute(req,resp);
+            forward = CommandContainer.get("account").execute(req,resp);
         }else {
             req.setAttribute("msg", "login or password incorrect");
             forward = Path.PAGE__MAIN;

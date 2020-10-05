@@ -18,7 +18,7 @@ public enum  CargoType {
         return id;
     }
 
-    public CargoType getTypeById(int id){
+    public static CargoType getTypeById(int id){
         for (CargoType ct : CargoType.values()){
             if(ct.getId() == id){
                 return ct;

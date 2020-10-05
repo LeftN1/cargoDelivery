@@ -12,11 +12,9 @@
         <option value="${city.getId()}"}>${city.getName(locale)}</option>
     </c:forEach>
 </datalist>
-<h4>User: ${sessionScope.user.getLogin()}</h4>
-<h4>Session id: ${pageContext.session.id}</h4>
-<h4>Locale : ${sessionScope.locale.getLanguage()}</h4>
+<p>User: ${sessionScope.user.getLogin()}</p>
+<p>Locale : ${sessionScope.locale.getLanguage()}</p>
 <h3>Create new delivery:</h3>
-
 <form name="order" action="/controller" method="post">
     <input type="hidden" name="command" value="makeOrder">
     <table>
@@ -101,6 +99,35 @@
     </table>
     <input type="submit" name="order" value="make order">
     <input type="submit" name="calculate" value="calculate">
+
+    <hr>
+
+    <h4>Delivery list:</h4>
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Adress</th>
+            <th>Type</th>
+            <th>Weight</th>
+            <th>Volume</th>
+        </tr>
+
+        <c:forEach var="delivery" items="${deliveries}">
+            <tr>
+                <td>${delivery.getId()}</td>
+                <td>${delivery.getOrigin().getName(locale)}</td>
+                <td>${delivery.getDestination().getName(locale)}</td>
+                <td>${delivery.getAdress()}</td>
+                <td>${delivery.getType().name()}</td>
+                <td>${delivery.getWeight()}</td>
+                <td>${delivery.getVolume()}</td>
+            </tr>
+        </c:forEach>
+
+    </table>
 
 </form>
 
