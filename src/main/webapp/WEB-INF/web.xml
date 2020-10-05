@@ -10,18 +10,36 @@
         <param-value>resources</param-value>
     </context-param>
 
+    <!--============================================================
+	Encoding support filter
+    =============================================================-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.voroniuk.delivery.web.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/WEB-INF/jsp/*</url-pattern>
+        <servlet-name>main-controller</servlet-name>
+    </filter-mapping>
 
 
-<!--
+
     <servlet>
         <servlet-name>main-controller</servlet-name>
         <servlet-class>com.voroniuk.delivery.web.MainController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>main-controller</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/controller</url-pattern>
     </servlet-mapping>
 
+<!--
     <servlet>
         <servlet-name>jsp-servlet</servlet-name>
         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>

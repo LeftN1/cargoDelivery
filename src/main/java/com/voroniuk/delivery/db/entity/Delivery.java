@@ -3,6 +3,7 @@ package com.voroniuk.delivery.db.entity;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class Delivery implements Serializable {
     private int id;
@@ -11,10 +12,22 @@ public class Delivery implements Serializable {
     private City destination;
     private String adress;
     private CargoType type;
-    private List<DeliveryStatus> statusList;
+    private Map<DeliveryStatus, Date> statusMap;
     private int weight; // kg
     private int volume; //decimeter ^ 3
     private double cost;
+
+    public void addStatus(DeliveryStatus status, Date date){
+        statusMap.put(status, date);
+    }
+
+    public Map<DeliveryStatus, Date> getStatusMap() {
+        return statusMap;
+    }
+
+    public void setStatusMap(Map<DeliveryStatus, Date> statusMap) {
+        this.statusMap = statusMap;
+    }
 
     public int getId() {
         return id;
@@ -46,14 +59,6 @@ public class Delivery implements Serializable {
 
     public void setType(CargoType type) {
         this.type = type;
-    }
-
-    public List<DeliveryStatus> getStatusList() {
-        return statusList;
-    }
-
-    public void setStatusList(List<DeliveryStatus> statusList) {
-        this.statusList = statusList;
     }
 
     public int getWeight() {

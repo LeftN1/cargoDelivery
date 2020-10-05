@@ -53,7 +53,7 @@
             <td>
                 <select name="type">
                     <c:forEach var="type" items="${applicationScope.cargoTypes}">
-                        <option ${cType==type?" selected":""}>${type.getName(locale)}</option>
+                        <option ${cType==type?" selected":""} value="${type.getId()}">${type.getName(locale)}</option>
                     </c:forEach>
                 </select>
             </td>

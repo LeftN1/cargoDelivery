@@ -8,6 +8,7 @@ import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.User;
 import com.voroniuk.delivery.utils.Calculations;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -15,15 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class MakeOrderCommand extends Command {
+
+    private static final Logger LOG = Logger.getLogger(MakeOrderCommand.class);
+
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-
+        LOG.debug("MakeOrderCommand starts");
         CityDAO cityDAO = new CityDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-
         String adress = req.getParameter("adress");
-        CargoType cType = CargoType.valueOf(req.getParameter("type"));
+        CargoType cType = CargoType.getTypeById(Integer.parseInt(req.getParameter("type")));
         int destId = 0;
         int weight;
         int length;
@@ -49,6 +52,7 @@ public class MakeOrderCommand extends Command {
         cost = Calculations.getCost(currentCity, destination, weight, volume);
 
         if (req.getParameter("calculate") != null) {
+            LOG.debug("do cost calculation");
             req.setAttribute("destination", destination);
             req.setAttribute("adress", adress);
             req.setAttribute("cType", cType);
@@ -59,8 +63,12 @@ public class MakeOrderCommand extends Command {
 
             req.setAttribute("cost", cost);
 
+            LOG.debug("cost calculation finished.");
+            LOG.debug("MakeOrderCommand finished");
             return CommandContainer.get("account").execute(req,resp);
         }
+
+        LOG.debug("Make delivery order");
 
         Delivery delivery = new Delivery();
         delivery.setUser((User) req.getSession().getAttribute("user"));
@@ -72,7 +80,11 @@ public class MakeOrderCommand extends Command {
         delivery.setVolume(volume);
         delivery.setCost(cost);
 
+
         orderDAO.saveDelivery(delivery);
+
+        LOG.debug("Delivery order saved");
+        LOG.debug("MakeOrderCommand finished");
 
         return CommandContainer.get("account").execute(req,resp);
     }
