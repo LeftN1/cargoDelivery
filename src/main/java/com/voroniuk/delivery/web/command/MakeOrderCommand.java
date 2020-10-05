@@ -25,7 +25,7 @@ public class MakeOrderCommand extends Command {
 
         String adress = req.getParameter("adress");
         CargoType cType = CargoType.getTypeById(Integer.parseInt(req.getParameter("type")));
-        int destId = 0;
+
         int weight;
         int length;
         int width;
@@ -34,7 +34,6 @@ public class MakeOrderCommand extends Command {
         int cost;
 
         try {
-            destId = Integer.parseInt(req.getParameter("cityInp"));
             weight = Integer.parseInt(req.getParameter("weight"));
             length = Integer.parseInt(req.getParameter("length"));
             width = Integer.parseInt(req.getParameter("width"));
@@ -43,14 +42,18 @@ public class MakeOrderCommand extends Command {
             return CommandContainer.get("account").execute(req,resp);
         }
 
-        City currentCity = cityDAO.findCityById(Integer.parseInt(req.getParameter("current")));
-        City destination = cityDAO.findCityById(destId);
+        //Тут приходится искать по имени, потому что не получается неявно передать cityId при помощи <input> + <datalist>
+        City currentCity = cityDAO.findCityByName(req.getParameter("current"));
+
+
+        City destination = cityDAO.findCityByName(req.getParameter("cityInp"));
 
         volume = Calculations.getVolume(length, width, height);
         cost = Calculations.getCost(currentCity, destination, weight, volume);
 
         if (req.getParameter("calculate") != null) {
             LOG.debug("do cost calculation");
+            req.setAttribute("lastCurrent", currentCity);
             req.setAttribute("destination", destination);
             req.setAttribute("adress", adress);
             req.setAttribute("cType", cType);

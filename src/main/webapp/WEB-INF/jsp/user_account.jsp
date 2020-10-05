@@ -9,11 +9,7 @@
 <fmt:setLocale value = "${locale.getLanguage()}"/>
 
 <a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
-<datalist id="cityList">
-    <c:forEach var="city" items="${applicationScope.cities}">
-        <option value="${city.getId()}"}>${city.getName(locale)}</option>
-    </c:forEach>
-</datalist>
+
 <p>User: ${sessionScope.user.getLogin()}</p>
 <p>Locale : ${sessionScope.locale.getLanguage()}</p>
 <h3>Create new delivery:</h3>
@@ -25,11 +21,14 @@
                 Current city:
             </td>
             <td>
+                <input type="text" size="50" list="cityList" name="current" value="${lastCurrent==null?sessionScope.currentCity.getName(locale):lastCurrent.getName(locale)}">
+                <!--
                 <select name="current">
                     <c:forEach var="city" items="${applicationScope.cities}">
                         <option value="${city.getId()}" ${city.getId()==sessionScope.currentCity.getId()?" selected":""}>${city.getName(locale)}</option>
                     </c:forEach>
                 </select>
+                -->
             </td>
         </tr>
         <tr>
@@ -37,7 +36,12 @@
                 Destination city:
             </td>
             <td>
-                <input type="text" size="50" list="cityList" name="cityInp" value="${destination.getId()}">
+                <input type="text" size="50" list="cityList" name="cityInp" value="${destination.getName(locale)}">
+                <datalist id="cityList">
+                    <c:forEach var="city" items="${applicationScope.cities}">
+                        <option>${city.getName(locale)}</option>
+                    </c:forEach>
+                </datalist>
             </td>
         </tr>
         <tr>
@@ -115,6 +119,7 @@
             <th>Type</th>
             <th>Weight</th>
             <th>Volume</th>
+            <th>Cost</th>
             <th>Status</th>
         </tr>
 
@@ -127,6 +132,7 @@
                 <td>${delivery.getType().getName(locale)}</td>
                 <td>${delivery.getWeight()}</td>
                 <td>${delivery.getVolume()}</td>
+                <td>${delivery.getCost()}</td>
                 <td>${delivery.getLastStatus().getName(locale)}</td>
             </tr>
         </c:forEach>

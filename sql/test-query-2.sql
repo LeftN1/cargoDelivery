@@ -47,6 +47,25 @@ join translations on name_resource_id = resource_id;
 SELECT * FROM statuses
 join translations on name_resource_id = resource_id;
 
+SELECT * FROM statuses
+join translations on name_resource_id = resource_id
+where name_resource_id=7;
+
+SELECT statuses.id, translation, lang, country FROM statuses
+join translations on name_resource_id = resource_id
+join locales on locales.id=locale_id
+order by statuses.id;
+
+SELECT cargo_types.id, translation, lang, country FROM cargo_types
+join translations on name_resource_id = resource_id
+join locales on locales.id=locale_id
+order by cargo_types.id;
+
+select * from delivery_status;
+
+select status_id, date_time from delivery_status
+where delivery_id=2;
+
 insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost)
 values (1, 1, 'skdjfhsdfh', 1, 10, 10, 22.2);
 
@@ -54,4 +73,7 @@ select * from deliveries;
 
 select * from deliveries
 join users on user_id=users.id;
+
+select * from deliveries
+where user_id=1;
 
