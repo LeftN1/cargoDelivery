@@ -6,7 +6,9 @@
     <title>Title</title>
 </head>
 <body>
+<fmt:setLocale value = "${locale.getLanguage()}"/>
 
+<a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
 <datalist id="cityList">
     <c:forEach var="city" items="${applicationScope.cities}">
         <option value="${city.getId()}"}>${city.getName(locale)}</option>
@@ -51,7 +53,7 @@
             <td>
                 <select name="type">
                     <c:forEach var="type" items="${applicationScope.cargoTypes}">
-                        <option ${cType==type?" selected":""}>${type.name()}</option>
+                        <option ${cType==type?" selected":""}>${type.getName(locale)}</option>
                     </c:forEach>
                 </select>
             </td>
@@ -121,7 +123,7 @@
                 <td>${delivery.getOrigin().getName(locale)}</td>
                 <td>${delivery.getDestination().getName(locale)}</td>
                 <td>${delivery.getAdress()}</td>
-                <td>${delivery.getType().name()}</td>
+                <td>${delivery.getType().getName(locale)}</td>
                 <td>${delivery.getWeight()}</td>
                 <td>${delivery.getVolume()}</td>
             </tr>

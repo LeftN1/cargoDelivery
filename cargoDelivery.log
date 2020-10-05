@@ -1559,3 +1559,190 @@
 2020-10-05 15:17 [DEBUG]            MainController:    51 - MainController starts
 2020-10-05 15:17 [ INFO]                  OrderDAO:    43 - User has been added
 2020-10-05 15:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 17:40 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 17:40 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 17:40 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 17:40 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 17:40 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 17:40 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 17:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 17:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 17:40 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 17:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:33 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 18:33 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 18:33 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 18:33 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 18:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:33 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 18:33 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 18:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:33 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:36 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:36 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 18:36 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 18:36 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 18:36 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 18:36 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 18:37 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 18:37 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 18:37 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 18:37 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 18:37 [DEBUG]            MainController:    59 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:10 [ INFO]                   UserDAO:   110 - Can't find user 333
+2020-10-05 21:11 [ INFO]                   UserDAO:   110 - Can't find user 333
+2020-10-05 21:16 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:16 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:16 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:16 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:16 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:16 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:16 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:16 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:16 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:16 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:17 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:17 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:17 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:17 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:17 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:17 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:17 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:17 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 21:17 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:17 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:17 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:18 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:18 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:18 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:18 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:18 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:18 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:18 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:18 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:18 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:19 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:19 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:19 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:19 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [TRACE]          CommandContainer:    39 - Command not found, name --> 'main'
+2020-10-05 21:19 [DEBUG]                 NoCommand:    17 - Command starts
+2020-10-05 21:19 [ERROR]                 NoCommand:    21 - Set the request attribute: errorMessage --> No such command
+2020-10-05 21:19 [DEBUG]                 NoCommand:    23 - Command finished
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/error_page.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:19 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:19 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:19 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:28 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:28 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:28 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:28 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:28 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:28 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:28 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:29 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:29 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:29 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:29 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:29 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:29 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:29 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:29 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 21:29 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:29 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:29 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 21:32 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 21:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    57 - MainController starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 21:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 21:32 [DEBUG]            MainController:    65 - Controller finished. forward adress: /main.jsp

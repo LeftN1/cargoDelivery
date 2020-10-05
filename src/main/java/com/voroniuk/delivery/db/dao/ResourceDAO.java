@@ -1,12 +1,13 @@
 package com.voroniuk.delivery.db.dao;
 
+import com.voroniuk.delivery.db.entity.CargoType;
+import com.voroniuk.delivery.db.entity.City;
+import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.db.entity.Region;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public class ResourceDAO {
 
@@ -156,6 +157,65 @@ public class ResourceDAO {
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }
+    }
+
+
+
+    public void loadStatuses() {
+
+        String sql =    "SELECT statuses.id, translation, lang, country FROM statuses " +
+                        "join translations on name_resource_id = resource_id " +
+                        "join locales on locales.id=locale_id " +
+                        "order by statuses.id";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+
+
+            DeliveryStatus deliveryStatus;
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt(1);
+                String translation =  resultSet.getString(2);
+                String lang = resultSet.getString(3);
+                String country =  resultSet.getString(4);
+
+                deliveryStatus = DeliveryStatus.getStatusById(id);
+                deliveryStatus.getNames().put(new Locale(lang, country), translation);
+            }
+
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+    }
+
+    public void loadCargoTypes() {
+
+        String sql =    "SELECT cargo_types.id, translation, lang, country FROM cargo_types " +
+                        "join translations on name_resource_id = resource_id " +
+                        "join locales on locales.id=locale_id " +
+                        "order by cargo_types.id";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+
+
+            CargoType cargoType;
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt(1);
+                String translation =  resultSet.getString(2);
+                String lang = resultSet.getString(3);
+                String country =  resultSet.getString(4);
+                cargoType = CargoType.getTypeById(id);
+                cargoType.getNames().put(new Locale(lang, country), translation);
+            }
+
+        } catch (SQLException e) {
+            LOG.warn(e);
         }
     }
 

@@ -2,6 +2,7 @@ package com.voroniuk.delivery.web;
 
 
 import com.voroniuk.delivery.db.dao.CityDAO;
+import com.voroniuk.delivery.db.dao.ResourceDAO;
 import com.voroniuk.delivery.db.entity.CargoType;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.db.entity.SiteLocale;
@@ -28,6 +29,11 @@ public class MainController extends HttpServlet {
         super.init();
 
         CityDAO cityDAO = new CityDAO();
+        ResourceDAO resourceDAO = new ResourceDAO();
+
+        //load names for cargo types and statuses from database
+        resourceDAO.loadCargoTypes();
+        resourceDAO.loadStatuses();
 
         getServletContext().setAttribute("cities", cityDAO.findAllCities());
 

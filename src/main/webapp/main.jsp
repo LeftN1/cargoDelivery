@@ -42,7 +42,7 @@
     <input type="hidden" name="command" value="changeLocale">
     <select name="choosenLang">
         <c:forEach var="item" items="${applicationScope.locales}">
-            <option>${item.name()}</option>
+            <option ${item.getLocale()==locale? " selected":""}>${item.name()}</option>
         </c:forEach>
         </option>
     </select>

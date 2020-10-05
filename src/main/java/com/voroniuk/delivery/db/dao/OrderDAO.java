@@ -18,7 +18,7 @@ public class OrderDAO {
     public void saveDelivery(Delivery delivery) {
 
         String sql = "insert into deliveries (user_id, origin_city_id, destination_city_id ,adress, cargo_type, weight, volume, cost) " +
-                "values (?, ?, ?, ?, ?, ?, ?, ?);\n";
+                "values (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
