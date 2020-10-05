@@ -21,13 +21,15 @@ public class LoginCommand extends Command{
 
         User user = userDAO.findUserByLogin(login);
 
+        String forward;
+
         if(user != null && user.getPassword().equals(passHash)){
             req.getSession().setAttribute("user", user);
+            forward= CommandContainer.get("account").execute(req,resp);
         }else {
             req.setAttribute("msg", "login or password incorrect");
+            forward = Path.PAGE__MAIN;
         }
-
-        String forward= Path.PAGE__USER_ACCOUNT;
 
         return forward;
     }

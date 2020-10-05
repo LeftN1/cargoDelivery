@@ -7,7 +7,8 @@ import java.util.List;
 public class Delivery implements Serializable {
     private int id;
     private User user;
-    private City city;
+    private City origin;
+    private City destination;
     private String adress;
     private CargoType type;
     private List<DeliveryStatus> statusList;
@@ -29,14 +30,6 @@ public class Delivery implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
     }
 
     public String getAdress() {
@@ -85,5 +78,21 @@ public class Delivery implements Serializable {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public City getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(City origin) {
+        this.origin = origin;
+    }
+
+    public City getDestination() {
+        return destination;
+    }
+
+    public void setDestination(City destination) {
+        this.destination = destination;
     }
 }

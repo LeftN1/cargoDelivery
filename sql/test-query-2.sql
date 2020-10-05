@@ -49,3 +49,9 @@ join translations on name_resource_id = resource_id;
 
 insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost)
 values (1, 1, 'skdjfhsdfh', 1, 10, 10, 22.2);
+
+select * from deliveries;
+
+select * from deliveries
+join users on user_id=users.id;
+

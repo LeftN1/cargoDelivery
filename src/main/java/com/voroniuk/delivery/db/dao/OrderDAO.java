@@ -12,21 +12,22 @@ public class OrderDAO {
 
     private static final Logger LOG = Logger.getLogger(OrderDAO.class);
 
-    public void saveDelivery(Delivery delivery){
+    public void saveDelivery(Delivery delivery) {
 
-        String sql =    "insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost) " +
-                        "values (?, ?, ?, ?, ?, ?, ?);\n";
+        String sql = "insert into deliveries (user_id, origin_city_id, destination_city_id ,adress, cargo_type, weight, volume, cost) " +
+                "values (?, ?, ?, ?, ?, ?, ?, ?);\n";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
 
             statement.setInt(1, delivery.getUser().getId());
-            statement.setInt(2, delivery.getCity().getId());
-            statement.setString(3, delivery.getAdress());
-            statement.setInt(4, delivery.getType().getId());
-            statement.setInt(5, delivery.getWeight());
-            statement.setInt(6, delivery.getVolume());
-            statement.setDouble(7, delivery.getCost());
+            statement.setInt(2, delivery.getOrigin().getId());
+            statement.setInt(3, delivery.getDestination().getId());
+            statement.setString(4, delivery.getAdress());
+            statement.setInt(5, delivery.getType().getId());
+            statement.setInt(6, delivery.getWeight());
+            statement.setInt(7, delivery.getVolume());
+            statement.setDouble(8, delivery.getCost());
 
             statement.executeUpdate();
 

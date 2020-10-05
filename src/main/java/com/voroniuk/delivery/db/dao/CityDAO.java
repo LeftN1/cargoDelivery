@@ -213,6 +213,7 @@ public class CityDAO {
                     Map<Locale, String> names = resourceDAO.getTranslations(resourceId);
 
                     City city = new City();
+                    city.setId(id);
                     city.setRegion(region);
                     city.setLongitude(longitude);
                     city.setLatitude(latitude);

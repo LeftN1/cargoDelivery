@@ -364,3 +364,1092 @@
 2020-10-05 01:27 [DEBUG]               MainCommand:    22 - Main command starts
 2020-10-05 01:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
 2020-10-05 01:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:40 [ WARN]                   CityDAO:   374 - java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+2020-10-05 08:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:40 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:40 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:40 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:40 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:40 [ WARN]                   UserDAO:   114 - java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+2020-10-05 08:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:40 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:40 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:41 [ WARN]                   CityDAO:   374 - java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+2020-10-05 08:41 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:41 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:41 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:41 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:41 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:41 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:41 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:41 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:41 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:41 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:41 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:41 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:42 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:42 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:42 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:42 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:42 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:44 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:48 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:48 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:48 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:48 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:48 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: null
+2020-10-05 08:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:49 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:49 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:49 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:49 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:49 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:51 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:51 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:51 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:51 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:51 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:52 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:52 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:52 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:52 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:52 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:53 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:54 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:54 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:54 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:54 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:54 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:54 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:54 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:54 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:54 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:54 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:56 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:56 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:56 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:56 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:56 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:56 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:56 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:56 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:56 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:56 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:56 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:58 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:58 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:58 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:58 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:59 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 08:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:59 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 08:59 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 08:59 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 08:59 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 08:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 08:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 08:59 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 08:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:00 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:00 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:00 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:00 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:00 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:00 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:00 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:00 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:01 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:01 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:01 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:01 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:01 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:01 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:02 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:02 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:02 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:02 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:02 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:02 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:03 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:08 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:08 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:08 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:08 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:08 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:10 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:10 [DEBUG]            MainController:    59 - Controller finished. forward adress: null
+2020-10-05 09:11 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:11 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:12 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:12 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: null
+2020-10-05 09:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:12 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:12 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:14 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:14 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:14 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:14 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:14 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:14 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:14 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:14 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:14 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:15 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:15 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:15 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:15 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:15 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:15 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:15 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:20 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:20 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:20 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:20 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:20 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:20 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:21 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:21 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:23 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 09:23 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 09:23 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 09:23 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 09:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 09:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:23 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 09:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:24 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:24 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:24 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:24 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 09:24 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 09:24 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:45 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:45 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:45 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:45 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:45 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:45 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:45 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:46 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:46 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:46 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:46 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 10:46 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:46 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:49 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:49 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:49 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:49 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:50 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:50 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:50 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:50 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:50 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:50 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:51 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:51 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:51 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:51 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:51 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 10:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:55 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:55 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:55 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:55 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:56 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:56 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:56 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:56 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 10:56 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:56 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 10:59 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 10:59 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 10:59 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 10:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 10:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:02 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:02 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:02 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:02 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:02 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:02 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:10 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:10 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:10 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:10 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:10 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:10 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:10 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:10 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:11 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:11 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:11 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:11 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:11 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:11 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:11 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:11 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:11 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:13 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:13 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:13 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:14 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:14 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:15 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:15 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:15 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:15 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:16 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:16 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:16 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:16 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:16 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:16 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:16 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:16 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:16 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:16 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:16 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:17 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:17 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:17 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:17 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:17 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:17 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:17 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:17 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:18 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:18 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:18 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:18 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:18 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:18 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:18 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:18 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:18 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:20 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:20 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:20 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:20 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:20 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:22 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:22 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:22 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:22 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:22 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:22 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:22 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:22 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:22 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:23 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:23 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:23 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:23 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:23 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:45 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:46 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:46 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:47 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:49 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:49 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:49 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:49 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:49 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:57 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:57 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:57 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:57 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:57 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:57 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:58 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 11:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:59 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 11:59 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 11:59 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 11:59 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 11:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 11:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 11:59 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 11:59 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:00 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:00 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:00 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:00 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:03 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:03 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:03 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:03 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:03 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:04 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:04 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:04 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:04 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:04 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:06 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:06 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:07 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:07 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:07 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:07 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:07 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:07 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:07 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:08 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:10 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:11 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:12 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:12 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:12 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:12 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:12 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:12 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:12 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:17 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:17 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:17 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:17 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:17 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:17 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:17 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:17 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:29 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:29 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:29 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:29 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:30 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:30 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:30 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:30 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:32 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:32 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:32 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:32 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:32 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:38 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:39 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:40 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:40 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:44 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:44 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:51 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:51 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:53 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:53 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:53 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:53 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:53 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:53 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:53 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:58 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 12:58 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 12:58 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 12:58 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 12:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 12:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:58 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 12:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 12:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 12:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:05 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:05 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:05 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:05 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:05 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:05 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:05 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:05 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:05 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:05 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:05 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:05 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:06 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:06 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:06 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:07 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:07 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:08 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:08 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:08 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:09 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:09 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:19 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:19 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:19 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:19 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:19 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:19 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:19 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:20 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:20 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:21 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:21 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:21 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:21 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:21 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:21 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:21 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:21 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:21 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:23 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:23 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:23 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:23 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:23 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:25 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:25 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:25 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:25 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:25 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:25 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:25 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:25 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:25 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:27 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:27 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:27 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:27 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:30 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:30 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:30 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:30 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:31 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:31 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:31 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:31 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:31 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:31 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:31 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:31 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:33 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:33 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:33 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:33 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:33 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:33 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:33 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:34 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:34 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:34 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 13:34 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:34 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:34 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:34 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:34 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:34 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:35 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:35 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:35 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:35 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:35 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:35 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:35 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:35 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:35 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:35 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:35 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-05 13:35 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:35 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:35 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:35 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:36 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:36 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:36 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:36 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:36 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:36 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:36 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:36 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:36 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:36 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:36 [ INFO]                   UserDAO:   110 - Can't find user 111
+2020-10-05 13:36 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:36 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:36 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:36 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/register.jsp
+2020-10-05 13:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:38 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:38 [ INFO]                   UserDAO:    31 - User has been added
+2020-10-05 13:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:38 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:38 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:39 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:39 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:39 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:39 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:39 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:39 [ INFO]                  OrderDAO:    39 - User has been added
+2020-10-05 13:39 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:48 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:48 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:48 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:48 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:48 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:48 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:48 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/register.jsp
+2020-10-05 13:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:49 [ INFO]                   UserDAO:   110 - Can't find user aaa
+2020-10-05 13:49 [ INFO]                   UserDAO:    31 - User has been added
+2020-10-05 13:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:49 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:49 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:49 [ INFO]                   CityDAO:    55 - Country Украина added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Автономная Республика Крым added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Винницкая область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Волынская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Днепропетровская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Донецкая область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Житомирская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Закарпатская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Запорожская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Ивано-Франковская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Киевская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Кировоградская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Луганская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Львовская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Николаевская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Одесская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Полтавская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Ровенская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Сумская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Тернопольская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Харьковская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Херсонская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Хмельницкая область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Черкасская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Черниговская область added
+2020-10-05 13:49 [ INFO]                   CityDAO:    95 - Region Черновицкая область added
+2020-10-05 13:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:50 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:50 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:50 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:50 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:50 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:50 [ WARN]                  OrderDAO:    42 - java.sql.SQLException: Parameter index out of range (8 > number of parameters, which is 7).
+2020-10-05 13:50 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:51 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:51 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:51 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:51 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:51 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:51 [ WARN]                  OrderDAO:    42 - java.sql.SQLException: Parameter index out of range (8 > number of parameters, which is 7).
+2020-10-05 13:51 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:52 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:52 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:52 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:52 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:53 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:53 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:53 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:53 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:53 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:53 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:53 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:54 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:54 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:54 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:54 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:57 [ INFO]                  OrderDAO:    40 - User has been added
+2020-10-05 13:57 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:57 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:57 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:57 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 13:57 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 13:57 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 13:57 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 13:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:58 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:58 [ INFO]                  OrderDAO:    40 - User has been added
+2020-10-05 13:58 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 13:59 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 13:59 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 13:59 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 14:00 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:01 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:01 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 14:01 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 14:01 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:02 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-05 14:03 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-05 14:03 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 14:03 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [DEBUG]               MainCommand:    22 - Main command starts
+2020-10-05 14:03 [DEBUG]               MainCommand:    52 - Main command ends forward to /main.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /main.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:03 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:03 [ INFO]                  OrderDAO:    40 - User has been added
+2020-10-05 14:03 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp
+2020-10-05 14:04 [DEBUG]            MainController:    51 - MainController starts
+2020-10-05 14:04 [ INFO]                  OrderDAO:    40 - User has been added
+2020-10-05 14:04 [DEBUG]            MainController:    59 - Controller finished. forward adress: /jsp/user_account.jsp

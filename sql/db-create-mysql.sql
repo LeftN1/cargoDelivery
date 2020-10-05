@@ -97,16 +97,18 @@ CREATE TABLE statuses
 
 CREATE TABLE deliveries
 (
-    id            INT PRIMARY KEY AUTO_INCREMENT,
-    user_id       INT,
-    city_id       INT,
-    adress        VARCHAR(100),
-    cargo_type    INT,
-    weight        INT,
-    volume        INT,
-    cost          DOUBLE,
+    id            				INT PRIMARY KEY AUTO_INCREMENT,
+    user_id       				INT,
+    origin_city_id	  			INT,	
+    destination_city_id       	INT,
+    adress        				VARCHAR(100),
+    cargo_type    				INT,
+    weight        				INT,
+    volume        				INT,
+    cost          				DOUBLE,
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
-    FOREIGN KEY (city_id) REFERENCES cities (id) ON DELETE CASCADE,
+    FOREIGN KEY (origin_city_id) REFERENCES cities (id) ON DELETE CASCADE,
+    FOREIGN KEY (destination_city_id) REFERENCES cities (id) ON DELETE CASCADE,
     FOREIGN KEY (cargo_type) REFERENCES cargo_types (id) ON DELETE CASCADE
 );
 
@@ -174,30 +176,30 @@ INSERT INTO resources value (7);
 INSERT INTO translations VALUES(7, 1, 'processed');
 INSERT INTO translations VALUES(7, 2, 'обработано');
 INSERT INTO translations VALUES(7, 3, 'опрацьовано');
-INSERT INTO statuses VALUES (1, 7);
+INSERT INTO statuses VALUES (2, 7);
 
 INSERT INTO resources value (8);
 INSERT INTO translations VALUES(8, 1, 'paid');
 INSERT INTO translations VALUES(8, 2, 'оплачено');
 INSERT INTO translations VALUES(8, 3, 'оплачено');
-INSERT INTO statuses VALUES (1, 8);
+INSERT INTO statuses VALUES (3, 8);
 
 INSERT INTO resources value (9);
 INSERT INTO translations VALUES(9, 1, 'shipped');
 INSERT INTO translations VALUES(9, 2, 'отправлено');
 INSERT INTO translations VALUES(9, 3, 'відправлено');
-INSERT INTO statuses VALUES (1, 9);
+INSERT INTO statuses VALUES (4, 9);
 
 INSERT INTO resources value (10);
 INSERT INTO translations VALUES(10, 1, 'arrived');
 INSERT INTO translations VALUES(10, 2, 'прибыло');
 INSERT INTO translations VALUES(10, 3, 'прибуло');
-INSERT INTO statuses VALUES (1, 10);
+INSERT INTO statuses VALUES (5, 10);
 
 INSERT INTO resources value (11);
 INSERT INTO translations VALUES(11, 1, 'recieved');
 INSERT INTO translations VALUES(11, 2, 'получено');
 INSERT INTO translations VALUES(11, 3, 'отримано');
-INSERT INTO statuses VALUES (1, 11);
+INSERT INTO statuses VALUES (6, 11);
 
     

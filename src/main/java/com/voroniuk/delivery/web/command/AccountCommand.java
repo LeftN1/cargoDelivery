@@ -17,13 +17,9 @@ public class AccountCommand extends Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        CityDAO cityDAO = new CityDAO();
-
-
+        System.out.println(req.getSession().getAttribute("user"));
 
         String forward = Path.PAGE__USER_ACCOUNT;
-
-        req.setAttribute("cost", 0);
 
         return forward;
     }
