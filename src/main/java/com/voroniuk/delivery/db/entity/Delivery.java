@@ -2,7 +2,7 @@ package com.voroniuk.delivery.db.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Delivery implements Serializable {
@@ -17,8 +17,22 @@ public class Delivery implements Serializable {
     private int volume; //decimeter ^ 3
     private double cost;
 
-    public void addStatus(DeliveryStatus status, Date date){
+    public Delivery() {
+        statusMap = new HashMap<>();
+    }
+
+    public void addStatus(DeliveryStatus status, Date date) {
         statusMap.put(status, date);
+    }
+
+    public DeliveryStatus getLastStatus() {
+        Date last = new Date(0);
+        DeliveryStatus status = DeliveryStatus.NEW;
+
+        for (Map.Entry<DeliveryStatus, Date> entry : statusMap.entrySet()) {
+            status = entry.getValue().getTime() > last.getTime() ? entry.getKey() : status;
+        }
+        return status;
     }
 
     public Map<DeliveryStatus, Date> getStatusMap() {

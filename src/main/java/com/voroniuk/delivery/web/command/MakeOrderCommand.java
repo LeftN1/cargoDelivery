@@ -3,10 +3,7 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
-import com.voroniuk.delivery.db.entity.CargoType;
-import com.voroniuk.delivery.db.entity.City;
-import com.voroniuk.delivery.db.entity.Delivery;
-import com.voroniuk.delivery.db.entity.User;
+import com.voroniuk.delivery.db.entity.*;
 import com.voroniuk.delivery.utils.Calculations;
 import org.apache.log4j.Logger;
 
@@ -14,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 public class MakeOrderCommand extends Command {
 
@@ -80,6 +78,7 @@ public class MakeOrderCommand extends Command {
         delivery.setVolume(volume);
         delivery.setCost(cost);
 
+        delivery.addStatus(DeliveryStatus.NEW, new Date());
 
         orderDAO.saveDelivery(delivery);
 

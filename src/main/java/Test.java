@@ -4,8 +4,8 @@ import com.voroniuk.delivery.db.dao.UserDAO;
 import com.voroniuk.delivery.db.entity.*;
 import org.apache.commons.codec.digest.DigestUtils;
 
-import java.util.List;
-import java.util.Locale;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 public class Test {
@@ -15,14 +15,12 @@ public class Test {
         UserDAO userDAO = new UserDAO();
         ResourceDAO resourceDAO = new ResourceDAO();
 
+        Date date = new Date();
 
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy H:m:s");
 
-        resourceDAO.loadCargoTypes();
-        resourceDAO.loadStatuses();
-
-        System.out.println(DeliveryStatus.NEW.getName(SiteLocale.RU.getLocale()));
-        System.out.println(CargoType.CARGO.getName(SiteLocale.UA.getLocale()));
-
+        System.out.println(formatter.format(date));
+        System.out.println(date.getTime());
 
     }
 }

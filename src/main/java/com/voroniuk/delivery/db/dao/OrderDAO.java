@@ -8,8 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class OrderDAO {
 
@@ -40,11 +39,32 @@ public class OrderDAO {
                 }
             }
 
-            LOG.info("User has been added");
+            saveDeliveryStatuses(delivery);
+
+            LOG.info("Delivery has been added");
         } catch (SQLException e) {
             LOG.warn(e);
         }
 
+    }
+
+    private void saveDeliveryStatuses(Delivery delivery){
+        String sql =    "insert into delivery_status (delivery_id, status_id, date_time) " +
+                        "values (?, ?, ?)";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+
+            for(Map.Entry<DeliveryStatus, Date> entry : delivery.getStatusMap().entrySet()) {
+                statement.setInt(1, delivery.getId());
+                statement.setInt(2, entry.getKey().getId());
+                statement.setLong(3, entry.getValue().getTime());
+                statement.executeUpdate();
+            }
+            LOG.info("Delivery statuses have been added");
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
     }
 
     public List<Delivery> findUserDeliveries(User user) {
@@ -53,8 +73,8 @@ public class OrderDAO {
         CityDAO cityDAO = new CityDAO();
 
 
-        String sql = "select * from deliveries " +
-                "where user_id=?";
+        String sql =    "select * from deliveries " +
+                        "where user_id=?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -85,6 +105,7 @@ public class OrderDAO {
                     delivery.setWeight(weight);
                     delivery.setVolume(volume);
                     delivery.setCost(cost);
+                    delivery.setStatusMap(findStatusesByDeliveryId(id));
 
                     deliveries.add(delivery);
                 }
@@ -94,6 +115,35 @@ public class OrderDAO {
         }
 
         return deliveries;
+    }
+
+    public Map<DeliveryStatus, Date> findStatusesByDeliveryId(int id){
+
+        Map<DeliveryStatus, Date> statuses = new HashMap<>();
+
+        String sql =    "select status_id, date_time from delivery_status " +
+                        "where delivery_id=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setInt(1, id);
+            statement.executeQuery();
+
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                while (resultSet.next()) {
+                    int statusId = resultSet.getInt(1);
+                    long millis = resultSet.getLong(2);
+
+                    statuses.put(DeliveryStatus.getStatusById(statusId), new Date(millis));
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return statuses;
     }
 
 }

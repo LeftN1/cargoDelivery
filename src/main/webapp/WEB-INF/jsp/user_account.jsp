@@ -115,6 +115,7 @@
             <th>Type</th>
             <th>Weight</th>
             <th>Volume</th>
+            <th>Status</th>
         </tr>
 
         <c:forEach var="delivery" items="${deliveries}">
@@ -126,6 +127,7 @@
                 <td>${delivery.getType().getName(locale)}</td>
                 <td>${delivery.getWeight()}</td>
                 <td>${delivery.getVolume()}</td>
+                <td>${delivery.getLastStatus().getName(locale)}</td>
             </tr>
         </c:forEach>
 

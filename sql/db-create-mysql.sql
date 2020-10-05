@@ -116,7 +116,7 @@ CREATE TABLE delivery_status
 (	
     delivery_id      INT,
     status_id        INT,
-    date_time        TIMESTAMP,
+    date_time        LONG,
     FOREIGN KEY (status_id) REFERENCES statuses (id) ON DELETE CASCADE,
     FOREIGN KEY (delivery_id) REFERENCES deliveries (id) ON DELETE CASCADE
 );
