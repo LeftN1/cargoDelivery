@@ -1,9 +1,7 @@
 package com.voroniuk.delivery.web.command;
 
 import com.voroniuk.delivery.Path;
-import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
-import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.log4j.Logger;
@@ -14,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class AccountCommand extends Command {
+public class UserAccountCommand extends Command {
 
-    private static final Logger LOG = Logger.getLogger(AccountCommand.class);
+    private static final Logger LOG = Logger.getLogger(UserAccountCommand.class);
 
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

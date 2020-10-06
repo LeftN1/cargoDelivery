@@ -2,6 +2,7 @@ package com.voroniuk.delivery.web.command;
 
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.UserDAO;
+import com.voroniuk.delivery.db.entity.Role;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -21,11 +22,18 @@ public class LoginCommand extends Command{
 
         User user = userDAO.findUserByLogin(login);
 
-        String forward;
+        String forward = Path.PAGE__MAIN;
 
         if(user != null && user.getPassword().equals(passHash)){
             req.getSession().setAttribute("user", user);
-            forward = CommandContainer.get("account").execute(req,resp);
+            if(user.getRole() == Role.USER) {
+                forward = Path.COMMAND__USER_ACCOUNT;
+            }
+
+            if(user.getRole() == Role.MANAGER){
+                forward = Path.COMMAND__MANAGER_ACCOUNT;
+            }
+
         }else {
             req.setAttribute("msg", "login or password incorrect");
             forward = Path.PAGE__MAIN;

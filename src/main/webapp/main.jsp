@@ -28,7 +28,7 @@
     </c:when>
     <c:otherwise>
         <form name="account" action="/controller" method="post">
-            <input type="hidden" name="command" value="account">
+            <input type="hidden" name="command" value="user_account">
             <input type="submit" value="account">
         </form>
         <form name="logout" action="/controller" method="post">
