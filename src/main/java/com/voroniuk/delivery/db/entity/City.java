@@ -4,7 +4,7 @@ import java.util.*;
 
 public class City {
     private int id;
-    private Region region;
+    private int regionId;
     private int nameResourceId;
     private Map<Locale, String> names;
     private double longitude;
@@ -22,12 +22,12 @@ public class City {
         this.id = id;
     }
 
-    public Region getRegion() {
-        return region;
+    public int getRegionId() {
+        return regionId;
     }
 
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setRegionId(int regionId) {
+        this.regionId = regionId;
     }
 
     public String getName(Locale locale) {
@@ -92,13 +92,13 @@ public class City {
         if (this == o) return true;
         if (!(o instanceof City)) return false;
         City city = (City) o;
-        return region.equals(city.region) &&
+        return regionId == city.regionId &&
                 names.equals(city.names);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(region, names);
+        return Objects.hash(names);
     }
 
 }

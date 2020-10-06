@@ -15,12 +15,8 @@ public class Test {
         UserDAO userDAO = new UserDAO();
         ResourceDAO resourceDAO = new ResourceDAO();
 
-        Date date = new Date();
+        List<City> cityList = cityDAO.findAllCities();
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy H:m:s");
-
-        System.out.println(formatter.format(date));
-        System.out.println(date.getTime());
 
     }
 }

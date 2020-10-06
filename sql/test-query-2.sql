@@ -77,3 +77,5 @@ join users on user_id=users.id;
 select * from deliveries
 where user_id=1;
 
+delete from regions where id=2;
+

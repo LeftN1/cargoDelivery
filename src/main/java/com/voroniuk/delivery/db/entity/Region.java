@@ -4,14 +4,13 @@ import java.util.*;
 
 public class Region {
     private int id;
-    private Country country;
+    private int countryId;
     private int nameResourceId;
     private Map<Locale, String> name;
-    private List<City> cities;
+
 
     public Region() {
         name = new HashMap<>();
-        cities = new LinkedList<>();
     }
 
     public int getId() {
@@ -22,14 +21,13 @@ public class Region {
         this.id = id;
     }
 
-    public Country getCountry() {
-        return country;
+    public int getCountryId() {
+        return countryId;
     }
 
-    public void setCountry(Country country) {
-        this.country = country;
+    public void setCountryId(int countryId) {
+        this.countryId = countryId;
     }
-
 
     public void addName(Locale locale, String s){
         name.put(locale, s);
@@ -52,18 +50,6 @@ public class Region {
 
     public void setNames(Map<Locale, String> name) {
         this.name = name;
-    }
-
-    public List<City> getCities() {
-        return cities;
-    }
-
-    public void setCities(List<City> cities) {
-        this.cities = cities;
-    }
-
-    public void addCity(City city){
-        cities.add(city);
     }
 
     public int getNameResourceId() {

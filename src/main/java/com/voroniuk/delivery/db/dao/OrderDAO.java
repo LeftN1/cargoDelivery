@@ -85,7 +85,7 @@ public class OrderDAO {
 
                 while (resultSet.next()) {
                     int id = resultSet.getInt(1);
-                    //Удалить потом эту строку, переписать запрос
+
                     int userId = resultSet.getInt(2);
                     int originCityId = resultSet.getInt(3);
                     int destinationCityId = resultSet.getInt(4);

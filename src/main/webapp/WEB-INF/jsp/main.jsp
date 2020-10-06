@@ -28,7 +28,7 @@
     </c:when>
     <c:otherwise>
         <form name="account" action="/controller" method="post">
-            <input type="hidden" name="command" value="user_account">
+            <input type="hidden" name="command" value="account">
             <input type="submit" value="account">
         </form>
         <form name="logout" action="/controller" method="post">
@@ -59,30 +59,32 @@ Role: ${sessionScope.user.getRole()}
 <hr>
 
 
-<table>
-    <tr>
-        <td>
-            <fmt:message key="main.label.choose_current_city"/>
-        </td>
-        <form name="changeCurrent" action="controller" method="post">
-            <input type="hidden" name="command" value="main">
-            <td>
-                <input type="text" size="30" list="cityList" name="cityInp"
-                       value="${sessionScope.currentCity.getName(locale)}">
-                <datalist id="cityList">
-                    <c:forEach var="city" items="${applicationScope.cities}">
-                        <option>${city.getName(locale)}</option>
-                    </c:forEach>
-                </datalist>
-            </td>
-            <td>
-                <input type="submit" value="<fmt:message key="main.button.change"/>">
-            </td>
-        </form>
-    </tr>
-</table>
+<form name="changeCurrent" action="controller" method="post">
+    <label><fmt:message key="main.label.choose_current_city"/></label>
+    <input type="hidden" name="command" value="main">
+    <input type="text" size="30" list="cityList" name="cityInp"
+           value="${sessionScope.currentCity.getName(locale)}">
+    <datalist id="cityList">
+        <c:forEach var="city" items="${applicationScope.cities}">
+            <option>${city.getName(locale)}</option>
+        </c:forEach>
+    </datalist>
+    <input type="submit" value="<fmt:message key="main.button.change"/>">
+</form>
+
 
 <p>Distance from ${sessionScope.currentCity.getName(locale)} to:</p>
+
+<form name="changeCurrent" action="controller" method="post">
+    <label><fmt:message key="main.label.filter_by_region"/></label>
+    <input type="hidden" name="command" value="main">
+    <select name="region">
+        <c:forEach var="city" items="${applicationScope.cities}">
+            <option>${city.getName(locale)}</option>
+        </c:forEach>
+    </select>
+    <input type="submit" value="<fmt:message key="main.button.change"/>">
+</form>
 
 <table>
     <c:forEach var="city" items="${applicationScope.cities}">

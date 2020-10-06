@@ -23,37 +23,39 @@ public class MainCommand extends Command {
 
         CityDAO cityDAO = new CityDAO();
         City currentCity = (City) req.getSession().getAttribute("currentCity");
+
         String cityInp = req.getParameter("cityInp");
 
-        if(cityInp==null) {
+
+        if (cityInp == null) {
             currentCity = cityDAO.findCityByName("Odessa");
             LOG.trace("Initializing current city as: " + currentCity);
-        }else {
-            currentCity = cityDAO.findCityByName(cityInp);
-            LOG.trace("Change current city to: " + currentCity);
+        } else {
+            City finded = cityDAO.findCityByName(cityInp);
+            if (finded != null) {
+                currentCity = finded;
+                LOG.trace("Change current city to: " + currentCity);
+            }
         }
 
         LOG.debug("Save currentCity to session: " + currentCity);
         req.getSession().setAttribute("currentCity", currentCity);
 
 
-        if(req.getSession().getAttribute("locale")==null){
+        if (req.getSession().getAttribute("locale") == null) {
             req.getSession().setAttribute("locale", Locale.getDefault());
         }
-
-
 
 
         Map<City, String> distances = new HashMap<>();
         List<City> cityList = (LinkedList<City>) req.getServletContext().getAttribute("cities");
 
-        for (City city: cityList){
+        for (City city : cityList) {
             String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
             distances.put(city, dist);
         }
 
         req.getSession().setAttribute("distances", distances);
-
 
 
         String forward = Path.PAGE__MAIN;

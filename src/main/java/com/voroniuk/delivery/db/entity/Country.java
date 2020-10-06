@@ -7,10 +7,8 @@ public class Country {
     private int nameResourceId;
     private Map<Locale, String> name;
 
-    private List<Region> regions;
     public Country(){
         name = new HashMap<>();
-        regions = new LinkedList<>();
     }
 
     public int getId() {
@@ -41,18 +39,6 @@ public class Country {
 
     public void addName(Locale locale, String s){
         name.put(locale, s);
-    }
-
-    public List<Region> getRegions() {
-        return regions;
-    }
-
-    public void setRegions(List<Region> regions) {
-        this.regions = regions;
-    }
-
-    public void addRegion(Region region){
-        regions.add(region);
     }
 
     public int getNameResourceId() {

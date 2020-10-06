@@ -53,9 +53,6 @@ public class CityDAO {
             throwables.printStackTrace();
         }
         LOG.info("Country " + country.getName(Locale.getDefault()) + " added");
-
-        addRegions(country.getRegions());
-
     }
 
     public void addRegion(Region region) {
@@ -75,7 +72,7 @@ public class CityDAO {
 
             resId = resourceDAO.addResource();
             statement.setInt(1, resId);
-            statement.setInt(2, region.getCountry().getId());
+            statement.setInt(2, region.getCountryId());
 
             statement.executeUpdate();
 
@@ -94,7 +91,6 @@ public class CityDAO {
         }
         LOG.info("Region " + region.getName(Locale.getDefault()) + " added");
 
-        addCities(region.getCities());
     }
 
     private void addRegions(List<Region> regionList) {
@@ -108,7 +104,7 @@ public class CityDAO {
 
         for (Locale locale : city.getNames().keySet()) {
             City tryFind = findCityByName(city.getName(locale));
-            if (tryFind != null && tryFind.getRegion().equals(city.getRegion())) {
+            if (tryFind != null && tryFind.getRegionId()==city.getRegionId()) {
                 throw new IllegalArgumentException("City " + city.getName(locale) + " already exists");
             }
         }
@@ -122,7 +118,7 @@ public class CityDAO {
 
             resId = resourceDAO.addResource();
 
-            statement.setInt(1, city.getRegion().getId());
+            statement.setInt(1, city.getRegionId());
             statement.setInt(2, resId);
             statement.setDouble(3, city.getLongitude());
             statement.setDouble(4, city.getLatitude());
@@ -171,13 +167,13 @@ public class CityDAO {
             try (ResultSet resultSet = statement.getResultSet()) {
                 if (resultSet.next()) {
                     int id = resultSet.getInt(1);
-                    Region region = getRegionById(resultSet.getInt(2));
+                    int regionId = resultSet.getInt(2);
                     double longitude = resultSet.getDouble(3);
                     double latitude = resultSet.getDouble(4);
                     Map<Locale, String> names = resourceDAO.getTranslations(resourceId);
                     City city = new City();
                     city.setId(id);
-                    city.setRegion(region);
+                    city.setRegionId(regionId);
                     city.setLongitude(longitude);
                     city.setLatitude(latitude);
                     city.setNames(names);
@@ -207,7 +203,7 @@ public class CityDAO {
             try (ResultSet resultSet = statement.getResultSet()) {
                 if (resultSet.next()) {
 
-                    Region region = getRegionById(resultSet.getInt(1));
+                    int regionId = resultSet.getInt(1);
                     int resourceId = resultSet.getInt(2);
                     double longitude = resultSet.getDouble(3);
                     double latitude = resultSet.getDouble(4);
@@ -216,7 +212,7 @@ public class CityDAO {
 
                     City city = new City();
                     city.setId(id);
-                    city.setRegion(region);
+                    city.setRegionId(regionId);
                     city.setLongitude(longitude);
                     city.setLatitude(latitude);
                     city.setNames(names);
@@ -231,7 +227,7 @@ public class CityDAO {
 
     }
 
-    public Region getRegionById(int id) {
+    public Region findRegionById(int id) {
 
         String sql = "SELECT name_resource_id, country FROM regions WHERE id = ?";
 
@@ -246,13 +242,13 @@ public class CityDAO {
             try (ResultSet resultSet = statement.getResultSet()) {
                 if (resultSet.next()) {
                     int resourceId = resultSet.getInt(1);
-                    Country country = getCountryById(resultSet.getInt(2));
+                    int countryId = resultSet.getInt(2);
 
                     Map<Locale, String> names = resourceDAO.getTranslations(resourceId);
 
                     Region region = new Region();
                     region.setNames(names);
-                    region.setCountry(country);
+                    region.setCountryId(countryId);
                     region.setNameResourceId(resourceId);
 
                     return region;
@@ -265,7 +261,7 @@ public class CityDAO {
     }
 
 
-    public Country getCountryById(int id) {
+    public Country findCountryById(int id) {
         String sql = "SELECT name_resource_id FROM countries WHERE id = ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
@@ -305,26 +301,7 @@ public class CityDAO {
     }
 
 
-//    public List<City> findAllCities() {
-//        List<City> result = new LinkedList<>();
-//        String sql = "SELECT DISTINCT id FROM cities";
-//
-//        try (Connection connection = DBManager.getInstance().getConnection();
-//             Statement statement = connection.createStatement();
-//             ResultSet resultSet = statement.executeQuery(sql)) {
-//
-//
-//            while (resultSet.next()) {
-//                int id = resultSet.getInt(1);
-//                result.add(findCityById(id));
-//            }
-//
-//        } catch (SQLException e) {
-//            LOG.warn(e);
-//        }
-//        return result;
-//    }
-
+    // ================= FAST SEARCH ==========================
         public List<City> findAllCities() {
         List<City> result = new LinkedList<>();
         String sql = "select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation " +
@@ -359,11 +336,10 @@ public class CityDAO {
                     double longitude = resultSet.getDouble(4);
                     double latitude = resultSet.getDouble(5);
 
-                    Region tempRegion = new Region();
-                    tempRegion.setId(regionId);
                     city = new City();
                     city.setId(id);
-                    city.setRegion(tempRegion);
+                    city.setRegionId(regionId);
+
                     city.setLongitude(longitude);
                     city.setLatitude(latitude);
                     city.getNames().put(new Locale(lang, country), translation);
@@ -409,4 +385,5 @@ public class CityDAO {
         }
         return res;
     }
+
 }

@@ -1,6 +1,7 @@
 package com.voroniuk.delivery.utils;
 
 
+import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.entity.SiteLocale;
 import com.voroniuk.delivery.utils.constant.Constants;
 import com.voroniuk.delivery.utils.constant.XML;
@@ -34,6 +35,8 @@ public class cityParserSAX extends DefaultHandler {
 
     private City city;
 
+    private CityDAO cityDAO = new CityDAO();
+
 
     public cityParserSAX(String xmlFileName) {
         this.xmlFileName = xmlFileName;
@@ -45,7 +48,7 @@ public class cityParserSAX extends DefaultHandler {
      * @param validate If true validate XML document against its XML schema. With
      *                 this parameter it is possible make parser validating.
      */
-    public void parse(boolean validate)
+    public void addToDb(boolean validate)
             throws ParserConfigurationException, SAXException, IOException {
 
         // XML document contains namespaces
@@ -97,13 +100,14 @@ public class cityParserSAX extends DefaultHandler {
             if (attributes.getValue(uri,XML.UK.value())!=null) {
                 country.addName(SiteLocale.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
             }
+            cityDAO.addCountry(country);
             return;
         }
 
         if (XML.REGION.equalsTo(currentElement)) {
             region = new Region();
             region.setId(0);
-            region.setCountry(getCountry());
+            region.setCountryId(getCountry().getId());
             if (attributes.getValue(uri,XML.EN.value())!=null) {
                 region.addName(SiteLocale.EN.getLocale(), attributes.getValue(uri, XML.EN.value()));
             }
@@ -113,13 +117,14 @@ public class cityParserSAX extends DefaultHandler {
             if (attributes.getValue(uri,XML.UK.value())!=null) {
                 region.addName(SiteLocale.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
             }
+            cityDAO.addRegion(region);
             return;
         }
 
         if (XML.CITY.equalsTo(currentElement)) {
             city = new City();
             city.setId(0);
-            city.setRegion(region);
+            city.setRegionId(region.getId());
             city.setLatitude(Double.parseDouble(attributes.getValue(uri, XML.LAT.value())));
 			city.setLongitude(Double.parseDouble(attributes.getValue(uri, XML.LON.value())));
 
@@ -132,6 +137,7 @@ public class cityParserSAX extends DefaultHandler {
             if (attributes.getValue(uri,XML.UK.value())!=null) {
                 city.addName(SiteLocale.UA.getLocale(), attributes.getValue(uri, XML.UK.value()));
             }
+            cityDAO.addCity(city);
 			return;
         }
 
@@ -148,22 +154,6 @@ public class cityParserSAX extends DefaultHandler {
             return;
         }
 
-
-    }
-
-    @Override
-    public void endElement(String uri, String localName, String qName)
-            throws SAXException {
-
-        if (XML.REGION.equalsTo(localName)) {
-            country.addRegion(region);
-            return;
-        }
-
-		if (XML.CITY.equalsTo(localName)) {
-			region.addCity(city);
-			return;
-		}
 
     }
 
