@@ -15,8 +15,10 @@ public class Test {
         UserDAO userDAO = new UserDAO();
         ResourceDAO resourceDAO = new ResourceDAO();
 
-        List<City> cityList = cityDAO.findAllCities();
 
+        List<Region> regions = cityDAO.findAllRegions();
+
+        System.out.println(regions);
 
     }
 }

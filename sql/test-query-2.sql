@@ -29,6 +29,12 @@ join translations on resource_id=resources.id
 join locales on locales.id=locale_id
 ORDER BY cities.id;
 
+select regions.id, regions.country, name_resource_id, lang, locales.country, translation from regions
+join resources on name_resource_id=resources.id
+join translations on resource_id=resources.id
+join locales on locales.id=locale_id
+ORDER BY regions.id;
+
 select regions.id, translation, country from regions
 join resources on name_resource_id=resources.id
 join translations on resource_id=resources.id;

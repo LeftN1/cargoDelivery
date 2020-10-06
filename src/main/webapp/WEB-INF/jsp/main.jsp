@@ -70,30 +70,27 @@ Role: ${sessionScope.user.getRole()}
         </c:forEach>
     </datalist>
     <input type="submit" value="<fmt:message key="main.button.change"/>">
-</form>
-
-
-<p>Distance from ${sessionScope.currentCity.getName(locale)} to:</p>
-
-<form name="changeCurrent" action="controller" method="post">
+<br>
     <label><fmt:message key="main.label.filter_by_region"/></label>
-    <input type="hidden" name="command" value="main">
     <select name="region">
-        <c:forEach var="city" items="${applicationScope.cities}">
-            <option>${city.getName(locale)}</option>
+        <option value="0" >---<fmt:message key="main.option.all_regions"/>---</option>
+        <c:forEach var="region" items="${applicationScope.regions}">
+            <option value="${region.getId()}" >${region.getName(locale)}</option>
         </c:forEach>
     </select>
     <input type="submit" value="<fmt:message key="main.button.change"/>">
 </form>
 
+<p>Distance from ${sessionScope.currentCity.getName(locale)} to:</p>
+
 <table>
-    <c:forEach var="city" items="${applicationScope.cities}">
+    <c:forEach var="city" items="${cityList}">
         <tr>
             <td>
                     ${city.getName(locale)}
             </td>
             <td>
-                    ${sessionScope.distances.get(city)}
+                    ${distances.get(city)}
             </td>
         </tr>
     </c:forEach>

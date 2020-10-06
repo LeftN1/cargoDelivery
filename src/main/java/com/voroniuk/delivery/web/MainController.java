@@ -36,6 +36,7 @@ public class MainController extends HttpServlet {
         resourceDAO.loadStatuses();
 
         getServletContext().setAttribute("cities", cityDAO.findAllCities());
+        getServletContext().setAttribute("regions", cityDAO.findAllRegions());
 
         getServletContext().setAttribute("locales", SiteLocale.values());
         getServletContext().setAttribute("cargoTypes", CargoType.values());

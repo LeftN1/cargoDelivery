@@ -22,7 +22,7 @@ public class CityDAO {
     public void addCountry(Country country) {
 
         for (Locale locale : country.getNames().keySet()) {
-            if (resourceDAO.getResourceIdByTranslation(country.getName(locale))>0) {
+            if (resourceDAO.getResourceIdByTranslation(country.getName(locale)) > 0) {
                 throw new IllegalArgumentException("Country " + country.getName(locale) + " already exists");
             }
         }
@@ -58,7 +58,7 @@ public class CityDAO {
     public void addRegion(Region region) {
 
         for (Locale locale : region.getNames().keySet()) {
-            if (resourceDAO.getResourceIdByTranslation(region.getName(locale))>0) {
+            if (resourceDAO.getResourceIdByTranslation(region.getName(locale)) > 0) {
                 throw new IllegalArgumentException("Region " + region.getName(locale) + " already exists");
             }
         }
@@ -104,7 +104,7 @@ public class CityDAO {
 
         for (Locale locale : city.getNames().keySet()) {
             City tryFind = findCityByName(city.getName(locale));
-            if (tryFind != null && tryFind.getRegionId()==city.getRegionId()) {
+            if (tryFind != null && tryFind.getRegionId() == city.getRegionId()) {
                 throw new IllegalArgumentException("City " + city.getName(locale) + " already exists");
             }
         }
@@ -301,33 +301,31 @@ public class CityDAO {
     }
 
 
-    // ================= FAST SEARCH ==========================
-        public List<City> findAllCities() {
+    public List<City> findAllCities() {
         List<City> result = new LinkedList<>();
-        String sql = "select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation " +
-                "from cities \n" +
-                "join resources on name_resource_id=resources.id\n" +
-                "join translations on resource_id=resources.id\n" +
-                "join locales on locales.id=locale_id\n" +
-                "ORDER BY cities.id";
-
+        String sql =    "select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation " +
+                        "from cities \n" +
+                        "join resources on name_resource_id=resources.id\n" +
+                        "join translations on resource_id=resources.id\n" +
+                        "join locales on locales.id=locale_id\n" +
+                        "ORDER BY cities.id";
 
 
         try (Connection connection = DBManager.getInstance().getConnection();
              Statement statement = connection.createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {
 
-            int lastId=0;
+            int lastId = 0;
             City city = new City();
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);
 
                 String lang = resultSet.getString(6);
-                String country =  resultSet.getString(7);
-                String translation =  resultSet.getString(8);
+                String country = resultSet.getString(7);
+                String translation = resultSet.getString(8);
 
-                if(id != lastId){
-                    if (lastId>0){
+                if (id != lastId) {
+                    if (lastId > 0) {
                         result.add(city);
                     }
                     lastId = id;
@@ -344,8 +342,55 @@ public class CityDAO {
                     city.setLatitude(latitude);
                     city.getNames().put(new Locale(lang, country), translation);
                     city.setNameResourceId(resourceId);
-                }else {
+                } else {
                     city.getNames().put(new Locale(lang, country), translation);
+                }
+            }
+
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+        return result;
+    }
+
+    public List<Region> findAllRegions() {
+        List<Region> result = new LinkedList<>();
+        String sql =    "select regions.id, regions.country, name_resource_id, lang, locales.country, translation from regions " +
+                        "join resources on name_resource_id=resources.id " +
+                        "join translations on resource_id=resources.id " +
+                        "join locales on locales.id=locale_id " +
+                        "ORDER BY regions.id;";
+
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+
+            int lastId = 0;
+            Region region = new Region();
+            while (resultSet.next()) {
+                int id = resultSet.getInt(1);
+
+                String lang = resultSet.getString(4);
+                String country = resultSet.getString(5);
+                String translation = resultSet.getString(6);
+
+                if (id != lastId) {
+                    if (lastId > 0) {
+                        result.add(region);
+                    }
+                    lastId = id;
+                    int countryId = resultSet.getInt(2);
+                    int resourceId = resultSet.getInt(3);
+
+                    region = new Region();
+                    region.setId(id);
+                    region.setCountryId(countryId);
+
+                    region.getNames().put(new Locale(lang, country), translation);
+                    region.setNameResourceId(resourceId);
+                } else {
+                    region.getNames().put(new Locale(lang, country), translation);
                 }
             }
 
