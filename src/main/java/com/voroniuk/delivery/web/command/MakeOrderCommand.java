@@ -39,7 +39,7 @@ public class MakeOrderCommand extends Command {
             width = Integer.parseInt(req.getParameter("width"));
             height = Integer.parseInt(req.getParameter("height"));
         } catch (NumberFormatException e) {
-            return CommandContainer.get("account").execute(req,resp);
+            return CommandContainer.get("account").execute(req, resp);
         }
 
         //Тут приходится искать по имени, потому что не получается неявно передать cityId при помощи <input> + <datalist>
@@ -61,12 +61,10 @@ public class MakeOrderCommand extends Command {
             req.setAttribute("length", length);
             req.setAttribute("width", width);
             req.setAttribute("height", height);
-
             req.setAttribute("cost", cost);
-
             LOG.debug("cost calculation finished.");
             LOG.debug("MakeOrderCommand finished");
-            return CommandContainer.get("account").execute(req,resp);
+            return Path.COMMAND__ACCOUNT;
         }
 
         LOG.debug("Make delivery order");
@@ -87,8 +85,13 @@ public class MakeOrderCommand extends Command {
 
         LOG.debug("Delivery order saved");
         LOG.debug("MakeOrderCommand finished");
+        //PRG pattern
+        String redirect = Path.COMMAND__ACCOUNT;
+        resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+        resp.setHeader("Location", redirect);
+        LOG.debug("Redirect to :" + redirect);
 
-        return CommandContainer.get("account").execute(req,resp);
+        return Path.COMMAND__ACCOUNT;
     }
 
 }

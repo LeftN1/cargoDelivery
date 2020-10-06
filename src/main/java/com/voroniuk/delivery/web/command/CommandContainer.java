@@ -19,8 +19,7 @@ public class CommandContainer {
         commands.put("logout", new LogoutCommand());
         commands.put("register", new RegisterCommand());
         commands.put("changeLocale", new ChangeLocaleCommand());
-        commands.put("user_account", new UserAccountCommand());
-        commands.put("manager_account", new ManagerAccountCommand());
+        commands.put("account", new AccountCommand());
         commands.put("makeOrder", new MakeOrderCommand());
 
 

@@ -5,40 +5,61 @@ import com.voroniuk.delivery.db.dao.UserDAO;
 import com.voroniuk.delivery.db.entity.Role;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class LoginCommand extends Command{
+public class LoginCommand extends Command {
+    private static final Logger LOG = Logger.getLogger(LoginCommand.class);
+
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
+        LOG.debug("Command starts");
+
         UserDAO userDAO = new UserDAO();
         String login = req.getParameter("login");
+        LOG.debug("request param: login: " + login);
+
         String password = req.getParameter("password");
         String passHash = DigestUtils.md5Hex(password);
 
-        User user = userDAO.findUserByLogin(login);
+        String forward = Path.PAGE__ERROR_PAGE;
+        String errorMessage;
 
-        String forward = Path.PAGE__MAIN;
-
-        if(user != null && user.getPassword().equals(passHash)){
-            req.getSession().setAttribute("user", user);
-            if(user.getRole() == Role.USER) {
-                forward = Path.COMMAND__USER_ACCOUNT;
-            }
-
-            if(user.getRole() == Role.MANAGER){
-                forward = Path.COMMAND__MANAGER_ACCOUNT;
-            }
-
-        }else {
-            req.setAttribute("msg", "login or password incorrect");
-            forward = Path.PAGE__MAIN;
+        if (login == null || password == null || login.isEmpty() || password.isEmpty()) {
+            errorMessage = "Login/password cannot be empty";
+            req.setAttribute("msg", errorMessage);
+            LOG.error("errorMessage --> " + errorMessage);
+            return forward;
         }
 
+        User user = userDAO.findUserByLogin(login);
+        LOG.trace("Found user: " + user);
+
+
+        if (user != null && user.getPassword().equals(passHash)) {
+            Role userRole = user.getRole();
+            LOG.trace("User role: " + userRole);
+
+            forward = Path.COMMAND__ACCOUNT;
+
+            req.getSession().setAttribute("user", user);
+            LOG.trace("Set session attribute: user = " + user);
+
+            LOG.info("User " + user + " logged in as " + user.getRole());
+
+
+        } else {
+            errorMessage = "login or password incorrect";
+            req.setAttribute("msg", errorMessage);
+            forward = Path.COMMAND__MAIN;
+        }
+
+        LOG.debug("Command finished, forward to: " + forward);
         return forward;
     }
 }

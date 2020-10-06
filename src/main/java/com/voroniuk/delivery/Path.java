@@ -10,6 +10,8 @@ public class Path {
     public static final String PAGE__ERROR_PAGE = "/WEB-INF/jsp/error_page.jsp";
 
     //commands
-    public static final String COMMAND__USER_ACCOUNT = "/controller?command=user_account";
-    public static final String COMMAND__MANAGER_ACCOUNT = "/controller?command=manager_account";
+    public static final String COMMAND__MAIN = "/controller?command=main";
+    public static final String COMMAND__ACCOUNT = "/controller?command=account";
+
+
 }
