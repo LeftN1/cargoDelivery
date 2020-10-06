@@ -188,6 +188,8 @@ public class CityDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+
+        LOG.warn("Can't find city " + name);
         return null;
     }
 

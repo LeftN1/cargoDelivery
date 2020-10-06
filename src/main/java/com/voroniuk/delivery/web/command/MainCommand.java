@@ -22,11 +22,20 @@ public class MainCommand extends Command {
         LOG.debug("Main command starts");
 
         CityDAO cityDAO = new CityDAO();
+        City currentCity = (City) req.getSession().getAttribute("currentCity");
+        String cityInp = req.getParameter("cityInp");
 
-        City currentCity = cityDAO.findCityByName("Odessa");
+        if(cityInp==null) {
+            currentCity = cityDAO.findCityByName("Odessa");
+            LOG.trace("Initializing current city as: " + currentCity);
+        }else {
+            currentCity = cityDAO.findCityByName(cityInp);
+            LOG.trace("Change current city to: " + currentCity);
+        }
 
+        LOG.debug("Save currentCity to session: " + currentCity);
         req.getSession().setAttribute("currentCity", currentCity);
-        currentCity = (City) req.getSession().getAttribute("currentCity");
+
 
         if(req.getSession().getAttribute("locale")==null){
             req.getSession().setAttribute("locale", Locale.getDefault());

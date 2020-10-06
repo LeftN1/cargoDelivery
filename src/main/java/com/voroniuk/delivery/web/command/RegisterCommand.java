@@ -63,8 +63,13 @@ public class RegisterCommand extends Command {
 
         userDAO.saveUser(newUser);
 
+        //PRG pattern
+        String redirect = Path.COMMAND__MAIN;
+        resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+        resp.setHeader("Location", redirect);
+        LOG.debug("Redirect to :" + redirect);
 
-        forward = Path.PAGE__MAIN;
-        return forward;
+
+        return redirect;
     }
 }
