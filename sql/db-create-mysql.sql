@@ -1,3 +1,5 @@
+CREATE SCHEMA IF NOT EXISTS deliveryservice;
+USE deliveryservice;
 DROP TABLE IF EXISTS delivery_status CASCADE;
 DROP TABLE IF EXISTS deliveries CASCADE;
 DROP TABLE IF EXISTS cities CASCADE;

@@ -87,7 +87,7 @@ public class UserDAO {
     public User findUserByLogin(String login) {
         String sql =    "select users.id, pass, role_name from users " +
                         "join roles on role=roles.id " +
-                        "where login=? LIMIT 1";
+                        "where login=?";
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
@@ -108,6 +108,38 @@ public class UserDAO {
                     return user;
                 } else {
                     LOG.info("Can't find user " + login);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+        return null;
+    }
+
+    public User findUserById(int id) {
+        String sql =    "select login, pass, role_name from users " +
+                        "join roles on role=roles.id " +
+                        "where users.id=?";
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, id);
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                if (resultSet.next()) {
+                    String login = resultSet.getString(1);
+                    String password = resultSet.getString(2);
+                    Role role = Role.valueOf(resultSet.getString(3));
+
+                    User user = new User();
+                    user.setId(id);
+                    user.setLogin(login);
+                    user.setPassword(password);
+                    user.setRole(role);
+                    return user;
+                } else {
+                    LOG.info("Can't find userby id: " + id);
                 }
             }
         } catch (SQLException e) {

@@ -3,6 +3,7 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.OrderDAO;
 import com.voroniuk.delivery.db.entity.Delivery;
+import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.db.entity.Role;
 import com.voroniuk.delivery.db.entity.User;
 import org.apache.log4j.Logger;
@@ -32,7 +33,11 @@ public class AccountCommand extends Command {
             forward = Path.PAGE__USER_ACCOUNT;
         }
 
-
+        if(user.getRole()== Role.MANAGER) {
+            List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(DeliveryStatus.NEW);
+            req.setAttribute("deliveries", deliveries);
+            forward = Path.PAGE__MANAGER_ACCOUNT;
+        }
 
         return forward;
     }

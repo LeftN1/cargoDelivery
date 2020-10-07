@@ -11,7 +11,7 @@ public class LogoutCommand extends Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        String forward = Path.PAGE__MAIN;
+        String forward = Path.COMMAND__MAIN;
 
         req.getSession().setAttribute("user", null);
 

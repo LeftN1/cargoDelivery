@@ -70,7 +70,7 @@ Current region: ${sessionScope.regionId}
 <form name="changeCurrent" action="controller" method="post">
     <table>
         <tr>
-            <td><label><fmt:message key="main.label.choose_current_city"/></label></td>
+            <td width="200"><label><fmt:message key="main.label.choose_current_city"/></label></td>
             <input type="hidden" name="command" value="main">
             <td><input type="text" size="30" list="cityList" name="cityInp"
                        value="${sessionScope.currentCity.getName(locale)}"></td>
@@ -137,7 +137,5 @@ Current region: ${sessionScope.regionId}
         </tr>
     </c:forEach>
 </table>
-
-
 </body>
 </html>

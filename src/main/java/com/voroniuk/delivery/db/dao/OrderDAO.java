@@ -45,7 +45,6 @@ public class OrderDAO {
         } catch (SQLException e) {
             LOG.warn(e);
         }
-
     }
 
     private void saveDeliveryStatuses(Delivery delivery){
@@ -117,6 +116,109 @@ public class OrderDAO {
         return deliveries;
     }
 
+    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {
+        List<Delivery> deliveries = new LinkedList<>();
+
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+
+        String sql =    "select * from deliveries " +
+                        "join delivery_status on deliveries.id=delivery_id " +
+                        "where status_id=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, status.getId());
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                while (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+
+                    int userId = resultSet.getInt(2);
+                    int originCityId = resultSet.getInt(3);
+                    int destinationCityId = resultSet.getInt(4);
+                    String adress = resultSet.getString(5);
+                    CargoType type = CargoType.getTypeById(resultSet.getInt(6));
+                    int weight = resultSet.getInt(7);
+                    int volume = resultSet.getInt(8);
+                    int cost = resultSet.getInt(9);
+
+                    Delivery delivery = new Delivery();
+                    delivery.setId(id);
+                    delivery.setUser(userDAO.findUserById(userId));
+                    delivery.setOrigin(cityDAO.findCityById(originCityId));
+                    delivery.setDestination(cityDAO.findCityById(destinationCityId));
+                    delivery.setAdress(adress);
+                    delivery.setType(type);
+                    delivery.setWeight(weight);
+                    delivery.setVolume(volume);
+                    delivery.setCost(cost);
+                    delivery.setStatusMap(findStatusesByDeliveryId(id));
+
+                    deliveries.add(delivery);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return deliveries;
+    }
+
+//    public List<Delivery> findAllDeliveries() {
+//        List<Delivery> deliveries = new LinkedList<>();
+//
+//        CityDAO cityDAO = new CityDAO();
+//        UserDAO userDAO = new UserDAO();
+//
+//
+//        String sql =    "select * from deliveries " +
+//                        "join delivery_status on deliveries.id=delivery_id ";
+//
+//        try (Connection connection = DBManager.getInstance().getConnection();
+//             PreparedStatement statement = connection.prepareStatement(sql);) {
+//
+//            statement.setInt(1, status.getId());
+//            statement.executeQuery();
+//            try (ResultSet resultSet = statement.getResultSet()) {
+//
+//                while (resultSet.next()) {
+//                    int id = resultSet.getInt(1);
+//
+//                    int userId = resultSet.getInt(2);
+//                    int originCityId = resultSet.getInt(3);
+//                    int destinationCityId = resultSet.getInt(4);
+//                    String adress = resultSet.getString(5);
+//                    CargoType type = CargoType.getTypeById(resultSet.getInt(6));
+//                    int weight = resultSet.getInt(7);
+//                    int volume = resultSet.getInt(8);
+//                    int cost = resultSet.getInt(9);
+//
+//                    Delivery delivery = new Delivery();
+//                    delivery.setId(id);
+//                    delivery.setUser(userDAO.findUserById(userId));
+//                    delivery.setOrigin(cityDAO.findCityById(originCityId));
+//                    delivery.setDestination(cityDAO.findCityById(destinationCityId));
+//                    delivery.setAdress(adress);
+//                    delivery.setType(type);
+//                    delivery.setWeight(weight);
+//                    delivery.setVolume(volume);
+//                    delivery.setCost(cost);
+//                    delivery.setStatusMap(findStatusesByDeliveryId(id));
+//
+//                    deliveries.add(delivery);
+//                }
+//            }
+//        } catch (SQLException e) {
+//            LOG.warn(e);
+//        }
+//
+//        return deliveries;
+//    }
+
     public Map<DeliveryStatus, Date> findStatusesByDeliveryId(int id){
 
         Map<DeliveryStatus, Date> statuses = new HashMap<>();
@@ -142,7 +244,6 @@ public class OrderDAO {
         } catch (SQLException e) {
             LOG.warn(e);
         }
-
         return statuses;
     }
 
