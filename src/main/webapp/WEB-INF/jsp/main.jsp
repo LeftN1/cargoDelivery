@@ -46,13 +46,16 @@
         </c:forEach>
         </option>
     </select>
-    <input type="submit" value="change">
+    <input type="submit" value="<fmt:message key="main.button.change"/>">
 </form>
 
-<c:out value="lang : ${sessionScope.locale.getLanguage()}"/>
+
 <fmt:setLocale value="${sessionScope.locale.getLanguage()}"/>
 
+<!--
 <hr>
+<c:out value="lang : ${sessionScope.locale.getLanguage()}"/>
+<br>
 Session Id: ${pageContext.session.id}
 <br>
 Role: ${sessionScope.user.getRole()}
@@ -61,6 +64,7 @@ Current city: ${sessionScope.currentCity}
 <br>
 Current region: ${sessionScope.regionId}
 <hr>
+-->
 
 
 <form name="changeCurrent" action="controller" method="post">
@@ -69,7 +73,7 @@ Current region: ${sessionScope.regionId}
             <td><label><fmt:message key="main.label.choose_current_city"/></label></td>
             <input type="hidden" name="command" value="main">
             <td><input type="text" size="30" list="cityList" name="cityInp"
-                   value="${sessionScope.currentCity.getName(locale)}"></td>
+                       value="${sessionScope.currentCity.getName(locale)}"></td>
             <datalist id="cityList">
                 <c:forEach var="city" items="${applicationScope.cities}">
                     <option>${city.getName(locale)}</option>
@@ -86,19 +90,19 @@ Current region: ${sessionScope.regionId}
             </select></td>
         </tr>
         <tr>
-            <td><label><fmt:message key="all.label.weight" /></label></td>
+            <td><label><fmt:message key="all.label.weight"/></label></td>
             <td><input type="number" size="5" name="weight" value="${weight}"></td>
         </tr>
         <tr>
-            <td><label><fmt:message key="all.label.length" /></label></td>
+            <td><label><fmt:message key="all.label.length"/></label></td>
             <td><input type="number" size="5" name="length" value="${length}"></td>
         </tr>
         <tr>
-            <td><label><fmt:message key="all.label.width" /></label></td>
+            <td><label><fmt:message key="all.label.width"/></label></td>
             <td><input type="number" size="5" name="width" value="${width}"></td>
         </tr>
         <tr>
-            <td><label><fmt:message key="all.label.height" /></label></td>
+            <td><label><fmt:message key="all.label.height"/></label></td>
             <td><input type="number" size="5" name="height" value="${height}"></td>
         </tr>
         <tr>
@@ -107,14 +111,17 @@ Current region: ${sessionScope.regionId}
     </table>
 </form>
 
+
+<br><fmt:message key="main.label.parcel_weight"/> ${weight} <fmt:message key="all.label.kg"/>
+<br><fmt:message key="main.label.parcel_volume"/> ${volume} <fmt:message key="all.label.dm3"/>
+
 <p><fmt:message key="main.label.delivery_cost_from_city"/> ${sessionScope.currentCity.getName(locale)}:</p>
-<p><fmt:message key="main.label.parcel_weight"/> ${weight} <fmt:message key="all.label.kg"/> </p>
-<p><fmt:message key="main.label.parcel_volume"/> ${volume} <fmt:message key="all.label.dm3"/></p>
+
 <table>
     <tr>
-        <th><fmt:message key="all.label.city"/> </th>
-        <th><fmt:message key="all.label.distance"/> </th>
-        <th><fmt:message key="all.label.cost"/> </th>
+        <th><fmt:message key="all.label.city"/></th>
+        <th><fmt:message key="all.label.distance"/></th>
+        <th><fmt:message key="all.label.cost"/></th>
     </tr>
     <c:forEach var="city" items="${cityList}">
         <tr>
