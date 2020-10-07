@@ -39,7 +39,7 @@ public class MakeOrderCommand extends Command {
             width = Integer.parseInt(req.getParameter("width"));
             height = Integer.parseInt(req.getParameter("height"));
         } catch (NumberFormatException e) {
-            return CommandContainer.get("account").execute(req, resp);
+            return Path.COMMAND__ACCOUNT;
         }
 
         //Тут приходится искать по имени, потому что не получается неявно передать cityId при помощи <input> + <datalist>

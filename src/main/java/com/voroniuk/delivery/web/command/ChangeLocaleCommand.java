@@ -18,7 +18,7 @@ public class ChangeLocaleCommand extends Command {
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         LOG.debug("Locale changed to ");
-        String forward = Path.PAGE__MAIN;
+        String forward = Path.COMMAND__MAIN;
 
         Locale choosen = SiteLocale.valueOf(req.getParameter("choosenLang")).getLocale();
 
