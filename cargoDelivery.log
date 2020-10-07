@@ -3545,3 +3545,305 @@
 2020-10-07 12:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
 2020-10-07 12:01 [DEBUG]            MainController:    58 - MainController starts
 2020-10-07 12:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-07 12:03 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-07 12:03 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-07 12:03 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-07 12:04 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:04 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-07 12:04 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-07 12:04 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:04 [TRACE]               MainCommand:    75 - Initializing current city as: City{Одесса}
+2020-10-07 12:04 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:04 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:04 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:04 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:04 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:04 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:04 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:04 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:04 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:04 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:04 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:04 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:04 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:04 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:04 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:04 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:04 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:04 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:04 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:04 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:04 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:04 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:04 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:04 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:04 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:05 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:05 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:05 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:05 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:05 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:05 [TRACE]               MainCommand:    69 - Change current city to: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Немиров}
+2020-10-07 12:05 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:05 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]          CommandContainer:    26 - Command container was successfully initialized
+2020-10-07 12:06 [TRACE]          CommandContainer:    27 - Number of commands --> 8
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    75 - Initializing current city as: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:06 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:06 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:06 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]       ChangeLocaleCommand:    20 - Locale changed to 
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-07 12:06 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:06 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:06 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:06 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [TRACE]               MainCommand:    69 - Change current city to: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-07 12:07 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-07 12:07 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-07 12:07 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=main
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:07 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:07 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-07 12:07 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-07 12:07 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-07 12:07 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-07 12:07 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-07 12:07 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-07 12:07 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-07 12:07 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-07 12:07 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-07 12:07 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-07 12:07 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:07 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-07 12:08 [DEBUG]            MainController:    58 - MainController starts
+2020-10-07 12:08 [DEBUG]               MainCommand:    26 - Main command starts
+2020-10-07 12:08 [DEBUG]               MainCommand:    79 - Save currentCity to session: City{Новая Одесса}
+2020-10-07 12:08 [DEBUG]               MainCommand:   120 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-07 12:08 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-07 12:24 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-07 12:24 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-07 12:24 [DEBUG]            EncodingFilter:    48 - Filter initialization finished

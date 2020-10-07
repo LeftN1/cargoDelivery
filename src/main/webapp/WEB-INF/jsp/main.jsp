@@ -125,7 +125,7 @@ Current region: ${sessionScope.regionId}
     </tr>
     <c:forEach var="city" items="${cityList}">
         <tr>
-            <td>
+            <td width="200">
                     ${city.getName(locale)}
             </td>
             <td width="150" align="center">
