@@ -5,8 +5,6 @@ O
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 >
 app.properties,0\4\04b02bfcfbb59e2ce9803e449df2cd081600b104
-H
-src/main/webapp/main.jsp,3\7\37a7e7efd6aa64ede7eb56f2f71c420a37050399
 G
 sql/db-create-mysql.sql,a\3\a3eae14256809da301e2a45fd81cfb87523f4e73
 A

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<fmt:setLocale value="${sessionScope.locale.getLanguage()}"/>
 <h2>Cargo Delivery Service</h2>
 
 <div style="color: red">${msg}</div>
@@ -46,11 +47,11 @@
         </c:forEach>
         </option>
     </select>
-    <input type="submit" value="<fmt:message key="main.button.change"/>">
+    <input type="submit" value=<fmt:message key="main.button.change"/>>
 </form>
 
 
-<fmt:setLocale value="${sessionScope.locale.getLanguage()}"/>
+
 
 <!--
 <hr>

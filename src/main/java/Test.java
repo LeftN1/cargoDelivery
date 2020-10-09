@@ -1,4 +1,5 @@
 import com.voroniuk.delivery.db.dao.CityDAO;
+import com.voroniuk.delivery.db.dao.DBManager;
 import com.voroniuk.delivery.db.dao.ResourceDAO;
 import com.voroniuk.delivery.db.dao.UserDAO;
 import com.voroniuk.delivery.db.entity.*;
@@ -19,6 +20,8 @@ public class Test {
         List<Region> regions = cityDAO.findAllRegions();
 
         System.out.println(regions);
+
+
 
     }
 }
