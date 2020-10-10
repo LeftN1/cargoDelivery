@@ -7,7 +7,7 @@
     <title>Title</title>
 </head>
 <body>
-<fmt:setLocale value = "${locale.getLanguage()}"/>
+<fmt:setLocale value="${locale.getLanguage()}"/>
 
 <a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
 
@@ -18,11 +18,12 @@
     <input type="hidden" name="command" value="makeOrder">
     <table>
         <tr>
-            <td>
-                Current city:
+            <td width="200">
+                <fmt:message key="main.label.choose_current_city"/>
             </td>
             <td>
-                <input type="text" size="50" list="cityList" name="current" value="${lastCurrent==null?sessionScope.currentCity.getName(locale):lastCurrent.getName(locale)}">
+                <input type="text" size="50" list="cityList" name="current"
+                       value="${lastCurrent==null?sessionScope.currentCity.getName(locale):lastCurrent.getName(locale)}">
                 <!--
                 <select name="current">
                     <c:forEach var="city" items="${applicationScope.cities}">
@@ -34,7 +35,7 @@
         </tr>
         <tr>
             <td>
-                Destination city:
+                <fmt:message key="main.label.choose_destination_city"/>
             </td>
             <td>
                 <input type="text" size="50" list="cityList" name="cityInp" value="${destination.getName(locale)}">
@@ -47,14 +48,16 @@
         </tr>
         <tr>
             <td>
-                Adress:
+                <fmt:message key="all.label.adress"/>
             </td>
             <td>
                 <input type="text" size="50" name="adress" value="${adress}">
             </td>
         </tr>
         <tr>
-            <td>Cargo type: </td>
+            <td>
+                <fmt:message key="all.label.cargo_type"/>
+            </td>
             <td>
                 <select name="type">
                     <c:forEach var="type" items="${applicationScope.cargoTypes}">
@@ -65,47 +68,47 @@
         </tr>
         <tr>
             <td>
-                Weight:
+                <fmt:message key="all.label.weight"/>
             </td>
             <td>
-                <input type="number" size="5" name="weight" value="${weight}"> kg
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Length:
-            </td>
-            <td>
-                <input type="number" size="5" name="length" value="${length}"> cm
+                <input type="number" size="5" name="weight" value="${weight}">
             </td>
         </tr>
         <tr>
             <td>
-                Width:
+                <fmt:message key="all.label.length"/>
             </td>
             <td>
-                <input type="number" size="5" name="width" value="${width}"> cm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Height:
-            </td>
-            <td>
-                <input type="number" size="5" name="height" value="${height}"> cm
+                <input type="number" size="5" name="length" value="${length}">
             </td>
         </tr>
         <tr>
             <td>
-                Cost:
+                <fmt:message key="all.label.width"/>
+            </td>
+            <td>
+                <input type="number" size="5" name="width" value="${width}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fmt:message key="all.label.height"/>
+            </td>
+            <td>
+                <input type="number" size="5" name="height" value="${height}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fmt:message key="all.label.cost"/>
             </td>
             <td>
                 ${cost}
             </td>
         </tr>
     </table>
-    <input type="submit" name="order" value="make order">
-    <input type="submit" name="calculate" value="calculate">
+    <input type="submit" name="order" value="<fmt:message key="user.button.make_order"/>"/>
+    <input type="submit" name="calculate" value="<fmt:message key="main.button.calculate"/>"/>
 
     <hr>
 
@@ -113,15 +116,15 @@
 
     <table>
         <tr>
-            <th>id</th>
-            <th>Origin</th>
-            <th>Destination</th>
-            <th>Adress</th>
-            <th>Type</th>
-            <th>Weight</th>
-            <th>Volume</th>
-            <th>Cost</th>
-            <th>Status</th>
+            <th><fmt:message key="all.label.id"/></th>
+            <th><fmt:message key="all.label.origin"/> </th>
+            <th><fmt:message key="all.label.destination"/> </th>
+            <th><fmt:message key="all.label.adress"/> </th>
+            <th><fmt:message key="all.label.cargo_type"/> </th>
+            <th><fmt:message key="all.label.weight"/> </th>
+            <th><fmt:message key="all.label.volume"/> </th>
+            <th><fmt:message key="all.label.cost"/> </th>
+            <th><fmt:message key="all.label.status"/> </th>
         </tr>
 
         <c:forEach var="delivery" items="${deliveries}">

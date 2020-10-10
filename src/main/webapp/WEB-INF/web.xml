@@ -29,6 +29,43 @@
     </filter-mapping>
 
 
+    <!--============================================================
+Security filter.
+1) admin: admin commands
+2) client: client commands
+3) commons: commands for all roles
+4) out-of-control: commands without access control
+Delimiter - space/tab
+=============================================================-->
+
+    <filter>
+        <filter-name>CommandAccessFilter</filter-name>
+        <filter-class>com.voroniuk.delivery.web.filter.CommandAccessFilter</filter-class>
+        <init-param>
+            <param-name>manager</param-name>
+            <param-value>manager_account account</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>user_account makeOrder account</param-value>
+        </init-param>
+        <init-param>
+            <param-name>common</param-name>
+            <param-value>noCommand logout register changeLocale</param-value>
+        </init-param>
+        <init-param>
+            <param-name>out-of-control</param-name>
+            <param-value>login main login changeLocale register</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CommandAccessFilter</filter-name>
+        <servlet-name>main-controller</servlet-name>
+    </filter-mapping>
+
+
+
 
     <servlet>
         <servlet-name>main-controller</servlet-name>
@@ -38,6 +75,9 @@
         <servlet-name>main-controller</servlet-name>
         <url-pattern>/controller</url-pattern>
     </servlet-mapping>
+
+
+
 
 <!--
     <servlet>
