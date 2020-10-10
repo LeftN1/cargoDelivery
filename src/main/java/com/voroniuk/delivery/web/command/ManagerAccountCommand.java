@@ -1,6 +1,7 @@
 package com.voroniuk.delivery.web.command;
 
 import com.voroniuk.delivery.Path;
+import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
@@ -19,24 +20,29 @@ public class ManagerAccountCommand extends Command {
 
         String forward;
         OrderDAO orderDAO = new OrderDAO();
+        CityDAO cityDAO = new CityDAO();
 
         String rStatus = req.getParameter("status");
         String rOrigin = req.getParameter("origin");
         String rDestination = req.getParameter("destination");
 
 
-
         DeliveryStatus status = (DeliveryStatus) req.getSession().getAttribute("status");
-        if(status == null){
+        if (status == null) {
             status = DeliveryStatus.NEW;
         }
-        City origin = new City();
-        City destination = new City();
+
+        int originId;
+        int destinationId;
 
         try {
             status = rStatus != null ? DeliveryStatus.getStatusById(Integer.parseInt(rStatus)) : status;
-        } catch (NumberFormatException e) {
+            originId = rOrigin != null ? Integer.parseInt(rOrigin) : (int) req.getSession().getAttribute("originId");
+            destinationId = rDestination != null ? Integer.parseInt(rDestination) : (int) req.getSession().getAttribute("destinationId");
+        } catch (NumberFormatException | NullPointerException e) {
             status = DeliveryStatus.NEW;
+            originId = 0;
+            destinationId = 0;
         }
 
         int pageNo;
@@ -45,22 +51,21 @@ public class ManagerAccountCommand extends Command {
 
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(status, (pageNo - 1) * pageSize, pageSize);
+        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(status, originId, destinationId, (pageNo - 1) * pageSize, pageSize);
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);
         req.setAttribute("deliveries", deliveries);
 
         req.getSession().setAttribute("status", status);
-        req.getSession().setAttribute("origin", origin);
-        req.getSession().setAttribute("destination", destination);
+        req.getSession().setAttribute("originId", originId);
+        req.getSession().setAttribute("destinationId", destinationId);
 
 
         forward = Path.PAGE__MANAGER_ACCOUNT;
 
         return forward;
     }
-
 
 
 }

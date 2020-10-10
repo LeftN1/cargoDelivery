@@ -14,14 +14,9 @@ public class Test {
         ResourceDAO resourceDAO = new ResourceDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(DeliveryStatus.PROCESSED);
+//        Delivery d = orderDAO.findDeliveriesByStatus(DeliveryStatus.PROCESSED).get(0);
+//        orderDAO.addStatus(d, DeliveryStatus.ARRIVED, new Date());
 
-
-
-//        delivery.addStatus(DeliveryStatus.PROCESSED, new Date());
-//        orderDAO.saveDelivery(delivery);
-
-        System.out.println(deliveries);
 
     }
 }

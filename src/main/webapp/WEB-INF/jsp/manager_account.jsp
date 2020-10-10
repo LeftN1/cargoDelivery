@@ -41,7 +41,7 @@
                 <select name="origin">
                     <option value="0">---<fmt:message key="main.option.any_city"/>---</option>
                     <c:forEach var="city" items="${applicationScope.cities}">
-                        <option value="${city.getId()}">${city.getName(locale)}</option>
+                        <option value="${city.getId()}" ${city.getId()==sessionScope.originId?" selected":" "}>${city.getName(locale)}</option>
                     </c:forEach>
                 </select>
             </td>
@@ -54,7 +54,7 @@
                 <select name="destination">
                     <option value="0">---<fmt:message key="main.option.any_city"/>---</option>
                     <c:forEach var="city" items="${applicationScope.cities}">
-                        <option value="${city.getId()}">${city.getName(locale)}</option>
+                        <option value="${city.getId() }" ${city.getId()==sessionScope.destinationId?" selected":" "}>${city.getName(locale)}</option>
                     </c:forEach>
                 </select>
             </td>
@@ -80,9 +80,10 @@
         <th><fmt:message key="all.label.volume"/></th>
         <th><fmt:message key="all.label.cost"/></th>
         <th><fmt:message key="all.label.status"/></th>
-        <th><fmt:message key="all.label.delete"/></th>
+       <!-- <th><fmt:message key="all.label.delete"/></th>
         <th><fmt:message key="all.label.edit"/></th>
         <th><fmt:message key="all.label.confirm"/></th>
+        -->
     </tr>
 
     <c:forEach var="delivery" items="${deliveries}">

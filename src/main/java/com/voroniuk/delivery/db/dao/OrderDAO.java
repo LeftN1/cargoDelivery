@@ -63,6 +63,25 @@ public class OrderDAO {
         }
     }
 
+    public void addStatus(Delivery delivery, DeliveryStatus status, Date date) {
+        String sql = "insert into delivery_status (delivery_id, status_id, date_time) " +
+                "values (?, ?, ?)";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+
+
+                statement.setInt(1, delivery.getId());
+                statement.setInt(2, status.getId());
+                statement.setLong(3, date.getTime());
+                statement.executeUpdate();
+
+            LOG.info("Statuses have been added to th delivery id=" + delivery.getId());
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+    }
+
     public List<Delivery> findUserDeliveries(User user, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
@@ -123,7 +142,7 @@ public class OrderDAO {
         return findUserDeliveries(user, start, offset);
     }
 
-    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
+    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int originId, int destinationId, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
         CityDAO cityDAO = new CityDAO();
@@ -143,15 +162,27 @@ public class OrderDAO {
                 "on actualdelivery_status.delivery_id = delivery_status.delivery_id\n" +
                 "and actualdelivery_status.date_time = delivery_status.date_time\n" +
                 "    and delivery_status.status_id=?\n" +
-                "join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
-                "limit ?,?;";
+                "inner join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN deliveries.origin_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN deliveries.destination_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "limit ?, ?;";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
             statement.setInt(1, status.getId());
-            statement.setInt(2, start);
-            statement.setInt(3, offset);
+            statement.setInt(2, originId);
+            statement.setInt(3, originId);
+            statement.setInt(4, destinationId);
+            statement.setInt(5, destinationId);
+            statement.setInt(6, start);
+            statement.setInt(7, offset);
 
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
@@ -188,6 +219,10 @@ public class OrderDAO {
         }
 
         return deliveries;
+    }
+
+    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
+        return findDeliveriesByStatus(status,0,0, start, offset);
     }
 
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {

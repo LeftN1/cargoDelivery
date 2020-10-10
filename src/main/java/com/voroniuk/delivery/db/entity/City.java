@@ -11,6 +11,7 @@ public class City implements Comparable<City>{
     private double latitude;
 
     public City() {
+        id = 0;
         names = new HashMap<>();
     }
 

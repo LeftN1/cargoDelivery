@@ -108,6 +108,7 @@ CREATE TABLE deliveries
     weight        				INT,
     volume        				INT,
     cost          				DOUBLE,
+    UNIQUE(id),
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
     FOREIGN KEY (origin_city_id) REFERENCES cities (id) ON DELETE CASCADE,
     FOREIGN KEY (destination_city_id) REFERENCES cities (id) ON DELETE CASCADE,
