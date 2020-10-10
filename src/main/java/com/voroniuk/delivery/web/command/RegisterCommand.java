@@ -31,18 +31,21 @@ public class RegisterCommand extends Command {
 
         if (login.equals("")){
             msg = "Login should not be empty";
+//            msg = "<fmt:message key=\"register.message.login_empty\"/>";
             req.setAttribute("msg", msg);
             return forward;
         }
 
         if (password.equals("")){
             msg = "Password should not be empty";
+//            msg = "<fmt:message key=\"register.message.password_empty\"/>";
             req.setAttribute("msg", msg);
             return forward;
         }
 
         if (!password.equals(confirm)){
             msg = "Confirm password incorrect";
+//            msg = "<fmt:message key=\"register.message.confirm_incorrect\"/>";
             req.setAttribute("msg", msg);
             return forward;
         }
@@ -50,7 +53,8 @@ public class RegisterCommand extends Command {
         UserDAO userDAO = new UserDAO();
 
         if(userDAO.findUserByLogin(login)!=null){
-            msg = "User with login '" + login + "' already exists";
+//            msg = "<fmt:message key=\"register.message.user_with_login\"/>" + login + "<fmt:message key=\"register.message.already_exists\"/>";
+            msg = "User with login '" + login + "' already exists\"/>";
             req.setAttribute("msg", msg);
             return forward;
         }
@@ -62,9 +66,10 @@ public class RegisterCommand extends Command {
         newUser.setRole(Role.USER);
 
         userDAO.saveUser(newUser);
+        req.getSession().setAttribute("user", newUser);
 
         //PRG pattern
-        String redirect = Path.COMMAND__MAIN;
+        String redirect = Path.COMMAND__ACCOUNT;
         resp.setStatus(resp.SC_MOVED_PERMANENTLY);
         resp.setHeader("Location", redirect);
         LOG.debug("Redirect to :" + redirect);

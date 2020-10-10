@@ -14,19 +14,23 @@
 </head>
 <body>
 
+<fmt:setLocale value="${locale.getLanguage()}"/>
+
+<a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
+
 <h4>Delivery list:</h4>
 
 <table>
     <tr>
-        <th>id</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Adress</th>
-        <th>Type</th>
-        <th>Weight</th>
-        <th>Volume</th>
-        <th>Cost</th>
-        <th>Status</th>
+        <th><fmt:message key="all.label.id"/></th>
+        <th><fmt:message key="all.label.origin"/> </th>
+        <th><fmt:message key="all.label.destination"/> </th>
+        <th><fmt:message key="all.label.adress"/> </th>
+        <th><fmt:message key="all.label.cargo_type"/> </th>
+        <th><fmt:message key="all.label.weight"/> </th>
+        <th><fmt:message key="all.label.volume"/> </th>
+        <th><fmt:message key="all.label.cost"/> </th>
+        <th><fmt:message key="all.label.status"/> </th>
     </tr>
 
     <c:forEach var="delivery" items="${deliveries}">

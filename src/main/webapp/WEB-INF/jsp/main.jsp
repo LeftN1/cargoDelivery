@@ -93,19 +93,19 @@ Current region: ${sessionScope.regionId}
         </tr>
         <tr>
             <td><label><fmt:message key="all.label.weight"/></label></td>
-            <td><input type="number" size="5" name="weight" value="${weight}"></td>
+            <td><input type="number" size="5" name="weight" value="${sessionScope.weight}"></td>
         </tr>
         <tr>
             <td><label><fmt:message key="all.label.length"/></label></td>
-            <td><input type="number" size="5" name="length" value="${length}"></td>
+            <td><input type="number" size="5" name="length" value="${sessionScope.length}"></td>
         </tr>
         <tr>
             <td><label><fmt:message key="all.label.width"/></label></td>
-            <td><input type="number" size="5" name="width" value="${width}"></td>
+            <td><input type="number" size="5" name="width" value="${sessionScope.width}"></td>
         </tr>
         <tr>
             <td><label><fmt:message key="all.label.height"/></label></td>
-            <td><input type="number" size="5" name="height" value="${height}"></td>
+            <td><input type="number" size="5" name="height" value="${sessionScope.height}"></td>
         </tr>
         <tr>
             <td><input type="submit" value="<fmt:message key="main.button.calculate"/>"></td>

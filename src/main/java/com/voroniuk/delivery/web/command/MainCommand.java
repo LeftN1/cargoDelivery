@@ -44,6 +44,12 @@ public class MainCommand extends Command {
         String sort = (String) req.getSession().getAttribute("sort");
         String order = (String) req.getSession().getAttribute("order");
 
+
+        String sWeight = req.getParameter("weight");
+        String sLength = req.getParameter("length");
+        String sWidth = req.getParameter("width");
+        String sHeight = req.getParameter("height");
+
         int weight;
         int length;
         int width;
@@ -51,11 +57,11 @@ public class MainCommand extends Command {
         int voulume;
 
         try {
-            weight = Integer.parseInt(req.getParameter("weight"));
-            length = Integer.parseInt(req.getParameter("length"));
-            width = Integer.parseInt(req.getParameter("width"));
-            height = Integer.parseInt(req.getParameter("height"));
-        } catch (NumberFormatException e) {
+            weight = sWeight != null ? Integer.parseInt(sWeight) : ((int) req.getSession().getAttribute("weight"));
+            length = sLength != null ? Integer.parseInt(sLength) : ((int) req.getSession().getAttribute("length"));
+            width = sWidth != null ? Integer.parseInt(sWidth) : ((int) req.getSession().getAttribute("width"));
+            height = sHeight != null ? Integer.parseInt(sHeight) : ((int) req.getSession().getAttribute("height"));
+        } catch (NumberFormatException | NullPointerException e) {
             weight = 1;
             length = 10;
             width = 10;
@@ -138,11 +144,11 @@ public class MainCommand extends Command {
 
         req.setAttribute("cityList", cityList);
 
-        req.setAttribute("weight", weight);
-        req.setAttribute("length", length);
-        req.setAttribute("width", width);
-        req.setAttribute("height", height);
-        req.setAttribute("volume", voulume);
+        req.getSession().setAttribute("weight", weight);
+        req.getSession().setAttribute("length", length);
+        req.getSession().setAttribute("width", width);
+        req.getSession().setAttribute("height", height);
+        req.getSession().setAttribute("volume", voulume);
 
 
         req.getSession().setAttribute("regionId", regionId);
