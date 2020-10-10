@@ -22,7 +22,7 @@ public class ManagerAccountCommand extends Command {
 
         int pageNo;
         int pageSize = 10;
-        int totalPages = (int) Math.ceil((double) orderDAO.countDeliveries(status) / pageSize);
+        int totalPages = (int) Math.ceil((double) orderDAO.countDeliveriesByStatus(status) / pageSize);
 
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 

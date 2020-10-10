@@ -4,6 +4,7 @@ import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.OrderDAO;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.User;
+import com.voroniuk.delivery.utils.Utils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,17 @@ public class UserAccountCommand extends Command {
 
         User user = (User) req.getSession().getAttribute("user");
 
-        List<Delivery> deliveries = orderDAO.findUserDeliveries(user);
+
+        int pageNo;
+        int pageSize = 10;
+        int totalPages = (int) Math.ceil((double) orderDAO.countDeliveriesByUser(user) / pageSize);
+
+        pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
+
+        List<Delivery> deliveries = orderDAO.findUserDeliveries(user, (pageNo-1)*pageSize, pageSize);
+
+        req.setAttribute("pageNo", pageNo);
+        req.setAttribute("totalPages", totalPages);
         req.setAttribute("deliveries", deliveries);
         forward = Path.PAGE__USER_ACCOUNT;
 

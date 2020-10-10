@@ -1,7 +1,4 @@
-import com.voroniuk.delivery.db.dao.CityDAO;
-import com.voroniuk.delivery.db.dao.DBManager;
-import com.voroniuk.delivery.db.dao.ResourceDAO;
-import com.voroniuk.delivery.db.dao.UserDAO;
+import com.voroniuk.delivery.db.dao.*;
 import com.voroniuk.delivery.db.entity.*;
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -15,16 +12,18 @@ public class Test {
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
         ResourceDAO resourceDAO = new ResourceDAO();
+        OrderDAO orderDAO = new OrderDAO();
 
 
         List<Region> regions = cityDAO.findAllRegions();
 
         System.out.println(regions);
 
-        String a="ва";
-        String b="вбф";
+        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(DeliveryStatus.NEW);
 
-        System.out.println(a.compareTo(b));
+        Delivery d = deliveries.get(0);
+
+        System.out.println(d.getDateByStatus(DeliveryStatus.NEW));
 
     }
 }

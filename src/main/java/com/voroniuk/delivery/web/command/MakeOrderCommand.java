@@ -78,7 +78,6 @@ public class MakeOrderCommand extends Command {
         delivery.setWeight(weight);
         delivery.setVolume(volume);
         delivery.setCost(cost);
-
         delivery.addStatus(DeliveryStatus.NEW, new Date());
 
         orderDAO.saveDelivery(delivery);

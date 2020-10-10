@@ -3,7 +3,6 @@ package com.voroniuk.delivery.db.dao;
 import com.voroniuk.delivery.db.entity.*;
 import org.apache.log4j.Logger;
 
-import javax.jws.soap.SOAPBinding;
 import java.sql.*;
 import java.util.*;
 import java.util.Date;
@@ -64,19 +63,23 @@ public class OrderDAO {
         }
     }
 
-    public List<Delivery> findUserDeliveries(User user) {
+    public List<Delivery> findUserDeliveries(User user, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
         CityDAO cityDAO = new CityDAO();
 
 
-        String sql = "select * from deliveries " +
-                    "where user_id=?";
+        String sql =    "select * from deliveries " +
+                        "where user_id=? " +
+                        "limit ?, ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
             statement.setInt(1, user.getId());
+            statement.setInt(2, start);
+            statement.setInt(3, offset);
+
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
 
@@ -114,6 +117,12 @@ public class OrderDAO {
         return deliveries;
     }
 
+    public List<Delivery> findUserDeliveries(User user) {
+        int start = 0;
+        int offset = countDeliveriesByUser(user);
+        return findUserDeliveries(user, start, offset);
+    }
+
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
@@ -121,10 +130,10 @@ public class OrderDAO {
         UserDAO userDAO = new UserDAO();
 
 
-        String sql =    "select * from deliveries " +
-                        "join delivery_status on deliveries.id=delivery_id\n" +
-                        "where status_id=?\n" +
-                        "limit ? , ?";
+        String sql = "select * from deliveries " +
+                "join delivery_status on deliveries.id=delivery_id\n" +
+                "where status_id=?\n" +
+                "limit ? , ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -172,11 +181,11 @@ public class OrderDAO {
 
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {
         int start = 0;
-        int offset = countDeliveries(status);
+        int offset = countDeliveriesByStatus(status);
         return findDeliveriesByStatus(status, start, offset);
     }
 
-    public int countDeliveries() {
+    public int countDeliveriesByStatus() {
         int result = 0;
         String sql = "select count(*) from deliveries;";
 
@@ -196,21 +205,50 @@ public class OrderDAO {
         return result;
     }
 
-    public int countDeliveries(DeliveryStatus status) {
+    public int countDeliveriesByStatus(DeliveryStatus status) {
         int result = 0;
 
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
 
 
-        String sql =    "select count(*) from deliveries " +
-                        "join delivery_status on deliveries.id=delivery_id " +
-                        "where status_id=?";
+        String sql = "select count(*) from deliveries " +
+                "join delivery_status on deliveries.id=delivery_id " +
+                "where status_id=?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
             statement.setInt(1, status.getId());
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                if (resultSet.next()) {
+                    result = resultSet.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return result;
+    }
+
+    public int countDeliveriesByUser(User user) {
+        int result = 0;
+
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+
+        String sql = "select count(*) from deliveries " +
+                "join delivery_status on deliveries.id=delivery_id " +
+                "where user_id=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, user.getId());
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
 

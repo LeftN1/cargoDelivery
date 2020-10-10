@@ -114,4 +114,9 @@ public class Delivery implements Serializable {
     public void setDestination(City destination) {
         this.destination = destination;
     }
+
+    public Date getDateByStatus(DeliveryStatus deliveryStatus){
+        return statusMap.get(deliveryStatus);
+    }
+
 }

@@ -27,6 +27,22 @@ select cities.id, region, name_resource_id, longitude, latitude, lang, country, 
 join resources on name_resource_id=resources.id
 join translations on resource_id=resources.id
 join locales on locales.id=locale_id
+ORDER BY cities.id
+limit 0, 400;
+
+select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation from cities 
+join resources on name_resource_id=resources.id
+join translations on resource_id=resources.id
+join locales on locales.id=locale_id
+where region=2
+ORDER BY cities.id;
+
+SELECT COUNT(*) FROM cities;
+
+select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation from cities 
+join resources on name_resource_id=resources.id
+join translations on resource_id=resources.id
+join locales on locales.id=locale_id
 ORDER BY cities.id;
 
 select regions.id, regions.country, name_resource_id, lang, locales.country, translation from regions
