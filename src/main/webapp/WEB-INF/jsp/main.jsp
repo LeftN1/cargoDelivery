@@ -161,5 +161,13 @@ Current region: ${sessionScope.regionId}
     <a href="<%=Path.COMMAND__MAIN%>&page=${totalPages}"><fmt:message key="all.href.last"/></a>
 </c:if>
 
+<!-- Access filter test  -->
+<!--
+<br>
+<a href="<%=Path.COMMAND__USER_ACCOUNT%>">User access</a>
+<br>
+<a href="<%=Path.COMMAND__MANAGER_ACCOUNT%>">Manager access</a>
+-->
+
 </body>
 </html>

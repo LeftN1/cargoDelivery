@@ -68,9 +68,11 @@ public class CommandAccessFilter implements Filter {
 			return false;
 
 		User user = (User) session.getAttribute("user");
-		Role userRole = user.getRole();
-		if (userRole == null)
+		if (user == null)
 			return false;
+
+		Role userRole = user.getRole();
+
 		
 		return accessMap.get(userRole).contains(commandName)
 				|| commons.contains(commandName);

@@ -77,7 +77,18 @@ Delimiter - space/tab
     </servlet-mapping>
 
 
+    <!--============================================================
+	Error page
+    =============================================================-->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/WEB-INF/jsp/error_page.jsp</location>
+    </error-page>
 
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error_page.jsp</location>
+    </error-page>
 
 <!--
     <servlet>
