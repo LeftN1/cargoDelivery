@@ -33,7 +33,16 @@ public class MainCommand extends Command {
         String cityInp = req.getParameter("cityInp");
         String region = req.getParameter("region");
 
+        String sortReq = req.getParameter("sort");
+        String orderReq = req.getParameter("order");
 
+        if (sortReq != null && orderReq != null) {
+            req.getSession().setAttribute("sort", sortReq);
+            req.getSession().setAttribute("order", orderReq);
+        }
+
+        String sort = (String) req.getSession().getAttribute("sort");
+        String order = (String) req.getSession().getAttribute("order");
 
         int weight;
         int length;
@@ -52,7 +61,7 @@ public class MainCommand extends Command {
             width = 10;
             height = 10;
         }
-        voulume = Calculations.getVolume(length,width, height);
+        voulume = Calculations.getVolume(length, width, height);
 
 
         int regionId = 0;
@@ -82,14 +91,15 @@ public class MainCommand extends Command {
         LOG.debug("Save currentCity to session: " + currentCity);
         req.getSession().setAttribute("currentCity", currentCity);
 
+        Locale locale = (Locale) req.getSession().getAttribute("locale");
 
-        if (req.getSession().getAttribute("locale") == null) {
-            req.getSession().setAttribute("locale", Locale.getDefault());
+        if (locale == null) {
+            locale = Locale.getDefault();
+            req.getSession().setAttribute("locale", locale);
         }
 
 
-
-        Map<City, String> distances = new HashMap<>();
+        Map<City, Integer> distances = new HashMap<>();
         Map<City, Integer> costs = new HashMap<>();
 
         List<City> cityList;
@@ -101,19 +111,24 @@ public class MainCommand extends Command {
             cityList = getCitiesByRegion(cityList, regionId);
         }
 
+        for (City city : cityList) {
+            //String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
+            int dist = (int) cityDAO.findDistance(currentCity, city);
+            distances.put(city, dist);
+            costs.put(city, Calculations.getCost(currentCity, city, weight, voulume));
+        }
+
+        //SORTING
+        cityList = sortCities(cityList, distances, sort, order, locale);
+
         int pageNo;
         int pageSize = 10;
         int totalPages = (int) Math.ceil((double) cityList.size() / pageSize);
 
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 
-        cityList = getCititesLimit(cityList, (pageNo-1) * pageSize, pageSize);
+        cityList = getCititesLimit(cityList, (pageNo - 1) * pageSize, pageSize);
 
-        for (City city : cityList) {
-            String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
-            distances.put(city, dist);
-            costs.put(city, Calculations.getCost(currentCity, city, weight, voulume));
-        }
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);
@@ -142,8 +157,53 @@ public class MainCommand extends Command {
         return cityList.stream().filter(i -> i.getRegionId() == id).collect(Collectors.<City>toList());
     }
 
-    List<City> getCititesLimit(List<City> cityList, int start, int offset){
-        return cityList.stream().skip(start).limit(offset).collect(Collectors.<City>toList());
+    List<City> getCititesLimit(List<City> cityList, int start, int offset) {
+        return cityList.stream().sorted().skip(start).limit(offset).collect(Collectors.<City>toList());
     }
+
+
+    List<City> sortCities(List<City> cityList, Map<City, Integer> distances, String sortBy, String order, Locale locale) {
+
+        if (sortBy == null) {
+            sortBy = "city";
+        }
+
+        if (order == null) {
+            order = "asc";
+        }
+
+        switch (sortBy) {
+            case ("distance"):
+                return sortCitiesByDistance(cityList, distances, order);
+            case ("city"):
+            default:
+                return sortCitiesByName(cityList, order, locale);
+        }
+    }
+
+    private List<City> sortCitiesByDistance(List<City> cityList, Map<City, Integer> distances, String order) {
+
+        Comparator<City> cityDistanceComparator = Comparator.comparingInt(distances::get);
+
+        if (order.equals("desc")) {
+            return cityList.stream().sorted(cityDistanceComparator.reversed()).collect(Collectors.<City>toList());
+        }
+        return cityList.stream().sorted(cityDistanceComparator).collect(Collectors.<City>toList());
+
+    }
+
+
+    List<City> sortCitiesByName(List<City> cityList, String order, Locale locale) {
+
+        Comparator<City> cityNameComparator = (Comparator.comparing(o -> o.getName(locale)));
+
+        if (order.equals("desc")) {
+            return cityList.stream().sorted(cityNameComparator.reversed()).collect(Collectors.<City>toList());
+        }
+        return cityList.stream().sorted(cityNameComparator).collect(Collectors.<City>toList());
+
+
+    }
+
 
 }

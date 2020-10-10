@@ -2,7 +2,7 @@ package com.voroniuk.delivery.db.entity;
 
 import java.util.*;
 
-public class City {
+public class City implements Comparable<City>{
     private int id;
     private int regionId;
     private int nameResourceId;
@@ -101,4 +101,8 @@ public class City {
         return Objects.hash(names);
     }
 
+    @Override
+    public int compareTo(City o) {
+        return 0;
+    }
 }

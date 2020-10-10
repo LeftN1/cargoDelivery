@@ -118,11 +118,10 @@ Current region: ${sessionScope.regionId}
 <br><fmt:message key="main.label.parcel_volume"/> ${volume} <fmt:message key="all.label.dm3"/>
 
 <p><fmt:message key="main.label.delivery_cost_from_city"/> ${sessionScope.currentCity.getName(locale)}:</p>
-
 <table>
     <tr>
-        <th><fmt:message key="all.label.city"/></th>
-        <th><fmt:message key="all.label.distance"/></th>
+        <th><fmt:message key="all.label.city"/><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=asc">&#9650;</a><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=desc">&#9660;</a> </th>
+        <th><fmt:message key="all.label.distance"/><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=asc">&#9650;</a><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=desc">&#9660;</a></th>
         <th><fmt:message key="all.label.cost"/></th>
     </tr>
     <c:forEach var="city" items="${cityList}">

@@ -21,7 +21,10 @@ public class Test {
 
         System.out.println(regions);
 
+        String a="ва";
+        String b="вбф";
 
+        System.out.println(a.compareTo(b));
 
     }
 }
