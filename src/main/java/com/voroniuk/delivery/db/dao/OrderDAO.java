@@ -4,11 +4,9 @@ import com.voroniuk.delivery.db.entity.*;
 import org.apache.log4j.Logger;
 
 import javax.jws.soap.SOAPBinding;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
+import java.util.Date;
 
 public class OrderDAO {
 
@@ -47,14 +45,14 @@ public class OrderDAO {
         }
     }
 
-    private void saveDeliveryStatuses(Delivery delivery){
-        String sql =    "insert into delivery_status (delivery_id, status_id, date_time) " +
-                        "values (?, ?, ?)";
+    private void saveDeliveryStatuses(Delivery delivery) {
+        String sql = "insert into delivery_status (delivery_id, status_id, date_time) " +
+                "values (?, ?, ?)";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
 
-            for(Map.Entry<DeliveryStatus, Date> entry : delivery.getStatusMap().entrySet()) {
+            for (Map.Entry<DeliveryStatus, Date> entry : delivery.getStatusMap().entrySet()) {
                 statement.setInt(1, delivery.getId());
                 statement.setInt(2, entry.getKey().getId());
                 statement.setLong(3, entry.getValue().getTime());
@@ -72,8 +70,8 @@ public class OrderDAO {
         CityDAO cityDAO = new CityDAO();
 
 
-        String sql =    "select * from deliveries " +
-                        "where user_id=?";
+        String sql = "select * from deliveries " +
+                    "where user_id=?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -116,7 +114,7 @@ public class OrderDAO {
         return deliveries;
     }
 
-    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {
+    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
         CityDAO cityDAO = new CityDAO();
@@ -124,13 +122,17 @@ public class OrderDAO {
 
 
         String sql =    "select * from deliveries " +
-                        "join delivery_status on deliveries.id=delivery_id " +
-                        "where status_id=?";
+                        "join delivery_status on deliveries.id=delivery_id\n" +
+                        "where status_id=?\n" +
+                        "limit ? , ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
             statement.setInt(1, status.getId());
+            statement.setInt(2, start);
+            statement.setInt(3, offset);
+
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
 
@@ -167,6 +169,62 @@ public class OrderDAO {
 
         return deliveries;
     }
+
+    public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {
+        int start = 0;
+        int offset = countDeliveries(status);
+        return findDeliveriesByStatus(status, start, offset);
+    }
+
+    public int countDeliveries() {
+        int result = 0;
+        String sql = "select count(*) from deliveries;";
+
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(sql)) {
+
+
+            if (resultSet.next()) {
+                result = resultSet.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+        return result;
+    }
+
+    public int countDeliveries(DeliveryStatus status) {
+        int result = 0;
+
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+
+        String sql =    "select count(*) from deliveries " +
+                        "join delivery_status on deliveries.id=delivery_id " +
+                        "where status_id=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, status.getId());
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                if (resultSet.next()) {
+                    result = resultSet.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return result;
+    }
+
 
 //    public List<Delivery> findAllDeliveries() {
 //        List<Delivery> deliveries = new LinkedList<>();
@@ -219,12 +277,12 @@ public class OrderDAO {
 //        return deliveries;
 //    }
 
-    public Map<DeliveryStatus, Date> findStatusesByDeliveryId(int id){
+    public Map<DeliveryStatus, Date> findStatusesByDeliveryId(int id) {
 
         Map<DeliveryStatus, Date> statuses = new HashMap<>();
 
-        String sql =    "select status_id, date_time from delivery_status " +
-                        "where delivery_id=?";
+        String sql = "select status_id, date_time from delivery_status " +
+                "where delivery_id=?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {

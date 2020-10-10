@@ -353,6 +353,63 @@ public class CityDAO {
         return result;
     }
 
+    public List<City> findCitiesByRegionId(int regionId) {
+        List<City> result = new LinkedList<>();
+        String sql =    "select cities.id, region, name_resource_id, longitude, latitude, lang, country, translation " +
+                        "from cities \n" +
+                        "join resources on name_resource_id=resources.id\n" +
+                        "join translations on resource_id=resources.id\n" +
+                        "join locales on locales.id=locale_id\n" +
+                        "WHERE region=?\n" +
+                        "ORDER BY cities.id";
+
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, regionId);
+
+            statement.executeQuery();
+
+            try(ResultSet resultSet = statement.getResultSet()) {
+                int lastId = 0;
+                City city = new City();
+                while (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+
+                    String lang = resultSet.getString(6);
+                    String country = resultSet.getString(7);
+                    String translation = resultSet.getString(8);
+
+                    if (id != lastId) {
+                        if (lastId > 0) {
+                            result.add(city);
+                        }
+                        lastId = id;
+
+                        int resourceId = resultSet.getInt(3);
+                        double longitude = resultSet.getDouble(4);
+                        double latitude = resultSet.getDouble(5);
+
+                        city = new City();
+                        city.setId(id);
+                        city.setRegionId(regionId);
+
+                        city.setLongitude(longitude);
+                        city.setLatitude(latitude);
+                        city.getNames().put(new Locale(lang, country), translation);
+                        city.setNameResourceId(resourceId);
+                    } else {
+                        city.getNames().put(new Locale(lang, country), translation);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+        return result;
+    }
+
     public List<Region> findAllRegions() {
         List<Region> result = new LinkedList<>();
         String sql =    "select regions.id, regions.country, name_resource_id, lang, locales.country, translation from regions " +

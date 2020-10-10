@@ -12,6 +12,8 @@ public class Path {
     //commands
     public static final String COMMAND__MAIN = "/controller?command=main";
     public static final String COMMAND__ACCOUNT = "/controller?command=account";
+    public static final String COMMAND__MANAGER_ACCOUNT = "/controller?command=manager_account";
+    public static final String COMMAND__USER_ACCOUNT = "/controller?command=user_account";
 
 
 }

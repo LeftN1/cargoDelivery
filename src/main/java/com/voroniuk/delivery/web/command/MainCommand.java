@@ -5,6 +5,7 @@ import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Region;
 import com.voroniuk.delivery.utils.Calculations;
+import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -31,6 +32,8 @@ public class MainCommand extends Command {
 
         String cityInp = req.getParameter("cityInp");
         String region = req.getParameter("region");
+
+
 
         int weight;
         int length;
@@ -84,22 +87,36 @@ public class MainCommand extends Command {
             req.getSession().setAttribute("locale", Locale.getDefault());
         }
 
+
+
         Map<City, String> distances = new HashMap<>();
         Map<City, Integer> costs = new HashMap<>();
 
-        List<City> cityList = new LinkedList<>();
+        List<City> cityList;
 
         cityList = (LinkedList<City>) req.getServletContext().getAttribute("cities");
+
 
         if (regionId != 0) {
             cityList = getCitiesByRegion(cityList, regionId);
         }
+
+        int pageNo;
+        int pageSize = 10;
+        int totalPages = (int) Math.ceil((double) cityList.size() / pageSize);
+
+        pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
+
+        cityList = getCititesLimit(cityList, (pageNo-1) * pageSize, pageSize);
 
         for (City city : cityList) {
             String dist = String.format("%.2f", cityDAO.findDistance(currentCity, city));
             distances.put(city, dist);
             costs.put(city, Calculations.getCost(currentCity, city, weight, voulume));
         }
+
+        req.setAttribute("pageNo", pageNo);
+        req.setAttribute("totalPages", totalPages);
 
         req.setAttribute("distances", distances);
         req.setAttribute("costs", costs);
@@ -123,6 +140,10 @@ public class MainCommand extends Command {
 
     List<City> getCitiesByRegion(List<City> cityList, int id) {
         return cityList.stream().filter(i -> i.getRegionId() == id).collect(Collectors.<City>toList());
+    }
+
+    List<City> getCititesLimit(List<City> cityList, int start, int offset){
+        return cityList.stream().skip(start).limit(offset).collect(Collectors.<City>toList());
     }
 
 }
