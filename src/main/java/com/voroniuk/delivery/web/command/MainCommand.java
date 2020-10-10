@@ -207,9 +207,5 @@ public class MainCommand extends Command {
             return cityList.stream().sorted(cityNameComparator.reversed()).collect(Collectors.<City>toList());
         }
         return cityList.stream().sorted(cityNameComparator).collect(Collectors.<City>toList());
-
-
     }
-
-
 }

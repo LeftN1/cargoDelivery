@@ -52,8 +52,6 @@
 </form>
 
 
-
-
 <!--
 <hr>
 <c:out value="lang : ${sessionScope.locale.getLanguage()}"/>
@@ -72,10 +70,14 @@ Current region: ${sessionScope.regionId}
 <form name="changeCurrent" action="controller" method="post">
     <table>
         <tr>
-            <td width="200"><label><fmt:message key="main.label.choose_current_city"/></label></td>
+            <td width="200">
+                <label><fmt:message key="main.label.choose_current_city"/></label>
+            </td>
             <input type="hidden" name="command" value="main">
-            <td><input type="text" size="30" list="cityList" name="cityInp"
-                       value="${sessionScope.currentCity.getName(locale)}"></td>
+            <td>
+                <input type="text" size="30" list="cityList" name="cityInp"
+                       value="${sessionScope.currentCity.getName(locale)}">
+            </td>
             <datalist id="cityList">
                 <c:forEach var="city" items="${applicationScope.cities}">
                     <option>${city.getName(locale)}</option>
@@ -84,12 +86,14 @@ Current region: ${sessionScope.regionId}
         </tr>
         <tr>
             <td><label><fmt:message key="main.label.filter_by_region"/></label></td>
-            <td><select name="region">
-                <option value="0">---<fmt:message key="main.option.all_regions"/>---</option>
-                <c:forEach var="region" items="${applicationScope.regions}">
-                    <option value="${region.getId()}" ${region.getId()==sessionScope.regionId?" selected" : ""} >${region.getName(locale)}</option>
-                </c:forEach>
-            </select></td>
+            <td>
+                <select name="region">
+                    <option value="0">---<fmt:message key="main.option.all_regions"/>---</option>
+                    <c:forEach var="region" items="${applicationScope.regions}">
+                        <option value="${region.getId()}" ${region.getId()==sessionScope.regionId?" selected" : ""} >${region.getName(locale)}</option>
+                    </c:forEach>
+                </select>
+            </td>
         </tr>
         <tr>
             <td><label><fmt:message key="all.label.weight"/></label></td>
@@ -120,8 +124,12 @@ Current region: ${sessionScope.regionId}
 <p><fmt:message key="main.label.delivery_cost_from_city"/> ${sessionScope.currentCity.getName(locale)}:</p>
 <table>
     <tr>
-        <th><fmt:message key="all.label.city"/><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=asc">&#9650;</a><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=desc">&#9660;</a> </th>
-        <th><fmt:message key="all.label.distance"/><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=asc">&#9650;</a><a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=desc">&#9660;</a></th>
+        <th><fmt:message key="all.label.city"/><a style="text-decoration: none"
+                                                  href="<%=Path.COMMAND__MAIN%>&sort=city&order=asc">&#9650;</a><a
+                style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=desc">&#9660;</a></th>
+        <th><fmt:message key="all.label.distance"/><a style="text-decoration: none"
+                                                      href="<%=Path.COMMAND__MAIN%>&sort=distance&order=asc">&#9650;</a><a
+                style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=desc">&#9660;</a></th>
         <th><fmt:message key="all.label.cost"/></th>
     </tr>
     <c:forEach var="city" items="${cityList}">

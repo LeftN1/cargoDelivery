@@ -69,9 +69,9 @@ public class OrderDAO {
         CityDAO cityDAO = new CityDAO();
 
 
-        String sql =    "select * from deliveries " +
-                        "where user_id=? " +
-                        "limit ?, ?";
+        String sql = "select * from deliveries " +
+                "where user_id=? " +
+                "limit ?, ?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -130,10 +130,21 @@ public class OrderDAO {
         UserDAO userDAO = new UserDAO();
 
 
-        String sql = "select * from deliveries " +
-                "join delivery_status on deliveries.id=delivery_id\n" +
-                "where status_id=?\n" +
-                "limit ? , ?";
+        String sql = "select  actualdelivery_status.delivery_id, deliveries.user_id, \n" +
+                "deliveries.origin_city_id, deliveries.destination_city_id, deliveries.adress, \n" +
+                "    deliveries.cargo_type, deliveries.weight, \n" +
+                "    deliveries.volume, deliveries.cost,\n" +
+                "actualdelivery_status.date_time , delivery_status.status_id\n" +
+                "from \n" +
+                "(select delivery_id, max(date_time) as date_time\n" +
+                "    from delivery_status\n" +
+                "group by delivery_id) as actualdelivery_status\n" +
+                "inner join delivery_status \n" +
+                "on actualdelivery_status.delivery_id = delivery_status.delivery_id\n" +
+                "and actualdelivery_status.date_time = delivery_status.date_time\n" +
+                "    and delivery_status.status_id=?\n" +
+                "join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
+                "limit ?,?;";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {

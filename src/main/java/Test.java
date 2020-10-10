@@ -14,16 +14,14 @@ public class Test {
         ResourceDAO resourceDAO = new ResourceDAO();
         OrderDAO orderDAO = new OrderDAO();
 
+        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(DeliveryStatus.PROCESSED);
 
-        List<Region> regions = cityDAO.findAllRegions();
 
-        System.out.println(regions);
 
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(DeliveryStatus.NEW);
+//        delivery.addStatus(DeliveryStatus.PROCESSED, new Date());
+//        orderDAO.saveDelivery(delivery);
 
-        Delivery d = deliveries.get(0);
-
-        System.out.println(d.getDateByStatus(DeliveryStatus.NEW));
+        System.out.println(deliveries);
 
     }
 }

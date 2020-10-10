@@ -26,11 +26,15 @@ public class Delivery implements Serializable {
     }
 
     public DeliveryStatus getLastStatus() {
-        Date last = new Date(0);
+        long last = 0;
         DeliveryStatus status = DeliveryStatus.NEW;
 
         for (Map.Entry<DeliveryStatus, Date> entry : statusMap.entrySet()) {
-            status = entry.getValue().getTime() > last.getTime() ? entry.getKey() : status;
+            if(entry.getValue().getTime() > last){
+                status = entry.getKey();
+                last = entry.getValue().getTime();
+            }
+
         }
         return status;
     }
@@ -119,4 +123,19 @@ public class Delivery implements Serializable {
         return statusMap.get(deliveryStatus);
     }
 
+    @Override
+    public String toString() {
+        return "Delivery{" +
+                "id=" + id +
+                ", user=" + user +
+                ", origin=" + origin +
+                ", destination=" + destination +
+                ", adress='" + adress + '\'' +
+                ", type=" + type +
+                ", statusMap=" + statusMap +
+                ", weight=" + weight +
+                ", volume=" + volume +
+                ", cost=" + cost +
+                '}';
+    }
 }

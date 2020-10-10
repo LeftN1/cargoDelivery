@@ -86,12 +86,34 @@ order by cargo_types.id;
 select * from delivery_status;
 
 select status_id, date_time from delivery_status
-where delivery_id=2;
+where delivery_id=3;
 
 insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost)
 values (1, 1, 'skdjfhsdfh', 1, 10, 10, 22.2);
 
 select * from deliveries;
+
+select * from deliveries
+join delivery_status on deliveries.id = delivery_id
+where status_id=1;
+
+
+select  actualdelivery_status.delivery_id, deliveries.user_id, 
+	deliveries.origin_city_id, deliveries.destination_city_id, deliveries.adress, 
+    deliveries.cargo_type, deliveries.weight, 
+    deliveries.volume, deliveries.cost,
+	actualdelivery_status.date_time , delivery_status.status_id
+from 
+	(select delivery_id, max(date_time) as date_time
+    from delivery_status
+	group by delivery_id) as actualdelivery_status
+inner join delivery_status 
+	on actualdelivery_status.delivery_id = delivery_status.delivery_id
+	and actualdelivery_status.date_time = delivery_status.date_time
+    and delivery_status.status_id=1
+join deliveries on deliveries.id = actualdelivery_status.delivery_id
+limit 0,10;
+
 
 select * from deliveries
 join users on user_id=users.id;
