@@ -147,6 +147,9 @@ then user_id=1
 else true
 end;
 
+select * from deliveries;
+delete from deliveries where id=1;
+
 truncate delivery_status;
 truncate deliveries;
 
