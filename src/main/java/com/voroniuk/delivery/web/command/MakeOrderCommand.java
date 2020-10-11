@@ -47,6 +47,9 @@ public class MakeOrderCommand extends Command {
 
 
         City destination = cityDAO.findCityByName(req.getParameter("cityInp"));
+        if(destination == null){
+            return Path.COMMAND__ACCOUNT;
+        }
 
         volume = Calculations.getVolume(length, width, height);
         cost = Calculations.getCost(currentCity, destination, weight, volume);

@@ -23,6 +23,7 @@ public class CommandContainer {
         commands.put("makeOrder", new MakeOrderCommand());
         commands.put("manager_account", new ManagerAccountCommand());
         commands.put("user_account", new UserAccountCommand());
+        commands.put("pay", new PayCommand());
 
 
         LOG.debug("Command container was successfully initialized");

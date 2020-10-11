@@ -1,9 +1,8 @@
 import com.voroniuk.delivery.db.dao.*;
-import com.voroniuk.delivery.db.entity.*;
-import org.apache.commons.codec.digest.DigestUtils;
+import com.voroniuk.delivery.db.entity.Delivery;
+import com.voroniuk.delivery.db.entity.DeliveryStatus;
 
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
 
 
 public class Test {
@@ -14,9 +13,10 @@ public class Test {
         ResourceDAO resourceDAO = new ResourceDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-//        Delivery d = orderDAO.findDeliveriesByStatus(DeliveryStatus.PROCESSED).get(0);
-//        orderDAO.addStatus(d, DeliveryStatus.ARRIVED, new Date());
+//        Delivery d = orderDAO.findDeliveriesByStatus(DeliveryStatus.NEW).get(0);
+//        orderDAO.addStatus(d, DeliveryStatus.PROCESSED, new Date());
 
+        System.out.println(DeliveryStatus.NEW == DeliveryStatus.NEW);
 
     }
 }

@@ -112,14 +112,18 @@ from
 inner join delivery_status 
 	on actualdelivery_status.delivery_id = delivery_status.delivery_id
 	and actualdelivery_status.date_time = delivery_status.date_time
-    and delivery_status.status_id=1
+    and delivery_status.status_id=5
 inner join deliveries on deliveries.id = actualdelivery_status.delivery_id
 		and CASE
-			WHEN ? > 0 THEN deliveries.origin_city_id = ?
+			WHEN 0 > 0 THEN deliveries.origin_city_id = 1
 			ELSE true
 			END
 		and CASE
-			WHEN ? > 0 THEN deliveries.destination_city_id = ?
+			WHEN 0 > 0 THEN deliveries.destination_city_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN deliveries.user_id = 1
 			ELSE true
 			END
 limit 0,10;
@@ -132,6 +136,15 @@ select * from deliveries
 where user_id=1;
 
 delete from regions where id=2;
+
+select count(*) from deliveries
+join delivery_status on deliveries.id=delivery_id
+where status_id=5
+and case 
+when 1>0 
+then user_id=1 
+else true
+end;
 
 truncate delivery_status;
 truncate deliveries;

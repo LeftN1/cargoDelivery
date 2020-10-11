@@ -3,7 +3,6 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
-import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.utils.Utils;
@@ -20,7 +19,6 @@ public class ManagerAccountCommand extends Command {
 
         String forward;
         OrderDAO orderDAO = new OrderDAO();
-        CityDAO cityDAO = new CityDAO();
 
         String rStatus = req.getParameter("status");
         String rOrigin = req.getParameter("origin");
@@ -51,7 +49,7 @@ public class ManagerAccountCommand extends Command {
 
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatus(status, originId, destinationId, (pageNo - 1) * pageSize, pageSize);
+        List<Delivery> deliveries = orderDAO.findDeliveriesByStatusAndCityId(status, originId, destinationId, (pageNo - 1) * pageSize, pageSize);
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);

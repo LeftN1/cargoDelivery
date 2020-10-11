@@ -47,7 +47,7 @@ Delimiter - space/tab
         </init-param>
         <init-param>
             <param-name>user</param-name>
-            <param-value>user_account makeOrder account</param-value>
+            <param-value>user_account makeOrder account pay</param-value>
         </init-param>
         <init-param>
             <param-name>common</param-name>

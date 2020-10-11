@@ -109,41 +109,64 @@
     </table>
     <input type="submit" name="order" value="<fmt:message key="user.button.make_order"/>"/>
     <input type="submit" name="calculate" value="<fmt:message key="main.button.calculate"/>"/>
+</form>
+<hr>
 
-    <hr>
-
-    <h4>Delivery list:</h4>
-
+<form name="filter" method="get" action="controller">
+    <input type="hidden" name="command" value="user_account">
     <table>
         <tr>
-            <th><fmt:message key="all.label.id"/></th>
-            <th><fmt:message key="all.label.origin"/> </th>
-            <th><fmt:message key="all.label.destination"/> </th>
-            <th><fmt:message key="all.label.adress"/> </th>
-            <th><fmt:message key="all.label.cargo_type"/> </th>
-            <th><fmt:message key="all.label.weight"/> </th>
-            <th><fmt:message key="all.label.volume"/> </th>
-            <th><fmt:message key="all.label.cost"/> </th>
-            <th><fmt:message key="all.label.status"/> </th>
+            <td>
+                <fmt:message key="all.label.status"/>
+            </td>
+            <td>
+                <select name="status">
+                    <c:forEach var="status" items="${applicationScope.statuses}">
+                        <option value="${status.getId()}" ${status.getId()==sessionScope.status.getId()?" selected" : ""} >${status.getName(locale)}</option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td>
+                <input type="submit" value="<fmt:message key="manager.button.filter"/> "/>
+            </td>
         </tr>
-
-        <c:forEach var="delivery" items="${deliveries}">
-            <tr>
-                <td>${delivery.getId()}</td>
-                <td>${delivery.getOrigin().getName(locale)}</td>
-                <td>${delivery.getDestination().getName(locale)}</td>
-                <td>${delivery.getAdress()}</td>
-                <td>${delivery.getType().getName(locale)}</td>
-                <td>${delivery.getWeight()}</td>
-                <td>${delivery.getVolume()}</td>
-                <td>${delivery.getCost()}</td>
-                <td>${delivery.getLastStatus().getName(locale)}</td>
-            </tr>
-        </c:forEach>
-
     </table>
-
 </form>
+
+<h4>Delivery list:</h4>
+
+<table>
+    <tr>
+        <th><fmt:message key="all.label.id"/></th>
+        <th><fmt:message key="all.label.origin"/></th>
+        <th><fmt:message key="all.label.destination"/></th>
+        <th><fmt:message key="all.label.adress"/></th>
+        <th><fmt:message key="all.label.cargo_type"/></th>
+        <th><fmt:message key="all.label.weight"/></th>
+        <th><fmt:message key="all.label.volume"/></th>
+        <th><fmt:message key="all.label.cost"/></th>
+        <th><fmt:message key="all.label.status"/></th>
+    </tr>
+
+    <c:forEach var="delivery" items="${deliveries}">
+        <tr>
+            <td>${delivery.getId()}</td>
+            <td>${delivery.getOrigin().getName(locale)}</td>
+            <td>${delivery.getDestination().getName(locale)}</td>
+            <td>${delivery.getAdress()}</td>
+            <td>${delivery.getType().getName(locale)}</td>
+            <td>${delivery.getWeight()}</td>
+            <td>${delivery.getVolume()}</td>
+            <td>${delivery.getCost()}</td>
+            <td>${delivery.getLastStatus().getName(locale)}</td>
+            <td><c:if test="${delivery.getLastStatus().getId() == 2}">
+                <a href="/?command=pay&delivery_id=${delivery.getId()}"><fmt:message key="all.href.pay"/></a>
+            </c:if></td>
+        </tr>
+    </c:forEach>
+
+</table>
+
 
 <c:if test="${pageNo>2}">
     <a href="<%=Path.COMMAND__USER_ACCOUNT%>&page=1"><fmt:message key="all.href.first"/></a>
