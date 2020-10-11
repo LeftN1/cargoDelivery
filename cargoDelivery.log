@@ -5396,3 +5396,1773 @@ END' at line 1
 2020-10-11 22:22 [DEBUG]       CommandAccessFilter:    43 - Filter finished
 2020-10-11 22:22 [DEBUG]            MainController:    58 - MainController starts
 2020-10-11 22:22 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:33 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 22:33 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:33 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:33 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:33 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:33 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:33 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:33 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:33 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:33 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:33 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:33 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:33 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:33 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:33 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:33 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:33 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=4
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:33 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=2
+2020-10-11 22:33 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:33 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:33 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:33 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:33 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:33 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:33 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:33 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:34 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:34 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=3
+2020-10-11 22:34 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:34 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:34 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:34 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:34 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:34 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:34 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:34 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:34 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:34 [DEBUG]              LoginCommand:    25 - request param: login: aaa
+2020-10-11 22:34 [TRACE]              LoginCommand:    41 - Found user: User{id=1, login='aaa', role=USER}
+2020-10-11 22:34 [TRACE]              LoginCommand:    46 - User role: USER
+2020-10-11 22:34 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=1, login='aaa', role=USER}
+2020-10-11 22:34 [ INFO]              LoginCommand:    53 - User User{id=1, login='aaa', role=USER} logged in as USER
+2020-10-11 22:34 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:34 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:34 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:34 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:35 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:35 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:35 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:35 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:35 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:35 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:35 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:35 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:35 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:35 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/register.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [ INFO]                   UserDAO:   110 - Can't find user ссс
+2020-10-11 22:35 [ INFO]                   UserDAO:    31 - User has been added
+2020-10-11 22:35 [DEBUG]           RegisterCommand:    75 - Redirect to :/controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    58 - do cost calculation
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    68 - cost calculation finished.
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    69 - MakeOrderCommand finished
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:35 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:35 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:35 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:35 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:35 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:35 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:35 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:35 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:35 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    58 - do cost calculation
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    68 - cost calculation finished.
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    69 - MakeOrderCommand finished
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:36 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:36 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:36 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:36 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:36 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:36 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:36 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:36 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:36 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:36 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:36 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:36 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:36 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:36 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:36 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:36 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:36 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:36 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:36 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:37 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:37 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:37 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:37 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:37 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 22:37 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:37 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:37 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:37 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:37 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:37 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:37 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:37 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:37 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:37 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:37 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:37 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:37 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:37 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:37 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:37 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:37 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:37 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:37 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:37 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:37 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:37 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:37 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:37 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:37 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:37 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:37 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:37 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:37 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:37 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:41 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:41 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    87 - Access map --> {MANAGER=[manager_account, account, delete], USER=[user_account, makeOrder, account, pay]}
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:41 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:41 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:41 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:41 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:41 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:41 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:41 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:41 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:41 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:41 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:41 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:41 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:41 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:41 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:41 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:41 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:41 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:41 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=5
+2020-10-11 22:41 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:41 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:41 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:41 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:41 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:41 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:41 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:47 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:47 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:47 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:47 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:47 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 22:47 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:47 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:47 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:48 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:48 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:48 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:48 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:48 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:48 [DEBUG]              LoginCommand:    25 - request param: login: aaa
+2020-10-11 22:48 [TRACE]              LoginCommand:    41 - Found user: User{id=1, login='aaa', role=USER}
+2020-10-11 22:48 [TRACE]              LoginCommand:    46 - User role: USER
+2020-10-11 22:48 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=1, login='aaa', role=USER}
+2020-10-11 22:48 [ INFO]              LoginCommand:    53 - User User{id=1, login='aaa', role=USER} logged in as USER
+2020-10-11 22:48 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:48 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:48 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:48 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:48 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:48 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:48 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:48 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:48 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:48 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:48 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:48 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:48 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:48 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:48 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:48 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:48 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:49 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:49 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:49 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:49 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:49 [TRACE]       CommandAccessFilter:    87 - Access map --> {MANAGER=[manager_account, account, delete], USER=[user_account, makeOrder, account, pay]}
+2020-10-11 22:49 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:49 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:49 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:49 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:49 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:49 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:49 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:49 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:49 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:49 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:49 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:49 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:49 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:49 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:49 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:49 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:49 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:49 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:49 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:49 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:49 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:49 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:49 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:49 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:49 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:49 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:49 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:49 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:49 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:49 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:52 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:52 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:52 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:52 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:52 [TRACE]       CommandAccessFilter:    87 - Access map --> {MANAGER=[manager_account, account, delete], USER=[user_account, makeOrder, account, pay]}
+2020-10-11 22:52 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:52 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:52 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:52 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:52 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:52 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:52 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:52 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:52 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:52 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:52 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:52 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:52 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:52 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:52 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:52 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:52 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:52 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:52 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:52 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:52 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:52 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:52 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:52 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:52 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:52 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:52 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:52 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:52 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:52 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:52 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:52 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:52 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:52 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:52 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:53 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=6
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:53 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=7
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 22:53 [TRACE]       CommandAccessFilter:    87 - Access map --> {MANAGER=[manager_account, account, delete], USER=[user_account, makeOrder, account, pay]}
+2020-10-11 22:53 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 22:53 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]          CommandContainer:    29 - Command container was successfully initialized
+2020-10-11 22:53 [TRACE]          CommandContainer:    30 - Number of commands --> 12
+2020-10-11 22:53 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:53 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 22:53 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:53 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:53 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:53 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:53 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:53 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:53 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:53 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:53 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=9
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    20 - Command starts
+2020-10-11 22:53 [ INFO]                  OrderDAO:   340 - Delivery has been deleted
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    34 - Delivery has been deleted id=8
+2020-10-11 22:53 [DEBUG]             DeleteCommand:    40 - Redirect to :/controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:53 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:53 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:53 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:53 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:53 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:53 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:53 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:53 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:53 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:54 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:54 [DEBUG]              LoginCommand:    25 - request param: login: aaa
+2020-10-11 22:54 [TRACE]              LoginCommand:    41 - Found user: User{id=1, login='aaa', role=USER}
+2020-10-11 22:54 [TRACE]              LoginCommand:    46 - User role: USER
+2020-10-11 22:54 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=1, login='aaa', role=USER}
+2020-10-11 22:54 [ INFO]              LoginCommand:    53 - User User{id=1, login='aaa', role=USER} logged in as USER
+2020-10-11 22:54 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:54 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:54 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:54 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:54 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:54 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:54 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:54 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:54 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    58 - do cost calculation
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    68 - cost calculation finished.
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    69 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    22 - MakeOrderCommand starts
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    73 - Make delivery order
+2020-10-11 22:54 [ INFO]                  OrderDAO:    60 - Delivery statuses have been added
+2020-10-11 22:54 [ INFO]                  OrderDAO:    41 - Delivery has been added
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    88 - Delivery order saved
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    89 - MakeOrderCommand finished
+2020-10-11 22:54 [DEBUG]          MakeOrderCommand:    94 - Redirect to :/controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:54 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:54 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:54 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:54 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:54 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:54 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:54 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 22:54 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 22:54 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:54 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 22:54 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 22:54 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 22:54 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 22:54 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:54 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:55 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:55 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:55 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:55 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:55 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:55 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:55 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:55 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 22:55 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 22:55 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 22:55 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 22:55 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 22:55 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 22:55 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 22:55 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 22:55 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 22:55 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 22:55 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 22:55 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 22:55 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:00 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 23:00 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 23:00 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 23:00 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 23:00 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 23:00 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 23:00 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 23:00 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 23:00 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:00 [DEBUG]          CommandContainer:    30 - Command container was successfully initialized
+2020-10-11 23:00 [TRACE]          CommandContainer:    31 - Number of commands --> 13
+2020-10-11 23:00 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:00 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 23:00 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:00 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:00 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:00 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:00 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:00 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:00 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:00 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:00 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:00 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:00 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 23:00 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 23:00 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:00 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 23:00 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:00 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 23:00 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 23:00 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:00 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:00 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:00 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:00 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete]}
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]          CommandContainer:    30 - Command container was successfully initialized
+2020-10-11 23:01 [TRACE]          CommandContainer:    31 - Number of commands --> 13
+2020-10-11 23:01 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:01 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 23:01 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:01 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:01 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:01 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:01 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 23:01 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 23:01 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:01 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 23:01 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:01 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 23:01 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:01 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    49 - Set the request attribute: errorMessage --> You do not have permission to access the requested resource
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    45 - Filter initialization starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    47 - Encoding from web.xml --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    48 - Filter initialization finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    82 - Filter initialization starts
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    87 - Access map --> {USER=[user_account, makeOrder, account, pay], MANAGER=[manager_account, account, delete, bill]}
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    91 - Common commands --> [noCommand, logout, register, changeLocale]
+2020-10-11 23:01 [TRACE]       CommandAccessFilter:    95 - Out of control commands --> [login, main, login, changeLocale, register]
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    97 - Filter initialization finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]          CommandContainer:    30 - Command container was successfully initialized
+2020-10-11 23:01 [TRACE]          CommandContainer:    31 - Number of commands --> 13
+2020-10-11 23:01 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:01 [TRACE]               MainCommand:    93 - Initializing current city as: City{Одесса}
+2020-10-11 23:01 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:01 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:01 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 23:01 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 23:01 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:01 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 23:01 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:01 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 23:01 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:01 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]           MakeBillCommand:    21 - Command starts
+2020-10-11 23:01 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=10
+2020-10-11 23:01 [DEBUG]           MakeBillCommand:    37 - Delivery status has been changed to PROCESSED. id=10
+2020-10-11 23:01 [DEBUG]           MakeBillCommand:    43 - Redirect to :/controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:01 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:01 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:01 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:01 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:01 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:01 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    21 - Command starts
+2020-10-11 23:02 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=12
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    37 - Delivery status has been changed to PROCESSED. id=12
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    43 - Redirect to :/controller?command=account
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    21 - Command starts
+2020-10-11 23:02 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=11
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    37 - Delivery status has been changed to PROCESSED. id=11
+2020-10-11 23:02 [DEBUG]           MakeBillCommand:    43 - Redirect to :/controller?command=account
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:02 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:02 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:02 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:02 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:02 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:02 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 23:03 [DEBUG]              LoginCommand:    25 - request param: login: aaa
+2020-10-11 23:03 [TRACE]              LoginCommand:    41 - Found user: User{id=1, login='aaa', role=USER}
+2020-10-11 23:03 [TRACE]              LoginCommand:    46 - User role: USER
+2020-10-11 23:03 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=1, login='aaa', role=USER}
+2020-10-11 23:03 [ INFO]              LoginCommand:    53 - User User{id=1, login='aaa', role=USER} logged in as USER
+2020-10-11 23:03 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [ WARN]                  OrderDAO:   219 - java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-10, 10' at line 27
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]                PayCommand:    19 - Command starts
+2020-10-11 23:03 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=10
+2020-10-11 23:03 [DEBUG]                PayCommand:    39 - Redirect to :/controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]                PayCommand:    19 - Command starts
+2020-10-11 23:03 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=12
+2020-10-11 23:03 [DEBUG]                PayCommand:    39 - Redirect to :/controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]                PayCommand:    19 - Command starts
+2020-10-11 23:03 [ INFO]                  OrderDAO:    79 - Statuses have been added to th delivery id=11
+2020-10-11 23:03 [DEBUG]                PayCommand:    39 - Redirect to :/controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=user_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/user_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-11 23:03 [DEBUG]              LoginCommand:    25 - request param: login: bbb
+2020-10-11 23:03 [TRACE]              LoginCommand:    41 - Found user: User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:03 [TRACE]              LoginCommand:    46 - User role: MANAGER
+2020-10-11 23:03 [TRACE]              LoginCommand:    51 - Set session attribute: user = User{id=2, login='bbb', role=MANAGER}
+2020-10-11 23:03 [ INFO]              LoginCommand:    53 - User User{id=2, login='bbb', role=MANAGER} logged in as MANAGER
+2020-10-11 23:03 [DEBUG]              LoginCommand:    62 - Command finished, forward to: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=manager_account
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/manager_account.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    29 - Filter starts
+2020-10-11 23:03 [TRACE]            EncodingFilter:    32 - Request uri --> /controller
+2020-10-11 23:03 [TRACE]            EncodingFilter:    36 - Request encoding = null, set encoding --> UTF-8
+2020-10-11 23:03 [DEBUG]            EncodingFilter:    40 - Filter finished
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    40 - Filter starts
+2020-10-11 23:03 [DEBUG]       CommandAccessFilter:    43 - Filter finished
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /controller?command=main
+2020-10-11 23:03 [DEBUG]            MainController:    58 - MainController starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    27 - Main command starts
+2020-10-11 23:03 [DEBUG]               MainCommand:    97 - Save currentCity to session: City{Одесса}
+2020-10-11 23:03 [DEBUG]               MainCommand:   158 - Main command ends forward to /WEB-INF/jsp/main.jsp
+2020-10-11 23:03 [DEBUG]            MainController:    66 - Controller finished. forward adress: /WEB-INF/jsp/main.jsp

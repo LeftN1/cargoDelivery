@@ -97,9 +97,12 @@
             <td align="right">${delivery.getVolume()}</td>
             <td align="right">${delivery.getCost()}</td>
             <td>${delivery.getLastStatus().getName(locale)}</td>
-            <td><a href="#"><fmt:message key="all.label.delete"/></a></td>
+            <!--<td><a href="/controller?command=delete&delivery_id=${delivery.getId()}" onclick="allert('click')"><fmt:message key="all.label.delete"/></a></td>-->
+            <td><a href="#" onclick="if (confirm('Are you sure you want to delete?')){location.href='/controller?command=delete&delivery_id=${delivery.getId()}'}else {}"><fmt:message key="all.label.delete"/></a></td>
             <td><a href="#"><fmt:message key="all.label.edit"/></a></td>
-            <td><a href="#"><fmt:message key="all.label.confirm"/></a></td>
+            <td><c:if test="${delivery.getLastStatus().getId() == 1}">
+                <a href="/controller?command=bill&delivery_id=${delivery.getId()}"><fmt:message key="all.label.confirm"/></a>
+            </c:if></td>
         </tr>
     </c:forEach>
 

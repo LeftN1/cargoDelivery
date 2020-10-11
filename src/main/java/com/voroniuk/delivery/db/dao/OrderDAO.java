@@ -135,6 +135,8 @@ public class OrderDAO {
         return delivery;
     }
 
+
+
     public List<Delivery> findDeliveriesByStatusAndUserId(DeliveryStatus status, int userId, int originId, int destinationId, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
@@ -322,6 +324,23 @@ public class OrderDAO {
             LOG.warn(e);
         }
         return statuses;
+    }
+
+    public void deleteDeliveryById(int id) {
+
+        String sql =    "delete from deliveries where id=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+
+            statement.setInt(1, id);
+
+            statement.executeUpdate();
+
+            LOG.info("Delivery has been deleted");
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
     }
 
 }

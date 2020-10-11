@@ -91,7 +91,8 @@ where delivery_id=3;
 insert into deliveries (user_id, city_id, adress, cargo_type, weight, volume, cost)
 values (1, 1, 'skdjfhsdfh', 1, 10, 10, 22.2);
 
-select * from deliveries;
+select * from deliveries
+where id=1;
 
 select * from deliveries
 join delivery_status on deliveries.id = delivery_id
