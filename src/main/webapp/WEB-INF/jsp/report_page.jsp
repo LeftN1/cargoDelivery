@@ -16,25 +16,13 @@
 
 <fmt:setLocale value="${locale.getLanguage()}"/>
 
-<a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
-<br>
-<a href="/controller?command=report"><fmt:message key="account.anchor.reports"/></a>
+<a href="/controller?command=main"><fmt:message key="all.label.account"/></a>
 
-<form name="filter" method="get" action="controller">
-    <input type="hidden" name="command" value="manager_account">
+<h3>Report page</h3>
+
+<form name="city_report" method="get" action="controller">
+    <input type="hidden" name="command" value="report">
     <table>
-        <tr>
-            <td>
-                <fmt:message key="all.label.status"/>
-            </td>
-            <td>
-                <select name="status">
-                    <c:forEach var="status" items="${applicationScope.statuses}">
-                        <option value="${status.getId()}" ${status.getId()==sessionScope.status.getId()?" selected" : ""} >${status.getName(locale)}</option>
-                    </c:forEach>
-                </select>
-            </td>
-        </tr>
         <tr>
             <td>
                 <fmt:message key="main.label.choose_current_city"/>
@@ -63,11 +51,37 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="<fmt:message key="manager.button.filter"/> "/>
+                <input type="submit" value="<fmt:message key="manager.button.report_by_city"/> "/>
             </td>
         </tr>
     </table>
+</form>
 
+<form name="day_report" method="get" action="controller">
+    <input type="hidden" name="command" value="report">
+    <table>
+        <tr>
+            <td>
+                <fmt:message key="report.label.start_date"/>
+            </td>
+            <td>
+                <input type="date" name="start_date">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fmt:message key="report.label.end_date"/>
+            </td>
+            <td>
+                <input type="date" name="end_date">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="<fmt:message key="manager.button.report_by_date"/> "/>
+            </td>
+        </tr>
+    </table>
 </form>
 
 
@@ -82,10 +96,6 @@
         <th><fmt:message key="all.label.volume"/></th>
         <th><fmt:message key="all.label.cost"/></th>
         <th><fmt:message key="all.label.status"/></th>
-       <!-- <th><fmt:message key="all.label.delete"/></th>
-        <th><fmt:message key="all.label.edit"/></th>
-        <th><fmt:message key="all.label.confirm"/></th>
-        -->
     </tr>
 
     <c:forEach var="delivery" items="${deliveries}">
@@ -99,15 +109,8 @@
             <td align="right">${delivery.getVolume()}</td>
             <td align="right">${delivery.getCost()}</td>
             <td>${delivery.getLastStatus().getName(locale)}</td>
-            <!--<td><a href="/controller?command=delete&delivery_id=${delivery.getId()}" onclick="allert('click')"><fmt:message key="all.label.delete"/></a></td>-->
-            <td><a href="#" onclick="if (confirm('Are you sure you want to delete?')){location.href='/controller?command=delete&delivery_id=${delivery.getId()}'}else {}"><fmt:message key="all.label.delete"/></a></td>
-            <td><a href="#"><fmt:message key="all.label.edit"/></a></td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 1}">
-                <a href="/controller?command=bill&delivery_id=${delivery.getId()}"><fmt:message key="all.label.confirm"/></a>
-            </c:if></td>
         </tr>
     </c:forEach>
-
 
 </table>
 
