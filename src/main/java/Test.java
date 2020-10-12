@@ -13,10 +13,7 @@ public class Test {
         ResourceDAO resourceDAO = new ResourceDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-//        Delivery d = orderDAO.findDeliveriesByStatus(DeliveryStatus.NEW).get(0);
-//        orderDAO.addStatus(d, DeliveryStatus.PROCESSED, new Date());
-
-        System.out.println(DeliveryStatus.NEW == DeliveryStatus.NEW);
+        System.out.println((int) Math.ceil((double) 7 / 10));
 
     }
 }

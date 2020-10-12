@@ -243,14 +243,20 @@ public class OrderDAO {
     public int countDeliveriesByStatusAndUser(DeliveryStatus status, User user) {
         int result = 0;
 
-        String sql =    "select count(*) from deliveries\n" +
-                        "join delivery_status on deliveries.id=delivery_id\n" +
-                        "where status_id=?\n" +
-                        "and case \n" +
-                        "when ?>0 \n" +
-                        "then user_id=? \n" +
-                        "else true\n" +
-                        "end;";
+        String sql =    "select count(*)\n" +
+                        "from \n" +
+                        "(select delivery_id, max(date_time) as date_time\n" +
+                        "    from delivery_status\n" +
+                        "group by delivery_id) as actualdelivery_status\n" +
+                        "inner join delivery_status \n" +
+                        "on actualdelivery_status.delivery_id = delivery_status.delivery_id\n" +
+                        "and actualdelivery_status.date_time = delivery_status.date_time\n" +
+                        "    and delivery_status.status_id=?\n" +
+                        "inner join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
+                        "and CASE\n" +
+                        "WHEN ? > 0 THEN deliveries.user_id = ?\n" +
+                        "ELSE true\n" +
+                        "END";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -274,28 +280,9 @@ public class OrderDAO {
     }
 
     public int countDeliveriesByStatus(DeliveryStatus status) {
-        int result = 0;
-
-        String sql = "select count(*) from deliveries " +
-                "join delivery_status on deliveries.id=delivery_id " +
-                "where status_id=?";
-
-        try (Connection connection = DBManager.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql);) {
-
-            statement.setInt(1, status.getId());
-            statement.executeQuery();
-            try (ResultSet resultSet = statement.getResultSet()) {
-
-                if (resultSet.next()) {
-                    result = resultSet.getInt(1);
-                }
-            }
-        } catch (SQLException e) {
-            LOG.warn(e);
-        }
-
-        return result;
+        User user = new User();
+        user.setId(0);
+        return countDeliveriesByStatusAndUser(status, user);
     }
 
     public Map<DeliveryStatus, Date> findStatusesByDeliveryId(int id) {
