@@ -1,11 +1,13 @@
-<%@ page import="com.voroniuk.delivery.Path" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<%@ include file="/WEB-INF/jspf/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/taglib.jspf" %>
+
+
 <html>
-<head>
-    <title>Title</title>
-</head>
+
+<c:set var="title" value="CDS" />
+<%@ include file="/WEB-INF/jspf/head.jspf" %>
+
 <body>
 <fmt:setLocale value="${locale.getLanguage()}"/>
 

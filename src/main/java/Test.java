@@ -13,7 +13,7 @@ public class Test {
         ResourceDAO resourceDAO = new ResourceDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-        System.out.println((int) Math.ceil((double) 7 / 10));
+
 
     }
 }

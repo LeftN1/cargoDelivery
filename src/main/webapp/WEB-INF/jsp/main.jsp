@@ -1,10 +1,7 @@
-
 <%@ include file="/WEB-INF/jspf/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/taglib.jspf" %>
 
-<%@ page import="com.voroniuk.delivery.Path" %>
 
-<!doctype html>
 <html>
 
 <c:set var="title" value="CDS" />
