@@ -167,28 +167,8 @@
 
 </table>
 
-
-<c:if test="${pageNo>2}">
-    <a href="<%=Path.COMMAND__USER_ACCOUNT%>&page=1"><fmt:message key="all.href.first"/></a>
-    ...
-</c:if>
-
-<c:forEach var="i" begin="${pageNo-2>1?pageNo-2:1}" end="${pageNo+2<totalPages?pageNo+2:totalPages}">
-    <c:choose>
-        <c:when test="${i==pageNo}">
-            <c:set var="ref" value="[${i}]"/>
-        </c:when>
-        <c:otherwise>
-            <c:set var="ref" value="${i}"/>
-        </c:otherwise>
-    </c:choose>
-    <a href="<%=Path.COMMAND__USER_ACCOUNT%>&page=${i}">${ref}</a>
-</c:forEach>
-
-<c:if test="${totalPages-pageNo>2}">
-    ...
-    <a href="<%=Path.COMMAND__USER_ACCOUNT%>&page=${totalPages}"> <fmt:message key="all.href.last"/> </a>
-</c:if>
+<c:set var="current_page" value="<%=Path.COMMAND__USER_ACCOUNT%>" />
+<%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 
 </body>
 </html>
