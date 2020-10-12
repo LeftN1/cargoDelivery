@@ -44,7 +44,9 @@ public class MakeOrderCommand extends Command {
 
         //Тут приходится искать по имени, потому что не получается неявно передать cityId при помощи <input> + <datalist>
         City currentCity = cityDAO.findCityByName(req.getParameter("current"));
-
+        if(currentCity == null){
+            return Path.COMMAND__ACCOUNT;
+        }
 
         City destination = cityDAO.findCityByName(req.getParameter("cityInp"));
         if(destination == null){

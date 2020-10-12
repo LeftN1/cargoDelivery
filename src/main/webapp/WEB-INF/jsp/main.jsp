@@ -28,11 +28,11 @@
     <c:otherwise>
         <form name="account" action="/controller" method="post">
             <input type="hidden" name="command" value="account">
-            <input type="submit" value="account">
+            <input type="submit" value="<fmt:message key="all.label.account"/>">
         </form>
         <form name="logout" action="/controller" method="post">
             <input type="hidden" name="command" value="logout">
-            <input type="submit" value="logout">
+            <input type="submit" value="<fmt:message key="all.button.logout"/>">
         </form>
     </c:otherwise>
 </c:choose>

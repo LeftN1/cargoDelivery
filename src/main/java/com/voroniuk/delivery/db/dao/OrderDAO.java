@@ -330,4 +330,31 @@ public class OrderDAO {
         }
     }
 
+    public void updateDelivery(Delivery delivery) {
+
+        String sql =    "update deliveries\n" +
+                        "set origin_city_id=?, destination_city_id=?,\n" +
+                        "adress=?, cargo_type=?, weight=?, volume=?, cost=?\n" +
+                        "where id=?;";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
+
+            statement.setInt(1, delivery.getOrigin().getId());
+            statement.setInt(2, delivery.getDestination().getId());
+            statement.setString(3, delivery.getAdress());
+            statement.setInt(4, delivery.getType().getId());
+            statement.setInt(5, delivery.getWeight());
+            statement.setInt(6, delivery.getVolume());
+            statement.setDouble(7, delivery.getCost());
+            statement.setInt(8, delivery.getId());
+
+            statement.executeUpdate();
+
+            LOG.info("Delivery has been updated");
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+    }
+
 }

@@ -73,6 +73,7 @@ public class CommandAccessFilter implements Filter {
 
 		Role userRole = user.getRole();
 
+		LOG.debug("User role = " + userRole + ". Trying get command = " + commandName);
 		
 		return accessMap.get(userRole).contains(commandName)
 				|| commons.contains(commandName);

@@ -30,6 +30,8 @@ public class CommandContainer {
         commands.put("send", new SendCommand());
         commands.put("arrived", new ArrivedCommand());
         commands.put("give_out", new GiveOutCommand());
+        commands.put("edit", new EditCommand());
+        commands.put("save", new SaveCommand());
 
         LOG.debug("Command container was successfully initialized");
         LOG.trace("Number of commands --> " + commands.size());
