@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Serializable;
-import java.net.URISyntaxException;
+import java.net.URISyntaxException;import java.text.ParseException;
 
 public abstract class Command implements Serializable {
 

@@ -82,7 +82,7 @@ public class OrderDAO {
         }
     }
 
-    public Delivery findDeliveryById(int id){
+    public Delivery findDeliveryById(int id) {
 
         Delivery delivery = null;
 
@@ -90,9 +90,9 @@ public class OrderDAO {
         UserDAO userDAO = new UserDAO();
 
 
-        String sql =    "select * from deliveries\n" +
-                        "where id=?\n" +
-                        "limit 1";
+        String sql = "select * from deliveries\n" +
+                "where id=?\n" +
+                "limit 1";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
@@ -136,8 +136,7 @@ public class OrderDAO {
     }
 
 
-
-    public List<Delivery> findDeliveriesByStatusAndUserId(DeliveryStatus status, int userId, int originId, int destinationId, int start, int offset) {
+    public List<Delivery> findDeliveriesByStatusAndUserIdAndDate(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
         CityDAO cityDAO = new CityDAO();
@@ -170,6 +169,14 @@ public class OrderDAO {
                 "WHEN ? > 0 THEN deliveries.user_id = ?\n" +
                 "ELSE true\n" +
                 "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN actualdelivery_status.date_time > ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN actualdelivery_status.date_time < ?\n" +
+                "ELSE true\n" +
+                "END\n" +
                 "limit ?, ?;";
 
         try (Connection connection = DBManager.getInstance().getConnection();
@@ -182,8 +189,12 @@ public class OrderDAO {
             statement.setInt(5, destinationId);
             statement.setInt(6, userId);
             statement.setInt(7, userId);
-            statement.setInt(8, start);
-            statement.setInt(9, offset);
+            statement.setLong(8, startDate.getTime());
+            statement.setLong(9, startDate.getTime());
+            statement.setLong(10, endDate.getTime());
+            statement.setLong(11, endDate.getTime());
+            statement.setInt(12, start);
+            statement.setInt(13, offset);
 
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
@@ -222,16 +233,20 @@ public class OrderDAO {
         return deliveries;
     }
 
-    public List<Delivery> findDeliveriesByStatusAndCityId(DeliveryStatus status, int originId, int destinationId,  int start, int offset) {
-        return findDeliveriesByStatusAndUserId(status, 0, originId, destinationId, start, offset);
+    public List<Delivery> findDeliveriesByStatusAndCityId(DeliveryStatus status, int originId, int destinationId, int start, int offset) {
+        return findDeliveriesByStatusAndUserIdAndDate(status, 0, originId, destinationId, new Date(0), new Date(0), start, offset);
+    }
+
+    public List<Delivery> findDeliveriesByStatusAndCityIdAndDate(DeliveryStatus status, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
+        return findDeliveriesByStatusAndUserIdAndDate(status, 0, originId, destinationId, startDate, endDate, start, offset);
     }
 
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
-        return findDeliveriesByStatusAndUserId(status, 0, 0, 0, start, offset);
+        return findDeliveriesByStatusAndUserIdAndDate(status, 0, 0, 0, new Date(0), new Date(0), start, offset);
     }
 
     public List<Delivery> findUserDeliveries(DeliveryStatus status, User user, int start, int offset) {
-        return findDeliveriesByStatusAndUserId(status, user.getId(), 0, 0, start, offset);
+        return findDeliveriesByStatusAndUserIdAndDate(status, user.getId(), 0, 0, new Date(0), new Date(0), start, offset);
     }
 
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status) {
@@ -240,30 +255,58 @@ public class OrderDAO {
         return findDeliveriesByStatus(status, start, offset);
     }
 
-    public int countDeliveriesByStatusAndUser(DeliveryStatus status, User user) {
+    public int countDeliveries(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate) {
         int result = 0;
 
-        String sql =    "select count(*)\n" +
-                        "from \n" +
-                        "(select delivery_id, max(date_time) as date_time\n" +
-                        "    from delivery_status\n" +
-                        "group by delivery_id) as actualdelivery_status\n" +
-                        "inner join delivery_status \n" +
-                        "on actualdelivery_status.delivery_id = delivery_status.delivery_id\n" +
-                        "and actualdelivery_status.date_time = delivery_status.date_time\n" +
-                        "    and delivery_status.status_id=?\n" +
-                        "inner join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
-                        "and CASE\n" +
-                        "WHEN ? > 0 THEN deliveries.user_id = ?\n" +
-                        "ELSE true\n" +
-                        "END";
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+
+        String sql = "select  count(*)" +
+                "from \n" +
+                "(select delivery_id, max(date_time) as date_time\n" +
+                "    from delivery_status\n" +
+                "group by delivery_id) as actualdelivery_status\n" +
+                "inner join delivery_status \n" +
+                "on actualdelivery_status.delivery_id = delivery_status.delivery_id\n" +
+                "and actualdelivery_status.date_time = delivery_status.date_time\n" +
+                "    and delivery_status.status_id=?\n" +
+                "inner join deliveries on deliveries.id = actualdelivery_status.delivery_id\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN deliveries.origin_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN deliveries.destination_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN deliveries.user_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN actualdelivery_status.date_time > ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN actualdelivery_status.date_time < ?\n" +
+                "ELSE true\n" +
+                "END";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql);) {
 
             statement.setInt(1, status.getId());
-            statement.setInt(2, user.getId());
-            statement.setInt(3, user.getId());
+            statement.setInt(2, originId);
+            statement.setInt(3, originId);
+            statement.setInt(4, destinationId);
+            statement.setInt(5, destinationId);
+            statement.setInt(6, userId);
+            statement.setInt(7, userId);
+            statement.setLong(8, startDate.getTime());
+            statement.setLong(9, startDate.getTime());
+            statement.setLong(10, endDate.getTime());
+            statement.setLong(11, endDate.getTime());
 
             statement.executeQuery();
             try (ResultSet resultSet = statement.getResultSet()) {
@@ -277,6 +320,11 @@ public class OrderDAO {
         }
 
         return result;
+    }
+
+
+    public int countDeliveriesByStatusAndUser(DeliveryStatus status, User user) {
+        return countDeliveries(status, user.getId(),0,0,new Date(0),new Date(0));
     }
 
     public int countDeliveriesByStatus(DeliveryStatus status) {
@@ -315,7 +363,7 @@ public class OrderDAO {
 
     public void deleteDeliveryById(int id) {
 
-        String sql =    "delete from deliveries where id=?";
+        String sql = "delete from deliveries where id=?";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {
@@ -332,10 +380,10 @@ public class OrderDAO {
 
     public void updateDelivery(Delivery delivery) {
 
-        String sql =    "update deliveries\n" +
-                        "set origin_city_id=?, destination_city_id=?,\n" +
-                        "adress=?, cargo_type=?, weight=?, volume=?, cost=?\n" +
-                        "where id=?;";
+        String sql = "update deliveries\n" +
+                "set origin_city_id=?, destination_city_id=?,\n" +
+                "adress=?, cargo_type=?, weight=?, volume=?, cost=?\n" +
+                "where id=?;";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, java.sql.Statement.RETURN_GENERATED_KEYS)) {

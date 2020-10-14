@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+import java.text.ParseException;
 
 
 @WebServlet("/")
@@ -61,7 +61,11 @@ public class MainController extends HttpServlet {
 
         Command command = CommandContainer.get(commandName);
 
-        String forward = command.execute(req, resp);
+        String forward = null;
+
+            forward = command.execute(req,
+                    resp);
+
 
         LOG.debug("Controller finished. forward adress: " + forward);
 

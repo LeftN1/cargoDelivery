@@ -1,6 +1,7 @@
 package com.voroniuk.delivery.db.entity;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +38,11 @@ public class Delivery implements Serializable {
 
         }
         return status;
+    }
+
+    public String getLastDate(){
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        return format.format(statusMap.get(getLastStatus()));
     }
 
     public Map<DeliveryStatus, Date> getStatusMap() {

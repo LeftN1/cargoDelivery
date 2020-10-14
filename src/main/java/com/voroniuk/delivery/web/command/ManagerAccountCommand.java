@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 public class ManagerAccountCommand extends Command {
@@ -45,7 +46,7 @@ public class ManagerAccountCommand extends Command {
 
         int pageNo;
         int pageSize = 10;
-        int totalPages = (int) Math.ceil((double) orderDAO.countDeliveriesByStatus(status) / pageSize);
+        int totalPages = (int) Math.ceil((double) orderDAO.countDeliveries(status, 0, originId, destinationId, new Date(0), new Date(0)) / pageSize);
 
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 

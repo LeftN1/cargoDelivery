@@ -150,7 +150,6 @@ public class MainCommand extends Command {
         req.getSession().setAttribute("height", height);
         req.getSession().setAttribute("volume", voulume);
 
-
         req.getSession().setAttribute("regionId", regionId);
 
         String forward = Path.PAGE__MAIN;

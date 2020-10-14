@@ -9,18 +9,27 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
+
+<c:set var="title" value="Report" />
+<%@ include file="/WEB-INF/jspf/head.jspf" %>
+
 <body>
 
 <fmt:setLocale value="${locale.getLanguage()}"/>
 
 <a href="/controller?command=main"><fmt:message key="all.label.account"/></a>
 
-<h3>Report page</h3>
+<h3><fmt:message key="report.label.report_generator"/></h3>
+    <br>
+    Origin = ${origin}
+    <br>
+    Destination = ${destination}
+    <br>
+    Start date = ${start}
+    <br>
+    End date = ${end}
 
-<form name="city_report" method="get" action="controller">
+<form name="report" method="get" action="controller">
     <input type="hidden" name="command" value="report">
     <table>
         <tr>
@@ -51,17 +60,6 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="<fmt:message key="manager.button.report_by_city"/> "/>
-            </td>
-        </tr>
-    </table>
-</form>
-
-<form name="day_report" method="get" action="controller">
-    <input type="hidden" name="command" value="report">
-    <table>
-        <tr>
-            <td>
                 <fmt:message key="report.label.start_date"/>
             </td>
             <td>
@@ -78,7 +76,19 @@
         </tr>
         <tr>
             <td>
-                <input type="submit" value="<fmt:message key="manager.button.report_by_date"/> "/>
+                <fmt:message key="all.label.status"/>
+            </td>
+            <td>
+                <select name="status">
+                    <c:forEach var="status" items="${applicationScope.statuses}">
+                        <option value="${status.getId()}" ${status.getId()==sessionScope.status.getId()?" selected" : ""} >${status.getName(locale)}</option>
+                    </c:forEach>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="<fmt:message key="manager.button.report"/> "/>
             </td>
         </tr>
     </table>
@@ -96,6 +106,7 @@
         <th><fmt:message key="all.label.volume"/></th>
         <th><fmt:message key="all.label.cost"/></th>
         <th><fmt:message key="all.label.status"/></th>
+        <th><fmt:message key="all.label.date"/></th>
     </tr>
 
     <c:forEach var="delivery" items="${deliveries}">
@@ -109,32 +120,14 @@
             <td align="right">${delivery.getVolume()}</td>
             <td align="right">${delivery.getCost()}</td>
             <td>${delivery.getLastStatus().getName(locale)}</td>
+            <td>${delivery.getLastDate()}</td>
         </tr>
     </c:forEach>
 
 </table>
 
-<c:if test="${pageNo>2}">
-    <a href="<%=Path.COMMAND__MANAGER_ACCOUNT%>&page=1"><fmt:message key="all.href.first"/></a>
-    ...
-</c:if>
-
-<c:forEach var="i" begin="${pageNo-2>1?pageNo-2:1}" end="${pageNo+2<totalPages?pageNo+2:totalPages}">
-    <c:choose>
-        <c:when test="${i==pageNo}">
-            <c:set var="ref" value="[${i}]"/>
-        </c:when>
-        <c:otherwise>
-            <c:set var="ref" value="${i}"/>
-        </c:otherwise>
-    </c:choose>
-    <a href="<%=Path.COMMAND__MANAGER_ACCOUNT%>&page=${i}">${ref}</a>
-</c:forEach>
-
-<c:if test="${totalPages-pageNo>2}">
-    ...
-    <a href="<%=Path.COMMAND__MANAGER_ACCOUNT%>&page=${totalPages}"> <fmt:message key="all.href.last"/> </a>
-</c:if>
+<c:set var="current_page" value="<%=Path.COMMAND__REPORT%>" />
+<%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 
 </body>
 </html>

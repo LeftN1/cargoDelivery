@@ -168,9 +168,101 @@ delete from deliveries where id=1;
 
 update deliveries
 set origin_city_id=277, destination_city_id=74,
-adress=111, cargo_type=3, volume=3, cost=33
+adress=111, cargo_type=3, weight=3, volume=3, cost=33
 where id=15;
 
 truncate delivery_status;
 truncate deliveries;
+
+select * from deliveries
+join delivery_status on delivery_id=id
+where id=19;
+
+/*
+		Report request 1
+*/
+
+
+select last_date.delivery_id, status_id, curr_date, created, deliveries.user_id, deliveries.origin_city_id, deliveries.destination_city_id, 
+deliveries.adress, deliveries.cargo_type, deliveries.weight, deliveries.volume, deliveries.cost
+ from
+(select delivery_id, max(date_time) as curr_date, min(date_time) as created
+    from delivery_status
+	group by delivery_id) as last_date
+inner join delivery_status on last_date.delivery_id = delivery_status.delivery_id
+		and curr_date=date_time
+inner join deliveries on deliveries.id = delivery_status.delivery_id
+where	
+	case 
+		when -1=-1 then true
+        when -1=0 then status_id<>1
+        when -1>0 then status_id=2
+        else true
+	end
+and
+    case
+		when 0>0 then origin_city_id=266
+        else true
+	end
+and
+    case
+		when 0>0 then destination_city_id=266
+        else true
+	end
+and
+    case
+		when 0>0 then created>1600527564607
+        else true
+	end
+and
+    case
+		when 0>0 then created<1600527564607
+        else true
+	end
+;
+/***********/
+
+
+/*
+		Report request 2
+*/
+
+select  actualdelivery_status.delivery_id, deliveries.user_id, 
+	deliveries.origin_city_id, deliveries.destination_city_id, deliveries.adress, 
+    deliveries.cargo_type, deliveries.weight, 
+    deliveries.volume, deliveries.cost,
+	actualdelivery_status.date_time , delivery_status.status_id
+from 
+	(select delivery_id, max(date_time) as date_time
+    from delivery_status
+	group by delivery_id) as actualdelivery_status
+inner join delivery_status 
+	on actualdelivery_status.delivery_id = delivery_status.delivery_id
+	and actualdelivery_status.date_time = delivery_status.date_time
+    and delivery_status.status_id=2
+inner join deliveries on deliveries.id = actualdelivery_status.delivery_id
+		and CASE
+			WHEN 0 > 0 THEN deliveries.origin_city_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN deliveries.destination_city_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN deliveries.user_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN actualdelivery_status.date_time > 1702531284720
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN actualdelivery_status.date_time < 1602531284720
+			ELSE true
+			END
+limit 0,10;
+
+
+
 
