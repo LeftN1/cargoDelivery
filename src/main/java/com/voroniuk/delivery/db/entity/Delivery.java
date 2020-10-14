@@ -16,7 +16,7 @@ public class Delivery implements Serializable {
     private Map<DeliveryStatus, Date> statusMap;
     private int weight; // kg
     private int volume; //decimeter ^ 3
-    private double cost;
+    private int cost;
 
     public Delivery() {
         statusMap = new HashMap<>();
@@ -40,9 +40,13 @@ public class Delivery implements Serializable {
         return status;
     }
 
-    public String getLastDate(){
+    public String getLastDateString(){
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return format.format(statusMap.get(getLastStatus()));
+    }
+
+    public Date getLastDate(){
+        return statusMap.get(getLastStatus());
     }
 
     public Map<DeliveryStatus, Date> getStatusMap() {
@@ -101,11 +105,11 @@ public class Delivery implements Serializable {
         this.volume = volume;
     }
 
-    public double getCost() {
+    public int getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 

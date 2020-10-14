@@ -10,14 +10,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
-<c:set var="title" value="Report" />
+<c:set var="title" value="Report"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 <body>
 
 <fmt:setLocale value="${locale.getLanguage()}"/>
 
-<a href="/controller?command=main"><fmt:message key="all.label.account"/></a>
+<a href="/controller?command=account"><fmt:message key="all.label.account"/></a>
 
 <h3><fmt:message key="report.label.report_generator"/></h3>
 
@@ -80,10 +80,12 @@
         </tr>
         <tr>
             <td>
-                <fmt:message key="manager.button.report_by_date"/> <input type="radio" name="type" value="by_date" checked>
+                <fmt:message key="manager.button.report_by_date"/> <input type="radio" name="type" value="by_date"
+                                                                          ${type.equals("by_date")? " checked": ""}>
             </td>
             <td>
-                <fmt:message key="manager.button.report_by_city"/> <input type="radio" name="type" value="by_city" >
+                <fmt:message key="manager.button.report_by_city"/> <input type="radio" name="type" value="by_city"
+                                                                            ${type.equals("by_city")? " checked": ""}>
             </td>
         </tr>
         <tr>
@@ -94,7 +96,6 @@
     </table>
 </form>
 
-Current date: ${currentDate}
 <table>
     <tr>
         <th><fmt:message key="all.label.id"/></th>
@@ -109,37 +110,40 @@ Current date: ${currentDate}
         <th><fmt:message key="all.label.date"/></th>
     </tr>
 
-    <c:forEach var="delivery" items="${deliveries}">
+    <c:forEach var="entry" items="${report}">
         <tr>
-            <td>${delivery.getId()}</td>
-            <td>${delivery.getOrigin().getName(locale)}</td>
-            <td>${delivery.getDestination().getName(locale)}</td>
-            <td>${delivery.getAdress()}</td>
-            <td>${delivery.getType().getName(locale)}</td>
-            <td>${delivery.getWeight()}</td>
-            <td align="right">${delivery.getVolume()}</td>
-            <td align="right">${delivery.getCost()}</td>
-            <td>${delivery.getLastStatus().getName(locale)}</td>
-            <td>${delivery.getLastDate()}</td>
+            <td><b>${entry.key}</b></td>
+        </tr>
+        <c:forEach var="delivery" items="${entry.value}">
+            <tr>
+                <td>${delivery.getId()}</td>
+                <td>${delivery.getOrigin().getName(locale)}</td>
+                <td>${delivery.getDestination().getName(locale)}</td>
+                <td>${delivery.getAdress()}</td>
+                <td>${delivery.getType().getName(locale)}</td>
+                <td>${delivery.getWeight()}</td>
+                <td align="right">${delivery.getVolume()}</td>
+                <td align="right">${delivery.getCost()}</td>
+                <td>${delivery.getLastStatus().getName(locale)}</td>
+                <td>${delivery.getLastDateString()}</td>
+            </tr>
+        </c:forEach>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><u><i><fmt:message key="report.label.total"/></i></u></td>
+            <td><b>${totals.get(entry.key).getTotalWeight()}</b></td>
+            <td align="right"><b>${totals.get(entry.key).getTotalVolume()}</b></td>
+            <td align="right"><b>${totals.get(entry.key).getTotalCost()}</b></td>
+            <td></td>
+            <td></td>
         </tr>
     </c:forEach>
-    <tr>
-        <td>Total</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>${totalWeight}</td>
-        <td align="right">${totalVolume}</td>
-        <td align="right">${totalCost}</td>
-        <td></td>
-        <td></td>
-    </tr>
+
 
 </table>
-
-<c:set var="current_page" value="<%=Path.COMMAND__REPORT%>" />
-<%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 
 </body>
 </html>

@@ -91,6 +91,7 @@
             <td align="right">${delivery.getVolume()}</td>
             <td align="right">${delivery.getCost()}</td>
             <td>${delivery.getLastStatus().getName(locale)}</td>
+            <td>${delivery.getLastDateString()}</td>
             <!--<td><a href="/controller?command=delete&delivery_id=${delivery.getId()}" onclick="allert('click')"><fmt:message key="all.label.delete"/></a></td>-->
             <td><a href="#" onclick="if (confirm('<fmt:message key="manager.alert.confirm_delete"/>')){location.href='/controller?command=delete&delivery_id=${delivery.getId()}'}else {}"><fmt:message key="all.label.delete"/></a></td>
             <td><a href="/controller?command=edit&delivery_id=${delivery.getId()}"><fmt:message key="all.label.edit"/></a></td>

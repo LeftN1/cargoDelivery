@@ -264,6 +264,14 @@ inner join deliveries on deliveries.id = actualdelivery_status.delivery_id
 		
 limit 0,2;
 
+update delivery_status set date_time=1602277200001 where delivery_id=12;
+update delivery_status set date_time=1602363600001 where delivery_id=13;
+update delivery_status set date_time=1602450000001 where delivery_id=14;
+update delivery_status set date_time=1602104400001 where delivery_id=15;
+update delivery_status set date_time=1602104400001 where delivery_id=16;
+
+SELECT * FROM deliveryservice.delivery_status;
+
 
 
 

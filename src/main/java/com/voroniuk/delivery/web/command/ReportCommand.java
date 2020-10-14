@@ -6,6 +6,7 @@ import com.voroniuk.delivery.db.dao.OrderDAO;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
+import com.voroniuk.delivery.db.entity.Total;
 import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
 
@@ -15,9 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ReportCommand extends Command {
     private static final Logger LOG = Logger.getLogger(ReportCommand.class);
@@ -38,6 +38,19 @@ public class ReportCommand extends Command {
         String rEnd = req.getParameter("end_date");
         String sStart = (String) req.getSession().getAttribute("start");
         String sEnd = (String) req.getSession().getAttribute("end");
+
+        Locale rLocale = (Locale) req.getSession().getAttribute("locale");
+        if(rLocale == null){
+            rLocale = Locale.getDefault();
+        }
+
+        final Locale locale = rLocale;
+
+        String type = req.getParameter("type");
+        if (type == null) {
+            String sType = (String) req.getSession().getAttribute("type");
+            type = type == null ? "by_date" : sType;
+        }
 
         int originId;
         int destinationId;
@@ -68,48 +81,93 @@ public class ReportCommand extends Command {
         try {
             startDate = rStart != null ? format.parse(rStart) : format.parse(sStart);
             endDate = rEnd != null ? format.parse(rEnd) : format.parse(sEnd);
+            endDate.setTime(endDate.getTime() + oneDay - 1);
         } catch (ParseException | NullPointerException e) {
-            endDate = new Date();
-            startDate = new Date(endDate.getTime()/oneDay * oneDay);
+            startDate = new Date(0);
+            endDate = new Date(0);
         }
 
 
-        long days = TimeUnit.DAYS.convert(endDate.getTime() - startDate.getTime(), TimeUnit.MILLISECONDS);
-
         int pageNo;
-        int totalPages = (int) days + 1;
+        int pageSize = 10;
+        int totalPages = 10;
         pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
 
-        Date sD = new Date(startDate.getTime() + (pageNo - 1) * oneDay);
-        Date eD = new Date(sD.getTime() + oneDay);
-        int pageSize = orderDAO.countDeliveries(status, 0, originId, destinationId, sD, eD);
+        Map<String, List<Delivery>> report = new LinkedHashMap<>();
+        Map<String, Total> totals = new LinkedHashMap<>();
 
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatusAndCityIdAndDate(status, originId, destinationId, sD, eD, 0, pageSize);
+        SimpleDateFormat repFormat = new SimpleDateFormat("dd.MM.yyyy");
 
-        long totalWeight = 0;
-        long totalVolume = 0;
-        long totalCost = 0;
+        int totalDel = orderDAO.countDeliveries(status, 0, originId, destinationId, startDate, endDate);
+        List<Delivery> deliveries = orderDAO.findDeliveriesByStatusAndCityIdAndDate(status, originId, destinationId, startDate, endDate, 0, totalDel);
 
-        for (Delivery d : deliveries) {
-            totalWeight += d.getWeight();
-            totalVolume += d.getVolume();
-            totalCost += d.getCost();
+        if (type.equals("by_date")) {
+            deliveries = deliveries.stream().sorted(Comparator.comparing(Delivery::getLastDate)).collect(Collectors.toList());
+
+            if (deliveries.size() > 0) {
+                Date currDate = new Date(deliveries.get(0).getLastDate().getTime() / oneDay * oneDay);
+                List<Delivery> currList = new LinkedList();
+                Total total = new Total();
+                for (Delivery delivery : deliveries) {
+                    if (delivery.getLastDate().getTime() > currDate.getTime() + oneDay) {
+                        report.put(repFormat.format(currDate), currList);
+                        totals.put(repFormat.format(currDate), total);
+                        currDate.setTime(delivery.getLastDate().getTime() / oneDay * oneDay);
+                        currList = new LinkedList<>();
+                        total = new Total();
+                    }
+                    currList.add(delivery);
+                    total.addWeight(delivery.getWeight());
+                    total.addVolume(delivery.getVolume());
+                    total.addCost(delivery.getCost());
+                }
+                totals.put(repFormat.format(currDate), total);
+                report.put(repFormat.format(currDate), currList);
+            }
+        }
+
+        if (type.equals("by_city")) {
+            if (originId == 0){
+                originId = 266;
+            }
+            deliveries = deliveries.stream().sorted(Comparator.comparing(o -> o.getDestination().getName(locale))).collect(Collectors.toList());
+
+            if (deliveries.size() > 0) {
+                City currCity = deliveries.get(0).getDestination();
+                List<Delivery> currList = new LinkedList();
+                Total total = new Total();
+                for (Delivery delivery : deliveries) {
+                    if (delivery.getDestination().getId() != currCity.getId()) {
+                        report.put(currCity.getName(locale), currList);
+                        totals.put(currCity.getName(locale), total);
+                        currCity = delivery.getDestination();
+                        currList = new LinkedList<>();
+                        total = new Total();
+                    }
+                    currList.add(delivery);
+                    total.addWeight(delivery.getWeight());
+                    total.addVolume(delivery.getVolume());
+                    total.addCost(delivery.getCost());
+                }
+                totals.put(currCity.getName(locale), total);
+                report.put(currCity.getName(locale), currList);
+            }
         }
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);
-        req.setAttribute("deliveries", deliveries);
-        req.setAttribute("currentDate", format.format(startDate.getTime() + (pageNo - 1) * oneDay));
-        req.setAttribute("totalWeight", totalWeight);
-        req.setAttribute("totalVolume", totalVolume);
-        req.setAttribute("totalCost", totalCost);
+        req.setAttribute("report", report);
+        req.setAttribute("totals", totals);
 
+        req.getSession().setAttribute("type", type);
         req.getSession().setAttribute("status", status);
         req.getSession().setAttribute("originId", originId);
         req.getSession().setAttribute("destinationId", destinationId);
-        req.getSession().setAttribute("start", format.format(startDate));
-        req.getSession().setAttribute("end", format.format(endDate));
+        req.getSession().setAttribute("start", startDate.getTime() != 0 ? format.format(startDate) : null);
+        req.getSession().setAttribute("end", endDate.getTime() != 0 ? format.format(endDate) : null);
 
         return Path.PAGE__REPORT;
     }
+
+
 }

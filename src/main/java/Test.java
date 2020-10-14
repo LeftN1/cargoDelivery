@@ -18,24 +18,26 @@ public class Test {
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
-        Date d1, d2 ;
+        Date d1, d2, d3, d4;
 
-        d1=d2 = new Date(0);
+        d1 = d2 = d3 = d4 = new Date(0);
 
         try {
-            d1 = format.parse("14.10.2020");
-            d2 = format.parse("15.10.2020");
+            d1 = format.parse("10.10.2020");
+            d2 = format.parse("11.10.2020");
+            d3 = format.parse("12.10.2020");
+            d4 = format.parse("08.10.2020");
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        long diff = d2.getTime() - d1.getTime();
+        System.out.println(d1.getTime()+10860000);
+        System.out.println(d2.getTime()+10860000);
+        System.out.println(d3.getTime()+10860000);
+        System.out.println(d4.getTime()+10860000);
 
-        long days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
-        System.out.println(days);
 
-        System.out.println(diff);
 
     }
 }
