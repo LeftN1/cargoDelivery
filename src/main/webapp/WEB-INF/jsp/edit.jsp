@@ -63,7 +63,7 @@
         </tr>
         <tr>
             <td>
-                <fmt:message key="all.label.volume"/>
+                <fmt:message key="all.label.weight"/>
             </td>
             <td>
                 <input type="number" size="5" name="weight" value="${weight}">

@@ -9,7 +9,7 @@ public class AddCitiesFromXMLtoDB {
 
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
 
-        String xmlFileName = "xml/cities-ua.xml";
+        String xmlFileName = "xml/cities-uaNEW.xml";
 
         cityParserSAX parser = new cityParserSAX(xmlFileName);
         parser.addToDb(false);
