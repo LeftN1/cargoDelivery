@@ -20,14 +20,6 @@
 <a href="/controller?command=main"><fmt:message key="all.label.account"/></a>
 
 <h3><fmt:message key="report.label.report_generator"/></h3>
-    <br>
-    Origin = ${origin}
-    <br>
-    Destination = ${destination}
-    <br>
-    Start date = ${start}
-    <br>
-    End date = ${end}
 
 <form name="report" method="get" action="controller">
     <input type="hidden" name="command" value="report">
@@ -63,7 +55,7 @@
                 <fmt:message key="report.label.start_date"/>
             </td>
             <td>
-                <input type="date" name="start_date">
+                <input type="date" name="start_date" value="${start}">
             </td>
         </tr>
         <tr>
@@ -71,7 +63,7 @@
                 <fmt:message key="report.label.end_date"/>
             </td>
             <td>
-                <input type="date" name="end_date">
+                <input type="date" name="end_date" value="${end}">
             </td>
         </tr>
         <tr>
@@ -88,13 +80,21 @@
         </tr>
         <tr>
             <td>
+                <fmt:message key="manager.button.report_by_date"/> <input type="radio" name="type" value="by_date" checked>
+            </td>
+            <td>
+                <fmt:message key="manager.button.report_by_city"/> <input type="radio" name="type" value="by_city" >
+            </td>
+        </tr>
+        <tr>
+            <td>
                 <input type="submit" value="<fmt:message key="manager.button.report"/> "/>
             </td>
         </tr>
     </table>
 </form>
 
-
+Current date: ${currentDate}
 <table>
     <tr>
         <th><fmt:message key="all.label.id"/></th>
@@ -123,6 +123,18 @@
             <td>${delivery.getLastDate()}</td>
         </tr>
     </c:forEach>
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>${totalWeight}</td>
+        <td align="right">${totalVolume}</td>
+        <td align="right">${totalCost}</td>
+        <td></td>
+        <td></td>
+    </tr>
 
 </table>
 

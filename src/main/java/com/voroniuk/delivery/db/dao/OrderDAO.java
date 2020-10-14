@@ -142,6 +142,9 @@ public class OrderDAO {
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
 
+        if(endDate.getTime() < startDate.getTime()){
+            endDate = new Date(0);
+        }
 
         String sql = "select  actualdelivery_status.delivery_id, deliveries.user_id, \n" +
                 "deliveries.origin_city_id, deliveries.destination_city_id, deliveries.adress, \n" +

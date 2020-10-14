@@ -239,7 +239,7 @@ from
 inner join delivery_status 
 	on actualdelivery_status.delivery_id = delivery_status.delivery_id
 	and actualdelivery_status.date_time = delivery_status.date_time
-    and delivery_status.status_id=2
+    and delivery_status.status_id=1
 inner join deliveries on deliveries.id = actualdelivery_status.delivery_id
 		and CASE
 			WHEN 0 > 0 THEN deliveries.origin_city_id = 1
@@ -261,7 +261,8 @@ inner join deliveries on deliveries.id = actualdelivery_status.delivery_id
 			WHEN 0 > 0 THEN actualdelivery_status.date_time < 1602531284720
 			ELSE true
 			END
-limit 0,10;
+		
+limit 0,2;
 
 
 

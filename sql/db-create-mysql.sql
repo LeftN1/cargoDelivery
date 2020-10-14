@@ -205,4 +205,8 @@ INSERT INTO translations VALUES(11, 2, 'получено');
 INSERT INTO translations VALUES(11, 3, 'отримано');
 INSERT INTO statuses VALUES (6, 11);
 
+INSERT INTO users (id, login, role, pass) VALUES
+(1, 'bbb' , 2, '08f8e0260c64418510cefb2b06eee5cd'),
+(2, 'aaa' , 1, '47bce5c74f589f4867dbd57e9ca9f808');
+
     
