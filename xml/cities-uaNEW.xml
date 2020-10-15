@@ -1,467 +1,950 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<country en="Ukraine" ru="Украина" uk="Україна">
-    <region en="Vinnitska oblast" ru="Винницкая область" uk="Вінницька область">
-        <city lat="49.630283" lon="27.001648" en="Bar" ru="Бар" uk="Бар"/>
-        <city lat="48.368954" lon="29.5331654" en="Bershad'" ru="Бершадь" uk="Бершадь"/>
-        <city lat="49.2333333" lon="28.4833333" en="Vinnitsa" ru="Винница" uk="Вінниця"/>
-        <city lat="48.8094444" lon="29.3905556" en="Haisyn" ru="Гайсин" uk="Гайсин"/>
-        <city lat="49.038349" lon="28.10556" en="Zhmerinka" ru="Жмеринка" uk="Жмеринка"/>
-        <city lat="49.711769" lon="28.842859" en="Kazatin" ru="Казатин" uk="Козятин"/>
-        <city lat="49.4472222" lon="28.5230556" en="Kalinivka" ru="Калиновка" uk="Калинівка"/>
-        <city lat="48.676151" lon="29.262541" en="Ladizhin" ru="Ладыжин" uk="Ладижин"/>
-        <city lat="48.45" lon="27.8" en="Mohyliv-Podilskyi" ru="Могилёв-Подольский" uk="Могилів-Подільский"/>
-        <city lat="48.9726621" lon="28.835666" en="Nemyriv" ru="Немиров" uk="Немирів"/>
-        <city lat="49.4833333" lon="29.2666667" en="Pohrebyshche" ru="Погребище" uk="Погребище"/>
-        <city lat="48.68" lon="28.87" en="Tulchyn" ru="Тульчин" uk="Тульчин"/>
-        <city lat="49.563469" lon="27.959379" en="Hmelnik" ru="Хмельник" uk="Хмельник"/>
-        <city lat="48.73761" lon="28.08688" en="Shargorod" ru="Шаргород" uk="Шаргород"/>
-        <city lat="49.9572775" lon="26.2290711" en="Yampil" ru="Ямполь" uk="Ямпіль"/>
+
+<country uk="Україна" ru="Украина" en="Ukraine">
+
+
+    <region uk="Вінницька область" ru="Винницкая область" en="Vinnitskaya oblast">
+
+        <city uk="Бар" ru="Бар" en="Bar" lon="27.001648" lat="49.630283"/>
+
+        <city uk="Бершадь" ru="Бершадь" en="Bershad'" lon="29.5331654" lat="48.368954"/>
+
+        <city uk="Вінниця" ru="Винница" en="Vinnitsa" lon="28.4833333" lat="49.2333333"/>
+
+        <city uk="Гайсин" ru="Гайсин" en="Haisyn" lon="29.3905556" lat="48.8094444"/>
+
+        <city uk="Жмеринка" ru="Жмеринка" en="Zhmerinka" lon="28.10556" lat="49.038349"/>
+
+        <city uk="Козятин" ru="Казатин" en="Kazatin" lon="28.842859" lat="49.711769"/>
+
+        <city uk="Калинівка" ru="Калиновка" en="Kalinivka" lon="28.5230556" lat="49.4472222"/>
+
+        <city uk="Ладижин" ru="Ладыжин" en="Ladizhin" lon="29.262541" lat="48.676151"/>
+
+        <city uk="Могилів-Подільский" ru="Могилёв-Подольский" en="Mohyliv-Podilskyi" lon="27.8" lat="48.45"/>
+
+        <city uk="Немирів" ru="Немиров" en="Nemyriv" lon="28.835666" lat="48.9726621"/>
+
+        <city uk="Погребище" ru="Погребище" en="Pohrebyshche" lon="29.2666667" lat="49.4833333"/>
+
+        <city uk="Тульчин" ru="Тульчин" en="Tulchyn" lon="28.87" lat="48.68"/>
+
+        <city uk="Хмельник" ru="Хмельник" en="Hmelnik" lon="27.959379" lat="49.563469"/>
+
+        <city uk="Шаргород" ru="Шаргород" en="Shargorod" lon="28.08688" lat="48.73761"/>
+
+        <city uk="Ямпіль" ru="Ямполь" en="Yampil" lon="26.2290711" lat="49.9572775"/>
+
     </region>
-    <region ru="Волынская область">
-        <city lat="50.3505636" lon="25.1007738" ru="Берестечко" en="Берестечко" uk="Берестечко"/>
-        <city lat="50.853578" lon="24.311783" ru="Владимир-Волынский" en="Vladimir-Volynskiy" uk="Володимир-Волинський"/>
-        <city lat="50.500622" lon="24.767559" ru="Горохов" en="Gorokhov" uk="Горохів"/>
-        <city lat="51.6241667" lon="24.9605556" ru="Камень-Каширский" en="Kamen-Kashirskiy" uk="Камінь-Каширський"/>
-        <city lat="50.833621" lon="25.460706" ru="Киверцы" en="Kivertsy" uk="Ківерці"/>
-        <city lat="51.212898" lon="24.71343" ru="Ковель" en="Kovel" uk="Ковель"/>
-        <city lat="50.75" lon="25.3358333" ru="Луцк" en="Lutsk" uk="Луцьк"/>
-        <city lat="51.2230556" lon="24.0377778" ru="Любомль" en="Lyuboml" uk="Любомль"/>
-        <city lat="50.7333333" lon="24.1666667" ru="Нововолынск"/>
-        <city lat="50.915901" lon="25.268551" ru="Рожище" en="Rozhyshche" uk="Рожище"/>
-        <city lat="50.86" lon="24.15" ru="Устилуг" en="Ustyluh" uk="Устилуг"/>
+
+
+    <region uk="Волинська область" ru="Волынская область" en="Volinskaya oblast">
+
+        <city uk="Берестечко" ru="Берестечко" en="Berestechko" lon="25.1007738" lat="50.3505636"/>
+
+        <city uk="Володимир-Волинський" ru="Владимир-Волынский" en="Vladimir-Volynskiy" lon="24.311783"
+              lat="50.853578"/>
+
+        <city uk="Горохів" ru="Горохов" en="Gorokhov" lon="24.767559" lat="50.500622"/>
+
+        <city uk="Камінь-Каширський" ru="Камень-Каширский" en="Kamen-Kashirskiy" lon="24.9605556" lat="51.6241667"/>
+
+        <city uk="Ківерці" ru="Киверцы" en="Kivertsy" lon="25.460706" lat="50.833621"/>
+
+        <city uk="Ковель" ru="Ковель" en="Kovel" lon="24.71343" lat="51.212898"/>
+
+        <city uk="Луцьк" ru="Луцк" en="Lutsk" lon="25.3358333" lat="50.75"/>
+
+        <city uk="Любомль" ru="Любомль" en="Lyuboml" lon="24.0377778" lat="51.2230556"/>
+
+        <city uk="Нововолинськ" ru="Нововолынск" en="Novovolinsk" lon="24.1666667" lat="50.7333333"/>
+
+        <city uk="Рожище" ru="Рожище" en="Rozhyshche" lon="25.268551" lat="50.915901"/>
+
+        <city uk="Устилуг" ru="Устилуг" en="Ustyluh" lon="24.15" lat="50.86"/>
+
     </region>
-    <region ru="Днепропетровская область">
-        <city lat="47.65815" lon="33.697819" ru="Апостолово" en="Apostolove" uk="Апостолове"/>
-        <city lat="48.6561111" lon="34.3283333" ru="Верхнеднепровск" en="Verkhnodniprovsk" uk="Верхньодніпровськ"/>
-        <city lat="48.4833333" lon="34.0166667" ru="Вольногорск" en="Vilnohirsk" uk="Вільногірськ"/>
-        <city lat="48.5166667" lon="34.6166667" ru="Днепродзержинск"/>
-        <city lat="48.45" lon="34.9833333" ru="Днепропетровск" en="Dnipropetrovsk" uk="Дніпро"/>
-        <city lat="48.35" lon="33.5" ru="Жёлтые Воды"/>
-        <city lat="47.899726" lon="33.379534" ru="Кривой Рог" en="Kryvyi Rig" uk="Кривий Ріг"/>
-        <city lat="47.6397222" lon="34.6363889" ru="Марганец" en="Marhanets" uk="Марганець"/>
-        <city lat="47.5666667" lon="34.4" ru="Никополь" en="Nikopol" uk="Нікополь"/>
-        <city lat="48.6333333" lon="35.2166667" ru="Новомосковск" en="Novomoskovsk" uk="Новомосковськ"/>
-        <city lat="44.9643961" lon="35.3569007" ru="Орджоникидзе" en="Ordzhonikidze" uk="Покров"/>
-        <city lat="48.533939" lon="35.869282" ru="Павлоград" en="Pavlograd" uk="Павлоград"/>
-        <city lat="49.016251" lon="35.371681" ru="Перещепино" en="Pereshchepyne" uk="Перещепине"/>
-        <city lat="48.3463889" lon="36.4044444" ru="Першотравенск" en="Pershotravensk" uk="Першотравенськ"/>
-        <city lat="49.5355598" lon="25.5276081" ru="Подгородное" en="Підгородне" uk="Підгородне"/>
-        <city lat="48.4113889" lon="33.7105556" ru="Пятихатки" en="Pyatykhatky" uk="П’ятихатки"/>
-        <city lat="48.3177778" lon="35.5119444" ru="Синельниково" en="Sinelnikovo" uk="Синельникове"/>
-        <city lat="48.5402778" lon="29.9677778" ru="Терновка" en="Тернівка" uk="Тернівка"/>
+
+
+    <region uk="Дніпропетровська область" ru="Днепропетровская область" en="Dnipropetrovskaya oblast">
+
+        <city uk="Апостолове" ru="Апостолово" en="Apostolove" lon="33.697819" lat="47.65815"/>
+
+        <city uk="Верхньодніпровськ" ru="Верхнеднепровск" en="Verkhnodniprovsk" lon="34.3283333" lat="48.6561111"/>
+
+        <city uk="Вільногірськ" ru="Вольногорск" en="Vilnohirsk" lon="34.0166667" lat="48.4833333"/>
+
+        <city uk="Дніпродзержинськ" ru="Днепродзержинск" en="Dneprodzerjinsk" lon="34.6166667" lat="48.5166667"/>
+
+        <city uk="Дніпро" ru="Днепропетровск" en="Dnipropetrovsk" lon="34.9833333" lat="48.45"/>
+
+        <city uk="Жовті води" ru="Жёлтые Воды" en="Jovti vodi" lon="33.5" lat="48.35"/>
+
+        <city uk="Кривий Ріг" ru="Кривой Рог" en="Kryvyi Rig" lon="33.379534" lat="47.899726"/>
+
+        <city uk="Марганець" ru="Марганец" en="Marhanets" lon="34.6363889" lat="47.6397222"/>
+
+        <city uk="Нікополь" ru="Никополь" en="Nikopol" lon="34.4" lat="47.5666667"/>
+
+        <city uk="Новомосковськ" ru="Новомосковск" en="Novomoskovsk" lon="35.2166667" lat="48.6333333"/>
+
+        <city uk="Покров" ru="Орджоникидзе" en="Ordzhonikidze" lon="35.3569007" lat="44.9643961"/>
+
+        <city uk="Павлоград" ru="Павлоград" en="Pavlograd" lon="35.869282" lat="48.533939"/>
+
+        <city uk="Перещепине" ru="Перещепино" en="Pereshchepyne" lon="35.371681" lat="49.016251"/>
+
+        <city uk="Першотравенськ" ru="Першотравенск" en="Pershotravensk" lon="36.4044444" lat="48.3463889"/>
+
+        <city uk="Підгородне" ru="Подгородное" en="Pidgorne" lon="25.5276081" lat="49.5355598"/>
+
+        <city uk="П’ятихатки" ru="Пятихатки" en="Pyatykhatky" lon="33.7105556" lat="48.4113889"/>
+
+        <city uk="Синельникове" ru="Синельниково" en="Sinelnikovo" lon="35.5119444" lat="48.3177778"/>
+
+        <city uk="Тернівка" ru="Терновка" en="Ternivka" lon="29.9677778" lat="48.5402778"/>
+
     </region>
-    <region ru="Донецкая область">
-        <city lat="48.1333333" lon="37.7333333" ru="Авдеевка" en="Avdeevka" uk="Авдіївка"/>
-        <city lat="48.599072" lon="37.999241" ru="Артёмовск"/>
-        <city lat="47.596119" lon="37.490429" ru="Волноваха" en="Volnovakha" uk="Волноваха"/>
-        <city lat="48.346432" lon="38.059513" ru="Горловка"/>
-        <city lat="48.4" lon="37.8333333" ru="Дзержинск" en="Toretsk" uk="Торецьк"/>
-        <city lat="48.3333333" lon="38.4" ru="Дебальцево" en="Дебальцеве" uk="Дебальцеве"/>
-        <city lat="48.32357" lon="37.291854" ru="Димитров" en="Dimitrov" uk="Мирноград"/>
-        <city lat="48.4691324" lon="37.0871223" ru="Доброполье" en="Добропілля" uk="Добропілля"/>
-        <city lat="47.770821" lon="37.684361" ru="Докучаевск"/>
-        <city lat="48.0027778" lon="37.8052778" ru="Донецк" en="Severodonetsk" uk="Сєвєродонецьк"/>
-        <city lat="48.6166667" lon="37.5333333" ru="Дружковка" en="Druzhkovka" uk="Дружківка"/>
-        <city lat="48.2166667" lon="38.2" ru="Енакиево"/>
-        <city lat="48.1462985" lon="38.2540176" ru="Ждановка" en="Жданівка" uk="Жданівка"/>
-        <city lat="48.0166667" lon="38.2666667" ru="Зугрэс"/>
-        <city lat="48.15" lon="38.3666667" ru="Кировское" en="Kirovske" uk="Обухівка"/>
-        <city lat="48.736462" lon="37.57164" ru="Краматорск" en="Kramatorsk" uk="Краматорськ"/>
-        <city lat="48.2827778" lon="37.1827778" ru="Красноармейск"/>
-        <city lat="48.984211" lon="37.810329" ru="Красный Лиман" en="Красний Лиман" uk="Красний Лиман"/>
-        <city lat="48.51545" lon="37.703629" ru="Константиновка" en="Konstantinovka" uk="Костянтинівка"/>
-        <city lat="47.1166667" lon="37.55" ru="Мариуполь" en="Mariupol" uk="Маріуполь"/>
-        <city lat="48.076179" lon="38.068427" ru="Макеевка" en="Макіївка" uk="Макіївка"/>
-        <city lat="48.2045408" lon="37.336821" ru="Новогродовка"/>
-        <city lat="48.144671" lon="37.297897" ru="Селидово" en="Selidovo" uk="Селидове"/>
-        <city lat="48.846851" lon="37.57954" ru="Славянск" en="Slavyansk" uk="Слов’янськ"/>
-        <city lat="48.0282789" lon="38.7656122" ru="Снежное"/>
-        <city lat="48.6833333" lon="38.1" ru="Соледар" en="Soledar" uk="Соледар"/>
-        <city lat="48.0166667" lon="38.6333333" ru="Торез"/>
-        <city lat="47.7833333" lon="37.25" ru="Угледар" en="Ugledar" uk="Вугледар"/>
-        <city lat="48.037411" lon="38.160301" ru="Харцызск"/>
-        <city lat="48.0333333" lon="38.4833333" ru="Шахтёрск" en="Шахтарське" uk="Шахтарське"/>
-        <city lat="48.1221425" lon="37.8765944" ru="Ясиноватая"/>
+
+
+    <region uk="Донецька область" ru="Донецкая область" en="Donetskaya oblast">
+
+        <city uk="Авдіївка" ru="Авдеевка" en="Avdeevka" lon="37.7333333" lat="48.1333333"/>
+
+        <city uk="Артемівськ" ru="Артёмовск" en="Artemivsk" lon="37.999241" lat="48.599072"/>
+
+        <city uk="Волноваха" ru="Волноваха" en="Volnovakha" lon="37.490429" lat="47.596119"/>
+
+        <city uk="Горлівка" ru="Горловка" en="Gorlovka" lon="38.059513" lat="48.346432"/>
+
+        <city uk="Торецьк" ru="Дзержинск" en="Toretsk" lon="37.8333333" lat="48.4"/>
+
+        <city uk="Дебальцеве" ru="Дебальцево" en="Debalceve" lon="38.4" lat="48.3333333"/>
+
+        <city uk="Мирноград" ru="Димитров" en="Dimitrov" lon="37.291854" lat="48.32357"/>
+
+        <city uk="Добропілля" ru="Доброполье" en="Dobropillya" lon="37.0871223" lat="48.4691324"/>
+
+        <city uk="Докучаєвськ" ru="Докучаевск" en="Dokuchaevsk" lon="37.684361" lat="47.770821"/>
+
+        <city uk="Донецьк" ru="Донецк" en="Donetsk" lon="37.8052778" lat="48.0027778"/>
+
+        <city uk="Дружківка" ru="Дружковка" en="Druzhkovka" lon="37.5333333" lat="48.6166667"/>
+
+        <city uk="Єнакіїве" ru="Енакиево" en="Yenakieve" lon="38.2" lat="48.2166667"/>
+
+        <city uk="Жданівка" ru="Ждановка" en="Jdanivka" lon="38.2540176" lat="48.1462985"/>
+
+        <city uk="Зугрес" ru="Зугрэс" en="Zugres" lon="38.2666667" lat="48.0166667"/>
+
+        <city uk="Кіровське" ru="Кировское" en="Kirovske" lon="38.3666667" lat="48.15"/>
+
+        <city uk="Краматорськ" ru="Краматорск" en="Kramatorsk" lon="37.57164" lat="48.736462"/>
+
+        <city uk="Красноармійськ" ru="Красноармейск" en="Krasnoarmeysk" lon="37.1827778" lat="48.2827778"/>
+
+        <city uk="Красний Лиман" ru="Красный Лиман" en="Krasniy Liman" lon="37.810329" lat="48.984211"/>
+
+        <city uk="Костянтинівка" ru="Константиновка" en="Konstantinovka" lon="37.703629" lat="48.51545"/>
+
+        <city uk="Маріуполь" ru="Мариуполь" en="Mariupol" lon="37.55" lat="47.1166667"/>
+
+        <city uk="Макіївка" ru="Макеевка" en="Makeevka" lon="38.068427" lat="48.076179"/>
+
+        <city uk="Новогродівка" ru="Новогродовка" en="Novogrodovka" lon="37.336821" lat="48.2045408"/>
+
+        <city uk="Селидове" ru="Селидово" en="Selidovo" lon="37.297897" lat="48.144671"/>
+
+        <city uk="Слов’янськ" ru="Славянск" en="Slavyansk" lon="37.57954" lat="48.846851"/>
+
+        <city uk="Снжіне" ru="Снежное" en="Snijne" lon="38.7656122" lat="48.0282789"/>
+
+        <city uk="Соледар" ru="Соледар" en="Soledar" lon="38.1" lat="48.6833333"/>
+
+        <city uk="Торез" ru="Торез" en="Torez" lon="38.6333333" lat="48.0166667"/>
+
+        <city uk="Вугледар" ru="Угледар" en="Ugledar" lon="37.25" lat="47.7833333"/>
+
+        <city uk="Харцизськ" ru="Харцызск" en="Harcizsk" lon="38.160301" lat="48.037411"/>
+
+        <city uk="Шахтарське" ru="Шахтёрск" en="Shakhtarske" lon="38.4833333" lat="48.0333333"/>
+
+        <city uk="Ясиновата" ru="Ясиноватая" en="Yasinovataya" lon="37.8765944" lat="48.1221425"/>
+
     </region>
-    <region ru="Житомирская область">
-        <city lat="50.0166667" lon="29.0166667" ru="Андрушёвка" en="Андрушівка" uk="Андрушівка"/>
-        <city lat="50.30204" lon="27.67634" ru="Барановка" en="Baranovka" uk="Баранівка"/>
-        <city lat="49.903381" lon="28.599251" ru="Бердичев"/>
-        <city lat="50.259749" lon="28.676248" ru="Житомир" en="Zhytomyr" uk="Житомир"/>
-        <city lat="50.95" lon="28.6333333" ru="Коростень" en="Korosten" uk="Коростень"/>
-        <city lat="50.316639" lon="29.06653" ru="Коростышев" en="Korostyshev" uk="Коростишів"/>
-        <city lat="50.77121" lon="29.25297" ru="Малин" en="Malyn" uk="Малин"/>
-        <city lat="50.59256" lon="27.62348" ru="Новоград-Волынский" en="Novograd-Volynskiy" uk="Новоград-Волинський"/>
-        <city lat="51.327251" lon="28.818979" ru="Овруч" en="Ovruch" uk="Овруч"/>
-        <city lat="50.4947222" lon="29.2333333" ru="Радомышль" en="Radomyshl" uk="Радомишль"/>
+
+
+    <region uk="Житомирська область" ru="Житомирская область" en="Zhytomyrska oblast">
+
+        <city uk="Андрушівка" ru="Андрушёвка" en="Andrushevka" lon="29.0166667" lat="50.0166667"/>
+
+        <city uk="Баранівка" ru="Барановка" en="Baranovka" lon="27.67634" lat="50.30204"/>
+
+        <city uk="Бердичів" ru="Бердичев" en="Berduchiv" lon="28.599251" lat="49.903381"/>
+
+        <city uk="Житомир" ru="Житомир" en="Zhytomyr" lon="28.676248" lat="50.259749"/>
+
+        <city uk="Коростень" ru="Коростень" en="Korosten" lon="28.6333333" lat="50.95"/>
+
+        <city uk="Коростишів" ru="Коростышев" en="Korostyshev" lon="29.06653" lat="50.316639"/>
+
+        <city uk="Малин" ru="Малин" en="Malyn" lon="29.25297" lat="50.77121"/>
+
+        <city uk="Новоград-Волинський" ru="Новоград-Волынский" en="Novograd-Volynskiy" lon="27.62348" lat="50.59256"/>
+
+        <city uk="Овруч" ru="Овруч" en="Ovruch" lon="28.818979" lat="51.327251"/>
+
+        <city uk="Радомишль" ru="Радомышль" en="Radomyshl" lon="29.2333333" lat="50.4947222"/>
+
     </region>
-    <region ru="Закарпатская область">
-        <city lat="48.2" lon="22.6333333" ru="Берегово" en="Beregovo" uk="Берегове"/>
-        <city lat="48.138142" lon="23.041519" ru="Виноградов" en="Vinogradov" uk="Виноградів"/>
-        <city lat="48.310911" lon="23.037711" ru="Иршава" en="Irshava" uk="Іршава"/>
-        <city lat="48.442411" lon="22.723352" ru="Мукачево" en="Mukacheve" uk="Мукачеве"/>
-        <city lat="48.7341667" lon="22.4741667" ru="Перечин" en="Perechin" uk="Перечин"/>
-        <city lat="48.060829" lon="24.205059" ru="Рахов" en="Kurakhovo" uk="Курахове"/>
-        <city lat="48.5472222" lon="22.9861111" ru="Свалява" en="Svalyava" uk="Свалява"/>
-        <city lat="48.0113889" lon="23.5722222" ru="Тячев" en="Тячівка" uk="Тячівка"/>
-        <city lat="48.6166667" lon="22.3" ru="Ужгород" en="Uzhgorod" uk="Ужгород"/>
-        <city lat="48.1813889" lon="23.2977778" ru="Хуст" en="Hust" uk="Хуст"/>
-        <city lat="48.4333333" lon="22.2" ru="Чоп" en="Чоповичі" uk="Чоповичі"/>
+
+
+    <region uk="Закарпатська область" ru="Закарпатская область" en="Zakarpatskaya oblast">
+
+        <city uk="Берегове" ru="Берегово" en="Beregovo" lon="22.6333333" lat="48.2"/>
+
+        <city uk="Виноградів" ru="Виноградов" en="Vinogradov" lon="23.041519" lat="48.138142"/>
+
+        <city uk="Іршава" ru="Иршава" en="Irshava" lon="23.037711" lat="48.310911"/>
+
+        <city uk="Мукачеве" ru="Мукачево" en="Mukacheve" lon="22.723352" lat="48.442411"/>
+
+        <city uk="Перечин" ru="Перечин" en="Perechin" lon="22.4741667" lat="48.7341667"/>
+
+        <city uk="Курахове" ru="Рахов" en="Kurakhovo" lon="24.205059" lat="48.060829"/>
+
+        <city uk="Свалява" ru="Свалява" en="Svalyava" lon="22.9861111" lat="48.5472222"/>
+
+        <city uk="Тячівка" ru="Тячев" en="Tyachivka" lon="23.5722222" lat="48.0113889"/>
+
+        <city uk="Ужгород" ru="Ужгород" en="Uzhgorod" lon="22.3" lat="48.6166667"/>
+
+        <city uk="Хуст" ru="Хуст" en="Hust" lon="23.2977778" lat="48.1813889"/>
+
+        <city uk="Чоп" ru="Чоп" en="Chop" lon="22.2" lat="48.4333333"/>
+
     </region>
-    <region ru="Запорожская область">
-        <city lat="46.748581" lon="36.809502" ru="Бердянск" en="Berdyansk" uk="Бердянськ"/>
-        <city lat="47.433708" lon="35.27816" ru="Васильевка" en="Нововасилівка" uk="Нововасилівка"/>
-        <city lat="47.9419444" lon="35.4280556" ru="Вольнянск" en="Volnyansk" uk="Вільнянськ"/>
-        <city lat="47.658562" lon="36.252918" ru="Гуляйполе" en="Гуляйполе" uk="Гуляйполе"/>
-        <city lat="47.3840983" lon="34.98121" ru="Днепрорудное" en="Дніпрорудне" uk="Дніпрорудне"/>
-        <city lat="47.853748" lon="35.157139" ru="Запорожье" en="Zaporizhzhia" uk="Запоріжжя"/>
-        <city lat="47.488911" lon="34.400761" ru="Каменка-Днепровская" en="Кам’янка-Дніпровська"
-              uk="Кам’янка-Дніпровська"/>
-        <city lat="46.847839" lon="35.364979" ru="Мелитополь" en="Melitopol" uk="Мелітополь"/>
-        <city lat="47.206982" lon="35.59618" ru="Молочанск" en="Molochansk" uk="Молочанськ"/>
-        <city lat="47.5666667" lon="35.7833333" ru="Орехов" en="Orehov" uk="Оріхів"/>
-        <city lat="47.47728" lon="36.25626" ru="Пологи" en="Pologi" uk="Пологи (місто)"/>
-        <city lat="46.7333333" lon="36.35" ru="Приморск" en="Primorsk" uk="Приморськ"/>
-        <city lat="47.25" lon="35.7" ru="Токмак" en="Tokmak" uk="Токмак"/>
-        <city lat="47.4979877" lon="34.6565334" ru="Энергодар" en="Енергодар" uk="Енергодар"/>
+
+
+    <region uk="Запорізька область" ru="Запорожская область" en="Zaporozhskaya oblast">
+
+        <city uk="Бердянськ" ru="Бердянск" en="Berdyansk" lon="36.809502" lat="46.748581"/>
+
+        <city uk="Василівка" ru="Васильевка" en="Vasylivka" lon="35.27816" lat="47.433708"/>
+
+        <city uk="Вільнянськ" ru="Вольнянск" en="Volnyansk" lon="35.4280556" lat="47.9419444"/>
+
+        <city uk="Гуляйполе" ru="Гуляйполе" en="Hulyay Pole" lon="36.252918" lat="47.658562"/>
+
+        <city uk="Дніпрорудне" ru="Днепрорудное" en="Dniproprudne" lon="34.98121" lat="47.3840983"/>
+
+        <city uk="Запоріжжя" ru="Запорожье" en="Zaporizhzhia" lon="35.157139" lat="47.853748"/>
+
+        <city uk="Кам’янка-Дніпровська" ru="Каменка-Днепровская" en="Kamyanka-Dniprovska" lon="34.400761"
+              lat="47.488911"/>
+
+        <city uk="Мелітополь" ru="Мелитополь" en="Melitopol" lon="35.364979" lat="46.847839"/>
+
+        <city uk="Молочанськ" ru="Молочанск" en="Molochansk" lon="35.59618" lat="47.206982"/>
+
+        <city uk="Оріхів" ru="Орехов" en="Orehov" lon="35.7833333" lat="47.5666667"/>
+
+        <city uk="Пологи (місто)" ru="Пологи" en="Pologi" lon="36.25626" lat="47.47728"/>
+
+        <city uk="Приморськ" ru="Приморск" en="Primorsk" lon="36.35" lat="46.7333333"/>
+
+        <city uk="Токмак" ru="Токмак" en="Tokmak" lon="35.7" lat="47.25"/>
+
+        <city uk="Енергодар" ru="Энергодар" en="Energodar" lon="34.6565334" lat="47.4979877"/>
+
     </region>
-    <region ru="Ивано-Франковская область">
-        <city lat="49.070011" lon="23.864719" ru="Болехов" en="Bolehiv" uk="Болехів"/>
-        <city lat="49.263802" lon="24.634211" ru="Бурштын" en="Burshtyn" uk="Бурштин"/>
-        <city lat="49.1247222" lon="24.7286111" ru="Галич" en="Galich" uk="Галич"/>
-        <city lat="48.6675" lon="25.5002778" ru="Городенка" en="Городенка" uk="Городенка"/>
-        <city lat="51.79" lon="33.76" ru="Долина" en="Dolina" uk="Долина"/>
-        <city lat="48.9166667" lon="24.7166667" ru="Ивано-Франковск" en="Ivano-Frankivsk" uk="Івано-Франківськ"/>
-        <city lat="49.050465" lon="24.374117" ru="Калуш" en="Kalush" uk="Калуш"/>
-        <city lat="48.53146" lon="25.039709" ru="Коломыя" en="Kolomyya" uk="Коломия"/>
-        <city lat="48.315" lon="25.0952778" ru="Косов" en="Косівська Поляна" uk="Косівська Поляна"/>
-        <city lat="48.6333333" lon="24.5833333" ru="Надворная" en="Nadvirna" uk="Надвірна"/>
-        <city lat="49.411449" lon="24.62051" ru="Рогатин" en="Rogatin" uk="Рогатин"/>
-        <city lat="48.45" lon="25.5666667" ru="Снятын" en="Snyatyn" uk="Снятин"/>
-        <city lat="48.9008333" lon="24.8491667" ru="Тысменица" en="Tysmenytsya" uk="Тисмениця"/>
-        <city lat="48.8666667" lon="25.0" ru="Тлумач" en="Tlumach" uk="Тлумач"/>
-        <city lat="48.449523" lon="24.557508" ru="Яремче" en="Yaremche" uk="Яремче"/>
+
+
+    <region uk="Івано-Франківська область" ru="Ивано-Франковская область" en="Ivano-Frankovskaya oblast">
+
+        <city uk="Болехів" ru="Болехов" en="Bolehiv" lon="23.864719" lat="49.070011"/>
+
+        <city uk="Бурштин" ru="Бурштын" en="Burshtyn" lon="24.634211" lat="49.263802"/>
+
+        <city uk="Галич" ru="Галич" en="Galich" lon="24.7286111" lat="49.1247222"/>
+
+        <city uk="Городенка" ru="Городенка" en="Gorodenka" lon="25.5002778" lat="48.6675"/>
+
+        <city uk="Долина" ru="Долина" en="Dolina" lon="33.76" lat="51.79"/>
+
+        <city uk="Івано-Франківськ" ru="Ивано-Франковск" en="Ivano-Frankivsk" lon="24.7166667" lat="48.9166667"/>
+
+        <city uk="Калуш" ru="Калуш" en="Kalush" lon="24.374117" lat="49.050465"/>
+
+        <city uk="Коломия" ru="Коломыя" en="Kolomyya" lon="25.039709" lat="48.53146"/>
+
+        <city uk="Косів" ru="Косов" en="Kosiv" lon="25.0952778" lat="48.315"/>
+
+        <city uk="Надвірна" ru="Надворная" en="Nadvirna" lon="24.5833333" lat="48.6333333"/>
+
+        <city uk="Рогатин" ru="Рогатин" en="Rogatin" lon="24.62051" lat="49.411449"/>
+
+        <city uk="Снятин" ru="Снятын" en="Snyatyn" lon="25.5666667" lat="48.45"/>
+
+        <city uk="Тисмениця" ru="Тысменица" en="Tysmenytsya" lon="24.8491667" lat="48.9008333"/>
+
+        <city uk="Тлумач" ru="Тлумач" en="Tlumach" lon="25.0" lat="48.8666667"/>
+
+        <city uk="Яремче" ru="Яремче" en="Yaremche" lon="24.557508" lat="48.449523"/>
+
     </region>
-    <region ru="Киевская область">
-        <city lat="49.7988889" lon="30.1152778" ru="Белая Церковь" en="Bila Tserkva" uk="Біла Церква"/>
-        <city lat="50.3197222" lon="31.47" ru="Березань" en="Березань" uk="Березань"/>
-        <city lat="49.541031" lon="30.88073" ru="Богуслав" en="Bohuslav" uk="Богуслав"/>
-        <city lat="50.350491" lon="30.960739" ru="Борисполь" en="Бориспіль" uk="Бориспіль"/>
-        <city lat="49.323518" lon="30.700165" ru="Боярка" en="Boyarka" uk="Боярка"/>
-        <city lat="50.5166667" lon="30.8166667" ru="Бровары" en="Brovary" uk="Бровари"/>
-        <city lat="50.5569165" lon="30.2230733" ru="Буча" en="Bucha" uk="Буча"/>
-        <city lat="50.178959" lon="30.32715" ru="Васильков" en="Vasilkov" uk="Васильків"/>
-        <city lat="50.4377778" lon="33.3822222" ru="Вишнёвое" en="Вишневе" uk="Вишневе"/>
-        <city lat="50.5833333" lon="30.5" ru="Вышгород" en="Vyshgorod" uk="Вишгород"/>
-        <city lat="50.5166667" lon="30.25" ru="Ирпень"/>
-        <city lat="49.85722" lon="30.82032" ru="Кагарлык" en="Kagarlyk" uk="Кагарлик"/>
-        <city lat="50.584981" lon="30.235748" ru="Киев" en="Kyiv" uk="Київ"/>
-        <city lat="49.661022" lon="30.98458" ru="Мироновка" en="Myronivka" uk="Миронівка"/>
-        <city lat="50.105728" lon="30.630699" ru="Обухов" en="Obuhiv" uk="Обухів"/>
-        <city lat="50.070141" lon="31.45775" ru="Переяслав-Хмельницкий" en="Pereyaslav-Khmelnitskiy"
-              uk="Переяслав-Хмельницький"/>
-        <city lat="51.4977778" lon="24.1180556" ru="Припять" en="Прип’ять" uk="Прип’ять"/>
-        <city lat="49.972801" lon="31.04777" ru="Ржищев" en="Rzhishchev" uk="Ржищів"/>
-        <city lat="49.73719" lon="29.66901" ru="Сквира" en="Skvira" uk="Сквира"/>
-        <city lat="51.523777" lon="30.768559" ru="Славутич" en="Славутич" uk="Славутич"/>
-        <city lat="49.56065" lon="30.510309" ru="Тараща" en="Tarashcha" uk="Тараща"/>
-        <city lat="49.370575" lon="29.680221" ru="Тетиев" en="Tetiyev" uk="Тетіїв"/>
-        <city lat="49.820228" lon="30.438929" ru="Узин" en="Uzin" uk="Узин"/>
-        <city lat="50.1530861" lon="30.7434917" ru="Украинка" en="Новоукраїнка" uk="Новоукраїнка"/>
-        <city lat="50.0833333" lon="29.9166667" ru="Фастов" en="Fastov" uk="Фастів"/>
-        <city lat="51.2666667" lon="30.2166667" ru="Чернобыль" en="Чорнобиль" uk="Чорнобиль"/>
-        <city lat="50.244949" lon="31.796261" ru="Яготин" en="Yagotin" uk="Яготин"/>
+
+
+    <region uk="Київська область" ru="Киевская область" en="Kyevskaya oblast">
+
+        <city uk="Біла Церква" ru="Белая Церковь" en="Bila Tserkva" lon="30.1152778" lat="49.7988889"/>
+
+        <city uk="Березань" ru="Березань" en="Berezan" lon="31.47" lat="50.3197222"/>
+
+        <city uk="Богуслав" ru="Богуслав" en="Bohuslav" lon="30.88073" lat="49.541031"/>
+
+        <city uk="Бориспіль" ru="Борисполь" en="Borispil" lon="30.960739" lat="50.350491"/>
+
+        <city uk="Боярка" ru="Боярка" en="Boyarka" lon="30.700165" lat="49.323518"/>
+
+        <city uk="Бровари" ru="Бровары" en="Brovary" lon="30.8166667" lat="50.5166667"/>
+
+        <city uk="Буча" ru="Буча" en="Bucha" lon="30.2230733" lat="50.5569165"/>
+
+        <city uk="Васильків" ru="Васильков" en="Vasilkov" lon="30.32715" lat="50.178959"/>
+
+        <city uk="Вишневе" ru="Вишнёвое" en="Vyshneve" lon="33.3822222" lat="50.4377778"/>
+
+        <city uk="Вишгород" ru="Вышгород" en="Vyshgorod" lon="30.5" lat="50.5833333"/>
+
+        <city uk="Ірпінь" ru="Ирпень" en="Irpen" lon="30.25" lat="50.5166667"/>
+
+        <city uk="Кагарлик" ru="Кагарлык" en="Kagarlyk" lon="30.82032" lat="49.85722"/>
+
+        <city uk="Київ" ru="Киев" en="Kyiv" lon="30.235748" lat="50.584981"/>
+
+        <city uk="Миронівка" ru="Мироновка" en="Myronivka" lon="30.98458" lat="49.661022"/>
+
+        <city uk="Обухів" ru="Обухов" en="Obuhiv" lon="30.630699" lat="50.105728"/>
+
+        <city uk="Переяслав-Хмельницький" ru="Переяслав-Хмельницкий" en="Pereyaslav-Khmelnitskiy" lon="31.45775"
+              lat="50.070141"/>
+
+        <city uk="Прип’ять" ru="Припять" en="Pripyat" lon="24.1180556" lat="51.4977778"/>
+
+        <city uk="Ржищів" ru="Ржищев" en="Rzhishchev" lon="31.04777" lat="49.972801"/>
+
+        <city uk="Сквира" ru="Сквира" en="Skvira" lon="29.66901" lat="49.73719"/>
+
+        <city uk="Славутич" ru="Славутич" en="Slavutich" lon="30.768559" lat="51.523777"/>
+
+        <city uk="Тараща" ru="Тараща" en="Tarashcha" lon="30.510309" lat="49.56065"/>
+
+        <city uk="Тетіїв" ru="Тетиев" en="Tetiyev" lon="29.680221" lat="49.370575"/>
+
+        <city uk="Узин" ru="Узин" en="Uzin" lon="30.438929" lat="49.820228"/>
+
+        <city uk="Українка" ru="Украинка" en="Ukrayinka" lon="30.7434917" lat="50.1530861"/>
+
+        <city uk="Фастів" ru="Фастов" en="Fastov" lon="29.9166667" lat="50.0833333"/>
+
+        <city uk="Чорнобиль" ru="Чернобыль" en="Chornobil" lon="30.2166667" lat="51.2666667"/>
+
+        <city uk="Яготин" ru="Яготин" en="Yagotin" lon="31.796261" lat="50.244949"/>
+
     </region>
-    <region ru="Кировоградская область">
-        <city lat="48.6666667" lon="33.1166667" ru="Александрия" en="Oleksandriya" uk="Олександрія"/>
-        <city lat="48.050861" lon="32.16589" ru="Бобринец" en="Bobrynets" uk="Бобринець"/>
-        <city lat="48.3333333" lon="29.8666667" ru="Гайворон" en="Gayvoron" uk="Гайворон"/>
-        <city lat="48.1108333" lon="32.7647222" ru="Долинская" en="Dolinskaya" uk="Долинська"/>
-        <city lat="48.7166667" lon="32.6666667" ru="Знаменка" en="Велика Знам’янка" uk="Велика Знам’янка"/>
-        <city lat="48.508389" lon="32.264801" ru="Кировоград" en="Kirovograd" uk="Кропивницький"/>
-        <city lat="48.65" lon="31.6333333" ru="Малая Виска" en="Malaya Viska" uk="Мала Виска"/>
-        <city lat="48.7833333" lon="31.65" ru="Новомиргород" en="Novomirhorod" uk="Новомиргород"/>
-        <city lat="48.3155556" lon="31.5269444" ru="Новоукраинка" en="Новоукраїнка" uk="Новоукраїнка"/>
-        <city lat="49.0502778" lon="33.2419444" ru="Светловодск" en="Svetlovodsk" uk="Світловодськ"/>
+
+
+    <region uk="Кропивницька область" ru="Кировоградская область" en="Kirovogradskaya oblast">
+
+        <city uk="Олександрія" ru="Александрия" en="Oleksandriya" lon="33.1166667" lat="48.6666667"/>
+
+        <city uk="Бобринець" ru="Бобринец" en="Bobrynets" lon="32.16589" lat="48.050861"/>
+
+        <city uk="Гайворон" ru="Гайворон" en="Gayvoron" lon="29.8666667" lat="48.3333333"/>
+
+        <city uk="Долинська" ru="Долинская" en="Dolinskaya" lon="32.7647222" lat="48.1108333"/>
+
+        <city uk="Знам’янка" ru="Знаменка" en="Znamyanka" lon="32.6666667" lat="48.7166667"/>
+
+        <city uk="Кропивницький" ru="Кировоград" en="Kirovograd" lon="32.264801" lat="48.508389"/>
+
+        <city uk="Мала Виска" ru="Малая Виска" en="Malaya Viska" lon="31.6333333" lat="48.65"/>
+
+        <city uk="Новомиргород" ru="Новомиргород" en="Novomirhorod" lon="31.65" lat="48.7833333"/>
+
+        <city uk="Новоукраїнка" ru="Новоукраинка" en="Novoukrayinka" lon="31.5269444" lat="48.3155556"/>
+
+        <city uk="Світловодськ" ru="Светловодск" en="Svetlovodsk" lon="33.2419444" lat="49.0502778"/>
+
     </region>
-    <region en="Autonomous Republic of Crimea" ru="Автономная Республика Крым" uk="Автономна Республіка Крим">
-        <city lat="44.4197222" lon="34.0430556" en="Alupka" ru="Алупка" uk="Алупка"/>
-        <city lat="44.6637211" lon="34.405013" en="Alushta" ru="Алушта" uk="Алушта"/>
-        <city lat="46.1072222" lon="33.6933333" en="Armiansk" ru="Армянск" uk="Армянськ"/>
-        <city lat="44.7527778" lon="33.8608333" en="Bakhchysarai" ru="Бахчисарай" uk="Бахчисарай"/>
-        <city lat="45.0544444" lon="34.6022222" en="Belogorsk" ru="Белогорск" uk="Білогірськ"/>
-        <city lat="45.7086111" lon="34.3933333" en="Dzhankoy" ru="Джанкой" uk="Джанкой"/>
-        <city lat="45.2036111" lon="33.3613889" en="Yevpatoria" ru="Евпатория" uk="Євпаторія"/>
-        <city lat="45.33786" lon="36.458401" en="Kerch" ru="Керчь" uk="Керчь"/>
-        <city lat="45.962849" lon="33.787121" en="Krasnoperekopsk" ru="Красноперекопск" гл="Красноперекопськ"/>
-        <city lat="45.1336111" lon="33.5772222" en="Saki" ru="Саки" uk="Саки"/>
-        <city lat="44.60000001" lon="33.533333343333" en="Sevastopol" ru="Севастополь" uk="Севастопіль"/>
-        <city lat="44.9480556" lon="34.1041667" en="Simferopol" ru="Симферополь" uk="Симферопіль"/>
-        <city lat="45.0291667" lon="35.0886111" en="Stari Krimea" ru="Старый Крым" uk="Старий Крим"/>
-        <city lat="44.858799" lon="34.974979" en="Sudak" ru="Судак" uk="Судак"/>
-        <city lat="45.0488889" lon="35.3791667" en="Feoodosia" ru="Феодосия" uk="Феодосія"/>
-        <city lat="45.4281023" lon="35.8165187" en="Schelkino" ru="Щёлкино" uk="Щолкіне"/>
-        <city lat="44.4994444" lon="34.1552778" en="Yalta" ru="Ялта" uk="Ялта"/>
+
+
+    <region uk="Автономна Республіка Крим" ru="Автономная Республика Крым" en="Autonomous Republic of Crimea">
+
+        <city uk="Алупка" ru="Алупка" en="Alupka" lon="34.0430556" lat="44.4197222"/>
+
+        <city uk="Алушта" ru="Алушта" en="Alushta" lon="34.405013" lat="44.6637211"/>
+
+        <city uk="Армянськ" ru="Армянск" en="Armiansk" lon="33.6933333" lat="46.1072222"/>
+
+        <city uk="Бахчисарай" ru="Бахчисарай" en="Bakhchysarai" lon="33.8608333" lat="44.7527778"/>
+
+        <city uk="Білогірськ" ru="Белогорск" en="Belogorsk" lon="34.6022222" lat="45.0544444"/>
+
+        <city uk="Джанкой" ru="Джанкой" en="Dzhankoy" lon="34.3933333" lat="45.7086111"/>
+
+        <city uk="Євпаторія" ru="Евпатория" en="Yevpatoria" lon="33.3613889" lat="45.2036111"/>
+
+        <city uk="Керчь" ru="Керчь" en="Kerch" lon="36.458401" lat="45.33786"/>
+
+        <city uk="Червоноперекопськ" ru="Красноперекопск" en="Krasnoperekopsk" lon="33.787121" lat="45.962849"/>
+
+        <city uk="Саки" ru="Саки" en="Saki" lon="33.5772222" lat="45.1336111"/>
+
+        <city uk="Севастопіль" ru="Севастополь" en="Sevastopol" lon="33.533333343333" lat="44.60000001"/>
+
+        <city uk="Симферопіль" ru="Симферополь" en="Simferopol" lon="34.1041667" lat="44.9480556"/>
+
+        <city uk="Старий Крим" ru="Старый Крым" en="Stari Krimea" lon="35.0886111" lat="45.0291667"/>
+
+        <city uk="Судак" ru="Судак" en="Sudak" lon="34.974979" lat="44.858799"/>
+
+        <city uk="Феодосія" ru="Феодосия" en="Feoodosia" lon="35.3791667" lat="45.0488889"/>
+
+        <city uk="Щолкіне" ru="Щёлкино" en="Schelkino" lon="35.8165187" lat="45.4281023"/>
+
+        <city uk="Ялта" ru="Ялта" en="Yalta" lon="34.1552778" lat="44.4994444"/>
+
     </region>
-    <region ru="Луганская область">
-        <city lat="48.5861652" lon="39.1949396" ru="Александровск" en="Пилипи-Олександрівські"
-              uk="Пилипи-Олександрівські"/>
-        <city lat="48.5166667" lon="38.5833333" ru="Алмазная"/>
-        <city lat="48.4666667" lon="38.8" ru="Алчевск"/>
-        <city lat="48.1166667" lon="39.0833333" ru="Антрацит"/>
-        <city lat="48.5133333" lon="38.6430556" ru="Брянка" en="Добрянка" uk="Добрянка"/>
-        <city lat="48.174579" lon="38.837224" ru="Вахрушево"/>
-        <city lat="49.1805556" lon="23.7341667" ru="Горное" en="Нагірне" uk="Нагірне"/>
-        <city lat="48.5833333" lon="38.9333333" ru="Зимогорье"/>
-        <city lat="48.6928568" lon="38.5146349" ru="Золотое" en="Золоте" uk="Золоте"/>
-        <city lat="48.4131636" lon="38.6204799" ru="Зоринск"/>
-        <city lat="48.29607" lon="39.745239" ru="Краснодон"/>
-        <city lat="48.134041" lon="38.931419" ru="Красный Луч"/>
-        <city lat="48.896895" lon="38.444143" ru="Лисичанск" en="Lisichansk" uk="Лисичанськ"/>
-        <city lat="48.573269" lon="39.355659" ru="Луганск" en="Луганське" uk="Луганське"/>
-        <city lat="48.4019444" lon="39.2102778" ru="Лутугино"/>
-        <city lat="48.07" lon="38.9" ru="Миусинск"/>
-        <city lat="48.3444444" lon="39.6583333" ru="Молодогвардейск"/>
-        <city lat="48.9666667" lon="38.35" ru="Новодружеск" en="Новодружеськ" uk="Новодружеськ"/>
-        <city lat="49.544731" lon="39.103889" ru="Новопсков" en="Novopskov" uk="Новопсков"/>
-        <city lat="48.05" lon="30.85" ru="Первомайск" en="Pervomaysk" uk="Первомайськ"/>
-        <city lat="48.4388889" lon="38.8194444" ru="Перевальск" en="Перевальське" uk="Перевальське"/>
-        <city lat="48.293331" lon="38.888614" ru="Петровское" en="Petrovskoye" uk="Петрівське"/>
-        <city lat="48.6333333" lon="38.38" ru="Попасная" en="Popasna" uk="Попасна"/>
-        <city lat="49.016706" lon="38.302668" ru="Приволье" en="Privolye" uk="Привілля"/>
-        <city lat="48.0833333" lon="39.3666667" ru="Ровеньки" en="Боровеньки" uk="Боровеньки"/>
-        <city lat="49.0166667" lon="38.3666667" ru="Рубежное" en="Rubezhnoye" uk="Рубіжне"/>
-        <city lat="49.41011" lon="38.15258" ru="Сватово" en="Svatovo" uk="Сватове"/>
-        <city lat="48.084549" lon="39.65163" ru="Свердловск"/>
-        <city lat="48.950191" lon="38.497631" ru="Северодонецк" en="Severodonetsk" uk="Сєвєродонецьк"/>
-        <city lat="49.2666667" lon="38.9166667" ru="Старобельск" en="Старобільськ" uk="Старобільськ"/>
-        <city lat="48.5666667" lon="38.65" ru="Стаханов"/>
-        <city lat="48.3523068" lon="39.7239205" ru="Суходольск" en="Суходільське" uk="Суходільське"/>
-        <city lat="48.737247" lon="39.2311974" ru="Счастье"/>
-        <city lat="48.600487" lon="38.5920825" ru="Теплогорск"/>
-        <city lat="48.095566" lon="39.759607" ru="Червонопартизанск"/>
+
+
+    <region uk="Луганська область" ru="Луганская область" en="Luganskaya oblast">
+
+        <city uk="Олександрівськ" ru="Александровск" en="Oleksandrivsk" lon="39.1949396" lat="48.5861652"/>
+
+        <city uk="Алмазна" ru="Алмазная" en="Almazna" lon="38.5833333" lat="48.5166667"/>
+
+        <city uk="Алчевськ" ru="Алчевск" en="Alchevsk" lon="38.8" lat="48.4666667"/>
+
+        <city uk="Антрацит" ru="Антрацит" en="Antracit" lon="39.0833333" lat="48.1166667"/>
+
+        <city uk="Брянка" ru="Брянка" en="Bryanka" lon="38.6430556" lat="48.5133333"/>
+
+        <city uk="Вахрушево" ru="Вахрушево" en="Vahrushevo" lon="38.837224" lat="48.174579"/>
+
+        <city uk="Гірне" ru="Горное" en="Girne" lon="23.7341667" lat="49.1805556"/>
+
+        <city uk="Зимогор'я" ru="Зимогорье" en="Zimogirya" lon="38.9333333" lat="48.5833333"/>
+
+        <city uk="Золоте" ru="Золотое" en="Zolote" lon="38.5146349" lat="48.6928568"/>
+
+        <city uk="Зоринськ" ru="Зоринск" en="Zorinsk" lon="38.6204799" lat="48.4131636"/>
+
+        <city uk="Краснодон" ru="Краснодон" en="Krasnodon" lon="39.745239" lat="48.29607"/>
+
+        <city uk="Червоний Луч" ru="Красный Луч" en="Chervoniy Luch" lon="38.931419" lat="48.134041"/>
+
+        <city uk="Лисичанськ" ru="Лисичанск" en="Lisichansk" lon="38.444143" lat="48.896895"/>
+
+        <city uk="Луганськ" ru="Луганск" en="Lugansk" lon="39.355659" lat="48.573269"/>
+
+        <city uk="Лутугіно" ru="Лутугино" en="Lutugino" lon="39.2102778" lat="48.4019444"/>
+
+        <city uk="Міусурінськ" ru="Миусинск" en="Miusurinsk" lon="38.9" lat="48.07"/>
+
+        <city uk="Малогвардійськ" ru="Молодогвардейск" en="Malohvardiysk" lon="39.6583333" lat="48.3444444"/>
+
+        <city uk="Новодружеськ" ru="Новодружеск" en="Novodrujesk" lon="38.35" lat="48.9666667"/>
+
+        <city uk="Новопсков" ru="Новопсков" en="Novopskov" lon="39.103889" lat="49.544731"/>
+
+        <city uk="Первомайськ" ru="Первомайск" en="Pervomaysk" lon="30.85" lat="48.05"/>
+
+        <city uk="Перевальськ" ru="Перевальск" en="Perevalsk" lon="38.8194444" lat="48.4388889"/>
+
+        <city uk="Петрівське" ru="Петровское" en="Petrovskoye" lon="38.888614" lat="48.293331"/>
+
+        <city uk="Попасна" ru="Попасная" en="Popasna" lon="38.38" lat="48.6333333"/>
+
+        <city uk="Привілля" ru="Приволье" en="Privolye" lon="38.302668" lat="49.016706"/>
+
+        <city uk="Ровеньки" ru="Ровеньки" en="Rovenki" lon="39.3666667" lat="48.0833333"/>
+
+        <city uk="Рубіжне" ru="Рубежное" en="Rubezhnoye" lon="38.3666667" lat="49.0166667"/>
+
+        <city uk="Сватове" ru="Сватово" en="Svatovo" lon="38.15258" lat="49.41011"/>
+
+        <city uk="Свєрдловськ" ru="Свердловск" en="Sverdlovsk" lon="39.65163" lat="48.084549"/>
+
+        <city uk="Сєвєродонецьк" ru="Северодонецк" en="Severodonetsk" lon="38.497631" lat="48.950191"/>
+
+        <city uk="Старобільськ" ru="Старобельск" en="Starobilsk" lon="38.9166667" lat="49.2666667"/>
+
+        <city uk="Стаханов" ru="Стаханов" en="Stahanov" lon="38.65" lat="48.5666667"/>
+
+        <city uk="Суходільськ" ru="Суходольск" en="Suhodilsk" lon="39.7239205" lat="48.3523068"/>
+
+        <city uk="Щастя" ru="Счастье" en="Schastye" lon="39.2311974" lat="48.737247"/>
+
+        <city uk="Теплогірськ" ru="Теплогорск" en="Teplogirsk" lon="38.5920825" lat="48.600487"/>
+
+        <city uk="Червонопартизанськ" ru="Червонопартизанск" en="Chervonopartizansk" lon="39.759607" lat="48.095566"/>
+
     </region>
-    <region ru="Львовская область">
-        <city lat="50.380501" lon="24.01269" ru="Белз" en="Белз" uk="Белз"/>
-        <city lat="49.6331904" lon="24.2907476" ru="Бобрка" en="Bobrka" uk="Бібрка"/>
-        <city lat="49.28476" lon="23.42137" ru="Борислав" en="Borislav" uk="Борислав"/>
-        <city lat="50.0833333" lon="25.15" ru="Броды" en="Переброди" uk="Переброди"/>
-        <city lat="49.9666667" lon="24.6333333" ru="Буск" en="Busk" uk="Буськ"/>
-        <city lat="50.24" lon="24.1394444" ru="Великие Мосты" en="Великі Мости" uk="Великі Мости"/>
-        <city lat="49.8233333" lon="24.5166667" ru="Глиняны" en="Glinyany" uk="Глиняни"/>
-        <city lat="49.1666667" lon="26.5666667" ru="Городок" en="Gorodok" uk="Городок"/>
-        <city lat="49.5666667" lon="22.7833333" ru="Добромиль" en="Dobromil" uk="Добромиль"/>
-        <city lat="49.34853" lon="23.51647" ru="Дрогобыч" en="Drohobych" uk="Дрогобич"/>
-        <city lat="49.8833333" lon="24.0833333" ru="Дубляны" en="Dublyany" uk="Дубляни"/>
-        <city lat="49.3813889" lon="24.1408333" ru="Жидачов" en="Zhydachiv" uk="Жидачів"/>
-        <city lat="50.0666667" lon="23.9666667" ru="Жолква" en="Zholkva" uk="Жовква"/>
-        <city lat="49.8083333" lon="24.9011111" ru="Золочев" en="Zolochev" uk="Золочів"/>
-        <city lat="50.1" lon="24.35" ru="Каменка-Бугская" en="Kamenka-Bugskaya" uk="Кам’янка-Бузька"/>
-        <city lat="49.85" lon="24.0166667" ru="Львов" en="Lviv" uk="Львів"/>
-        <city lat="49.7941667" lon="23.1525" ru="Мостиска" en="Mostiska" uk="Мостиська"/>
-        <city lat="49.67" lon="24.5594444" ru="Перемышляны" en="Peremyshlyany" uk="Перемишляни"/>
-        <city lat="49.7138889" lon="23.9108333" ru="Пустомыты" en="Pustomyty" uk="Пустомити"/>
-        <city lat="50.230431" lon="23.628309" ru="Рава-Русская" en="Rava-Russkaya" uk="Рава-Руська"/>
-        <city lat="50.2827778" lon="24.6375" ru="Радехов" en="Radekhov" uk="Радехів"/>
-        <city lat="49.6530556" lon="23.4880556" ru="Рудки" en="Грудки" uk="Грудки"/>
-        <city lat="49.5166667" lon="23.2027778" ru="Самбор" en="Sambor" uk="Самбір"/>
-        <city lat="49.036049" lon="23.51232" ru="Сколе" en="Skole" uk="Сколе"/>
-        <city lat="50.4833333" lon="24.2833333" ru="Сокаль" en="Сокаль" uk="Сокаль"/>
-        <city lat="49.4430556" lon="23.0033333" ru="Старый Самбор" en="Staryy Sambor" uk="Старий Самбір"/>
-        <city lat="49.256171" lon="23.850306" ru="Стрый" en="Stryy" uk="Стрий"/>
-        <city lat="49.2805556" lon="23.505" ru="Трускавец" en="Truskavets" uk="Трускавець"/>
-        <city lat="50.3666667" lon="23.7444444" ru="Угнев" en="Угнів" uk="Угнів"/>
-        <city lat="49.5333333" lon="22.85" ru="Хыров" en="Хирів" uk="Хирів"/>
-        <city lat="50.3833333" lon="24.2333333" ru="Червоноград" en="Chervonograd" uk="Червоноград"/>
-        <city lat="49.942501" lon="23.390989" ru="Яворов" en="Яворів" uk="Яворів"/>
+
+
+    <region uk="Львівська область" ru="Львовская область" en="Lvovskaya oblast">
+
+        <city uk="Белз" ru="Белз" en="Belz" lon="24.01269" lat="50.380501"/>
+
+        <city uk="Бібрка" ru="Бобрка" en="Bobrka" lon="24.2907476" lat="49.6331904"/>
+
+        <city uk="Борислав" ru="Борислав" en="Borislav" lon="23.42137" lat="49.28476"/>
+
+        <city uk="Броди" ru="Броды" en="Brodi" lon="25.15" lat="50.0833333"/>
+
+        <city uk="Буськ" ru="Буск" en="Busk" lon="24.6333333" lat="49.9666667"/>
+
+        <city uk="Великі Мости" ru="Великие Мосты" en="Veliki Mosti" lon="24.1394444" lat="50.24"/>
+
+        <city uk="Глиняни" ru="Глиняны" en="Glinyany" lon="24.5166667" lat="49.8233333"/>
+
+        <city uk="Городок" ru="Городок" en="Gorodok" lon="26.5666667" lat="49.1666667"/>
+
+        <city uk="Добромиль" ru="Добромиль" en="Dobromil" lon="22.7833333" lat="49.5666667"/>
+
+        <city uk="Дрогобич" ru="Дрогобыч" en="Drohobych" lon="23.51647" lat="49.34853"/>
+        <city uk="Дубляни" ru="Дубляны" en="Dublyany" lon="24.0833333" lat="49.8833333"/>
+
+        <city uk="Жидачів" ru="Жидачов" en="Zhydachiv" lon="24.1408333" lat="49.3813889"/>
+
+        <city uk="Жовква" ru="Жолква" en="Zholkva" lon="23.9666667" lat="50.0666667"/>
+
+        <city uk="Золочів" ru="Золочев" en="Zolochev" lon="24.9011111" lat="49.8083333"/>
+
+        <city uk="Кам’янка-Бузька" ru="Каменка-Бугская" en="Kamenka-Bugskaya" lon="24.35" lat="50.1"/>
+
+        <city uk="Львів" ru="Львов" en="Lviv" lon="24.0166667" lat="49.85"/>
+
+        <city uk="Мостиська" ru="Мостиска" en="Mostiska" lon="23.1525" lat="49.7941667"/>
+
+        <city uk="Перемишляни" ru="Перемышляны" en="Peremyshlyany" lon="24.5594444" lat="49.67"/>
+
+        <city uk="Пустомити" ru="Пустомыты" en="Pustomyty" lon="23.9108333" lat="49.7138889"/>
+
+        <city uk="Рава-Руська" ru="Рава-Русская" en="Rava-Russkaya" lon="23.628309" lat="50.230431"/>
+
+        <city uk="Радехів" ru="Радехов" en="Radekhov" lon="24.6375" lat="50.2827778"/>
+
+        <city uk="Рудки" ru="Рудки" en="Rydki" lon="23.4880556" lat="49.6530556"/>
+
+        <city uk="Самбір" ru="Самбор" en="Sambor" lon="23.2027778" lat="49.5166667"/>
+
+        <city uk="Сколе" ru="Сколе" en="Skole" lon="23.51232" lat="49.036049"/>
+
+        <city uk="Сокаль" ru="Сокаль" en="Sokal" lon="24.2833333" lat="50.4833333"/>
+
+        <city uk="Старий Самбір" ru="Старый Самбор" en="Staryy Sambor" lon="23.0033333" lat="49.4430556"/>
+
+        <city uk="Стрий" ru="Стрый" en="Stryy" lon="23.850306" lat="49.256171"/>
+
+        <city uk="Трускавець" ru="Трускавец" en="Truskavets" lon="23.505" lat="49.2805556"/>
+
+        <city uk="Угнів" ru="Угнев" en="Ugnev" lon="23.7444444" lat="50.3666667"/>
+
+        <city uk="Хирів" ru="Хыров" en="Khyriv" lon="22.85" lat="49.5333333"/>
+
+        <city uk="Червоноград" ru="Червоноград" en="Chervonograd" lon="24.2333333" lat="50.3833333"/>
+
+        <city uk="Яворів" ru="Яворов" en="Yavoriv" lon="23.390989" lat="49.942501"/>
+
     </region>
-    <region ru="Николаевская область">
-        <city lat="47.404331" lon="32.445301" ru="Баштанка" en="Bashtanka" uk="Баштанка"/>
-        <city lat="47.587711" lon="31.336" ru="Вознесенск" en="Voznesensk" uk="Вознесенськ"/>
-        <city lat="46.9666667" lon="32.0" ru="Николаев" en="Mykolayiv" uk="Миколаїв"/>
-        <city lat="47.3166667" lon="31.7833333" ru="Новая Одесса" en="Novaya Odessa" uk="Нова Одеса"/>
-        <city lat="47.6833333" lon="32.5" ru="Новый Буг" en="Новий Буг" uk="Новий Буг"/>
-        <city lat="46.6166667" lon="31.55" ru="Очаков" en="Ochakov" uk="Очаків"/>
-        <city lat="48.05" lon="30.85" ru="Первомайск" en="Pervomaysk" uk="Первомайськ"/>
-        <city lat="47.0666667" lon="32.8166667" ru="Снигирёвка" en="Snigirevka" uk="Снігурівка"/>
-        <city lat="47.8166667" lon="31.1833333" ru="Южноукраинск" en="Yuzhnoukrainsk" uk="Южноукраїнськ"/>
+
+
+    <region uk="Миколаївська область" ru="Николаевская область" en="Nykolayevskaya oblast">
+
+        <city uk="Баштанка" ru="Баштанка" en="Bashtanka" lon="32.445301" lat="47.404331"/>
+
+        <city uk="Вознесенськ" ru="Вознесенск" en="Voznesensk" lon="31.336" lat="47.587711"/>
+
+        <city uk="Миколаїв" ru="Николаев" en="Mykolayiv" lon="32.0" lat="46.9666667"/>
+
+        <city uk="Нова Одеса" ru="Новая Одесса" en="Novaya Odessa" lon="31.7833333" lat="47.3166667"/>
+
+        <city uk="Новий Буг" ru="Новый Буг" en="Noviy Bug" lon="32.5" lat="47.6833333"/>
+
+        <city uk="Очаків" ru="Очаков" en="Ochakov" lon="31.55" lat="46.6166667"/>
+
+        <city uk="Первомайськ" ru="Первомайск" en="Pervomaysk" lon="30.85" lat="48.05"/>
+
+        <city uk="Снігурівка" ru="Снигирёвка" en="Snigirevka" lon="32.8166667" lat="47.0666667"/>
+
+        <city uk="Южноукраїнськ" ru="Южноукраинск" en="Yuzhnoukrainsk" lon="31.1833333" lat="47.8166667"/>
+
     </region>
-    <region ru="Одесская область">
-        <city lat="47.7173" lon="29.975639" ru="Ананьев" en="Ананьїв" uk="Ананьїв"/>
-        <city lat="45.99739" lon="29.431288" ru="Арциз" en="Арциз" uk="Арциз"/>
-        <city lat="47.9333333" lon="29.6166667" ru="Балта" en="Балта" uk="Балта"/>
-        <city lat="46.1833333" lon="30.3333333" ru="Белгород-Днестровский" en="Belgorod-Dnestrovskiy"
-              uk="Білгород-Дністровський"/>
-        <city lat="45.682701" lon="28.61935" ru="Болград" en="Болград" uk="Болград"/>
-        <city lat="45.3516667" lon="28.8363889" ru="Измаил" en="Izmail" uk="Ізмаїл"/>
-        <city lat="46.3020534" lon="30.6517391" ru="Ильичёвск"/>
-        <city lat="45.45578" lon="29.273291" ru="Килия" en="Кілія" uk="Кілія"/>
-        <city lat="48.093941" lon="29.13368" ru="Кодыма" en="Кодима" uk="Кодима"/>
-        <city lat="47.75" lon="29.5333333" ru="Котовск" en="Подільськ" uk="Подільськ"/>
-        <city lat="46.4666667" lon="30.7333333" en="Odessa" ru="Одесса" uk="Одеса"/>
-        <city lat="45.841418" lon="29.62284" ru="Татарбунары" en="Татарбунари" uk="Татарбунари"/>
-        <city lat="46.5" lon="30.3333333" ru="Теплодар" en="Теплодар" uk="Теплодар"/>
-        <city lat="47.8173262" lon="33.5737487" ru="Южное" en="Калюжне" uk="Калюжне"/>
+
+
+    <region uk="Одеська область" ru="Одесская область" en="Odesskaya oblast">
+
+        <city uk="Ананьїв" ru="Ананьев" en="Ananyev" lon="29.975639" lat="47.7173"/>
+
+        <city uk="Арциз" ru="Арциз" en="Arciz" lon="29.431288" lat="45.99739"/>
+
+        <city uk="Балта" ru="Балта" en="Balta" lon="29.6166667" lat="47.9333333"/>
+
+        <city uk="Білгород-Дністровський" ru="Белгород-Днестровский" en="Belgorod-Dnestrovskiy" lon="30.3333333"
+              lat="46.1833333"/>
+
+        <city uk="Болград" ru="Болград" en="Bolgrad" lon="28.61935" lat="45.682701"/>
+
+        <city uk="Ізмаїл" ru="Измаил" en="Izmail" lon="28.8363889" lat="45.3516667"/>
+
+        <city uk="Чорноморськ" ru="Черноморск" en="Chornomorsk" lon="30.6517391" lat="46.3020534"/>
+
+        <city uk="Кілія" ru="Килия" en="Kiliya" lon="29.273291" lat="45.45578"/>
+
+        <city uk="Кодима" ru="Кодыма" en="Kodyma" lon="29.13368" lat="48.093941"/>
+
+        <city uk="Подільськ" ru="Подольск" en="Podolsk" lon="29.5333333" lat="47.75"/>
+
+        <city uk="Одеса" ru="Одесса" en="Odessa" lon="30.7333333" lat="46.4666667"/>
+
+        <city uk="Татарбунари" ru="Татарбунары" en="Tatarbunary" lon="29.62284" lat="45.841418"/>
+
+        <city uk="Теплодар" ru="Теплодар" en="Teplodar" lon="30.3333333" lat="46.5"/>
+
+        <city uk="Южне" ru="Южное" en="Yuzhne" lon="33.5737487" lat="47.8173262"/>
+
     </region>
-    <region ru="Полтавская область">
-        <city lat="50.3666667" lon="34.0" ru="Гадяч" en="Gadyach" uk="Гадяч"/>
-        <city lat="49.3833333" lon="33.2833333" ru="Глобино" en="Globino" uk="Глобине"/>
-        <city lat="50.116852" lon="32.44059" ru="Гребёнка"/>
-        <city lat="50.20955" lon="34.362345" ru="Зеньков" en="Зіньків" uk="Зіньків"/>
-        <city lat="49.45" lon="35.1333333" ru="Карловка" en="Karlovka" uk="Карлівка"/>
-        <city lat="49.073521" lon="33.4231" ru="Кременчуг" en="Kremenchuk" uk="Кременчук"/>
-        <city lat="49.145439" lon="34.213638" ru="Кобеляки" en="Kobelyaki" uk="Кобеляки"/>
-        <city lat="49.013756" lon="33.643381" ru="Комсомольск" en="Komsomolsk" uk="Горішні Плавні"/>
-        <city lat="50.36319" lon="33.253288" ru="Лохвица" en="Лохвиця" uk="Лохвиця"/>
-        <city lat="50.0166667" lon="33.0" ru="Лубны" en="Lubny" uk="Лубни"/>
-        <city lat="49.963799" lon="33.61869" ru="Миргород" en="Mirgorod" uk="Миргород"/>
-        <city lat="50.23975" lon="32.514309" ru="Пирятин" en="Пирятин" uk="Пирятин"/>
-        <city lat="49.59269" lon="34.551159" ru="Полтава" en="Poltava" uk="Полтава"/>
-        <city lat="49.790279" lon="33.207809" ru="Хорол" en="Хорол" uk="Хорол"/>
-        <city lat="50.4" lon="33.4" ru="Червонозаводское"/>
+
+
+    <region uk="Полтавська область" ru="Полтавская область" en="Poltavskaya oblast">
+
+        <city uk="Гадяч" ru="Гадяч" en="Gadyach" lon="34.0" lat="50.3666667"/>
+
+        <city uk="Глобине" ru="Глобино" en="Globino" lon="33.2833333" lat="49.3833333"/>
+
+        <city uk="Гребінка" ru="Гребёнка" en="Grebinka" lon="32.44059" lat="50.116852"/>
+
+        <city uk="Зіньків" ru="Зеньков" en="Zenkov" lon="34.362345" lat="50.20955"/>
+
+        <city uk="Карлівка" ru="Карловка" en="Karlovka" lon="35.1333333" lat="49.45"/>
+
+        <city uk="Кременчук" ru="Кременчуг" en="Kremenchuk" lon="33.4231" lat="49.073521"/>
+
+        <city uk="Кобеляки" ru="Кобеляки" en="Kobelyaki" lon="34.213638" lat="49.145439"/>
+
+        <city uk="Комсомольськ" ru="Комсомольск" en="Komsomolsk" lon="33.643381" lat="49.013756"/>
+
+        <city uk="Лохвиця" ru="Лохвица" en="Lohvica" lon="33.253288" lat="50.36319"/>
+
+        <city uk="Лубни" ru="Лубны" en="Lubny" lon="33.0" lat="50.0166667"/>
+
+        <city uk="Миргород" ru="Миргород" en="Mirgorod" lon="33.61869" lat="49.963799"/>
+
+        <city uk="Пирятин" ru="Пирятин" en="Piryatyn" lon="32.514309" lat="50.23975"/>
+
+        <city uk="Полтава" ru="Полтава" en="Poltava" lon="34.551159" lat="49.59269"/>
+
+        <city uk="Хорол" ru="Хорол" en="Khorol" lon="33.207809" lat="49.790279"/>
+
+        <city uk="Червонозаводське" ru="Червонозаводское" en="Chervonozavodskoye" lon="33.4" lat="50.4"/>
+
     </region>
-    <region ru="Ровенская область">
-        <city lat="51.0" lon="26.75" ru="Березне" en="Березнегувате" uk="Березнегувате"/>
-        <city lat="50.38738" lon="25.754559" ru="Дубно" en="Dubno" uk="Дубно"/>
-        <city lat="51.571209" lon="26.56805" ru="Дубровица" en="Дубровиця" uk="Дубровиця"/>
-        <city lat="50.5166667" lon="26.25" ru="Здолбунов" en="Zdolbunov" uk="Здолбунів"/>
-        <city lat="50.619129" lon="27.161869" ru="Корец" en="Korets" uk="Корець"/>
-        <city lat="50.8833333" lon="26.45" ru="Костополь" en="Kostopol" uk="Костопіль"/>
-        <city lat="51.3436553" lon="25.8490867" ru="Кузнецовск" en="Вараш" uk="Вараш"/>
-        <city lat="50.3333333" lon="26.5166667" ru="Острог" en="Ostrog" uk="Острог"/>
-        <city lat="50.125777" lon="25.264195" ru="Радивилов" en="Радивилів" uk="Радивилів"/>
-        <city lat="50.6166667" lon="26.25" ru="Ровно" en="Rivne" uk="Рівне"/>
-        <city lat="51.3372222" lon="26.6058333" ru="Сарны" en="Sarny" uk="Сарни"/>
+
+
+    <region uk="Рівненська область" ru="Ровенская область" en="Rovnenskaya oblast">
+
+        <city uk="Березне" ru="Березне" en="Berezne" lon="26.75" lat="51.0"/>
+
+        <city uk="Дубно" ru="Дубно" en="Dubno" lon="25.754559" lat="50.38738"/>
+
+        <city uk="Дубровиця" ru="Дубровица" en="Dubrovyca" lon="26.56805" lat="51.571209"/>
+
+        <city uk="Здолбунів" ru="Здолбунов" en="Zdolbunov" lon="26.25" lat="50.5166667"/>
+
+        <city uk="Корець" ru="Корец" en="Korets" lon="27.161869" lat="50.619129"/>
+
+        <city uk="Костопіль" ru="Костополь" en="Kostopol" lon="26.45" lat="50.8833333"/>
+
+        <city uk="Вараш" ru="Вараш" en="Varash" lon="25.8490867" lat="51.3436553"/>
+
+        <city uk="Острог" ru="Острог" en="Ostrog" lon="26.5166667" lat="50.3333333"/>
+
+        <city uk="Радивилів" ru="Радивилов" en="Radyvilov" lon="25.264195" lat="50.125777"/>
+
+        <city uk="Рівне" ru="Ровно" en="Rivne" lon="26.25" lat="50.6166667"/>
+
+        <city uk="Сарни" ru="Сарны" en="Sarny" lon="26.6058333" lat="51.3372222"/>
+
     </region>
-    <region ru="Сумская область">
-        <city lat="50.29855" lon="34.892052" ru="Ахтырка" en="Akhtyrka" uk="Охтирка"/>
-        <city lat="51.149402" lon="34.3175225" ru="Белополье" en="Belopolye" uk="Білопілля"/>
-        <city lat="51.1978" lon="33.847351" ru="Бурынь" en="Buryn" uk="Буринь"/>
-        <city lat="51.6786111" lon="33.9113889" ru="Глухов" en="Gluhiv" uk="Глухів"/>
-        <city lat="51.550121" lon="33.38279" ru="Кролевец" en="Кролевець" uk="Кролевець"/>
-        <city lat="51.237469" lon="33.21217" ru="Конотоп" en="Konotop" uk="Конотоп"/>
-        <city lat="48.96" lon="31.52" ru="Лебедин" en="Lebedin" uk="Лебедин"/>
-        <city lat="51.337589" lon="33.87888" ru="Путивль" en="Путивль" uk="Путивль"/>
-        <city lat="50.743919" lon="33.475712" ru="Ромны" en="Ромни" uk="Ромни"/>
-        <city lat="52.1833333" lon="34.0333333" ru="Середина-Буда" en="Середина-Буда" uk="Середина-Буда"/>
-        <city lat="50.910561" lon="34.80566" ru="Сумы" en="Sumy" uk="Суми"/>
-        <city lat="50.9599282" lon="25.55378" ru="Тростянец" en="Trostyanets" uk="Тростянець"/>
-        <city lat="51.86282" lon="33.487831" ru="Шостка" en="Shostka" uk="Шостка"/>
+
+
+    <region uk="Сумська область" ru="Сумская область" en="Sumskaya oblast">
+
+        <city uk="Охтирка" ru="Ахтырка" en="Akhtyrka" lon="34.892052" lat="50.29855"/>
+
+        <city uk="Білопілля" ru="Белополье" en="Belopolye" lon="34.3175225" lat="51.149402"/>
+
+        <city uk="Буринь" ru="Бурынь" en="Buryn" lon="33.847351" lat="51.1978"/>
+
+        <city uk="Глухів" ru="Глухов" en="Gluhiv" lon="33.9113889" lat="51.6786111"/>
+
+        <city uk="Кролевець" ru="Кролевец" en="Krolevec" lon="33.38279" lat="51.550121"/>
+
+        <city uk="Конотоп" ru="Конотоп" en="Konotop" lon="33.21217" lat="51.237469"/>
+
+        <city uk="Лебедин" ru="Лебедин" en="Lebedin" lon="31.52" lat="48.96"/>
+
+        <city uk="Путивль" ru="Путивль" en="Putivl" lon="33.87888" lat="51.337589"/>
+
+        <city uk="Ромни" ru="Ромны" en="Romni" lon="33.475712" lat="50.743919"/>
+
+        <city uk="Середина-Буда" ru="Середина-Буда" en="Seredina-Buda" lon="34.0333333" lat="52.1833333"/>
+
+        <city uk="Суми" ru="Сумы" en="Sumy" lon="34.80566" lat="50.910561"/>
+
+        <city uk="Тростянець" ru="Тростянец" en="Trostyanets" lon="25.55378" lat="50.9599282"/>
+
+        <city uk="Шостка" ru="Шостка" en="Shostka" lon="33.487831" lat="51.86282"/>
+
     </region>
-    <region ru="Тернопольская область">
-        <city lat="49.444191" lon="24.94486" ru="Бережаны" en="Berezhany" uk="Бережани"/>
-        <city lat="48.803181" lon="26.041809" ru="Борщёв"/>
-        <city lat="49.05772" lon="25.401979" ru="Бучач" en="Buchach" uk="Бучач"/>
-        <city lat="48.65" lon="25.7333333" ru="Залещики" en="Zaleshchiki" uk="Заліщики"/>
-        <city lat="49.6666667" lon="25.7777778" ru="Збараж" en="Zbarazh" uk="Збараж"/>
-        <city lat="49.660696" lon="25.1434667" ru="Зборов" en="Zborov" uk="Зборів"/>
-        <city lat="50.099129" lon="25.7328" ru="Кременец" en="Kremenets" uk="Кременець"/>
-        <city lat="49.8659402" lon="26.0841931" ru="Лановцы" en="Lanovcy" uk="Ланівці"/>
-        <city lat="49.0888889" lon="25.1694444" ru="Монастыриска"/>
-        <city lat="49.5246859" lon="26.137326" ru="Подволочиск" en="Podvolochisk" uk="Підволочиськ"/>
-        <city lat="49.2694444" lon="25.1361111" ru="Подгайцы" en="Podgaytsy" uk="Підгайці"/>
-        <city lat="50.0" lon="25.5083333" ru="Почаев" en="Pochaev" uk="Почаїв"/>
-        <city lat="49.424214" lon="25.976246" ru="Скалат" en="Скалат" uk="Скалат"/>
-        <city lat="49.551361" lon="25.603979" ru="Тернополь" en="Ternopil" uk="Тернопіль"/>
-        <city lat="49.29348" lon="25.699551" ru="Теребовля" en="Terebovlya" uk="Теребовля"/>
-        <city lat="49.0166667" lon="25.8" ru="Чортков"/>
-        <city lat="50.122577" lon="26.1149716" ru="Шумск" en="Шумськ" uk="Шумськ"/>
+
+
+    <region uk="Тернопільська область" ru="Тернопольская область" en="Ternopolskaya oblast">
+
+        <city uk="Бережани" ru="Бережаны" en="Berezhany" lon="24.94486" lat="49.444191"/>
+
+        <city uk="Борщів" ru="Борщёв" en="Borshchov" lon="26.041809" lat="48.803181"/>
+
+        <city uk="Бучач" ru="Бучач" en="Buchach" lon="25.401979" lat="49.05772"/>
+
+        <city uk="Заліщики" ru="Залещики" en="Zaleshchiki" lon="25.7333333" lat="48.65"/>
+
+        <city uk="Збараж" ru="Збараж" en="Zbarazh" lon="25.7777778" lat="49.6666667"/>
+
+        <city uk="Зборів" ru="Зборов" en="Zborov" lon="25.1434667" lat="49.660696"/>
+
+        <city uk="Кременець" ru="Кременец" en="Kremenets" lon="25.7328" lat="50.099129"/>
+
+        <city uk="Ланівці" ru="Лановцы" en="Lanovcy" lon="26.0841931" lat="49.8659402"/>
+
+        <city uk="Монастирська" ru="Монастыриска" en="Monastyrska" lon="25.1694444" lat="49.0888889"/>
+
+        <city uk="Підволочиськ" ru="Подволочиск" en="Podvolochisk" lon="26.137326" lat="49.5246859"/>
+
+        <city uk="Підгайці" ru="Подгайцы" en="Podgaytsy" lon="25.1361111" lat="49.2694444"/>
+
+        <city uk="Почаїв" ru="Почаев" en="Pochaev" lon="25.5083333" lat="50.0"/>
+
+        <city uk="Скалат" ru="Скалат" en="Skalat" lon="25.976246" lat="49.424214"/>
+
+        <city uk="Тернопіль" ru="Тернополь" en="Ternopil" lon="25.603979" lat="49.551361"/>
+
+        <city uk="Теребовля" ru="Теребовля" en="Terebovlya" lon="25.699551" lat="49.29348"/>
+
+        <city uk="Чортків" ru="Чортков" en="Chortkov" lon="25.8" lat="49.0166667"/>
+
+        <city uk="Шумськ" ru="Шумск" en="Shumsk" lon="26.1149716" lat="50.122577"/>
+
     </region>
-    <region ru="Харьковская область">
-        <city lat="49.4658333" lon="36.8677778" ru="Балаклея" en="Balakleya" uk="Балаклія"/>
-        <city lat="48.9" lon="37.0166667" ru="Барвенково" en="Barvenkovo" uk="Барвінкове"/>
-        <city lat="50.1654302" lon="35.5267251" ru="Богодухов" en="Bogodukhov" uk="Богодухів"/>
-        <city lat="49.843601" lon="35.61388" ru="Валки" en="Valki" uk="Валки"/>
-        <city lat="50.0455556" lon="37.3905556" ru="Великий Бурлук" en="Великий Бурлук" uk="Великий Бурлук"/>
-        <city lat="50.278519" lon="36.945171" ru="Волчанск" en="Volchansk" uk="Вовчанськ"/>
-        <city lat="50.110668" lon="36.114361" ru="Дергачи" en="Dergachi" uk="Дергачі"/>
-        <city lat="49.701939" lon="36.355171" ru="Змиев" en="Zmiyev" uk="Зміїв"/>
-        <city lat="49.2127778" lon="37.2569444" ru="Изюм" en="Izyum" uk="Ізюм"/>
-        <city lat="49.3666667" lon="35.45" ru="Красноград" en="Krasnograd" uk="Красноград"/>
-        <city lat="49.721901" lon="37.624329" ru="Купянск" en="Kupyansk" uk="Куп’янськ"/>
-        <city lat="48.891684" lon="36.325786" ru="Лозовая" en="Lozovaya" uk="Лозова"/>
-        <city lat="49.95" lon="35.9166667" ru="Люботин" en="Lyubotin" uk="Люботин"/>
-        <city lat="49.8166667" lon="36.05" ru="Мерефа" en="Merefa" uk="Мерефа"/>
-        <city lat="49.3833333" lon="36.2166667" ru="Первомайский" en="Pervomayskiy" uk="Первомайський"/>
-        <city lat="49.98967" lon="36.208309" ru="Харьков" en="Kharkiv" uk="Харків"/>
-        <city lat="49.8355556" lon="36.6863889" ru="Чугуев" en="Chuguev" uk="Чугуїв"/>
+
+
+    <region uk="Харківська область" ru="Харьковская область" en="Kharkovskaya oblast">
+
+        <city uk="Балаклія" ru="Балаклея" en="Balakleya" lon="36.8677778" lat="49.4658333"/>
+
+        <city uk="Барвінкове" ru="Барвенково" en="Barvenkovo" lon="37.0166667" lat="48.9"/>
+
+        <city uk="Богодухів" ru="Богодухов" en="Bogodukhov" lon="35.5267251" lat="50.1654302"/>
+
+        <city uk="Валки" ru="Валки" en="Valki" lon="35.61388" lat="49.843601"/>
+
+        <city uk="Великий Бурлук" ru="Великий Бурлук" en="Velykiy Burluk" lon="37.3905556" lat="50.0455556"/>
+
+        <city uk="Вовчанськ" ru="Волчанск" en="Volchansk" lon="36.945171" lat="50.278519"/>
+
+        <city uk="Дергачі" ru="Дергачи" en="Dergachi" lon="36.114361" lat="50.110668"/>
+
+        <city uk="Зміїв" ru="Змиев" en="Zmiyev" lon="36.355171" lat="49.701939"/>
+
+        <city uk="Ізюм" ru="Изюм" en="Izyum" lon="37.2569444" lat="49.2127778"/>
+
+        <city uk="Красноград" ru="Красноград" en="Krasnograd" lon="35.45" lat="49.3666667"/>
+
+        <city uk="Куп’янськ" ru="Купянск" en="Kupyansk" lon="37.624329" lat="49.721901"/>
+
+        <city uk="Лозова" ru="Лозовая" en="Lozovaya" lon="36.325786" lat="48.891684"/>
+
+        <city uk="Люботин" ru="Люботин" en="Lyubotin" lon="35.9166667" lat="49.95"/>
+
+        <city uk="Мерефа" ru="Мерефа" en="Merefa" lon="36.05" lat="49.8166667"/>
+
+        <city uk="Первомайський" ru="Первомайский" en="Pervomayskiy" lon="36.2166667" lat="49.3833333"/>
+
+        <city uk="Харків" ru="Харьков" en="Kharkiv" lon="36.208309" lat="49.98967"/>
+
+        <city uk="Чугуїв" ru="Чугуев" en="Chuguev" lon="36.6863889" lat="49.8355556"/>
+
     </region>
-    <region ru="Херсонская область">
-        <city lat="46.843822" lon="33.4375" ru="Берислав" en="Berislav" uk="Берислав"/>
-        <city lat="46.171638" lon="34.80777" ru="Геническ" en="Genichesk" uk="Генічеськ"/>
-        <city lat="46.5166667" lon="32.5166667" ru="Голая Пристань" en="Golaya Pristan" uk="Гола Пристань"/>
-        <city lat="46.817388" lon="33.494325" ru="Каховка" en="Kakhovka" uk="Каховка"/>
-        <city lat="46.7666667" lon="33.3666667" ru="Новая Каховка" en="Nova Kakhovka" uk="Нова Каховка"/>
-        <city lat="46.116871" lon="32.913731" ru="Скадовск" en="Skadovsk" uk="Скадовськ"/>
-        <city lat="46.7528018" lon="33.4216856" ru="Таврийск" en="Таврійське" uk="Таврійське"/>
-        <city lat="46.653368" lon="32.629424" ru="Херсон" en="Kherson" uk="Херсон"/>
-        <city lat="46.62" lon="32.72" ru="Цюрупинск"/>
+
+
+    <region uk="Херсонська область" ru="Херсонская область" en="Khersonskaya oblast">
+
+        <city uk="Берислав" ru="Берислав" en="Berislav" lon="33.4375" lat="46.843822"/>
+
+        <city uk="Генічеськ" ru="Геническ" en="Genichesk" lon="34.80777" lat="46.171638"/>
+
+        <city uk="Гола Пристань" ru="Голая Пристань" en="Golaya Pristan" lon="32.5166667" lat="46.5166667"/>
+
+        <city uk="Каховка" ru="Каховка" en="Kakhovka" lon="33.494325" lat="46.817388"/>
+
+        <city uk="Нова Каховка" ru="Новая Каховка" en="Nova Kakhovka" lon="33.3666667" lat="46.7666667"/>
+
+        <city uk="Скадовськ" ru="Скадовск" en="Skadovsk" lon="32.913731" lat="46.116871"/>
+
+        <city uk="Таврійськ" ru="Таврийск" en="Tavriysk" lon="33.4216856" lat="46.7528018"/>
+
+        <city uk="Херсон" ru="Херсон" en="Kherson" lon="32.629424" lat="46.653368"/>
+
+        <city uk="Цюрупинськ" ru="Цюрупинск" en="Tsyrupinsk" lon="32.72" lat="46.62"/>
+
     </region>
-    <region ru="Хмельницкая область">
-        <city lat="49.535179" lon="26.22331" ru="Волочиск" en="Volochisk" uk="Волочиськ"/>
-        <city lat="49.1666667" lon="26.5666667" ru="Городок" en="Gorodok" uk="Городок"/>
-        <city lat="49.267071" lon="27.440269" ru="Деражня" en="Деражня" uk="Деражня"/>
-        <city lat="48.8909743" lon="26.8546608" ru="Дунаевцы" en="Dunaevtsy" uk="Дунаївці (місто)"/>
-        <city lat="50.119221" lon="26.82629" ru="Изяслав" en="Izyaslav" uk="Ізяслав"/>
-        <city lat="48.6833333" lon="26.5833333" ru="Каменец-Подольский" en="Kamyanets-Podilskyi"
-              uk="Кам’янець-Подільський"/>
-        <city lat="49.6519444" lon="26.9705556" ru="Красилов" en="Krasilov" uk="Красилів"/>
-        <city lat="50.3374232" lon="26.6404529" ru="Нетешин" en="Neteshin" uk="Нетішин"/>
-        <city lat="50.122269" lon="27.511909" ru="Полонное" en="Polonnoye" uk="Полонне"/>
-        <city lat="49.0563905" lon="27.3944506" ru="Славута" en="Slavuta" uk="Славута"/>
-        <city lat="49.7555556" lon="27.2208333" ru="Староконстантинов" en="Starokonstantinov" uk="Старокостянтинів"/>
-        <city lat="49.4166667" lon="27.0" ru="Хмельницкий" en="Khmelnutskyi" uk="Хмельницький"/>
-        <city lat="50.179131" lon="27.07732" ru="Шепетовка" en="Shepetovka" uk="Шепетівка"/>
+
+
+    <region uk="Хмельницька область" ru="Хмельницкая область" en="Khmelnutskaya oblast">
+
+        <city uk="Волочиськ" ru="Волочиск" en="Volochisk" lon="26.22331" lat="49.535179"/>
+
+        <city uk="Городок" ru="Городок" en="Gorodok" lon="26.5666667" lat="49.1666667"/>
+
+        <city uk="Деражня" ru="Деражня" en="Derazhnya" lon="27.440269" lat="49.267071"/>
+
+        <city uk="Дунаївці (місто)" ru="Дунаевцы" en="Dunaevtsy" lon="26.8546608" lat="48.8909743"/>
+
+        <city uk="Ізяслав" ru="Изяслав" en="Izyaslav" lon="26.82629" lat="50.119221"/>
+
+        <city uk="Кам’янець-Подільський" ru="Каменец-Подольский" en="Kamyanets-Podilskyi" lon="26.5833333"
+              lat="48.6833333"/>
+
+        <city uk="Красилів" ru="Красилов" en="Krasilov" lon="26.9705556" lat="49.6519444"/>
+
+        <city uk="Нетішин" ru="Нетешин" en="Neteshin" lon="26.6404529" lat="50.3374232"/>
+
+        <city uk="Полонне" ru="Полонное" en="Polonnoye" lon="27.511909" lat="50.122269"/>
+
+        <city uk="Славута" ru="Славута" en="Slavuta" lon="27.3944506" lat="49.0563905"/>
+
+        <city uk="Старокостянтинів" ru="Староконстантинов" en="Starokonstantinov" lon="27.2208333" lat="49.7555556"/>
+
+        <city uk="Хмельницький" ru="Хмельницкий" en="Khmelnutskyi" lon="27.0" lat="49.4166667"/>
+
+        <city uk="Шепетівка" ru="Шепетовка" en="Shepetovka" lon="27.07732" lat="50.179131"/>
+
     </region>
-    <region ru="Черкасская область">
-        <city lat="49.0166667" lon="31.0666667" ru="Ватутино" en="Ватутіне" uk="Ватутіне"/>
-        <city lat="49.290649" lon="31.443199" ru="Городище" en="Gorodishche" uk="Городище"/>
-        <city lat="49.245522" lon="30.11998" ru="Жашков" en="Zhashkov" uk="Жашків"/>
-        <city lat="49.075489" lon="30.967911" ru="Звенигородка" en="Zvenigorodka" uk="Звенигородка"/>
-        <city lat="49.674271" lon="32.040421" ru="Золотоноша" en="Zolotonosha" uk="Золотоноша"/>
-        <city lat="49.036347" lon="32.103481" ru="Каменка" en="Кам’янка-Дніпровська" uk="Кам’янка-Дніпровська"/>
-        <city lat="49.75" lon="31.4666667" ru="Канев" en="Kanev" uk="Канів"/>
-        <city lat="49.421051" lon="31.268993" ru="Корсунь-Шевченковский" en="Korsun-Shevchenkovskiy"
-              uk="Корсунь-Шевченківський"/>
-        <city lat="48.9909154" lon="29.8051363" ru="Монастырище" en="Монастирище" uk="Монастирище"/>
-        <city lat="49.224621" lon="31.878401" ru="Смела" en="Smela" uk="Сміла"/>
-        <city lat="48.8833333" lon="30.7" ru="Тальное" en="Talnoye" uk="Тальне"/>
-        <city lat="48.75" lon="30.2166667" ru="Умань" en="Uman" uk="Умань"/>
-        <city lat="48.8494444" lon="29.97" ru="Христиновка" en="Khristinovka" uk="Христинівка"/>
-        <city lat="49.4333333" lon="32.0666667" ru="Черкассы" en="Cherkasy" uk="Черкаси"/>
-        <city lat="49.072498" lon="32.683578" ru="Чигирин" en="Chigirin" uk="Чигирин"/>
-        <city lat="49.00349" lon="31.385559" ru="Шпола" en="Shpola" uk="Шпола"/>
+
+
+    <region uk="Черкаська область" ru="Черкасская область" en="Cherkasskaya oblast">
+
+        <city uk="Ватутіне" ru="Ватутино" en="Vatutino" lon="31.0666667" lat="49.0166667"/>
+
+        <city uk="Городище" ru="Городище" en="Gorodishche" lon="31.443199" lat="49.290649"/>
+
+        <city uk="Жашків" ru="Жашков" en="Zhashkov" lon="30.11998" lat="49.245522"/>
+
+        <city uk="Звенигородка" ru="Звенигородка" en="Zvenigorodka" lon="30.967911" lat="49.075489"/>
+
+        <city uk="Золотоноша" ru="Золотоноша" en="Zolotonosha" lon="32.040421" lat="49.674271"/>
+
+        <city uk="Кам’янка" ru="Каменка" en="Kamenka" lon="32.103481" lat="49.036347"/>
+
+        <city uk="Канів" ru="Канев" en="Kanev" lon="31.4666667" lat="49.75"/>
+
+        <city uk="Корсунь-Шевченківський" ru="Корсунь-Шевченковский" en="Korsun-Shevchenkovskiy" lon="31.268993"
+              lat="49.421051"/>
+
+        <city uk="Монастирище" ru="Монастырище" en="Monastyrishche" lon="29.8051363" lat="48.9909154"/>
+
+        <city uk="Сміла" ru="Смела" en="Smela" lon="31.878401" lat="49.224621"/>
+
+        <city uk="Тальне" ru="Тальное" en="Talnoye" lon="30.7" lat="48.8833333"/>
+
+        <city uk="Умань" ru="Умань" en="Uman" lon="30.2166667" lat="48.75"/>
+
+        <city uk="Христинівка" ru="Христиновка" en="Khristinovka" lon="29.97" lat="48.8494444"/>
+
+        <city uk="Черкаси" ru="Черкассы" en="Cherkasy" lon="32.0666667" lat="49.4333333"/>
+
+        <city uk="Чигирин" ru="Чигирин" en="Chigirin" lon="32.683578" lat="49.072498"/>
+
+        <city uk="Шпола" ru="Шпола" en="Shpola" lon="31.385559" lat="49.00349"/>
+
     </region>
-    <region ru="Черниговская область">
-        <city lat="51.1830556" lon="32.8297222" ru="Бахмач" en="Бахмач" uk="Бахмач"/>
-        <city lat="50.745" lon="31.3869444" ru="Бобровица" en="Бобровиця" uk="Бобровиця"/>
-        <city lat="51.249451" lon="32.43034" ru="Борзна" en="Борзна" uk="Борзна"/>
-        <city lat="51.8905556" lon="31.5936111" ru="Городня" en="Gorodnya" uk="Городня"/>
-        <city lat="50.9246667" lon="30.756" ru="Десна" en="Десна" uk="Десна"/>
-        <city lat="50.863918" lon="32.39307" ru="Ичня" en="Ічня" uk="Ічня"/>
-        <city lat="51.7754831" lon="32.2595792" ru="Корюковка" en="Koryukovka" uk="Корюківка"/>
-        <city lat="51.521759" lon="32.21888" ru="Мена" en="Mena" uk="Мена"/>
-        <city lat="51.0380556" lon="31.8861111" ru="Нежин" en="Nezhin" uk="Ніжин"/>
-        <city lat="52.0069896" lon="33.2537069" ru="Новгород-Северский" en="Новгород-Сіверський"
-              uk="Новгород-Сіверський"/>
-        <city lat="50.9333333" lon="31.5833333" ru="Носовка" en="Nosovka" uk="Носівка"/>
-        <city lat="50.594181" lon="32.38689" ru="Прилуки" en="Pryluky" uk="Прилуки"/>
-        <city lat="51.6463023" lon="31.5616846" ru="Седнев" en="Седнівка" uk="Седнівка"/>
-        <city lat="52.173561" lon="32.587059" ru="Семёновка" en="Семенівка" uk="Семенівка"/>
-        <city lat="51.503653" lon="31.293167" ru="Чернигов" en="Chernihiv" uk="Чернігів"/>
-        <city lat="51.819321" lon="31.94846" ru="Щорс" en="Сновськ" uk="Сновськ"/>
+
+
+    <region uk="Чернігівська область" ru="Черниговская область" en="Chernihovskaya oblast">
+
+        <city uk="Бахмач" ru="Бахмач" en="Bahmach" lon="32.8297222" lat="51.1830556"/>
+
+        <city uk="Бобровиця" ru="Бобровица" en="Bobrovica" lon="31.3869444" lat="50.745"/>
+
+        <city uk="Борзна" ru="Борзна" en="Borzna" lon="32.43034" lat="51.249451"/>
+
+        <city uk="Городня" ru="Городня" en="Gorodnya" lon="31.5936111" lat="51.8905556"/>
+
+        <city uk="Десна" ru="Десна" en="Desna" lon="30.756" lat="50.9246667"/>
+
+        <city uk="Ічня" ru="Ичня" en="Ichnya" lon="32.39307" lat="50.863918"/>
+
+        <city uk="Корюківка" ru="Корюковка" en="Koryukovka" lon="32.2595792" lat="51.7754831"/>
+
+        <city uk="Мена" ru="Мена" en="Mena" lon="32.21888" lat="51.521759"/>
+
+        <city uk="Ніжин" ru="Нежин" en="Nezhin" lon="31.8861111" lat="51.0380556"/>
+
+        <city uk="Новгород-Сіверський" ru="Новгород-Северский" en="Novhorod-Severskiy" lon="33.2537069"
+              lat="52.0069896"/>
+
+        <city uk="Носівка" ru="Носовка" en="Nosovka" lon="31.5833333" lat="50.9333333"/>
+
+        <city uk="Прилуки" ru="Прилуки" en="Pryluky" lon="32.38689" lat="50.594181"/>
+
+        <city uk="Седнів" ru="Седнев" en="Sednev" lon="31.5616846" lat="51.6463023"/>
+
+        <city uk="Семенівка" ru="Семёновка" en="Semenovka" lon="32.587059" lat="52.173561"/>
+
+        <city uk="Чернігів" ru="Чернигов" en="Chernihiv" lon="31.293167" lat="51.503653"/>
+
+        <city uk="Сновськ" ru="Сновск" en="Snovsk" lon="31.94846" lat="51.819321"/>
+
     </region>
-    <region ru="Черновицкая область">
-        <city lat="48.38" lon="25.51" ru="Вашковцы" en="Vashkovtsy" uk="Вашківці"/>
-        <city lat="48.25" lon="25.1916667" ru="Вижница" en="Vyzhnytsya" uk="Вижниця"/>
-        <city lat="48.1485764" lon="26.2572996" ru="Герца" en="Gertsa" uk="Герца"/>
-        <city lat="48.5166667" lon="25.85" ru="Заставна" en="Zastavna" uk="Заставна"/>
-        <city lat="48.4425" lon="25.7613889" ru="Кицмань" en="Kitsman" uk="Кіцмань"/>
-        <city lat="48.5833333" lon="27.4333333" ru="Новоднестровск" en="Новодністровськ" uk="Новодністровськ"/>
-        <city lat="48.2166667" lon="26.2666667" ru="Новоселица" en="Новоселиця" uk="Новоселиця"/>
-        <city lat="48.45" lon="27.4166667" ru="Сокиряны" en="Sokiryany" uk="Сокиряни"/>
-        <city lat="48.1666667" lon="25.7166667" ru="Сторожинец" en="Storozhinets" uk="Сторожинець"/>
-        <city lat="48.5" lon="26.5" ru="Хотин" en="Khotin" uk="Хотин"/>
-        <city lat="48.3" lon="25.9333333" ru="Черновцы" en="Chernovtsi" uk="Чернівці"/>
+
+
+    <region uk="Чернівецька область" ru="Черновицкая область" en="Chernovitskaya oblast">
+
+        <city uk="Вашківці" ru="Вашковцы" en="Vashkovtsy" lon="25.51" lat="48.38"/>
+
+        <city uk="Вижниця" ru="Вижница" en="Vyzhnytsya" lon="25.1916667" lat="48.25"/>
+
+        <city uk="Герца" ru="Герца" en="Gertsa" lon="26.2572996" lat="48.1485764"/>
+
+        <city uk="Заставна" ru="Заставна" en="Zastavna" lon="25.85" lat="48.5166667"/>
+
+        <city uk="Кіцмань" ru="Кицмань" en="Kitsman" lon="25.7613889" lat="48.4425"/>
+
+        <city uk="Новодністровськ" ru="Новоднестровск" en="Novodnestrovsk" lon="27.4333333" lat="48.5833333"/>
+
+        <city uk="Новоселиця" ru="Новоселица" en="Novoselitsa" lon="26.2666667" lat="48.2166667"/>
+
+        <city uk="Сокиряни" ru="Сокиряны" en="Sokiryany" lon="27.4166667" lat="48.45"/>
+
+        <city uk="Сторожинець" ru="Сторожинец" en="Storozhinets" lon="25.7166667" lat="48.1666667"/>
+
+        <city uk="Хотин" ru="Хотин" en="Khotin" lon="26.5" lat="48.5"/>
+
+        <city uk="Чернівці" ru="Черновцы" en="Chernovtsi" lon="25.9333333" lat="48.3"/>
+
     </region>
+
 </country>

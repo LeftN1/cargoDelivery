@@ -40,7 +40,7 @@ public class CommandContainer {
 
 
     public static Command get(String commandName){
-
+        LOG.debug("Trying to get command " + commandName);
         if(commandName == null){
             commandName="main";
         }
@@ -50,6 +50,7 @@ public class CommandContainer {
             return commands.get("noCommand");
         }
 
+        LOG.debug("return command " + commandName);
         return commands.get(commandName);
     }
 

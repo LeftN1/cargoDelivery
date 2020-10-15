@@ -4,6 +4,7 @@ import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Region;
+import com.voroniuk.delivery.db.entity.SiteLocale;
 import com.voroniuk.delivery.utils.Calculations;
 import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
@@ -12,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.Collator;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -199,8 +201,10 @@ public class MainCommand extends Command {
 
 
     List<City> sortCitiesByName(List<City> cityList, String order, Locale locale) {
+        //Comparator with considering locale nuances
+        Collator collator = Collator.getInstance(locale);
 
-        Comparator<City> cityNameComparator = (Comparator.comparing(o -> o.getName(locale)));
+        Comparator<City> cityNameComparator = (o1,o2) -> (collator.compare(o1.getName(locale), o2.getName(locale)));
 
         if (order.equals("desc")) {
             return cityList.stream().sorted(cityNameComparator.reversed()).collect(Collectors.<City>toList());

@@ -30,8 +30,10 @@ public class PayCommand extends Command {
         }
 
         Delivery delivery = orderDAO.findDeliveryById(id);
+        LOG.debug("found delivery: " + delivery);
 
         orderDAO.changeCurrentStatus(delivery, DeliveryStatus.PAID, new Date());
+        LOG.debug("status changed.");
 
         String redirect = Path.COMMAND__ACCOUNT;
         resp.setStatus(resp.SC_MOVED_PERMANENTLY);
