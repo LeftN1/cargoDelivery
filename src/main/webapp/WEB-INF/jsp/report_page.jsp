@@ -95,7 +95,7 @@
         </tr>
     </table>
 </form>
-
+<a href="/controller?command=download"><fmt:message key="report.ancor.download_xls"/></a>
 <table>
     <tr>
         <th><fmt:message key="all.label.id"/></th>

@@ -5,10 +5,12 @@
 
     <display-name>Cargo delivery</display-name>
 
+
     <context-param>
         <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
         <param-value>resources</param-value>
     </context-param>
+
 
     <!--============================================================
 	Encoding support filter
@@ -43,7 +45,7 @@ Delimiter - space/tab
         <filter-class>com.voroniuk.delivery.web.filter.CommandAccessFilter</filter-class>
         <init-param>
             <param-name>manager</param-name>
-            <param-value>manager_account account delete bill report send arrived give_out edit save</param-value>
+            <param-value>manager_account account delete bill report send arrived give_out edit save download</param-value>
         </init-param>
         <init-param>
             <param-name>user</param-name>
@@ -51,7 +53,7 @@ Delimiter - space/tab
         </init-param>
         <init-param>
             <param-name>common</param-name>
-            <param-value>noCommand logout register changeLocale</param-value>
+            <param-value>noCommand logout changeLocale</param-value>
         </init-param>
         <init-param>
             <param-name>out-of-control</param-name>

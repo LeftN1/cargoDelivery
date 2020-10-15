@@ -10,6 +10,7 @@ import com.voroniuk.delivery.db.entity.Total;
 import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +26,10 @@ public class ReportCommand extends Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         LOG.debug("Command starts");
+
+        String sessionId = req.getSession().getId();
+        String reportName = sessionId + ".xls";
+
 
         OrderDAO orderDAO = new OrderDAO();
         CityDAO cityDAO = new CityDAO();
@@ -124,6 +129,7 @@ public class ReportCommand extends Command {
                 totals.put(repFormat.format(currDate), total);
                 report.put(repFormat.format(currDate), currList);
             }
+            Utils.createXLS(report, totals, locale, reportName);
         }
 
         if (type.equals("by_city")) {
@@ -152,12 +158,14 @@ public class ReportCommand extends Command {
                 totals.put(currCity.getName(locale), total);
                 report.put(currCity.getName(locale), currList);
             }
+            Utils.createXLS(report, totals, locale, reportName);
         }
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);
         req.setAttribute("report", report);
         req.setAttribute("totals", totals);
+        req.setAttribute("reportName", reportName);
 
         req.getSession().setAttribute("type", type);
         req.getSession().setAttribute("status", status);
@@ -168,6 +176,9 @@ public class ReportCommand extends Command {
 
         return Path.PAGE__REPORT;
     }
+
+
+
 
 
 }

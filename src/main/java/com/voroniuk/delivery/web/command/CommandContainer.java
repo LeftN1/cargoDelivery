@@ -32,6 +32,8 @@ public class CommandContainer {
         commands.put("give_out", new GiveOutCommand());
         commands.put("edit", new EditCommand());
         commands.put("save", new SaveCommand());
+        commands.put("download", new  DownloadCommand());
+
 
         LOG.debug("Command container was successfully initialized");
         LOG.trace("Number of commands --> " + commands.size());
