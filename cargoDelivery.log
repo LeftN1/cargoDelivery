@@ -376,3 +376,11 @@
 2020-10-16 00:15 [DEBUG]          CommandContainer:    45 - Trying to get command download
 2020-10-16 00:15 [DEBUG]          CommandContainer:    55 - return command download
 2020-10-16 00:15 [DEBUG]            MainController:    70 - Controller finished. forward adress: null
+2020-10-16 00:35 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-16 00:35 [DEBUG]              LoginCommand:    25 - request param: login: null
+2020-10-16 00:38 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-16 00:38 [DEBUG]              LoginCommand:    25 - request param: login: null
+2020-10-16 00:38 [ERROR]              LoginCommand:    36 - errorMessage --> Login/password cannot be empty
+2020-10-16 00:38 [DEBUG]              LoginCommand:    21 - Command starts
+2020-10-16 00:38 [DEBUG]              LoginCommand:    25 - request param: login: null
+2020-10-16 00:38 [ERROR]              LoginCommand:    36 - errorMessage --> Login/password cannot be empty

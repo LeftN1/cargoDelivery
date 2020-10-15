@@ -23,3 +23,5 @@ B
 sql/test-query.sql,e\c\ec9b320ae4bd2f64f8df9a81af4728615a128ac0
 g
 7src/main/java/com/voroniuk/delivery/db/dao/CityDAO.java,d\c\dcc95ae7f083c5d8283f747f1af5284135a9ab4c
+R
+"src/test/java/MainCommandTest.java,8\c\8cb529a51489e5e86f2d6929bd2781096c4d3d59
