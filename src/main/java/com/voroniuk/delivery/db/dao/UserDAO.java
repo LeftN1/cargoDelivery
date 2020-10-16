@@ -34,30 +34,30 @@ public class UserDAO {
         }
     }
 
-    public Role getRoleFromDb(String name) {
-        String sql = "SELECT * FROM roles WHERE role_name=?";
-        try (Connection connection = DBManager.getInstance().getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql);) {
-
-            statement.setString(1, name);
-            statement.executeQuery();
-            try (ResultSet resultSet = statement.getResultSet()) {
-
-                if (resultSet.next()) {
-                    for (Role role : Role.values()) {
-                        if (role.name().equals(resultSet.getString(2))) {
-                            return role;
-                        }
-                    }
-                } else {
-                    LOG.info("Can't find user " + name);
-                }
-            }
-        } catch (SQLException e) {
-            LOG.warn(e);
-        }
-        return null;
-    }
+//    public Role getRoleFromDb(String name) {
+//        String sql = "SELECT * FROM roles WHERE role_name=?";
+//        try (Connection connection = DBManager.getInstance().getConnection();
+//             PreparedStatement statement = connection.prepareStatement(sql);) {
+//
+//            statement.setString(1, name);
+//            statement.executeQuery();
+//            try (ResultSet resultSet = statement.getResultSet()) {
+//
+//                if (resultSet.next()) {
+//                    for (Role role : Role.values()) {
+//                        if (role.name().equals(resultSet.getString(2))) {
+//                            return role;
+//                        }
+//                    }
+//                } else {
+//                    LOG.info("Can't find user " + name);
+//                }
+//            }
+//        } catch (SQLException e) {
+//            LOG.warn(e);
+//        }
+//        return null;
+//    }
 
     public int getRoleNum(Role role) {
         String sql = "SELECT * FROM roles WHERE role_name=?";
@@ -137,13 +137,13 @@ public class UserDAO {
                     user.setLogin(login);
                     user.setPassword(password);
                     user.setRole(role);
+                    LOG.debug("User founded: " + user);
                     return user;
-                } else {
-                    LOG.info("Can't find userby id: " + id);
                 }
             }
         } catch (SQLException e) {
             LOG.warn(e);
+            LOG.info("Can't find userby id: " + id);
         }
         return null;
     }
@@ -168,4 +168,20 @@ public class UserDAO {
         }
         return res;
     }
+
+    public void deleteUser(User user) {
+        String sql = "DELETE FROM users WHERE login=?";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)) {
+
+            statement.setString(1, user.getLogin());
+            statement.executeUpdate();
+
+            LOG.info("User has been deleted");
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+    }
+
 }
