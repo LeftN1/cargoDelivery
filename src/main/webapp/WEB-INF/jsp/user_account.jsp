@@ -73,7 +73,7 @@
                 <fmt:message key="all.label.weight"/>
             </td>
             <td>
-                <input type="number" size="5" name="weight" value="${weight}">
+                <input type="number" size="5" name="weight" min="1" value="${weight}">
             </td>
         </tr>
         <tr>
@@ -81,7 +81,7 @@
                 <fmt:message key="all.label.length"/>
             </td>
             <td>
-                <input type="number" size="5" name="length" value="${length}">
+                <input type="number" size="5" name="length" min="1" value="${length}">
             </td>
         </tr>
         <tr>
@@ -89,7 +89,7 @@
                 <fmt:message key="all.label.width"/>
             </td>
             <td>
-                <input type="number" size="5" name="width" value="${width}">
+                <input type="number" size="5" name="width" min="1" value="${width}">
             </td>
         </tr>
         <tr>
@@ -97,7 +97,7 @@
                 <fmt:message key="all.label.height"/>
             </td>
             <td>
-                <input type="number" size="5" name="height" value="${height}">
+                <input type="number" size="5" name="height" min="1" value="${height}">
             </td>
         </tr>
         <tr>
