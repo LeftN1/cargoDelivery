@@ -60,6 +60,7 @@ public class Test {
         }
 
         System.out.println("Branch master. test message");
+        System.out.println("Branch master. another test message");
 
     }
 }
