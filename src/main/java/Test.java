@@ -59,5 +59,7 @@ public class Test {
             e.printStackTrace();
         }
 
+        System.out.println("Branch nobootstarp. Test message");
+
     }
 }
