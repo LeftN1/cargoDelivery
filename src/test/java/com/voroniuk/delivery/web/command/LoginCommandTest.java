@@ -1,14 +1,12 @@
 package com.voroniuk.delivery.web.command;
 
-import com.sun.deploy.net.HttpRequest;
-import com.sun.deploy.net.HttpResponse;
+
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.UserDAO;
-import com.voroniuk.delivery.db.entity.User;
-import org.junit.Before;
+
 import org.junit.Test;
 
-import javax.jws.soap.SOAPBinding;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,7 +20,7 @@ import static org.mockito.Mockito.*;
 public class LoginCommandTest {
 
 
-        UserDAO userDAO = new UserDAO();
+
         LoginCommand loginCommand = new LoginCommand();
 
         String ok = Path.COMMAND__ACCOUNT;
