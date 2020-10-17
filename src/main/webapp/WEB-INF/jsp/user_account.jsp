@@ -161,9 +161,15 @@
             <td>${delivery.getVolume()}</td>
             <td>${delivery.getCost()}</td>
             <td>${delivery.getLastStatus().getName(locale)}</td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 2}">
-                <a href="/?command=pay&delivery_id=${delivery.getId()}"><fmt:message key="all.href.pay"/></a>
-            </c:if></td>
+            <c:if test="${delivery.getLastStatus().getId() == 2}">
+            <td>
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="pay">
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}">
+                    <input type="submit" value="<fmt:message key="all.href.pay"/>">
+                </form>
+            </td>
+            </c:if>
         </tr>
     </c:forEach>
 

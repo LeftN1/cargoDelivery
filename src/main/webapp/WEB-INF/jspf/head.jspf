@@ -15,6 +15,13 @@ If you define http-equiv attribute, set the content type and the charset the sam
 as you set them in a page directive.
 ===========================================================================--%> 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="Cache-Control" content="private">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+	<style>
+		.tdform{
+			display: inline-block;
+			margin: 0;
+		}
+	</style>
 
 </head>

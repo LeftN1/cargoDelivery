@@ -93,20 +93,52 @@
             <td>${delivery.getLastStatus().getName(locale)}</td>
             <td>${delivery.getLastDateString()}</td>
             <!--<td><a href="/controller?command=delete&delivery_id=${delivery.getId()}" onclick="allert('click')"><fmt:message key="all.label.delete"/></a></td>-->
-            <td><a href="#" onclick="if (confirm('<fmt:message key="manager.alert.confirm_delete"/>')){location.href='/controller?command=delete&delivery_id=${delivery.getId()}'}else {}"><fmt:message key="all.label.delete"/></a></td>
-            <td><a href="/controller?command=edit&delivery_id=${delivery.getId()}"><fmt:message key="all.label.edit"/></a></td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 1}">
-                <a href="/controller?command=bill&delivery_id=${delivery.getId()}"><fmt:message key="all.label.confirm"/></a>
-            </c:if></td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 3}">
-                <a href="/controller?command=send&delivery_id=${delivery.getId()}"><fmt:message key="all.label.send"/></a>
-            </c:if></td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 4}">
-                <a href="/controller?command=arrived&delivery_id=${delivery.getId()}"><fmt:message key="all.label.arrived"/></a>
-            </c:if></td>
-            <td><c:if test="${delivery.getLastStatus().getId() == 5}">
-                <a href="/controller?command=give_out&delivery_id=${delivery.getId()}"><fmt:message key="all.label.give_out"/></a>
-            </c:if></td>
+            <td>
+                <input type="button" onclick="if (confirm('<fmt:message key="manager.alert.confirm_delete"/>')){location.href='/controller?command=delete&delivery_id=${delivery.getId()}'}else {}" value="<fmt:message key="all.label.delete"/>"/>
+            </td>
+            <td>
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="edit"/>
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}"/>
+                    <input type="submit" value="<fmt:message key="all.label.edit"/>">
+                </form>
+            </td>
+            <c:if test="${delivery.getLastStatus().getId() == 1}">
+            <td height="20">
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="bill"/>
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}"/>
+                    <input type="submit" value="<fmt:message key="all.label.confirm"/>"/>
+                </form>
+            </td>
+            </c:if>
+            <c:if test="${delivery.getLastStatus().getId() == 3}">
+            <td>
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="send"/>
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}"/>
+                    <input type="submit" value="<fmt:message key="all.label.send"/>"/>
+                </form>
+            </td>
+            </c:if>
+            <c:if test="${delivery.getLastStatus().getId() == 4}">
+            <td>
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="arrived"/>
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}"/>
+                    <input type="submit" value="<fmt:message key="all.label.arrived"/>"/>
+                </form>
+            </td>
+            </c:if>
+            <c:if test="${delivery.getLastStatus().getId() == 5}">
+            <td>
+                <form class="tdform" action="/controller" method="get">
+                    <input type="hidden" name="command" value="give_out"/>
+                    <input type="hidden" name="delivery_id" value="${delivery.getId()}"/>
+                    <input type="submit" value="<fmt:message key="all.label.give_out"/>"/>
+                </form>
+            </td>
+            </c:if>
         </tr>
     </c:forEach>
 
