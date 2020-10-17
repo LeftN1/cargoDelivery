@@ -3,10 +3,9 @@
 
 
 <c:set var="title" value="Manager account" />
+<c:set var="current" value="account"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
-
-<a href="/controller?command=report"><fmt:message key="account.anchor.reports"/></a>
 
 <form name="filter" method="get" action="controller">
     <input type="hidden" name="command" value="manager_account">

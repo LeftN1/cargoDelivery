@@ -4,7 +4,7 @@
 
 
 <c:set var="title" value="CDS" />
-<c:set var="current" value="account" />
+<c:set var="current" value="account"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 

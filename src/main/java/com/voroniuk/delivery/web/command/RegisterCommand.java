@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class RegisterCommand extends Command {
 
@@ -25,27 +27,29 @@ public class RegisterCommand extends Command {
         String password = req.getParameter("password");
         String confirm = req.getParameter("confirm");
 
+        Locale locale = (Locale) req.getSession().getAttribute("locale");
+
+        ResourceBundle rb = ResourceBundle.getBundle("resources", locale);
+
+
         if (login == null && password == null) {
             return forward;
         }
 
         if (login.equals("")){
-            msg = "Login should not be empty";
-//            msg = "<fmt:message key=\"register.message.login_empty\"/>";
+            msg = rb.getString("error.message.empty_login");
             req.setAttribute("msg", msg);
             return forward;
         }
 
         if (password.equals("")){
-            msg = "Password should not be empty";
-//            msg = "<fmt:message key=\"register.message.password_empty\"/>";
+            msg = rb.getString("error.message.empty_password");
             req.setAttribute("msg", msg);
             return forward;
         }
 
         if (!password.equals(confirm)){
-            msg = "Confirm password incorrect";
-//            msg = "<fmt:message key=\"register.message.confirm_incorrect\"/>";
+            msg = rb.getString("error.message.confirm_incorrect");
             req.setAttribute("msg", msg);
             return forward;
         }
@@ -53,8 +57,7 @@ public class RegisterCommand extends Command {
         UserDAO userDAO = new UserDAO();
 
         if(userDAO.findUserByLogin(login)!=null){
-//            msg = "<fmt:message key=\"register.message.user_with_login\"/>" + login + "<fmt:message key=\"register.message.already_exists\"/>";
-            msg = "User with login '" + login + "' already exists\"/>";
+            msg = rb.getString("error.message.user_with_login") + login + rb.getString("error.message.already_exists");
             req.setAttribute("msg", msg);
             return forward;
         }

@@ -6,8 +6,6 @@
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 
-<a href="/controller?command=account"><fmt:message key="all.label.account"/></a>
-
 <h3><fmt:message key="report.label.report_generator"/></h3>
 
 <form name="report" method="get" action="controller">

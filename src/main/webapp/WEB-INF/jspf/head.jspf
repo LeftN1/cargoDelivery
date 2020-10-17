@@ -49,11 +49,16 @@
             <h3 class="navbar-brand">Cargo Delivery Service</h3>
         </div>
         <ul class="nav nav-pills">
-            <c:if test="${sessionScope.user!=null}">
+            <li class="nav-item">
+                <a class="nav-link" href="/controller?command=main"><fmt:message
+                        key="account.anchor.main_page"/> </a>
+            </li>
+            <c:if test="${sessionScope.user==null}">
                 <li class="nav-item">
-                    <a class="nav-link" href="/controller?command=main"><fmt:message
-                            key="account.anchor.main_page"/> </a>
+                    <a class="nav-link" href="/controller?command=register"><fmt:message key="register.button.register"/> </a>
                 </li>
+            </c:if>
+            <c:if test="${sessionScope.user!=null}">
                 <li class="nav-item">
                     <a class="nav-link" href="/controller?command=account"><fmt:message key="all.label.account"/> </a>
                 </li>
