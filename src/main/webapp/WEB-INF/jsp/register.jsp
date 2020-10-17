@@ -1,18 +1,9 @@
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Admin
-  Date: 27.09.2020
-  Time: 13:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-<fmt:setLocale value="${locale.getLanguage()}"/>
+
+<%@ include file="/WEB-INF/jspf/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/taglib.jspf" %>
+
+<c:set var="title" value="Register"/>
+<%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 <a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
 
@@ -36,5 +27,4 @@
     %>
 </div>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/jspf/bottom.jspf" %>

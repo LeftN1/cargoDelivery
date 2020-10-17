@@ -3,8 +3,7 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.entity.City;
-import com.voroniuk.delivery.db.entity.Region;
-import com.voroniuk.delivery.db.entity.SiteLocale;
+
 import com.voroniuk.delivery.utils.Calculations;
 import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
@@ -16,7 +15,6 @@ import java.io.IOException;
 import java.text.Collator;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 public class MainCommand extends Command {

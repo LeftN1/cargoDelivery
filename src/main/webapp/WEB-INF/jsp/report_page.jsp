@@ -1,21 +1,10 @@
-<%@ page import="com.voroniuk.delivery.Path" %><%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 06.10.2020
-  Time: 16:05
-  To change this template use File | Settings | File Templates.
---%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+
+<%@ include file="/WEB-INF/jspf/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/taglib.jspf" %>
 
 <c:set var="title" value="Report"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
-<body>
-
-<fmt:setLocale value="${locale.getLanguage()}"/>
 
 <a href="/controller?command=account"><fmt:message key="all.label.account"/></a>
 
@@ -145,5 +134,4 @@
 
 </table>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/jspf/bottom.jspf" %>

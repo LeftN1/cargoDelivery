@@ -1,15 +1,11 @@
 <%@ include file="/WEB-INF/jspf/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/taglib.jspf" %>
 
-<html>
+
 <c:set var="title" value="Manager account" />
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
-<body>
 
-<fmt:setLocale value="${locale.getLanguage()}"/>
 
-<a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
-<br>
 <a href="/controller?command=report"><fmt:message key="account.anchor.reports"/></a>
 
 <form name="filter" method="get" action="controller">
@@ -148,5 +144,4 @@
 <c:set var="current_page" value="<%=Path.COMMAND__MANAGER_ACCOUNT%>" />
 <%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/jspf/bottom.jspf" %>

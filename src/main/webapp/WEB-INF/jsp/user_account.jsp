@@ -3,18 +3,13 @@
 <%@ include file="/WEB-INF/jspf/taglib.jspf" %>
 
 
-<html>
-
 <c:set var="title" value="CDS" />
+<c:set var="current" value="account" />
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
-<body>
-<fmt:setLocale value="${locale.getLanguage()}"/>
 
-<a href="/controller?command=main"><fmt:message key="account.anchor.main_page"/></a>
+<p><fmt:message key="all.label.user"/>: ${sessionScope.user.getLogin()}</p>
 
-<p>User: ${sessionScope.user.getLogin()}</p>
-<p>Locale : ${sessionScope.locale.getLanguage()}</p>
 <h3>Create new delivery:</h3>
 <form name="order" action="/controller" method="post">
     <input type="hidden" name="command" value="makeOrder">
@@ -110,7 +105,7 @@
         </tr>
     </table>
     <input type="submit" name="order" value="<fmt:message key="user.button.make_order"/>"/>
-    <input type="submit" name="calculate" value="<fmt:message key="main.button.calculate"/>"/>
+    <input type="submit"  name="calculate" value="<fmt:message key="main.button.calculate"/>"/>
 </form>
 <hr>
 
@@ -178,5 +173,4 @@
 <c:set var="current_page" value="<%=Path.COMMAND__USER_ACCOUNT%>" />
 <%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 
-</body>
-</html>
+<%@ include file="/WEB-INF/jspf/bottom.jspf" %>

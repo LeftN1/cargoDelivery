@@ -2,7 +2,6 @@ package com.voroniuk.delivery.web.command;
 
 
 import com.voroniuk.delivery.Path;
-import com.voroniuk.delivery.db.dao.UserDAO;
 
 import org.junit.Test;
 

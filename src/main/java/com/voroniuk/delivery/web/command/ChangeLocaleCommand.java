@@ -17,13 +17,18 @@ public class ChangeLocaleCommand extends Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        LOG.debug("Locale changed to ");
-        String forward = Path.COMMAND__MAIN;
+
+        String from = req.getParameter("from");
+        if(from.equals("")){
+            from = "main";
+        }
+
+        String forward = "/controller?command="+from;
 
         Locale choosen = SiteLocale.valueOf(req.getParameter("choosenLang")).getLocale();
-
         req.getSession().setAttribute("locale", choosen);
 
+        LOG.debug("Locale changed to " + choosen);
         return forward;
     }
 }

@@ -34,6 +34,7 @@ public class LoginCommand extends Command {
             errorMessage = "Login/password cannot be empty";
             req.setAttribute("msg", errorMessage);
             LOG.error("errorMessage --> " + errorMessage);
+            forward = Path.COMMAND__MAIN;
             return forward;
         }
 

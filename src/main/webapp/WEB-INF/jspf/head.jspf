@@ -1,27 +1,82 @@
+<%@ page import="com.voroniuk.delivery.db.entity.Role" %>
+<!doctype html>
+<html lang="en">
 
 <head>
 
-	<title>
-		${title}
-	</title>
-	
-<%--=========================================================================== 
-Bind CSS document.
-===========================================================================--%> 
-	<link rel="stylesheet" type="text/css" media="screen" href="style/st4.css"/>
-	
-<%--=========================================================================== 
-If you define http-equiv attribute, set the content type and the charset the same
-as you set them in a page directive.
-===========================================================================--%> 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="Cache-Control" content="no-cache">
+    <title>
+        ${title}
+    </title>
 
-	<style>
-		.tdform{
-			display: inline-block;
-			margin: 0;
-		}
-	</style>
+    <%--===========================================================================
+    Connect bootetrap
+    ===========================================================================--%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <%--===========================================================================
+    If you define http-equiv attribute, set the content type and the charset the same
+    as you set them in a page directive.
+    ===========================================================================--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        .tdform {
+            display: inline-block;
+            margin: 0;
+        }
+    </style>
 
 </head>
+
+<body>
+<fmt:setLocale value="${locale.getLanguage()}"/>
+
+<nav class="navbar navbar-defualt">
+    <div class="container">
+        <div class="navbar-header">
+            <h3 class="navbar-brand">Cargo Delivery Service</h3>
+        </div>
+        <ul class="nav nav-pills">
+            <c:if test="${sessionScope.user!=null}">
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=main"><fmt:message
+                            key="account.anchor.main_page"/> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=account"><fmt:message key="all.label.account"/> </a>
+                </li>
+                <c:if test="${user.getRole().name()==\"MANAGER\"}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/controller?command=report"><fmt:message
+                                key="account.anchor.reports"/> </a>
+                    </li>
+                </c:if>
+                <li class="nav-item">
+                    <a class="nav-link" href="/controller?command=logout"><fmt:message key="all.button.logout"/></a>
+                </li>
+            </c:if>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                   aria-expanded="false">${locale.getLanguage().toUpperCase()}</a>
+                <div class="dropdown-menu">
+                    <c:forEach var="item" items="${applicationScope.locales}">
+                        <a class="dropdown-item"
+                           href="/controller?command=changeLocale&choosenLang=${item.name()}&from=${current}">${item.name()}</a>
+                    </c:forEach>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
