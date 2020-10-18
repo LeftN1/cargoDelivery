@@ -27,7 +27,11 @@ public class RegisterCommand extends Command {
         String password = req.getParameter("password");
         String confirm = req.getParameter("confirm");
 
+
         Locale locale = (Locale) req.getSession().getAttribute("locale");
+        if(locale == null){
+            locale = Locale.getDefault();
+        }
 
         ResourceBundle rb = ResourceBundle.getBundle("resources", locale);
 

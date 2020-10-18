@@ -3,15 +3,13 @@
 
 
 <c:set var="title" value="CDS"/>
-<c:set var="current" value="main" />
+<c:set var="current" value="main"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 
-
 <div class="container border border-light">
-    <div class="row justify-content-between">
+    <div class="row">
         <div class="col-md-4">
-
             <c:if test="${sessionScope.user==null}">
                 <form name="loginForm" action="/controller" method="post">
                     <input type="hidden" name="command" value="login"/>
@@ -45,22 +43,15 @@
                     </div>
                 </form>
             </c:if>
-
-
         </div>
-
-        <div class="col-md-3">
-
-        </div>
-
     </div>
 
-    <br>
-    <br>
 
     <div class="row">
-        <div class="col-md-6">
 
+        <div class="col-md-6">
+            <br>
+            <br>
             <form name="changeCurrent" action="controller" method="post">
                 <div class="form-group row">
                     <div class="col-md-6">
@@ -135,23 +126,21 @@
             <br><fmt:message key="main.label.parcel_weight"/> ${weight} <fmt:message key="all.label.kg"/>
             <br><fmt:message key="main.label.parcel_volume"/> ${volume} <fmt:message key="all.label.dm3"/>
         </div>
+
         <div class="col-md-6">
-            <p><fmt:message key="main.label.delivery_cost_from_city"/> ${sessionScope.currentCity.getName(locale)}:</p>
+            <p><fmt:message key="main.label.delivery_cost_from_city"/>
+                <strong> ${sessionScope.currentCity.getName(locale)} </strong> : </p>
             <table class="table table-striped table-bordered table-condensed">
                 <thead>
                 <tr>
-
-
-                    <th class="col-md-8" scope="col"><fmt:message key="all.label.city"/><a style="text-decoration: none"
-                                                                                           href="<%=Path.COMMAND__MAIN%>&sort=city&order=asc">&#9650;</a><a
-                            style="text-decoration: none"
-                            href="<%=Path.COMMAND__MAIN%>&sort=city&order=desc">&#9660;</a>
+                    <th class="col-md-8" scope="col"><fmt:message key="all.label.city"/>
+                        <a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=asc">&#9650;</a>
+                        <a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=city&order=desc">&#9660;</a>
                     </th>
 
-                    <th scope="col"><fmt:message key="all.label.distance"/><a style="text-decoration: none"
-                                                                              href="<%=Path.COMMAND__MAIN%>&sort=distance&order=asc">&#9650;</a><a
-                            style="text-decoration: none"
-                            href="<%=Path.COMMAND__MAIN%>&sort=distance&order=desc">&#9660;</a>
+                    <th scope="col"><fmt:message key="all.label.distance"/>
+                        <a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=asc">&#9650;</a>
+                        <a style="text-decoration: none" href="<%=Path.COMMAND__MAIN%>&sort=distance&order=desc">&#9660;</a>
                     </th>
                     <th scope="col"><fmt:message key="all.label.cost"/></th>
 

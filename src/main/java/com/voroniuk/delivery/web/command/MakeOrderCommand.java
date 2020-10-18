@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class MakeOrderCommand extends Command {
 
@@ -23,7 +25,13 @@ public class MakeOrderCommand extends Command {
         CityDAO cityDAO = new CityDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-        String adress = req.getParameter("adress");
+        Locale locale = (Locale) req.getSession().getAttribute("locale");
+        if (locale == null) {
+            locale = Locale.getDefault();
+        }
+
+        ResourceBundle rb = ResourceBundle.getBundle("resources", locale);
+
         CargoType cType = CargoType.getTypeById(Integer.parseInt(req.getParameter("type")));
 
         int weight;
@@ -42,14 +50,22 @@ public class MakeOrderCommand extends Command {
             return Path.COMMAND__ACCOUNT;
         }
 
-        //Тут приходится искать по имени, потому что не получается неявно передать cityId при помощи <input> + <datalist>
+
         City currentCity = cityDAO.findCityByName(req.getParameter("current"));
-        if(currentCity == null){
+        if (currentCity == null) {
+            req.setAttribute("origin_city_msg", rb.getString("user.error.message.origin_not_valid"));
             return Path.COMMAND__ACCOUNT;
         }
 
         City destination = cityDAO.findCityByName(req.getParameter("cityInp"));
-        if(destination == null){
+        if (destination == null) {
+            req.setAttribute("destination_city_msg", rb.getString("user.error.message.destination_not_valid"));
+            return Path.COMMAND__ACCOUNT;
+        }
+
+        String address = req.getParameter("address");
+        if(address == null){
+            req.setAttribute("address_msg", rb.getString("user.error.message.address_is_empty"));
             return Path.COMMAND__ACCOUNT;
         }
 
@@ -60,7 +76,7 @@ public class MakeOrderCommand extends Command {
             LOG.debug("do cost calculation");
             req.setAttribute("lastCurrent", currentCity);
             req.setAttribute("destination", destination);
-            req.setAttribute("adress", adress);
+            req.setAttribute("address", address);
             req.setAttribute("cType", cType);
             req.setAttribute("weight", weight);
             req.setAttribute("length", length);
@@ -78,7 +94,7 @@ public class MakeOrderCommand extends Command {
         delivery.setUser((User) req.getSession().getAttribute("user"));
         delivery.setOrigin(currentCity);
         delivery.setDestination(destination);
-        delivery.setAdress(adress);
+        delivery.setAddress(address);
         delivery.setType(cType);
         delivery.setWeight(weight);
         delivery.setVolume(volume);

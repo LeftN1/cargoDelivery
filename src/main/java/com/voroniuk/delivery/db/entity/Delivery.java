@@ -96,7 +96,7 @@ public class Delivery implements Serializable {
         return adress;
     }
 
-    public void setAdress(String adress) {
+    public void setAddress(String adress) {
         this.adress = adress;
     }
 

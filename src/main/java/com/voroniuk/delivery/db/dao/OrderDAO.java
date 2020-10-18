@@ -119,7 +119,7 @@ public class OrderDAO {
                     delivery.setUser(userDAO.findUserById(uId));
                     delivery.setOrigin(cityDAO.findCityById(originCityId));
                     delivery.setDestination(cityDAO.findCityById(destinationCityId));
-                    delivery.setAdress(adress);
+                    delivery.setAddress(adress);
                     delivery.setType(type);
                     delivery.setWeight(weight);
                     delivery.setVolume(volume);
@@ -219,7 +219,7 @@ public class OrderDAO {
                     delivery.setUser(userDAO.findUserById(uId));
                     delivery.setOrigin(cityDAO.findCityById(originCityId));
                     delivery.setDestination(cityDAO.findCityById(destinationCityId));
-                    delivery.setAdress(adress);
+                    delivery.setAddress(adress);
                     delivery.setType(type);
                     delivery.setWeight(weight);
                     delivery.setVolume(volume);
@@ -308,7 +308,7 @@ public class OrderDAO {
                     delivery.setUser(userDAO.findUserById(uId));
                     delivery.setOrigin(cityDAO.findCityById(originCityId));
                     delivery.setDestination(cityDAO.findCityById(destinationCityId));
-                    delivery.setAdress(adress);
+                    delivery.setAddress(adress);
                     delivery.setType(type);
                     delivery.setWeight(weight);
                     delivery.setVolume(volume);

@@ -46,7 +46,10 @@
 <nav class="navbar navbar-defualt">
     <div class="container">
         <div class="navbar-header">
-            <h3 class="navbar-brand">Cargo Delivery Service</h3>
+            <h2 class="navbar-brand">Cargo Delivery Service</h2>
+            <c:if test="${sessionScope.user!=null}">
+                <p><fmt:message key="all.label.loged_in_as"/><strong> ${sessionScope.user.getLogin()} </strong> </p>
+            </c:if>
         </div>
         <ul class="nav nav-pills">
             <li class="nav-item">
@@ -55,7 +58,8 @@
             </li>
             <c:if test="${sessionScope.user==null}">
                 <li class="nav-item">
-                    <a class="nav-link" href="/controller?command=register"><fmt:message key="register.button.register"/> </a>
+                    <a class="nav-link" href="/controller?command=register"><fmt:message
+                            key="register.button.register"/> </a>
                 </li>
             </c:if>
             <c:if test="${sessionScope.user!=null}">

@@ -59,7 +59,7 @@ public class SaveCommand extends Command {
         delivery.setCost(cost);
         delivery.setOrigin(origin);
         delivery.setDestination(destination);
-        delivery.setAdress(adress);
+        delivery.setAddress(adress);
 
         orderDAO.updateDelivery(delivery);
 
