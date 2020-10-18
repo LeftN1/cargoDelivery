@@ -270,8 +270,36 @@ update delivery_status set date_time=1602460860000 where delivery_id=14;
 update delivery_status set date_time=1602115260000 where delivery_id=15;
 update delivery_status set date_time=1602115260000 where delivery_id=16;
 
-SELECT * FROM deliveryservice.delivery_status;
+/*
+		Report request 3
+*/
+SELECT id, user_id, origin_city_id, destination_city_id, adress, cargo_type, weight, volume, cost, delivery_id, status_id FROM deliveries 
+join delivery_status on id=delivery_id
+where status_id=2
+		and CASE
+			WHEN 0 > 0 THEN origin_city_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN destination_city_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN user_id = 1
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN date_time > 1702531284720
+			ELSE true
+			END
+		and CASE
+			WHEN 0 > 0 THEN date_time < 1602531284720
+			ELSE true
+			END
+limit 0,100;
 
+select * from delivery_status;
+select * from deliveries;
 
 
 
