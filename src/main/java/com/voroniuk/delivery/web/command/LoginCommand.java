@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class LoginCommand extends Command {
     private static final Logger LOG = Logger.getLogger(LoginCommand.class);
@@ -21,8 +23,17 @@ public class LoginCommand extends Command {
         LOG.debug("Command starts");
 
         UserDAO userDAO = new UserDAO();
+
+        Locale locale = (Locale) req.getSession().getAttribute("locale");
+        if (locale == null) {
+            locale = Locale.getDefault();
+        }
+        ResourceBundle rb = ResourceBundle.getBundle("resources", locale);
+
         String login = req.getParameter("login");
         LOG.debug("request param: login: " + login);
+
+
 
         String password = req.getParameter("password");
         String passHash = DigestUtils.md5Hex(password);
@@ -31,7 +42,7 @@ public class LoginCommand extends Command {
         String errorMessage;
 
         if (login == null || password == null || login.isEmpty() || password.isEmpty()) {
-            errorMessage = "Login/password cannot be empty";
+            errorMessage = rb.getString("login.message.login_pass_cant_be_empty");
             req.setAttribute("msg", errorMessage);
             LOG.error("errorMessage --> " + errorMessage);
             forward = Path.COMMAND__MAIN;
@@ -55,7 +66,7 @@ public class LoginCommand extends Command {
 
 
         } else {
-            errorMessage = "login or password incorrect";
+            errorMessage = rb.getString("login.message.login_pass_incorrect");
             req.setAttribute("msg", errorMessage);
             forward = Path.COMMAND__MAIN;
         }

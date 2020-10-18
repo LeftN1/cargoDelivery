@@ -1,15 +1,11 @@
 import com.voroniuk.delivery.db.dao.*;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
-import com.voroniuk.delivery.db.entity.Role;
-import com.voroniuk.delivery.db.entity.User;
 
-import java.io.*;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 
 
 public class Test {

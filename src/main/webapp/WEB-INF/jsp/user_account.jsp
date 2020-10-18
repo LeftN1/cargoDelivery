@@ -198,7 +198,7 @@
                         <form class="tdform" action="/controller" method="get">
                             <input type="hidden" name="command" value="pay">
                             <input type="hidden" name="delivery_id" value="${delivery.getId()}">
-                            <input class="btn btn-primary" type="submit" value="<fmt:message key="all.href.pay"/>">
+                            <input class="btn btn-outline-primary" type="submit" value="<fmt:message key="all.href.pay"/>">
                         </form>
                     </td>
                 </c:if>
