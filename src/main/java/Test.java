@@ -1,11 +1,9 @@
 import com.voroniuk.delivery.db.dao.*;
-import com.voroniuk.delivery.db.entity.Delivery;
-import com.voroniuk.delivery.db.entity.DeliveryStatus;
+import com.voroniuk.delivery.db.entity.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 
 
 public class Test {
@@ -18,17 +16,37 @@ public class Test {
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
-        int count = orderDAO.countReportDeliveries(DeliveryStatus.RECIEVED, 0, 0,0, new Date(0), new Date(0));
-        System.out.println("count: " + count);
+        City origin;
+        City destination;
+        String address = "address";
+        User user;
+        Delivery delivery;
 
-        List<Delivery> deliveries = orderDAO.reportDeliveriesByStatusAndCityIdAndDate(DeliveryStatus.RECIEVED, 0, 0, new Date(0), new Date(0), 0, 10);
+        origin = cityDAO.findCityById(1);
+        destination = cityDAO.findCityById(2);
+        user = userDAO.findUserById(1);
 
-        System.out.println(deliveries.size());
+        delivery = new Delivery();
+        delivery.setUser(user);
+        delivery.setOrigin(origin);
+        delivery.setDestination(destination);
+        delivery.setAddress(address);
+        delivery.setType(CargoType.CARGO);
+        delivery.setWeight(1);
+        delivery.setVolume(1);
+        delivery.setCost(1);
+        orderDAO.saveDelivery(delivery);
 
-        for (Delivery delivery : deliveries){
-            System.out.println("id: " + delivery.getId() + "   date: "+delivery.getStatusDateString(DeliveryStatus.NEW));
-        }
+        orderDAO.changeCurrentStatus(delivery, DeliveryStatus.PROCESSED, new Date());
 
+        System.out.println(delivery.getStatusMap());
+
+        System.out.println(delivery.getLastStatus());
+
+        Delivery founded = orderDAO.findDeliveryById(delivery.getId());
+
+        System.out.println(founded.getStatusMap());
+        System.out.println(founded.getLastStatus());
 
     }
 }

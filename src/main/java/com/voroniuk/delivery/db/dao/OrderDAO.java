@@ -37,6 +37,8 @@ public class OrderDAO {
             }
 
             saveDeliveryStatuses(delivery);
+            changeCurrentStatus(delivery, DeliveryStatus.NEW, new Date());
+            delivery.setStatusMap(findStatusesByDeliveryId(delivery.getId()));
 
             LOG.info("Delivery has been added");
         } catch (SQLException e) {
@@ -80,6 +82,7 @@ public class OrderDAO {
         } catch (SQLException e) {
             LOG.warn(e);
         }
+        delivery.getStatusMap().put(status, date);
     }
 
     public Delivery findDeliveryById(int id) {

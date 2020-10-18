@@ -39,7 +39,6 @@ public class Utils {
 
     public static void createXLS(Map<String, List<Delivery>> report, Map<String, Total> totals, Locale locale, String name) {
 
-
         ResourceBundle rb = ResourceBundle.getBundle("resources", locale);
 
         HSSFWorkbook workbook = new HSSFWorkbook();
