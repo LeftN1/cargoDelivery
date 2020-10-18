@@ -28,7 +28,7 @@ public class ReportCommand extends Command {
         LOG.debug("Command starts");
 
         String sessionId = req.getSession().getId();
-        String reportName = sessionId + ".xls";
+
 
 
         OrderDAO orderDAO = new OrderDAO();
@@ -62,9 +62,6 @@ public class ReportCommand extends Command {
 
         Date startDate;
         Date endDate;
-
-        City origin;
-        City destination;
 
         long oneDay = 24 * 60 * 60 * 1000;
 
@@ -133,7 +130,7 @@ public class ReportCommand extends Command {
                 totals.put(repFormat.format(currDate), total);
                 report.put(repFormat.format(currDate), currList);
             }
-            Utils.createXLS(report, totals, locale, reportName);
+
         }
 
         if (type.equals("by_city")) {
@@ -162,14 +159,16 @@ public class ReportCommand extends Command {
                 totals.put(currCity.getName(locale), total);
                 report.put(currCity.getName(locale), currList);
             }
-            Utils.createXLS(report, totals, locale, reportName);
         }
 
         req.setAttribute("pageNo", pageNo);
         req.setAttribute("totalPages", totalPages);
-        req.setAttribute("report", report);
-        req.setAttribute("totals", totals);
-        req.setAttribute("reportName", reportName);
+//        req.setAttribute("report", report);
+//        req.setAttribute("totals", totals);
+//        req.setAttribute("reportName", reportName);
+
+        req.getSession().setAttribute("report", report);
+        req.getSession().setAttribute("totals", totals);
 
         req.getSession().setAttribute("type", type);
         req.getSession().setAttribute("status", status);
