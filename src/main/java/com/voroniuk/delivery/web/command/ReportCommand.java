@@ -103,21 +103,25 @@ public class ReportCommand extends Command {
 
         SimpleDateFormat repFormat = new SimpleDateFormat("dd.MM.yyyy");
 
-        int totalDel = orderDAO.countDeliveries(status, 0, originId, destinationId, startDate, endDate);
-        List<Delivery> deliveries = orderDAO.findDeliveriesByStatusAndCityIdAndDate(status, originId, destinationId, startDate, endDate, 0, totalDel);
+        int totalDel = orderDAO.countReportDeliveries(status, 0, originId, destinationId, startDate, endDate);
+        List<Delivery> deliveries = orderDAO.reportDeliveriesByStatusAndCityIdAndDate(status, originId, destinationId, startDate, endDate, 0, totalDel);
 
         if (type.equals("by_date")) {
-            deliveries = deliveries.stream().sorted(Comparator.comparing(Delivery::getLastDate)).collect(Collectors.toList());
+            final DeliveryStatus fStatus = status;
+
+            Comparator<Delivery> statusDateComparator = Comparator.comparing(d -> d.getStatusDate(fStatus));
+
+            deliveries = deliveries.stream().sorted(statusDateComparator).collect(Collectors.toList());
 
             if (deliveries.size() > 0) {
-                Date currDate = new Date(deliveries.get(0).getLastDate().getTime() / oneDay * oneDay);
+                Date currDate = new Date(deliveries.get(0).getStatusDate(status).getTime() / oneDay * oneDay);
                 List<Delivery> currList = new LinkedList();
                 Total total = new Total();
                 for (Delivery delivery : deliveries) {
-                    if (delivery.getLastDate().getTime() > currDate.getTime() + oneDay) {
+                    if (delivery.getStatusDate(status).getTime() > currDate.getTime() + oneDay) {
                         report.put(repFormat.format(currDate), currList);
                         totals.put(repFormat.format(currDate), total);
-                        currDate.setTime(delivery.getLastDate().getTime() / oneDay * oneDay);
+                        currDate.setTime(delivery.getStatusDate(status).getTime() / oneDay * oneDay);
                         currList = new LinkedList<>();
                         total = new Total();
                     }

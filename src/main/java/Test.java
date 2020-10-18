@@ -8,6 +8,7 @@ import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,8 +22,17 @@ public class Test {
 
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
 
-        User user = userDAO.findUserByLogin("bbb");
-        System.out.println(user.getRole()== Role.MANAGER);
+        int count = orderDAO.countReportDeliveries(DeliveryStatus.RECIEVED, 0, 0,0, new Date(0), new Date(0));
+        System.out.println("count: " + count);
+
+        List<Delivery> deliveries = orderDAO.reportDeliveriesByStatusAndCityIdAndDate(DeliveryStatus.RECIEVED, 0, 0, new Date(0), new Date(0), 0, 10);
+
+        System.out.println(deliveries.size());
+
+        for (Delivery delivery : deliveries){
+            System.out.println("id: " + delivery.getId() + "   date: "+delivery.getStatusDateString(DeliveryStatus.NEW));
+        }
+
 
     }
 }

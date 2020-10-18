@@ -31,7 +31,7 @@ public class Delivery implements Serializable {
         DeliveryStatus status = DeliveryStatus.NEW;
 
         for (Map.Entry<DeliveryStatus, Date> entry : statusMap.entrySet()) {
-            if(entry.getValue().getTime() > last){
+            if (entry.getValue().getTime() > last) {
                 status = entry.getKey();
                 last = entry.getValue().getTime();
             }
@@ -40,13 +40,32 @@ public class Delivery implements Serializable {
         return status;
     }
 
-    public String getLastDateString(){
+    public String getLastDateString() {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return format.format(statusMap.get(getLastStatus()));
     }
 
-    public Date getLastDate(){
+    public Date getLastDate() {
         return statusMap.get(getLastStatus());
+    }
+
+
+    public Date getStatusDate(DeliveryStatus status) {
+        if (getLastStatus().getId() >= status.getId()) {
+            return statusMap.get(status);
+        } else {
+            return null;
+        }
+    }
+
+    public String getStatusDateString(DeliveryStatus status) {
+
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        if (getLastStatus().getId() >= status.getId()) {
+            return format.format(getStatusDate(status));
+        } else {
+            return null;
+        }
     }
 
     public Map<DeliveryStatus, Date> getStatusMap() {
@@ -127,10 +146,6 @@ public class Delivery implements Serializable {
 
     public void setDestination(City destination) {
         this.destination = destination;
-    }
-
-    public Date getDateByStatus(DeliveryStatus deliveryStatus){
-        return statusMap.get(deliveryStatus);
     }
 
     @Override

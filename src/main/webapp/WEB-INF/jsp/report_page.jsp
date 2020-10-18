@@ -83,6 +83,7 @@
     </table>
 </form>
 <a href="/controller?command=download"><fmt:message key="report.ancor.download_xls"/></a>
+${sessionScope.status.getName(locale)}
 <table>
     <tr>
         <th><fmt:message key="all.label.id"/></th>
@@ -94,7 +95,8 @@
         <th><fmt:message key="all.label.volume"/></th>
         <th><fmt:message key="all.label.cost"/></th>
         <th><fmt:message key="all.label.status"/></th>
-        <th><fmt:message key="all.label.date"/></th>
+        <th><fmt:message key="all.label.chosen_status_date"/>${sessionScope.status.getName(locale)}</th>
+        <th><fmt:message key="all.label.last_date"/></th>
     </tr>
 
     <c:forEach var="entry" items="${report}">
@@ -112,6 +114,7 @@
                 <td align="right">${delivery.getVolume()}</td>
                 <td align="right">${delivery.getCost()}</td>
                 <td>${delivery.getLastStatus().getName(locale)}</td>
+                <td>${delivery.getStatusDateString(sessionScope.status)}</td>
                 <td>${delivery.getLastDateString()}</td>
             </tr>
         </c:forEach>
@@ -124,6 +127,7 @@
             <td><b>${totals.get(entry.key).getTotalWeight()}</b></td>
             <td align="right"><b>${totals.get(entry.key).getTotalVolume()}</b></td>
             <td align="right"><b>${totals.get(entry.key).getTotalCost()}</b></td>
+            <td></td>
             <td></td>
             <td></td>
         </tr>

@@ -142,7 +142,7 @@ public class OrderDAO {
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
 
-        if(endDate.getTime() < startDate.getTime()){
+        if (endDate.getTime() < startDate.getTime()) {
             endDate = new Date(0);
         }
 
@@ -236,12 +236,105 @@ public class OrderDAO {
         return deliveries;
     }
 
+    public List<Delivery> reportDeliveriesByStatusAndUserIdAndDate(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
+        List<Delivery> deliveries = new LinkedList<>();
+
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+        if (endDate.getTime() < startDate.getTime()) {
+            endDate = new Date(0);
+        }
+
+        String sql = "SELECT id, user_id, origin_city_id, destination_city_id, adress, cargo_type, weight, volume, cost, delivery_id, status_id FROM deliveries \n" +
+                "join delivery_status on id=delivery_id\n" +
+                "where status_id=?\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN origin_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN destination_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN user_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN date_time > ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN date_time < ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "limit ?, ?;";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, status.getId());
+            statement.setInt(2, originId);
+            statement.setInt(3, originId);
+            statement.setInt(4, destinationId);
+            statement.setInt(5, destinationId);
+            statement.setInt(6, userId);
+            statement.setInt(7, userId);
+            statement.setLong(8, startDate.getTime());
+            statement.setLong(9, startDate.getTime());
+            statement.setLong(10, endDate.getTime());
+            statement.setLong(11, endDate.getTime());
+            statement.setInt(12, start);
+            statement.setInt(13, offset);
+
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                while (resultSet.next()) {
+                    int id = resultSet.getInt(1);
+
+                    int uId = resultSet.getInt(2);
+                    int originCityId = resultSet.getInt(3);
+                    int destinationCityId = resultSet.getInt(4);
+                    String adress = resultSet.getString(5);
+                    CargoType type = CargoType.getTypeById(resultSet.getInt(6));
+                    int weight = resultSet.getInt(7);
+                    int volume = resultSet.getInt(8);
+                    int cost = resultSet.getInt(9);
+
+                    Delivery delivery = new Delivery();
+                    delivery.setId(id);
+                    delivery.setUser(userDAO.findUserById(uId));
+                    delivery.setOrigin(cityDAO.findCityById(originCityId));
+                    delivery.setDestination(cityDAO.findCityById(destinationCityId));
+                    delivery.setAdress(adress);
+                    delivery.setType(type);
+                    delivery.setWeight(weight);
+                    delivery.setVolume(volume);
+                    delivery.setCost(cost);
+                    delivery.setStatusMap(findStatusesByDeliveryId(id));
+
+                    deliveries.add(delivery);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return deliveries;
+    }
+
     public List<Delivery> findDeliveriesByStatusAndCityId(DeliveryStatus status, int originId, int destinationId, int start, int offset) {
         return findDeliveriesByStatusAndUserIdAndDate(status, 0, originId, destinationId, new Date(0), new Date(0), start, offset);
     }
 
     public List<Delivery> findDeliveriesByStatusAndCityIdAndDate(DeliveryStatus status, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
         return findDeliveriesByStatusAndUserIdAndDate(status, 0, originId, destinationId, startDate, endDate, start, offset);
+    }
+
+    public List<Delivery> reportDeliveriesByStatusAndCityIdAndDate(DeliveryStatus status, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
+        return reportDeliveriesByStatusAndUserIdAndDate(status, 0, originId, destinationId, startDate, endDate, start, offset);
     }
 
     public List<Delivery> findDeliveriesByStatus(DeliveryStatus status, int start, int offset) {
@@ -325,9 +418,69 @@ public class OrderDAO {
         return result;
     }
 
+    public int countReportDeliveries(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate) {
+        int result = 0;
+
+        CityDAO cityDAO = new CityDAO();
+        UserDAO userDAO = new UserDAO();
+
+
+        String sql = "SELECT count(*) FROM deliveries \n" +
+                "join delivery_status on id=delivery_id\n" +
+                "where status_id=?\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN origin_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN destination_city_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN user_id = ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN date_time > ?\n" +
+                "ELSE true\n" +
+                "END\n" +
+                "and CASE\n" +
+                "WHEN ? > 0 THEN date_time < ?\n" +
+                "ELSE true\n" +
+                "END\n";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, status.getId());
+            statement.setInt(2, originId);
+            statement.setInt(3, originId);
+            statement.setInt(4, destinationId);
+            statement.setInt(5, destinationId);
+            statement.setInt(6, userId);
+            statement.setInt(7, userId);
+            statement.setLong(8, startDate.getTime());
+            statement.setLong(9, startDate.getTime());
+            statement.setLong(10, endDate.getTime());
+            statement.setLong(11, endDate.getTime());
+
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                if (resultSet.next()) {
+                    result = resultSet.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return result;
+    }
+
 
     public int countDeliveriesByStatusAndUser(DeliveryStatus status, User user) {
-        return countDeliveries(status, user.getId(),0,0,new Date(0),new Date(0));
+        return countDeliveries(status, user.getId(), 0, 0, new Date(0), new Date(0));
     }
 
     public int countDeliveriesByStatus(DeliveryStatus status) {
