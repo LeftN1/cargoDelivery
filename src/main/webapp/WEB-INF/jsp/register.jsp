@@ -5,12 +5,10 @@
 <c:set var="current" value="register"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
-
 <div class="container border border-light">
     <h3><fmt:message key="register.label.register_page"/></h3>
     <form action="/controller" method="post">
         <input type="hidden" name="command" value="register">
-
         <div class="form-group row">
             <div class="col-md-2">
                 <label><fmt:message key="all.label.login"/></label>

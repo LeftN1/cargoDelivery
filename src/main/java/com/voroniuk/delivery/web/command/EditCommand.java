@@ -22,14 +22,22 @@ public class EditCommand extends Command {
         CityDAO cityDAO = new CityDAO();
         OrderDAO orderDAO = new OrderDAO();
 
+        String sId;
+        sId = req.getParameter("delivery_id");
+        if (sId == null) {
+            sId = (String) req.getSession().getAttribute("s_delivery_id");
+        }
 
         int id;
 
         try {
-            id = Integer.parseInt(req.getParameter("delivery_id"));
+            id = Integer.parseInt(sId);
         } catch (NumberFormatException e) {
             return Path.COMMAND__ACCOUNT;
         }
+
+        //save id to session on case change locale
+        req.getSession().setAttribute("s_delivery_id", String.valueOf(id));
 
         Delivery delivery = orderDAO.findDeliveryById(id);
 

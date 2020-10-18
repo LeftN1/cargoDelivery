@@ -23,7 +23,7 @@ public class ChangeLocaleCommand extends Command {
             from = "main";
         }
 
-        String forward = "/controller?command="+from;
+        String forward = "/controller?command=" + from;
 
         Locale choosen = SiteLocale.valueOf(req.getParameter("choosenLang")).getLocale();
         req.getSession().setAttribute("locale", choosen);
