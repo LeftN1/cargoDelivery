@@ -3,7 +3,7 @@
 
 
 <c:set var="title" value="Manager account"/>
-<c:set var="current" value="account"/>
+<c:set var="current" value="manager_account"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
 
 <div class="container border border-light">

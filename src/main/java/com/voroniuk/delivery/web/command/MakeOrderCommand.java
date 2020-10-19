@@ -38,8 +38,9 @@ public class MakeOrderCommand extends Command {
         int length;
         int width;
         int height;
-        int volume;
-        int cost;
+        int volume = 0;
+        int cost = 0;
+        boolean valid = true;
 
         try {
             weight = Integer.parseInt(req.getParameter("weight"));
@@ -47,33 +48,61 @@ public class MakeOrderCommand extends Command {
             width = Integer.parseInt(req.getParameter("width"));
             height = Integer.parseInt(req.getParameter("height"));
         } catch (NumberFormatException e) {
-            return Path.COMMAND__ACCOUNT;
+            return Path.COMMAND__USER_ACCOUNT;
         }
 
 
         City currentCity = cityDAO.findCityByName(req.getParameter("current"));
         if (currentCity == null) {
             req.setAttribute("origin_city_msg", rb.getString("user.error.message.origin_not_valid"));
-            return Path.COMMAND__ACCOUNT;
+            valid = false;
+            //            return Path.COMMAND__USER_ACCOUNT;
         }
 
         City destination = cityDAO.findCityByName(req.getParameter("cityInp"));
         if (destination == null) {
             req.setAttribute("destination_city_msg", rb.getString("user.error.message.destination_not_valid"));
-            return Path.COMMAND__ACCOUNT;
+            valid = false;
+            //            return Path.COMMAND__USER_ACCOUNT;
         }
 
         String address = req.getParameter("address");
-        if(address == null){
+        if (address.equals("")) {
             req.setAttribute("address_msg", rb.getString("user.error.message.address_is_empty"));
-            return Path.COMMAND__ACCOUNT;
+            valid = false;
+            //            return Path.COMMAND__USER_ACCOUNT;
         }
 
-        volume = Calculations.getVolume(length, width, height);
-        cost = Calculations.getCost(currentCity, destination, weight, volume);
+        if (currentCity != null && destination != null) {
+            volume = Calculations.getVolume(length, width, height);
+            cost = Calculations.getCost(currentCity, destination, weight, volume);
+        }
 
         if (req.getParameter("calculate") != null) {
             LOG.debug("do cost calculation");
+            valid = false;
+//            return Path.COMMAND__USER_ACCOUNT;
+        }
+
+
+        if (valid) {
+            LOG.debug("Make delivery order");
+
+            Delivery delivery = new Delivery();
+            delivery.setUser((User) req.getSession().getAttribute("user"));
+            delivery.setOrigin(currentCity);
+            delivery.setDestination(destination);
+            delivery.setAddress(address);
+            delivery.setType(cType);
+            delivery.setWeight(weight);
+            delivery.setVolume(volume);
+            delivery.setCost(cost);
+            delivery.addStatus(DeliveryStatus.NEW, new Date());
+
+            orderDAO.saveDelivery(delivery);
+
+            LOG.debug("Delivery order saved");
+        } else {
             req.setAttribute("lastCurrent", currentCity);
             req.setAttribute("destination", destination);
             req.setAttribute("address", address);
@@ -83,35 +112,20 @@ public class MakeOrderCommand extends Command {
             req.setAttribute("width", width);
             req.setAttribute("height", height);
             req.setAttribute("cost", cost);
-            LOG.debug("cost calculation finished.");
+            LOG.debug("save attributes");
             LOG.debug("MakeOrderCommand finished");
-            return Path.COMMAND__ACCOUNT;
+            return Path.COMMAND__USER_ACCOUNT;
         }
 
-        LOG.debug("Make delivery order");
-
-        Delivery delivery = new Delivery();
-        delivery.setUser((User) req.getSession().getAttribute("user"));
-        delivery.setOrigin(currentCity);
-        delivery.setDestination(destination);
-        delivery.setAddress(address);
-        delivery.setType(cType);
-        delivery.setWeight(weight);
-        delivery.setVolume(volume);
-        delivery.setCost(cost);
-        delivery.addStatus(DeliveryStatus.NEW, new Date());
-
-        orderDAO.saveDelivery(delivery);
-
-        LOG.debug("Delivery order saved");
         LOG.debug("MakeOrderCommand finished");
         //PRG pattern
-        String redirect = Path.COMMAND__ACCOUNT;
+        String redirect = Path.COMMAND__USER_ACCOUNT;
         resp.setStatus(resp.SC_MOVED_PERMANENTLY);
         resp.setHeader("Location", redirect);
         LOG.debug("Redirect to :" + redirect);
 
-        return Path.COMMAND__ACCOUNT;
+        return Path.COMMAND__USER_ACCOUNT;
     }
+
 
 }
