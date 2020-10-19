@@ -48,5 +48,8 @@ public class Test {
         System.out.println(founded.getStatusMap());
         System.out.println(founded.getLastStatus());
 
+        Delivery d = orderDAO.findDeliveryById(21);
+        System.out.println(d.getStatusMap());
+
     }
 }

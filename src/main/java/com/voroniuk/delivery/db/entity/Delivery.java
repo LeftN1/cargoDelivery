@@ -1,5 +1,7 @@
 package com.voroniuk.delivery.db.entity;
 
+import org.apache.log4j.Logger;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,6 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Delivery implements Serializable {
+    private static final Logger LOG = Logger.getLogger(Delivery.class);
+
     private int id;
     private User user;
     private City origin;
@@ -24,6 +28,7 @@ public class Delivery implements Serializable {
 
     public void addStatus(DeliveryStatus status, Date date) {
         statusMap.put(status, date);
+        LOG.debug("Status added: " + status);
     }
 
     public DeliveryStatus getLastStatus() {
