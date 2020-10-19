@@ -219,7 +219,7 @@ update delivery_status set date_time=1602115260000 where delivery_id=16;
 */
 SELECT id, user_id, origin_city_id, destination_city_id, adress, cargo_type, weight, volume, cost, delivery_id, status_id FROM deliveries 
 join delivery_status on id=delivery_id
-where status_id=2
+where status_id=1
 		and CASE
 			WHEN 0 > 0 THEN origin_city_id = 1
 			ELSE true

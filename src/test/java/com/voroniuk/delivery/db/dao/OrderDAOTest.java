@@ -1,7 +1,7 @@
 package com.voroniuk.delivery.db.dao;
 
 import com.voroniuk.delivery.db.entity.*;
-import junit.framework.TestCase;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -147,11 +147,9 @@ public class OrderDAOTest {
                 founded = d;
             }
         }
-
         assertTrue(deliveries.size()>0);
         assertNotNull(founded);
         assertNotEquals(reportStatus, founded.getLastStatus());
-
     }
 
 

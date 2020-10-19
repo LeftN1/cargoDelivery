@@ -1,6 +1,7 @@
 import com.voroniuk.delivery.db.dao.*;
 import com.voroniuk.delivery.db.entity.*;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -24,32 +25,30 @@ public class Test {
 
         origin = cityDAO.findCityById(1);
         destination = cityDAO.findCityById(2);
-        user = userDAO.findUserById(1);
+        user = userDAO.findUserById(2);
 
-        delivery = new Delivery();
-        delivery.setUser(user);
-        delivery.setOrigin(origin);
-        delivery.setDestination(destination);
-        delivery.setAddress(address);
-        delivery.setType(CargoType.CARGO);
-        delivery.setWeight(1);
-        delivery.setVolume(1);
-        delivery.setCost(1);
-        orderDAO.saveDelivery(delivery);
+        Date dMin = new Date(0);
+        Date dMax = new Date(0);
 
-        orderDAO.changeCurrentStatus(delivery, DeliveryStatus.PROCESSED, new Date());
+        try {
+            dMin = format.parse("10.09.2020");
+            dMax = format.parse("10.10.2020");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
-        System.out.println(delivery.getStatusMap());
+        long lMin = dMin.getTime();
+        long lMax = dMax.getTime();
+        long delta = lMax - lMin;
 
-        System.out.println(delivery.getLastStatus());
 
-        Delivery founded = orderDAO.findDeliveryById(delivery.getId());
+        for (int i = 0; i < 10; i++) {
 
-        System.out.println(founded.getStatusMap());
-        System.out.println(founded.getLastStatus());
+            long rand = (long) (Math.random() * delta + lMin);
 
-        Delivery d = orderDAO.findDeliveryById(21);
-        System.out.println(d.getStatusMap());
+            System.out.println(format.format(new Date(rand)));
+        }
+
 
     }
 }
