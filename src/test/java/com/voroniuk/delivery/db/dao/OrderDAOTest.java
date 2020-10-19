@@ -40,6 +40,7 @@ public class OrderDAOTest {
         delivery.setWeight(1);
         delivery.setVolume(1);
         delivery.setCost(1);
+        delivery.addStatus(DeliveryStatus.NEW, new Date());
         orderDAO.saveDelivery(delivery);
     }
 
@@ -147,9 +148,9 @@ public class OrderDAOTest {
             }
         }
 
-//        assertTrue(deliveries.size()>0);
-//        assertNotNull(founded);
-//        assertNotEquals(reportStatus, founded.getLastStatus());
+        assertTrue(deliveries.size()>0);
+        assertNotNull(founded);
+        assertNotEquals(reportStatus, founded.getLastStatus());
 
     }
 
