@@ -27,11 +27,19 @@ public class AccountCommand extends Command {
         User user = (User) req.getSession().getAttribute("user");
 
         if(user.getRole()== Role.USER) {
-            forward = Path.COMMAND__USER_ACCOUNT;
+            String redirect = Path.COMMAND__USER_ACCOUNT;
+            resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+            resp.setHeader("Location", redirect);
+            LOG.debug("Redirect to :" + redirect);
+//            forward = Path.COMMAND__USER_ACCOUNT;
         }
 
         if(user.getRole()== Role.MANAGER) {
-            forward = Path.COMMAND__MANAGER_ACCOUNT;
+            String redirect = Path.COMMAND__MANAGER_ACCOUNT;
+            resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+            resp.setHeader("Location", redirect);
+            LOG.debug("Redirect to :" + redirect);
+//            forward = Path.COMMAND__MANAGER_ACCOUNT;
         }
 
         return forward;

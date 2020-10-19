@@ -27,12 +27,8 @@ public class ReportCommand extends Command {
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         LOG.debug("Command starts");
 
-        String sessionId = req.getSession().getId();
-
-
-
         OrderDAO orderDAO = new OrderDAO();
-        CityDAO cityDAO = new CityDAO();
+
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
         String rStatus = req.getParameter("status");
@@ -89,12 +85,6 @@ public class ReportCommand extends Command {
             endDate = new Date(0);
         }
 
-
-        int pageNo;
-        int pageSize = 10;
-        int totalPages = 10;
-        pageNo = Utils.getPageNoFromRequest(req, "page", totalPages);
-
         Map<String, List<Delivery>> report = new LinkedHashMap<>();
         Map<String, Total> totals = new LinkedHashMap<>();
 
@@ -134,9 +124,9 @@ public class ReportCommand extends Command {
         }
 
         if (type.equals("by_city")) {
-            if (originId == 0){
-                originId = 266;
-            }
+//            if (originId == 0){
+//                originId = 266;
+//            }
             deliveries = deliveries.stream().sorted(Comparator.comparing(o -> o.getDestination().getName(locale))).collect(Collectors.toList());
 
             if (deliveries.size() > 0) {
@@ -161,11 +151,6 @@ public class ReportCommand extends Command {
             }
         }
 
-        req.setAttribute("pageNo", pageNo);
-        req.setAttribute("totalPages", totalPages);
-//        req.setAttribute("report", report);
-//        req.setAttribute("totals", totals);
-//        req.setAttribute("reportName", reportName);
 
         req.getSession().setAttribute("report", report);
         req.getSession().setAttribute("totals", totals);

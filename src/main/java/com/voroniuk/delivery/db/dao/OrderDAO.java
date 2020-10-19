@@ -143,6 +143,7 @@ public class OrderDAO {
 
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
+        User user = userDAO.findUserById(userId);
 
         if (endDate.getTime() < startDate.getTime()) {
             endDate = new Date(0);
@@ -207,7 +208,7 @@ public class OrderDAO {
                 while (resultSet.next()) {
                     int id = resultSet.getInt(1);
 
-                    int uId = resultSet.getInt(2);
+//                    int uId = resultSet.getInt(2);
                     int originCityId = resultSet.getInt(3);
                     int destinationCityId = resultSet.getInt(4);
                     String adress = resultSet.getString(5);
@@ -218,7 +219,7 @@ public class OrderDAO {
 
                     Delivery delivery = new Delivery();
                     delivery.setId(id);
-                    delivery.setUser(userDAO.findUserById(uId));
+                    delivery.setUser(user);
                     delivery.setOrigin(cityDAO.findCityById(originCityId));
                     delivery.setDestination(cityDAO.findCityById(destinationCityId));
                     delivery.setAddress(adress);

@@ -169,7 +169,7 @@
     </form>
 
 
-    <table class="table table-striped table-bordered table-condensed">
+    <table class="table table-striped table-bordered table-condensed table-sm">
         <tr>
             <th><fmt:message key="all.label.id"/></th>
             <th><fmt:message key="all.label.origin"/></th>
