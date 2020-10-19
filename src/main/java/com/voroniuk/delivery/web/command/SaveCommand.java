@@ -21,7 +21,6 @@ public class SaveCommand extends Command {
         CityDAO cityDAO = new CityDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-
         int id;
 
         int weight;
@@ -49,10 +48,7 @@ public class SaveCommand extends Command {
             return Path.COMMAND__EDIT;
         }
 
-
-
         Delivery delivery = orderDAO.findDeliveryById(id);
-
 
         delivery.setWeight(weight);
         delivery.setVolume(volume);

@@ -29,7 +29,7 @@ public class OrderDAOTest {
         orderDAO = new OrderDAO();
         origin = cityDAO.findCityById(1);
         destination = cityDAO.findCityById(2);
-        user = userDAO.findUserById(1);
+        user = userDAO.findUserById(2);
 
         delivery = new Delivery();
         delivery.setUser(user);

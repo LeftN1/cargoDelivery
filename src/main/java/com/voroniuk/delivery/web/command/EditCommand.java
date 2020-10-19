@@ -19,7 +19,7 @@ public class EditCommand extends Command {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         LOG.debug("Command starts");
-        CityDAO cityDAO = new CityDAO();
+
         OrderDAO orderDAO = new OrderDAO();
 
         String sId;
