@@ -13,7 +13,7 @@ public class RandomDeliveryGenerator {
 
     public static void main(String[] args) {
 
-        generate(100);
+        generate(10);
 
     }
 

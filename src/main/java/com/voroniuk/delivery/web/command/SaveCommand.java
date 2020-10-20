@@ -63,7 +63,7 @@ public class SaveCommand extends Command {
         LOG.debug("Command finished");
         //PRG pattern
         String redirect = Path.COMMAND__ACCOUNT;
-        resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+        resp.setStatus(resp.SC_TEMPORARY_REDIRECT);
         resp.setHeader("Location", redirect);
         LOG.debug("Redirect to :" + redirect);
 

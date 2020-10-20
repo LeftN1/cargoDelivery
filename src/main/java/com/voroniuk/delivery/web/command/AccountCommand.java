@@ -28,7 +28,7 @@ public class AccountCommand extends Command {
 
         if(user.getRole()== Role.USER) {
 //            String redirect = Path.COMMAND__USER_ACCOUNT;
-//            resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+//            resp.setStatus(resp.SC_TEMPORARY_REDIRECT);
 //            resp.setHeader("Location", redirect);
 //            LOG.debug("Redirect to :" + redirect);
             forward = Path.COMMAND__USER_ACCOUNT;
@@ -36,7 +36,7 @@ public class AccountCommand extends Command {
 
         if(user.getRole()== Role.MANAGER) {
 //            String redirect = Path.COMMAND__MANAGER_ACCOUNT;
-//            resp.setStatus(resp.SC_MOVED_PERMANENTLY);
+//            resp.setStatus(resp.SC_TEMPORARY_REDIRECT);
 //            resp.setHeader("Location", redirect);
 //            LOG.debug("Redirect to :" + redirect);
             forward = Path.COMMAND__MANAGER_ACCOUNT;
