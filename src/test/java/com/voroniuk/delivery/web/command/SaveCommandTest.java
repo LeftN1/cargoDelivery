@@ -78,6 +78,7 @@ public class SaveCommandTest {
         when(request.getParameter("cost")).thenReturn(String.valueOf(newCost));
         when(request.getParameter("origin")).thenReturn(newOrigin.getName(locale));
         when(request.getParameter("destination")).thenReturn(newDestination.getName(locale));
+        when(request.getParameter("type")).thenReturn("1");
     }
 
     @AfterClass

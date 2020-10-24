@@ -3,6 +3,7 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
+import com.voroniuk.delivery.db.entity.CargoType;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import org.apache.log4j.Logger;
@@ -48,6 +49,8 @@ public class SaveCommand extends Command {
             return Path.COMMAND__EDIT;
         }
 
+        CargoType cType = CargoType.getTypeById(Integer.parseInt(req.getParameter("type")));
+
         Delivery delivery = orderDAO.findDeliveryById(id);
 
         delivery.setWeight(weight);
@@ -56,6 +59,7 @@ public class SaveCommand extends Command {
         delivery.setOrigin(origin);
         delivery.setDestination(destination);
         delivery.setAddress(adress);
+        delivery.setType(cType);
 
         orderDAO.updateDelivery(delivery);
 
