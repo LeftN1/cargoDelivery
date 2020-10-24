@@ -26,9 +26,7 @@ public class Test {
         User user;
         Delivery delivery;
 
-        String name = "hello.txt";
-
-        File file = new File("src\\main\\webapp\\reports\\"+name);
-        file.delete();
+        resourceDAO.loadStatuses();
+        System.out.println(DeliveryStatus.NEW.getName(SiteLocale.EN.getLocale()));
     }
 }
