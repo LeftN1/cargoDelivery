@@ -49,6 +49,11 @@ public class GiveOutCommandTest {
         delivery.addStatus(DeliveryStatus.NEW, new Date());
         orderDAO.saveDelivery(delivery);
 
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
         when(request.getParameter("delivery_id")).thenReturn(String.valueOf(delivery.getId()));

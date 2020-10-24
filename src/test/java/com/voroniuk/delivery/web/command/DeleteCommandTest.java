@@ -49,6 +49,7 @@ public class DeleteCommandTest {
         delivery.addStatus(DeliveryStatus.NEW, new Date());
         orderDAO.saveDelivery(delivery);
 
+
         int oldCount = orderDAO.countDeliveries(DeliveryStatus.NEW, 0, originId, destinationId, new Date(0), new Date(0));
 
         when(request.getParameter("delivery_id")).thenReturn(String.valueOf(delivery.getId()));
