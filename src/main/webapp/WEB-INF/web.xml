@@ -100,4 +100,15 @@ Delimiter - space/tab
         <location>/WEB-INF/jsp/error_page.jsp</location>
     </error-page>
 
+    <!--============================================================
+    Tag library
+    =============================================================-->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>mytags</taglib-uri>
+            <taglib-location>/WEB-INF/tld/mytag.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+
 </web-app>

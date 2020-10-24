@@ -165,7 +165,7 @@
                 </tbody>
             </table>
             <c:set var="current_page" value="<%=Path.COMMAND__MAIN%>"/>
-            <%@ include file="/WEB-INF/jspf/pagination.jspf" %>
+            <%@ include file="/WEB-INF/pagination.jspf" %>
         </div>
     </div>
 </div>
