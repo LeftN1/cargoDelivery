@@ -3,6 +3,8 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.Total;
 import com.voroniuk.delivery.utils.Utils;
+import com.voroniuk.delivery.web.listener.SessionListener;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,9 @@ import java.util.Locale;
 import java.util.Map;
 
 public class DownloadCommand extends Command {
+    private static final Logger LOG = Logger.getLogger(DownloadCommand.class);
     private final int ARBITARY__SIZE = 1048;
+
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
@@ -51,6 +55,13 @@ public class DownloadCommand extends Command {
             while ((numBytesRead = in.read(buffer)) > 0) {
                 out.write(buffer, 0, numBytesRead);
             }
+        }
+
+
+
+        LOG.debug("Trying to delete file " + reportName);
+        if(file.delete()){
+            LOG.debug("report file deleted. name: " + reportName);
         }
 
         return null;

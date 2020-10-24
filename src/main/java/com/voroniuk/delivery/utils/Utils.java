@@ -159,16 +159,17 @@ public class Utils {
         file.getParentFile().mkdirs();
 
         FileOutputStream outFile = null;
+
         try {
             outFile = new FileOutputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
             workbook.write(outFile);
+            outFile.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
         LOG.debug("Created file: " + file.getAbsolutePath());
 
 

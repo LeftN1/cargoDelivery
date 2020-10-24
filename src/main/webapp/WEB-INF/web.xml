@@ -13,6 +13,15 @@
 
 
     <!--============================================================
+    Session listener
+    =============================================================-->
+    <listener>
+        <listener-class>com.voroniuk.delivery.web.listener.SessionListener</listener-class>
+    </listener>
+
+
+
+    <!--============================================================
 	Encoding support filter
     =============================================================-->
     <filter>
@@ -45,7 +54,8 @@ Delimiter - space/tab
         <filter-class>com.voroniuk.delivery.web.filter.CommandAccessFilter</filter-class>
         <init-param>
             <param-name>manager</param-name>
-            <param-value>manager_account account delete bill report send arrived give_out edit save download</param-value>
+            <param-value>manager_account account delete bill report send arrived give_out edit save download
+            </param-value>
         </init-param>
         <init-param>
             <param-name>user</param-name>
@@ -65,8 +75,6 @@ Delimiter - space/tab
         <filter-name>CommandAccessFilter</filter-name>
         <servlet-name>main-controller</servlet-name>
     </filter-mapping>
-
-
 
 
     <servlet>

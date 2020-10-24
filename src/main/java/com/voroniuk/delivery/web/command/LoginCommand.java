@@ -44,7 +44,7 @@ public class LoginCommand extends Command {
         if (login == null || password == null || login.isEmpty() || password.isEmpty()) {
             errorMessage = rb.getString("login.message.login_pass_cant_be_empty");
             req.setAttribute("msg", errorMessage);
-            LOG.error("errorMessage --> " + errorMessage);
+            LOG.warn("errorMessage --> " + errorMessage);
             forward = Path.COMMAND__MAIN;
             return forward;
         }
