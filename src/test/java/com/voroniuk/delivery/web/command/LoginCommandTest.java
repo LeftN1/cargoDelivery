@@ -19,23 +19,20 @@ import static org.mockito.Mockito.*;
 public class LoginCommandTest {
 
 
+    private LoginCommand loginCommand = new LoginCommand();
 
-        LoginCommand loginCommand = new LoginCommand();
+    private String ok = Path.COMMAND__ACCOUNT;
+    private String error = Path.PAGE__ERROR_PAGE;
+    private String main = Path.COMMAND__MAIN;
 
-        String ok = Path.COMMAND__ACCOUNT;
-        String error = Path.PAGE__ERROR_PAGE;
-        String main = Path.COMMAND__MAIN;
+    private HttpSession session = mock(HttpSession.class);
 
-        HttpSession session = mock(HttpSession.class);
+    private HttpServletRequest request = mock(HttpServletRequest.class);
+    private HttpServletResponse response = mock(HttpServletResponse.class);
 
-        HttpServletRequest request = mock(HttpServletRequest.class);
-        HttpServletResponse response = mock(HttpServletResponse.class);
-
-        String login = "aaa";
-        String correctPassword ="aaa";
-        String incorrectPassword="---";
-
-
+    private String login = "aaa";
+    private String correctPassword = "aaa";
+    private String incorrectPassword = "---";
 
 
     @Test
@@ -44,7 +41,7 @@ public class LoginCommandTest {
         when(request.getParameter("login")).thenReturn(login);
         when(request.getParameter("password")).thenReturn(correctPassword);
         when(request.getSession()).thenReturn(session);
-        assertEquals(ok, loginCommand.execute(request,response));
+        assertEquals(ok, loginCommand.execute(request, response));
     }
 
     @Test
@@ -53,7 +50,7 @@ public class LoginCommandTest {
         when(request.getParameter("login")).thenReturn(login);
         when(request.getParameter("password")).thenReturn(incorrectPassword);
         when(request.getSession()).thenReturn(session);
-        assertEquals(main, loginCommand.execute(request,response));
+        assertEquals(main, loginCommand.execute(request, response));
     }
 
 

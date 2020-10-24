@@ -1,40 +1,51 @@
 package com.voroniuk.delivery.web.command;
 
+import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.entity.SiteLocale;
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import java.io.IOException;
 import java.util.Locale;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class ChangeLocaleCommandTest {
 
-    ChangeLocaleCommand changeLocaleCommand = new ChangeLocaleCommand();
+    private static ChangeLocaleCommand changeLocaleCommand = new ChangeLocaleCommand();
 
-    private static HttpSession session = mock(HttpSession.class);
-    private static HttpServletRequest request = mock(HttpServletRequest.class);
-    private static HttpServletResponse response = mock(HttpServletResponse.class);
+    private  HttpSession session;
+    private  HttpServletRequest request;
+    private  HttpServletResponse response;
 
-    private static Locale ru = SiteLocale.RU.getLocale();
     private static Locale en = SiteLocale.EN.getLocale();
 
-    @BeforeClass
-    public static void init(){
-        Locale siteLocale = ru;
+    @Before
+    public void init(){
+        session = mock(HttpSession.class);
+        request = mock(HttpServletRequest.class);
+        response = mock(HttpServletResponse.class);
         when(request.getSession()).thenReturn(session);
-        when(session.getAttribute("locale")).thenReturn(siteLocale);
+        when(request.getParameter("choosenLang")).thenReturn("EN");
+        when(request.getParameter("from")).thenReturn("main");
     }
 
     @Test
-    public static void shouldChangeLocale(){
+    public void shouldChangeLocale() throws IOException, ServletException {
+        changeLocaleCommand.execute(request, response);
+        verify(session).setAttribute("locale", en);
+    }
 
+    @Test
+    public void shouldReturnBack() throws IOException, ServletException {
+        String forward = changeLocaleCommand.execute(request, response);
+        assertEquals(Path.COMMAND__MAIN, forward);
     }
 
 }

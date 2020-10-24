@@ -70,8 +70,8 @@ public class MakeOrderCommand extends Command {
         if (address.equals("")) {
             req.setAttribute("address_msg", rb.getString("user.error.message.address_is_empty"));
             valid = false;
-            //            return Path.COMMAND__USER_ACCOUNT;
-        }
+
+    }
 
         if (currentCity != null && destination != null) {
             volume = Calculations.getVolume(length, width, height);
@@ -81,7 +81,7 @@ public class MakeOrderCommand extends Command {
         if (req.getParameter("calculate") != null) {
             LOG.debug("do cost calculation");
             valid = false;
-//            return Path.COMMAND__USER_ACCOUNT;
+
         }
 
 
