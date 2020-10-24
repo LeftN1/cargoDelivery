@@ -7,7 +7,7 @@ public class Country {
     private int nameResourceId;
     private Map<Locale, String> name;
 
-    public Country(){
+    public Country() {
         name = new HashMap<>();
     }
 
@@ -26,7 +26,7 @@ public class Country {
 
     public String getName(Locale locale) {
 
-        if(!name.containsKey(locale)){
+        if (!name.containsKey(locale)) {
             locale = Locale.getDefault();
         }
 
@@ -37,7 +37,7 @@ public class Country {
         return name;
     }
 
-    public void addName(Locale locale, String s){
+    public void addName(Locale locale, String s) {
         name.put(locale, s);
     }
 

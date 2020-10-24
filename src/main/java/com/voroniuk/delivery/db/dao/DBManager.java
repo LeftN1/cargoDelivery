@@ -38,9 +38,9 @@ public class DBManager {
         return dbManager;
     }
 
-    public Connection getConnectionFromDriverManager() throws SQLException {
-        return DriverManager.getConnection(conUrl);
-    }
+//    public Connection getConnectionFromDriverManager() throws SQLException {
+//        return DriverManager.getConnection(conUrl);
+//    }
 
     public DataSource getDataSource(){
         PoolProperties p = new PoolProperties();
@@ -72,7 +72,6 @@ public class DBManager {
     }
 
     public Connection getConnection() throws SQLException {
-
 
         Connection connection = dataSource.getConnection();
         return connection;

@@ -42,6 +42,7 @@ public class CityDAO {
             try (ResultSet resultSet = statement.getGeneratedKeys()) {
                 if (resultSet.next()) {
                     country.setId(resultSet.getInt(1));
+                    country.setNameResourceId(resId);
                 }
             }
 
@@ -79,6 +80,7 @@ public class CityDAO {
             try (ResultSet resultSet = statement.getGeneratedKeys()) {
                 if (resultSet.next()) {
                     region.setId(resultSet.getInt(1));
+                    region.setNameResourceId(resId);
                 }
             }
 
@@ -138,6 +140,7 @@ public class CityDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        LOG.info("City " + city.getName(Locale.getDefault()) + " added");
     }
 
     public void addCities(List<City> cityList) {
@@ -289,15 +292,21 @@ public class CityDAO {
     }
 
     public void deleteCountry(Country country) {
+        String name = country.getName(Locale.getDefault());
         resourceDAO.deleteResource(country.getNameResourceId());
+        LOG.debug("Country " + name + " deleted");
     }
 
     public void deleteRegion(Region region) {
+        String name = region.getName(Locale.getDefault());
         resourceDAO.deleteResource(region.getNameResourceId());
+        LOG.debug("Region " + name + " deleted");
     }
 
     public void deleteCity(City city) {
+        String name = city.getName(Locale.getDefault());
         resourceDAO.deleteResource(city.getNameResourceId());
+        LOG.debug("City " + name + " deleted");
     }
 
 

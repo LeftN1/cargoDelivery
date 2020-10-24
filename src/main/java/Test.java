@@ -26,7 +26,6 @@ public class Test {
         User user;
         Delivery delivery;
 
-        resourceDAO.loadStatuses();
-        System.out.println(DeliveryStatus.NEW.getName(SiteLocale.EN.getLocale()));
+        System.out.println(resourceDAO.getResourceIdByTranslation("Spain"));
     }
 }

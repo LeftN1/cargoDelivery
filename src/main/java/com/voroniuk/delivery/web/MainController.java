@@ -56,7 +56,7 @@ public class MainController extends HttpServlet {
     private void process(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         LOG.debug("MainController starts");
-
+        LOG.debug("User: " + req.getSession().getAttribute("user"));
         String commandName = req.getParameter("command");
 
         Command command = CommandContainer.get(commandName);

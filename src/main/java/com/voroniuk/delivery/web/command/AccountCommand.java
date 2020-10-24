@@ -22,11 +22,14 @@ public class AccountCommand extends Command {
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
 
-
         String forward = Path.PAGE__ERROR_PAGE;
         User user = (User) req.getSession().getAttribute("user");
 
-        if(user.getRole()== Role.USER) {
+        if (user == null) {
+            return forward;
+        }
+
+        if (user.getRole() == Role.USER) {
 //            String redirect = Path.COMMAND__USER_ACCOUNT;
 //            resp.setStatus(resp.SC_TEMPORARY_REDIRECT);
 //            resp.setHeader("Location", redirect);
@@ -34,7 +37,7 @@ public class AccountCommand extends Command {
             forward = Path.COMMAND__USER_ACCOUNT;
         }
 
-        if(user.getRole()== Role.MANAGER) {
+        if (user.getRole() == Role.MANAGER) {
 //            String redirect = Path.COMMAND__MANAGER_ACCOUNT;
 //            resp.setStatus(resp.SC_TEMPORARY_REDIRECT);
 //            resp.setHeader("Location", redirect);
