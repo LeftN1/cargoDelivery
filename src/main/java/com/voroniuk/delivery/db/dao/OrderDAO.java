@@ -7,6 +7,13 @@ import java.sql.*;
 import java.util.*;
 import java.util.Date;
 
+/**
+ *
+ * DAO for create-update-delete Deliveries
+ *
+ * @author M. Voroniuk
+ */
+
 public class OrderDAO {
 
     private static final Logger LOG = Logger.getLogger(OrderDAO.class);
@@ -45,6 +52,10 @@ public class OrderDAO {
         }
     }
 
+    /**
+     * Save delivery statuses with date in database.
+     * @param delivery Delivery
+     */
     private void saveDeliveryStatuses(Delivery delivery) {
         String sql = "insert into delivery_status (delivery_id, status_id, date_time) " +
                 "values (?, ?, ?)";
@@ -63,6 +74,16 @@ public class OrderDAO {
             LOG.warn(e);
         }
     }
+
+    /**
+     *
+     * Add new status with date-time to the Delivery
+     *
+     * @param delivery Delivery
+     * @param status Status
+     * @param date UNIX time (in millis from 00:00:00 UTC on 1 January 1970)
+     *
+     */
 
     public void changeCurrentStatus(Delivery delivery, DeliveryStatus status, Date date) {
         String sql = "insert into delivery_status (delivery_id, status_id, date_time) " +
@@ -137,6 +158,18 @@ public class OrderDAO {
         return delivery;
     }
 
+    /**
+     * Find  deliveries that have last staatus {@status}, by status and user and/or origin/destination city and/or date
+     * @param status  Delivery status. Search by last status.
+     * @param userId users id. If zero - finds all users.
+     * @param originId Origin city id. If zero - finds all city.
+     * @param destinationId Destination city id. If zero - finds all.
+     * @param startDate Start date of search. If zero(in millis) - finds for all time.
+     * @param endDate End date of searc. If zero(in millis) - finds for all time.
+     * @param start Skip first n deliveries.
+     * @param offset Max count of deliveries.
+     * @return list of deliveries.
+     */
 
     public List<Delivery> findDeliveriesByStatusAndUserIdAndDate(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
@@ -239,6 +272,20 @@ public class OrderDAO {
         return deliveries;
     }
 
+    /**
+     *
+     * Find deliveries that have {@status} in their history by status and user and/or origin/destination city and/or date.
+     * This method is used for making reports to see deliveries that had definite status in definite period.
+     * @param status  Delivery status . Search by all statuses.
+     * @param userId users id. If zero - finds all users.
+     * @param originId Origin city id. If zero - finds all city.
+     * @param destinationId Destination city id. If zero - finds all.
+     * @param startDate Start date of search. If zero(in millis) - finds for all time.
+     * @param endDate End date of searc. If zero(in millis) - finds for all time.
+     * @param start Skip first n deliveries.
+     * @param offset Max count of deliveries.
+     * @return list of deliveries.
+     */
     public List<Delivery> reportDeliveriesByStatusAndUserIdAndDate(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate, int start, int offset) {
         List<Delivery> deliveries = new LinkedList<>();
 
@@ -354,6 +401,19 @@ public class OrderDAO {
         return findDeliveriesByStatus(status, start, offset);
     }
 
+    /**
+     * Counts number of Deliveries by status and user and/or origin/destination city and/or date.
+     * Counts only those deliveries that have {@status} for their last status
+     * @param status  Delivery status . Search by all statuses.
+     * @param userId users id. If zero - finds all users.
+     * @param originId Origin city id. If zero - finds all city.
+     * @param destinationId Destination city id. If zero - finds all.
+     * @param startDate Start date of search. If zero(in millis) - finds for all time.
+     * @param endDate End date of searc. If zero(in millis) - finds for all time.
+     * @return count of deliveries
+     *
+     */
+
     public int countDeliveries(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate) {
         int result = 0;
 
@@ -421,6 +481,18 @@ public class OrderDAO {
         return result;
     }
 
+    /**
+     * Counts number of Deliveries by status and user and/or origin/destination city and/or date.
+     * Counts deliveries that have {@status} in their history
+     * @param status  Delivery status . Search by all statuses.
+     * @param userId users id. If zero - finds all users.
+     * @param originId Origin city id. If zero - finds all city.
+     * @param destinationId Destination city id. If zero - finds all.
+     * @param startDate Start date of search. If zero(in millis) - finds for all time.
+     * @param endDate End date of searc. If zero(in millis) - finds for all time.
+     * @return count of deliveries
+     *
+     */
     public int countReportDeliveries(DeliveryStatus status, int userId, int originId, int destinationId, Date startDate, Date endDate) {
         int result = 0;
 

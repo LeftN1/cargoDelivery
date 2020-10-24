@@ -8,6 +8,11 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * DAO for save and retrieve City, Region, Country from DB
+ *
+ * @author M. Voroniuk
+ */
 
 public class CityDAO {
 
@@ -18,6 +23,11 @@ public class CityDAO {
     public CityDAO() {
         this.resourceDAO = resourceDAO = new ResourceDAO();
     }
+
+    /**
+     * Add country to DB
+     * @param country
+     */
 
     public void addCountry(Country country) {
 
@@ -56,6 +66,10 @@ public class CityDAO {
         LOG.info("Country " + country.getName(Locale.getDefault()) + " added");
     }
 
+    /**
+     * Add Region to DB
+     * @param region
+     */
     public void addRegion(Region region) {
 
         for (Locale locale : region.getNames().keySet()) {
@@ -94,13 +108,6 @@ public class CityDAO {
         LOG.info("Region " + region.getName(Locale.getDefault()) + " added");
 
     }
-
-    private void addRegions(List<Region> regionList) {
-        for (Region region : regionList) {
-            addRegion(region);
-        }
-    }
-
 
     public void addCity(City city) {
 
@@ -141,12 +148,6 @@ public class CityDAO {
             throwables.printStackTrace();
         }
         LOG.info("City " + city.getName(Locale.getDefault()) + " added");
-    }
-
-    public void addCities(List<City> cityList) {
-        for (City city : cityList) {
-            addCity(city);
-        }
     }
 
     public City findCityByName(String name) {
@@ -466,12 +467,24 @@ public class CityDAO {
         return result;
     }
 
-
+    /**
+     * Find distance between two cities with considering Earth shape
+     * @param cityA first city
+     * @param cityB second city
+     * @return distance in km
+     */
     public double findDistance(City cityA, City cityB) {
         return findDistance(cityA.getLongitude(), cityA.getLatitude(), cityB.getLongitude(), cityB.getLatitude());
     }
 
-
+    /**
+     * Find distance between two points on Earth
+     * @param lonA point A longitude
+     * @param latA point A latitude
+     * @param lonB point B longitude
+     * @param latB point B latitude
+     * @return distance in km
+     */
     private double findDistance(double lonA, double latA, double lonB, double latB) {
         double res = 0;
         String sql = "SELECT ST_Distance_Sphere(Point(?,?),Point(?,?)) as distance";

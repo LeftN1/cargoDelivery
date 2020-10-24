@@ -9,6 +9,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
 
+/**
+ * Class for getting database connection
+ *
+ * @author M. Voroniuk
+ *
+ */
 
 public class DBManager {
 
@@ -16,13 +22,18 @@ public class DBManager {
 
     private static DBManager dbManager;
     private String conUrl;
+
     DataSource dataSource;
+    private String user;
+    private String password;
 
     private DBManager() {
         Properties properties = new Properties();
         try {
             properties.load(new FileInputStream("app.properties"));
-            conUrl = (properties.getProperty("connection.url"));
+            conUrl = properties.getProperty("connection.url");
+            user = properties.getProperty("user");
+            password = properties.getProperty("password");
             dataSource = getDataSource();
 
 
@@ -42,12 +53,19 @@ public class DBManager {
 //        return DriverManager.getConnection(conUrl);
 //    }
 
+    /**
+     *
+     * Configure TomCat connection pool
+     *
+     * @return configured DataSource
+     */
     public DataSource getDataSource(){
+
         PoolProperties p = new PoolProperties();
-        p.setUrl("jdbc:mysql://localhost:3306/deliveryservice?sslMode=DISABLED&serverTimezone=UTC&useSSL=false");
+        p.setUrl(conUrl);
         p.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        p.setUsername("test");
-        p.setPassword("test");
+        p.setUsername(user);
+        p.setPassword(password);
         p.setJmxEnabled(true);
         p.setTestWhileIdle(false);
         p.setTestOnBorrow(true);
