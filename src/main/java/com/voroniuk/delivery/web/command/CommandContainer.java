@@ -6,6 +6,13 @@ import org.apache.log4j.Logger;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Holder for all commands.<br/>
+ *
+ * @author M. Voroniuk
+ *
+ */
+
 public class CommandContainer {
 
     private static final Logger LOG = Logger.getLogger(CommandContainer.class);
@@ -40,6 +47,13 @@ public class CommandContainer {
     }
 
 
+    /**
+     * Returns command object with the given name.
+     *
+     * @param commandName
+     *            Name of the command.
+     * @return Command object.
+     */
 
     public static Command get(String commandName){
         LOG.debug("Trying to get command " + commandName);

@@ -2,15 +2,18 @@ package com.voroniuk.delivery.web.command;
 
 import com.voroniuk.delivery.Path;
 import com.voroniuk.delivery.db.dao.OrderDAO;
-import com.voroniuk.delivery.db.entity.Delivery;
-import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
+
+/**
+ * Command deletes delivery from database.
+ *
+ * @author M. Voroniuk
+ */
 
 public class DeleteCommand extends Command {
     private static final Logger LOG = Logger.getLogger(DeleteCommand.class);

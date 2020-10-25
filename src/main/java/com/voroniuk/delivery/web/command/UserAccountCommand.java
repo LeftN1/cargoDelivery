@@ -6,6 +6,7 @@ import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.db.entity.User;
 import com.voroniuk.delivery.utils.Utils;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,10 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * User account. List of deliveries with filters by way and status.
+ *
+ * @author M. Voroniuk
+ */
+
 public class UserAccountCommand extends Command {
+    private static final Logger LOG = Logger.getLogger(UserAccountCommand.class);
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-
+        LOG.debug("Command starts");
         String forward = Path.PAGE__ERROR_PAGE;
         OrderDAO orderDAO = new OrderDAO();
 
@@ -50,6 +58,8 @@ public class UserAccountCommand extends Command {
         req.getSession().setAttribute("status", status);
 
         forward = Path.PAGE__USER_ACCOUNT;
+
+        LOG.debug("Command finished");
 
         return forward;
     }

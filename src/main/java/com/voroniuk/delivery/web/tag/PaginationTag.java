@@ -9,6 +9,11 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
+/**
+ * Class for implement custom jstl tag that provides pagination of database items
+ *
+ * @author M. Voroniuk
+ */
 public class PaginationTag extends TagSupport {
 
     private static final Logger LOG = Logger.getLogger(PaginationTag.class);

@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * Cmmand changes delivery status to PROCESSED
+ *
+ * @author M. Voroniuk
+ */
 public class MakeBillCommand extends Command {
 
     private static final Logger LOG = Logger.getLogger(MakeBillCommand.class);

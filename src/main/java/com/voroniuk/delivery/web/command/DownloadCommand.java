@@ -3,7 +3,6 @@ package com.voroniuk.delivery.web.command;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.Total;
 import com.voroniuk.delivery.utils.Utils;
-import com.voroniuk.delivery.web.listener.SessionListener;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -14,6 +13,12 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+/**
+ * Creates xls document using Utils.createXLS() and provides downloading
+ *
+ * @author M. Voroniuk
+ */
 
 public class DownloadCommand extends Command {
     private static final Logger LOG = Logger.getLogger(DownloadCommand.class);
@@ -37,7 +42,7 @@ public class DownloadCommand extends Command {
         }
 
         Utils.createXLS(report, totals, locale, reportName);
-
+        LOG.debug("File created");
 
         resp.setContentType("application/vnd.ms-excel");
         resp.setHeader("Content-disposition", "attachment; filename=report.xls");
@@ -56,6 +61,7 @@ public class DownloadCommand extends Command {
                 out.write(buffer, 0, numBytesRead);
             }
         }
+        LOG.debug("File downloaded");
 
 
 

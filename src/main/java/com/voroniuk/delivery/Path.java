@@ -1,6 +1,13 @@
 package com.voroniuk.delivery;
 
+/**
+ * Constants that hold mapping of pages and commands of application
+ *
+ * @author M. Voroniuk
+ */
+
 public class Path {
+
 
     //pages
     public static final String PAGE__MAIN = "/WEB-INF/jsp/main.jsp";

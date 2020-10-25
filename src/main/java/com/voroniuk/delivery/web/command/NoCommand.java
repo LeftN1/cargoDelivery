@@ -8,6 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * No command
+ *
+ * @author M. Voroniuk
+ */
+
 public class NoCommand extends Command{
 
     private static final Logger LOG = Logger.getLogger(NoCommand.class);

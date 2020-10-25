@@ -15,6 +15,12 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * Create delivery order in user account. Provides ability to calculate cost before ordering.
+ *
+ * @author M. Voroniuk
+ */
+
 public class MakeOrderCommand extends Command {
 
     private static final Logger LOG = Logger.getLogger(MakeOrderCommand.class);

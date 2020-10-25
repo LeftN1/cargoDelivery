@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * Command changes delivery status to RECEIVED
+ *
+ * @author M. Voroniuk
+ */
 public class GiveOutCommand extends Command {
     private static final Logger LOG = Logger.getLogger(GiveOutCommand.class);
     @Override

@@ -12,6 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * Command changes delivery status to PAID
+ *
+ * @author M. Voroniuk
+ */
+
 public class PayCommand extends Command {
     private static final Logger LOG = Logger.getLogger(PayCommand.class);
     @Override

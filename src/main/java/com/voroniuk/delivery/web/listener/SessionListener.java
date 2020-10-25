@@ -5,6 +5,11 @@ import org.apache.log4j.Logger;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
+/**
+ * Listen HttpSession events, count total active sessions
+ *
+ * @author M. Voroniuk
+ */
 
 public class SessionListener implements HttpSessionListener {
     private static final Logger LOG = Logger.getLogger(SessionListener.class);

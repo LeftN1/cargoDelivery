@@ -18,6 +18,12 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Report command. Makes report by date and ways.
+ *
+ * @author M. Voroniuk
+ */
+
 public class ReportCommand extends Command {
     private static final Logger LOG = Logger.getLogger(ReportCommand.class);
 

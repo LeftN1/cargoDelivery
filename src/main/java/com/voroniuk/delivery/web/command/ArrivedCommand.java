@@ -12,10 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * Command changes delivery status to ARRIVED
+ *
+ * @author M. Voroniuk
+ */
+
 public class ArrivedCommand extends Command {
     private static final Logger LOG = Logger.getLogger(ArrivedCommand.class);
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+
         LOG.debug("Command starts");
 
         OrderDAO orderDAO = new OrderDAO();

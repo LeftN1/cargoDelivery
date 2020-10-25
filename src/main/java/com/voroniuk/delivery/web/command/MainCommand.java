@@ -16,6 +16,12 @@ import java.text.Collator;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Main command. List ways and costs according to distance.
+ * Provides ability to calculate delivery cost. Can be accessed by unregistered user.
+ *
+ * @author M. Voroniuk
+ */
 
 public class MainCommand extends Command {
 

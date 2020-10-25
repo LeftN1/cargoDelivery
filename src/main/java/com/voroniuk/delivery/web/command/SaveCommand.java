@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Save command. Saves edited delivery from edit page.
+ *
+ * @author M. Voroniuk
+ */
+
 public class SaveCommand extends Command {
     private static final Logger LOG = Logger.getLogger(SaveCommand.class);
 

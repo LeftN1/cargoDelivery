@@ -14,6 +14,12 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * Login command. Checks login password
+ *
+ * @author M. Voroniuk
+ */
+
 public class LoginCommand extends Command {
     private static final Logger LOG = Logger.getLogger(LoginCommand.class);
 
