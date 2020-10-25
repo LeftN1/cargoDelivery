@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 public class ManagerAccountCommand extends Command {
-    private static final Logger LOG = Logger.getLogger(UserAccountCommand.class);
+    private static final Logger LOG = Logger.getLogger(ManagerAccountCommand.class);
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         LOG.debug("Command starts");
