@@ -139,7 +139,7 @@
     </table>
 
     <c:set var="current_page" value="<%=Path.COMMAND__MANAGER_ACCOUNT%>"/>
-    <%@ include file="/WEB-INF/pagination.jspf" %>
+    <%@ include file="/WEB-INF/jspf/pagination.jspf" %>
 </div>
 
 <%@ include file="/WEB-INF/jspf/bottom.jspf" %>
