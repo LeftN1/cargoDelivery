@@ -3,7 +3,15 @@ package com.voroniuk.delivery.utils;
 import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.entity.City;
 
+/**
+ * Hold all calculations of application.
+ *
+ * @author  M. Voroniuk
+ */
+
 public class Calculations {
+
+
     public static int getCost(City current, City dest, int weight, int volume) {
         CityDAO cityDAO = new CityDAO();
         double distance = cityDAO.findDistance(current, dest);

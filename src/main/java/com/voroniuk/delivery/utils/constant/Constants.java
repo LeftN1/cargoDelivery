@@ -1,9 +1,8 @@
 package com.voroniuk.delivery.utils.constant;
 
 /**
- * Holds application constants.
- * 
- * @author D.Kolesnikov
+ * Holds parser constants.
+ *
  * 
  */
 public final class Constants {

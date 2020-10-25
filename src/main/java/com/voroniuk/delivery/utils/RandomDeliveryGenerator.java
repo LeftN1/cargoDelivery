@@ -9,6 +9,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Generate random deliveries to demonstrate application work
+ *
+ * @author M. Voroniuk
+ */
+
 public class RandomDeliveryGenerator {
 
     public static void main(String[] args) {
@@ -16,6 +22,11 @@ public class RandomDeliveryGenerator {
         generate(10);
 
     }
+
+    /**
+     * Generate given count of deliveries with random parameters and date from 10/09/2020 to 10/10/2020
+     * @param count
+     */
 
     public static void generate(int count){
 

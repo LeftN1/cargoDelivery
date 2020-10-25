@@ -11,15 +11,27 @@ import org.apache.poi.ss.usermodel.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
+
+/**
+ * Class for holding util methods of application
+ *
+ * @author M. Voroniuk
+ */
 
 public class Utils {
 
     private static final Logger LOG = Logger.getLogger(ReportCommand.class);
 
+    /**
+     * Gets page number from request. Used in pagination to verify page number(can't be less 1 and more than total count of pages)
+     * @param req request object
+     * @param paramName name of parameter that hold page number
+     * @param totalPages total count of pages
+     * @return
+     */
     public static int getPageNoFromRequest(HttpServletRequest req, String paramName, int totalPages) {
         int pageNo = 1;
         try {
@@ -37,6 +49,13 @@ public class Utils {
         return pageNo;
     }
 
+    /**
+     * Create xls file from report.
+     * @param report
+     * @param totals
+     * @param locale
+     * @param name
+     */
     public static void createXLS(Map<String, List<Delivery>> report, Map<String, Total> totals, Locale locale, String name) {
 
         ResourceBundle rb = ResourceBundle.getBundle("resources", locale);

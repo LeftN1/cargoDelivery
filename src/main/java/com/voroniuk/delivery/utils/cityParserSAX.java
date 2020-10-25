@@ -17,6 +17,11 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 
+/**
+ * Parser used to read xml file with cities
+ *
+ * @author M. Voroniuk
+ */
 
 public class cityParserSAX extends DefaultHandler {
 
