@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * Cargo type enum
+ *
+ * @author M. Voroniuk
+ */
 public enum  CargoType {
 
     PARCEL(1),
@@ -32,6 +37,13 @@ public enum  CargoType {
         }
         return CargoType.PARCEL;
     }
+
+    /**
+     * Return name of cargo type in given language.
+     * Names are loaded from database using ResourceDAO
+     * @param locale
+     * @return
+     */
 
     public String getName(Locale locale) {
         if (names.isEmpty()) {

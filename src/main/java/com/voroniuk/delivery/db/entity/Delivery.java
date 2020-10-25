@@ -8,6 +8,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Delivery entity
+ *
+ * @author M. Voroniuk
+ */
 public class Delivery implements Serializable {
     private static final Logger LOG = Logger.getLogger(Delivery.class);
 
@@ -31,6 +36,10 @@ public class Delivery implements Serializable {
         LOG.debug("Status added: " + status);
     }
 
+    /**
+     * Return last status of delivery
+     * @return
+     */
     public DeliveryStatus getLastStatus() {
         long last = 0;
         DeliveryStatus status = DeliveryStatus.NEW;
@@ -45,16 +54,28 @@ public class Delivery implements Serializable {
         return status;
     }
 
+    /**
+     * Return date of last delivery status in string format dd.MM.yyyy
+     * @return
+     */
     public String getLastDateString() {
         SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         return format.format(statusMap.get(getLastStatus()));
     }
 
+    /**
+     * Return date of last delivery status
+     * @return
+     */
     public Date getLastDate() {
         return statusMap.get(getLastStatus());
     }
 
-
+    /**
+     * Returns date when delivery had given status
+     * @param status
+     * @return
+     */
     public Date getStatusDate(DeliveryStatus status) {
         if (getLastStatus().getId() >= status.getId()) {
             return statusMap.get(status);

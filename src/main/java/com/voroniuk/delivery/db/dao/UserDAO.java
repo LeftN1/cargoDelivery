@@ -8,9 +8,17 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * DAO for User
+ */
+
 public class UserDAO {
     private static final Logger LOG = Logger.getLogger(UserDAO.class);
 
+    /**
+     * Add new user
+     * @param user
+     */
     public void saveUser(User user) {
         String sql = "INSERT INTO users (login, role, pass) VALUES (?,?,?)";
 
@@ -34,31 +42,11 @@ public class UserDAO {
         }
     }
 
-//    public Role getRoleFromDb(String name) {
-//        String sql = "SELECT * FROM roles WHERE role_name=?";
-//        try (Connection connection = DBManager.getInstance().getConnection();
-//             PreparedStatement statement = connection.prepareStatement(sql);) {
-//
-//            statement.setString(1, name);
-//            statement.executeQuery();
-//            try (ResultSet resultSet = statement.getResultSet()) {
-//
-//                if (resultSet.next()) {
-//                    for (Role role : Role.values()) {
-//                        if (role.name().equals(resultSet.getString(2))) {
-//                            return role;
-//                        }
-//                    }
-//                } else {
-//                    LOG.info("Can't find user " + name);
-//                }
-//            }
-//        } catch (SQLException e) {
-//            LOG.warn(e);
-//        }
-//        return null;
-//    }
-
+    /**
+     * Returns role number, as it saved in database
+     * @param role
+     * @return id
+     */
     public int getRoleNum(Role role) {
         String sql = "SELECT * FROM roles WHERE role_name=?";
         try (Connection connection = DBManager.getInstance().getConnection();

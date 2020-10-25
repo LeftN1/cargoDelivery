@@ -1,18 +1,27 @@
 package com.voroniuk.delivery.db.dao;
 
 import com.voroniuk.delivery.db.entity.CargoType;
-import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
-import com.voroniuk.delivery.db.entity.Region;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.*;
 
+/**
+ * DAO for resources. One resource may have many translations, used for i8n in database.
+ *
+ * @author M. Voroniuk
+ */
+
 public class ResourceDAO {
 
     private static final Logger LOG = Logger.getLogger(ResourceDAO.class);
 
+    /**
+     * Add new resource (has no translations)
+     * @return number of new empty resource
+     * @throws SQLException
+     */
     public int addResource() throws SQLException {
         String sqlAddResource = "INSERT INTO resources VALUE(DEFAULT)";
         int resourceId;
@@ -33,6 +42,14 @@ public class ResourceDAO {
         }
     }
 
+    /**
+     * Add translation for resource
+     * @param resourceId int resource id
+     * @param locale Locale, used for translate resource
+     * @param translation String translation
+     * @throws SQLException
+     */
+
     public void addTranslation(int resourceId, Locale locale, String translation) throws SQLException {
         String sqlAddTranslation = "INSERT INTO translations VALUES(?, ?, ?)";
 
@@ -45,6 +62,12 @@ public class ResourceDAO {
             psAddTranslation.executeUpdate();
         }
     }
+
+    /**
+     * Find resource id by translation from any language(if exists)
+     * @param translation
+     * @return resource id or -1 if not found
+     */
 
     public int getResourceIdByTranslation(String translation) {
 
@@ -70,6 +93,11 @@ public class ResourceDAO {
         return -1;
     }
 
+    /**
+     * Find all translations of resource
+     * @param resourceId
+     * @return Map of translations
+     */
     public Map<Locale, String> getTranslations(int resourceId) {
 
         Map<Locale, String> result = new HashMap<>();
@@ -95,6 +123,12 @@ public class ResourceDAO {
         return result;
     }
 
+    /**
+     * Return locale by id(saved in database)
+     * @param id
+     * @return Locale
+     * @throws SQLException
+     */
     public Locale getLocaleById(int id) throws SQLException {
         String sql = "SELECT lang, country FROM locales WHERE id=?";
 
@@ -120,6 +154,12 @@ public class ResourceDAO {
         }
     }
 
+    /**
+     * Return id of locale from database (if exists)
+     * @param locale
+     * @return
+     * @throws SQLException
+     */
 
     public int getLocaleId(Locale locale) throws SQLException {
 
@@ -160,7 +200,9 @@ public class ResourceDAO {
         }
     }
 
-
+    /**
+     * load translations of DeliveryStatus values from database.
+     */
 
     public void loadStatuses() {
 
@@ -190,6 +232,10 @@ public class ResourceDAO {
             LOG.warn(e);
         }
     }
+
+    /**
+     * load translations of CargoType values from database.
+     */
 
     public void loadCargoTypes() {
 

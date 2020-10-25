@@ -2,6 +2,11 @@ package com.voroniuk.delivery.db.entity;
 
 import java.util.*;
 
+/**
+ * Region entity
+ *
+ * @author M. Voroniuk
+ */
 public class Region {
     private int id;
     private int countryId;
@@ -32,7 +37,12 @@ public class Region {
     public void addName(Locale locale, String s){
         names.put(locale, s);
     }
-
+    /**
+     * Returns name of the region in given language.
+     * Names are loaded from database using ResourceDAO.
+     * @param locale
+     * @return city name
+     */
     public String getName(Locale locale) {
         if (names.isEmpty()) {
             return "Unknown";

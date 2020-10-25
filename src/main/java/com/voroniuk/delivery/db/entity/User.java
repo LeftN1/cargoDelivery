@@ -3,6 +3,12 @@ package com.voroniuk.delivery.db.entity;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * User entity
+ *
+ * @author M. Voroniuk
+ */
+
 public class User implements Serializable {
     private int id;
     private String login;

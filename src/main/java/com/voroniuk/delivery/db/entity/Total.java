@@ -1,5 +1,11 @@
 package com.voroniuk.delivery.db.entity;
 
+/**
+ * Report total entity. Used to hold totals in reports.
+ *
+ * @author M. Voroniuk
+ */
+
 public class Total {
 
     int totalWeight;

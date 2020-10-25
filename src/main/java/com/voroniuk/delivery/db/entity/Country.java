@@ -2,6 +2,11 @@ package com.voroniuk.delivery.db.entity;
 
 import java.util.*;
 
+/**
+ * Country entity
+ *
+ * @author M. Voroniuk
+ */
 public class Country {
     private int id;
     private int nameResourceId;
@@ -24,6 +29,12 @@ public class Country {
         this.name = name;
     }
 
+    /**
+     * Returns name of the country in given language.
+     * Names are loaded from database using ResourceDAO.
+     * @param locale
+     * @return country name
+     */
     public String getName(Locale locale) {
 
         if (!name.containsKey(locale)) {

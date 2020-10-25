@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+/**
+ * Delivery status enum
+ *
+ * @author M. Voroniuk
+ */
+
 public enum DeliveryStatus {
     NEW (1),
     PROCESSED (2),
@@ -25,6 +31,12 @@ public enum DeliveryStatus {
         return id;
     }
 
+    /**
+     * Return name of delivery status in given language.
+     * Names are loaded from database using ResourceDAO.
+     * @param locale
+     * @return
+     */
     public String getName(Locale locale) {
         if (names.isEmpty()) {
             return name();

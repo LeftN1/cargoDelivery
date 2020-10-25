@@ -2,6 +2,12 @@ package com.voroniuk.delivery.db.entity;
 
 import java.util.*;
 
+/**
+ * City entity
+ *
+ * @author M. Voroniuk
+ */
+
 public class City implements Comparable<City>{
     private int id;
     private int regionId;
@@ -31,6 +37,12 @@ public class City implements Comparable<City>{
         this.regionId = regionId;
     }
 
+    /**
+     * Returns name of the city in given language.
+     * Names are loaded from database using ResourceDAO.
+     * @param locale
+     * @return city name
+     */
     public String getName(Locale locale) {
         if (names.isEmpty()) {
             return "Unknown";
