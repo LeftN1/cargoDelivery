@@ -1,13 +1,11 @@
 package com.voroniuk.delivery.web.command;
 
 import com.voroniuk.delivery.Path;
-import com.voroniuk.delivery.db.dao.CityDAO;
 import com.voroniuk.delivery.db.dao.OrderDAO;
 import com.voroniuk.delivery.db.entity.City;
 import com.voroniuk.delivery.db.entity.Delivery;
 import com.voroniuk.delivery.db.entity.DeliveryStatus;
 import com.voroniuk.delivery.db.entity.Total;
-import com.voroniuk.delivery.utils.Utils;
 import org.apache.log4j.Logger;
 
 
@@ -41,7 +39,7 @@ public class ReportCommand extends Command {
         String sEnd = (String) req.getSession().getAttribute("end");
 
         Locale rLocale = (Locale) req.getSession().getAttribute("locale");
-        if(rLocale == null){
+        if (rLocale == null) {
             rLocale = Locale.getDefault();
         }
 
@@ -60,6 +58,7 @@ public class ReportCommand extends Command {
         Date endDate;
 
         long oneDay = 24 * 60 * 60 * 1000;
+        long threeHours = 3 * 60 * 60 * 1000;
 
         DeliveryStatus status = (DeliveryStatus) req.getSession().getAttribute("status");
         if (status == null) {
@@ -101,14 +100,25 @@ public class ReportCommand extends Command {
             deliveries = deliveries.stream().sorted(statusDateComparator).collect(Collectors.toList());
 
             if (deliveries.size() > 0) {
-                Date currDate = new Date(deliveries.get(0).getStatusDate(status).getTime() / oneDay * oneDay);
+                //Date currDate = new Date(deliveries.get(0).getStatusDate(status).getTime() / oneDay * oneDay);
+                Date currDate = new Date(0);
+                try {
+                    currDate = repFormat.parse(deliveries.get(0).getStatusDateString(status));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 List<Delivery> currList = new LinkedList();
                 Total total = new Total();
                 for (Delivery delivery : deliveries) {
                     if (delivery.getStatusDate(status).getTime() > currDate.getTime() + oneDay) {
                         report.put(repFormat.format(currDate), currList);
                         totals.put(repFormat.format(currDate), total);
-                        currDate.setTime(delivery.getStatusDate(status).getTime() / oneDay * oneDay);
+//                        currDate.setTime(delivery.getStatusDate(status).getTime() / oneDay * oneDay);
+                        try {
+                            currDate = repFormat.parse(delivery.getStatusDateString(status));
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
                         currList = new LinkedList<>();
                         total = new Total();
                     }
@@ -164,9 +174,6 @@ public class ReportCommand extends Command {
 
         return Path.PAGE__REPORT;
     }
-
-
-
 
 
 }

@@ -1,6 +1,7 @@
 import com.voroniuk.delivery.db.dao.*;
 import com.voroniuk.delivery.db.entity.*;
 
+import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -11,7 +12,7 @@ import java.util.List;
 
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         CityDAO cityDAO = new CityDAO();
         UserDAO userDAO = new UserDAO();
@@ -26,6 +27,13 @@ public class Test {
         User user;
         Delivery delivery;
 
-        System.out.println(resourceDAO.getResourceIdByTranslation("Spain"));
+        List<Delivery> deliveries = orderDAO.reportDeliveriesByStatusAndCityIdAndDate(DeliveryStatus.NEW, 0, 0, new Date(0), new Date(0), 0, 100);
+
+        for (Delivery d : deliveries) {
+            String sDate = d.getStatusDateString(DeliveryStatus.NEW);
+            Date date = format.parse(sDate);
+            System.out.println(sDate + "   " + date);
+        }
+
     }
 }
