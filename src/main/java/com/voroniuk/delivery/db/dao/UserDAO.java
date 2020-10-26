@@ -139,7 +139,8 @@ public class UserDAO {
 
     public List<User> findAllUsers() {
         List<User> res = new LinkedList<>();
-        String sql = "SELECT * FROM users";
+        String sql =    "select users.id, users.login, roles.role_name from users " +
+                        "join roles on role=roles.id ";
 
         try (Connection connection = DBManager.getInstance().getConnection();
              Statement statement = connection.createStatement();
@@ -148,7 +149,12 @@ public class UserDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 String login = resultSet.getString(2);
-                res.add(new User(id, login));
+                Role role = Role.valueOf(resultSet.getString(3));
+                User user = new User();
+                user.setId(id);
+                user.setLogin(login);
+                user.setRole(role);
+                res.add(user);
             }
 
         } catch (SQLException e) {

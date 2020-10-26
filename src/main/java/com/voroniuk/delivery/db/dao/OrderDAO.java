@@ -554,6 +554,34 @@ public class OrderDAO {
     }
 
 
+    public int countDeliveriesByUser(User user) {
+        int result = 0;
+        int userId = user.getId();
+
+        String sql = "SELECT count(*) FROM deliveries \n" +
+                        "where user_id=?\n";
+
+        try (Connection connection = DBManager.getInstance().getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql);) {
+
+            statement.setInt(1, userId);
+
+
+            statement.executeQuery();
+            try (ResultSet resultSet = statement.getResultSet()) {
+
+                if (resultSet.next()) {
+                    result = resultSet.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            LOG.warn(e);
+        }
+
+        return result;
+    }
+
+
     public int countDeliveriesByStatusAndUser(DeliveryStatus status, User user) {
         return countDeliveries(status, user.getId(), 0, 0, new Date(0), new Date(0));
     }

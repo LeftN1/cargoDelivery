@@ -40,6 +40,7 @@ public class CommandContainer {
         commands.put("edit", new EditCommand());
         commands.put("save", new SaveCommand());
         commands.put("download", new  DownloadCommand());
+        commands.put("statistic", new  UserStatisticCommand());
 
 
         LOG.debug("Command container was successfully initialized");

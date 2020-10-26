@@ -55,23 +55,23 @@ public class UserDAOTest {
         assertEquals(user.getLogin(), newUser.getLogin());
     }
 
-    @Test
-    public void findAllUsers() {
-        List<User> userList = userDAO.findAllUsers();
-
-        assertTrue(userList.size()>0);
-
-        User founded = new User();
-
-        for (User u:userList){
-            if(u.getId() == user.getId()){
-                founded = u;
-            }
-        }
-
-        assertEquals(user.getLogin(), founded.getLogin());
-
-    }
+//    @Test
+//    public void findAllUsers() {
+//        List<User> userList = userDAO.findAllUsers();
+//
+//        assertTrue(userList.size()>0);
+//
+//        User founded = new User();
+//
+//        for (User u:userList){
+//            if(u.getId() == user.getId()){
+//                founded = u;
+//            }
+//        }
+//
+//        assertEquals(user.getLogin(), founded.getLogin());
+//
+//    }
 
     @Test
     public void deleteUser() {

@@ -9,7 +9,7 @@
     </title>
 
     <%--===========================================================================
-    Connect bootetrap
+    Connect bootstrap
     ===========================================================================--%>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -70,6 +70,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/controller?command=report"><fmt:message
                                 key="account.anchor.reports"/> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/controller?command=statistic"><fmt:message
+                                key="account.anchor.statistic"/> </a>
                     </li>
                 </c:if>
                 <li class="nav-item">
