@@ -23,7 +23,7 @@ public class UserStatisticCommand extends Command {
         UserDAO userDAO = new UserDAO();
         OrderDAO orderDAO = new OrderDAO();
 
-        Map<User, Integer> statistic = new LinkedHashMap<>();
+        Map<User, Integer> statistic = new HashMap<>();
 
         List<User> allUsers = userDAO.findAllUsers();
 
@@ -36,15 +36,14 @@ public class UserStatisticCommand extends Command {
             }
 
         }
+        Comparator<Map.Entry<User, Integer>> cmp = Map.Entry.comparingByValue();
 
-
-
-        statistic.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(
+        Map<User, Integer> res = statistic.entrySet().stream().sorted(cmp.reversed()).collect(Collectors.toMap(
                 Map.Entry::getKey,
                 Map.Entry::getValue,
                 (oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
-        req.getSession().setAttribute("statistic", statistic);
+        req.getSession().setAttribute("statistic", res);
 
         String forward = Path.PAGE__STATISTIC;
 

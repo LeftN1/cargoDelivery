@@ -41,7 +41,7 @@ public class EncodingFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 
-	public void init(FilterConfig fConfig) throws ServletException {
+	public void init(FilterConfig fConfig) {
 		LOG.debug("Filter initialization starts");
 		encoding = fConfig.getInitParameter("encoding");
 		LOG.trace("Encoding from web.xml --> " + encoding);

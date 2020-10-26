@@ -39,8 +39,6 @@ public class LoginCommand extends Command {
         String login = req.getParameter("login");
         LOG.debug("request param: login: " + login);
 
-
-
         String password = req.getParameter("password");
         String passHash = DigestUtils.md5Hex(password);
 
@@ -57,7 +55,6 @@ public class LoginCommand extends Command {
 
         User user = userDAO.findUserByLogin(login);
         LOG.trace("Found user: " + user);
-
 
         if (user != null && user.getPassword().equals(passHash)) {
             Role userRole = user.getRole();
